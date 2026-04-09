@@ -351,29 +351,18 @@ export default function AgenciaGoogleAdsPage() {
               Qué gestionamos en Google Ads
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((s, i) =>
-                s.quote ? (
-                  <div
-                    key={i}
-                    className="p-8 bg-[#0061FF] text-white rounded-2xl flex flex-col justify-center"
-                  >
-                    <p className="italic mb-4 text-sm leading-relaxed">{s.body}</p>
-                    <div className="h-px bg-white/20 w-full mb-4" />
-                    <p className="font-bold">{s.author}</p>
+              {services.map((s) => (
+                <div
+                  key={s.title}
+                  className="p-8 border border-slate-100 rounded-2xl hover:border-blue-100 hover:bg-blue-50/30 transition-all"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-[#0061FF] mb-6">
+                    {s.icon}
                   </div>
-                ) : (
-                  <div
-                    key={s.title}
-                    className="p-8 border border-slate-100 rounded-2xl hover:border-blue-100 hover:bg-blue-50/30 transition-all"
-                  >
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-[#0061FF] mb-6">
-                      {s.icon}
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-slate-900">{s.title}</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">{s.body}</p>
-                  </div>
-                )
-              )}
+                  <h3 className="text-xl font-bold mb-3 text-slate-900">{s.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{s.body}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

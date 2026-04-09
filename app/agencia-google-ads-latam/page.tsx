@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SectionWrapper from "@/components/ui/SectionWrapper";
-import CTAButton from "@/components/ui/CTAButton";
-import FaqSection from "@/components/sections/FaqSection";
-import FinalCTA from "@/components/sections/FinalCTA";
 import DiagnosticoForm from "@/components/forms/DiagnosticoForm";
 
 export const metadata: Metadata = {
@@ -23,88 +19,117 @@ export const metadata: Metadata = {
 const comparison = [
   {
     feature: "Tracking server-side activo",
-    jt: { value: "Sí, desde el día 1", positive: true },
-    traditional: { value: "Raro — depende del cliente pedirlo", positive: false },
+    jt: "✅ Sí, desde el día 1",
+    jtPositive: true,
+    traditional: "❌ Raro — depende del cliente",
+    tradPositive: false,
   },
   {
-    feature: "Account manager senior dedicado",
-    jt: { value: "Siempre — no hay juniors asignados", positive: true },
-    traditional: { value: "Varía — en muchos casos son juniors", positive: false },
+    feature: "El equipo que vende ejecuta",
+    jt: "✅ Siempre",
+    jtPositive: true,
+    traditional: "❌ Casi nunca — hay juniors",
+    tradPositive: false,
   },
   {
-    feature: "Experiencia en presupuestos $500k+/mes",
-    jt: { value: "Sí — equipo con track record probado", positive: true },
-    traditional: { value: "Depende del equipo asignado", positive: null },
-  },
-  {
-    feature: "Reportes con CPL real (conectado a CRM)",
-    jt: { value: "Sí, conectado a ventas", positive: true },
-    traditional: { value: "A veces — depende de si lo mides", positive: null },
+    feature: "Reportes con CPL real (CRM)",
+    jt: "✅ Sí, conectado a ventas",
+    jtPositive: true,
+    traditional: "⚠️ A veces — depende si lo mides",
+    tradPositive: null,
   },
   {
     feature: "Sin contratos de 12 meses",
-    jt: { value: "Mes a mes", positive: true },
-    traditional: { value: "6–12 meses típico", positive: false },
+    jt: "✅ Mes a mes",
+    jtPositive: true,
+    traditional: "❌ 6–12 meses típico",
+    tradPositive: false,
+  },
+  {
+    feature: "Acceso directo al experto",
+    jt: "✅ Juan gestiona la cuenta",
+    jtPositive: true,
+    traditional: "❌ Account manager intermediario",
+    tradPositive: false,
   },
   {
     feature: "Mínimo de presupuesto",
-    jt: { value: "$5,000/mes", positive: true },
-    traditional: { value: "Variable — muchas aceptan cualquier cosa", positive: null },
+    jt: "$5,000/mes",
+    jtPositive: true,
+    traditional: "Variable — aceptan cualquier cosa",
+    tradPositive: null,
   },
 ];
 
 const services = [
   {
-    title: "Google Search — Captura de intención",
-    body: "Anuncios de texto en búsquedas activas. Estructura por intención, negativos agresivos, copy alineado con el funnel de ventas. No compramos tráfico de volumen — compramos tráfico de intención.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+      </svg>
+    ),
+    title: "Google Search",
+    body: "Captura de intención activa. Estructura por intención, negativos agresivos y copy alineado con el funnel. Compramos tráfico de intención, no de volumen.",
   },
   {
-    title: "Performance Max — Con configuración avanzada",
-    body: "PMax bien configurado no es 'poner el presupuesto y esperar'. Requiere señales de audiencia correctas, assets de calidad, exclusiones activas y revisión constante de dónde está gastando realmente.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+      </svg>
+    ),
+    title: "Performance Max",
+    body: "Configuración avanzada con señales de audiencia correctas, assets de calidad y revisión constante de exclusiones. No es solo poner presupuesto y esperar.",
   },
   {
-    title: "Google Display — Retargeting y prospecting",
-    body: "Display bien segmentado para audiencias calificadas. Retargeting por etapa del funnel. Nada de banners de volumen sin segmentación.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+      </svg>
+    ),
+    title: "Google Display",
+    body: "Retargeting y prospecting segmentado para audiencias calificadas por etapa del funnel. Sin banners de volumen sin segmentación real.",
   },
   {
-    title: "YouTube Ads — Awareness y consideración",
-    body: "Video ads para mercados donde el ciclo de ventas es más largo. Formatos: skippable, bumper, Demand Gen. Con métricas de impacto real, no solo de vistas.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+      </svg>
+    ),
+    title: "YouTube Ads",
+    body: "Awareness y consideración para ciclos de venta largos. Formatos: skippable, bumper, Demand Gen con métricas de impacto real.",
   },
   {
-    title: "Demand Gen — Descubrimiento y consideración",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+      </svg>
+    ),
+    title: "Demand Gen",
     body: "Campañas visuales en YouTube, Gmail y Discover para audiencias de alta intención. Ideal para acortar ciclos de ventas largos con creativos que interrumpen sin molestar.",
   },
   {
-    title: "Campañas de Apps — Android e iOS",
-    body: "Promocionamos tu app en Búsqueda de Google, Play Store, YouTube y sitios asociados. Optimizamos por instalaciones, eventos in-app o valor del usuario según tu objetivo.",
+    quote: true,
+    body: '"Estamos construyendo los primeros casos documentados. Mientras tanto, la sesión de diagnóstico en vivo es la mejor forma de ver cómo trabajamos — sin compromiso."',
+    author: "JT Ads",
   },
-];
-
-const markets = [
-  { flag: "🇲🇽", country: "México", detail: "Mayor mercado de búsqueda en LATAM. Google Ads en español e inglés para empresas con presencia binacional." },
-  { flag: "🇨🇴", country: "Colombia", detail: "Mercado en crecimiento. Alta competencia en servicios B2B y educación." },
-  { flag: "🇨🇱", country: "Chile", detail: "CPCs más altos, pero conversiones de mayor valor. Mercado maduro para performance." },
-  { flag: "🇦🇷", country: "Argentina", detail: "Requiere estrategia específica por variabilidad económica. Manejamos campañas adaptadas." },
-  { flag: "🇵🇪", country: "Perú", detail: "Mercado en expansión. Buenas oportunidades en costos vs. competencia." },
-  { flag: "🇺🇸", country: "USA", detail: "Empresas que venden en el mercado norteamericano. Google Ads en inglés y español." },
 ];
 
 const faqItems = [
   {
     q: "¿Trabajan solo con Google o también otras plataformas?",
-    a: "Google es una de nuestras especialidades principales. También gestionamos Meta Ads y LinkedIn Ads. En la mayoría de los casos, el mix correcto depende de tu objetivo y presupuesto — te recomendamos la combinación que tenga sentido para tu negocio, no la que sume más comisión.",
+    a: "Google es una de nuestras especialidades principales. También gestionamos Meta Ads y LinkedIn Ads. En la mayoría de los casos, el mix correcto depende de tu objetivo y presupuesto — te recomendamos la combinación que tenga sentido para tu negocio.",
   },
   {
     q: "¿Cuál es el presupuesto mínimo para trabajar con JT Ads?",
-    a: "$5,000/mes en la plataforma. Por debajo de ese monto, el impacto que podemos generar no justifica nuestros honorarios ni tu inversión de tiempo. No tiene sentido para ninguna de las dos partes.",
+    a: "Mínimo de $5,000/mes en la plataforma. Por debajo de ese monto, el impacto que podemos generar no justifica nuestros honorarios ni tu inversión de tiempo. No tiene sentido para ninguna de las dos partes.",
   },
   {
-    q: "¿Cómo sé que están gestionando bien mi cuenta?",
-    a: "Desde el primer mes tienes acceso directo a la cuenta — ves todo lo que vemos nosotros. Los reportes mensuales incluyen el CPL real conectado con tu CRM, no el CPL de plataforma. Y puedes hablar directamente con tu account manager senior, sin pasar por un intermediario.",
+    q: "¿Cómo sé que están gestionando bien mi cuenta si no tengo acceso técnico?",
+    a: "Desde el primer mes tienes acceso directo a la cuenta — ves todo lo que vemos nosotros. Los reportes mensuales incluyen el CPL real conectado con tu CRM, no el CPL de plataforma. Sin intermediarios.",
   },
   {
     q: "¿Trabajan con cuentas que ya tienen historial o solo cuentas nuevas?",
-    a: "Ambas. Con cuentas nuevas construimos la estructura correcta desde el inicio. Con cuentas con historial, el primer paso es siempre la sesión de diagnóstico para entender qué tiene sentido conservar y qué hay que reconstruir.",
+    a: "Ambas. Con cuentas nuevas construimos la estructura correcta desde el inicio. Con cuentas con historial, el primer paso es siempre el diagnóstico para entender qué tiene sentido conservar y qué hay que reconstruir.",
   },
 ];
 
@@ -112,203 +137,299 @@ export default function AgenciaGoogleAdsPage() {
   return (
     <>
       <Navbar />
-      <main className="flex-1">
-        {/* Hero */}
-        <SectionWrapper className="pt-20 pb-16">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: "var(--text-primary)" }}>
-              Agencia de Google Ads para empresas en LATAM
-            </h1>
-            <p className="text-xl leading-relaxed mb-8" style={{ color: "var(--text-secondary)" }}>
-              Performance marketing con tracking correcto, estrategia real y resultados medibles.
-              Primera sesión de diagnóstico en vivo sin costo — revisamos tu cuenta juntos y te
-              decimos exactamente qué está fallando antes de que contrates a nadie.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <CTAButton href="/diagnostico-en-vivo" size="lg">
-                Reservar Sesión de Diagnóstico — Sin Costo
-              </CTAButton>
-              <a
-                href="https://www.google.com/partners/agency?id=1978608979"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block hover:opacity-80 transition-opacity"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg"
-                  alt="Google Partner"
-                  style={{ height: "56px", width: "auto" }}
-                />
-              </a>
-            </div>
-            <p className="mt-4 text-sm" style={{ color: "var(--text-muted)" }}>
-              Sin llamada de ventas previa. Sesión disponible en 48 horas hábiles. Respuesta en menos de 4 horas.
-            </p>
-          </div>
-        </SectionWrapper>
+      <main className="pt-0 bg-white text-slate-900 antialiased">
 
-        {/* Comparison table */}
-        <SectionWrapper className="py-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "var(--text-primary)" }}>
-            Antes de contratar una agencia, compara lo que realmente importa.
-          </h2>
-          <p className="mb-10" style={{ color: "var(--text-secondary)" }}>
-            La mayoría de las agencias venden bien. La diferencia está en lo que entregan después de firmar.
-          </p>
+        {/* ── HERO ── */}
+        <section className="relative py-20 lg:py-32 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid var(--bg-border)" }}>
-            <table className="w-full text-sm">
-              <thead>
-                <tr style={{ background: "var(--bg-surface)", borderBottom: "1px solid var(--bg-border)" }}>
-                  <th className="text-left px-6 py-4 font-medium" style={{ color: "var(--text-muted)" }}>
-                    Criterio
-                  </th>
-                  <th className="text-left px-6 py-4 font-semibold" style={{ color: "var(--accent)" }}>
-                    JT Ads
-                  </th>
-                  <th className="text-left px-6 py-4 font-medium" style={{ color: "var(--text-muted)" }}>
-                    Agencia tradicional
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparison.map((row, i) => (
-                  <tr
-                    key={row.feature}
-                    style={{
-                      background: i % 2 === 0 ? "var(--bg-base)" : "var(--bg-surface)",
-                      borderBottom: "1px solid var(--bg-border)",
-                    }}
+              {/* Left: copy */}
+              <div>
+                <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                  Agencia de Google Ads para empresas en LATAM
+                </h1>
+                <p className="text-lg lg:text-xl text-slate-600 mb-8 leading-relaxed">
+                  Performance marketing con tracking correcto, estrategia real y resultados medibles.
+                  Primera sesión de diagnóstico en vivo sin costo — revisamos tu cuenta juntos y te
+                  decimos exactamente qué está fallando antes de que contrates a nadie.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
+                  <a
+                    href="#diagnostico-form"
+                    className="bg-[#0061FF] text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg hover:shadow-blue-200 transition-all"
                   >
-                    <td className="px-6 py-4 font-medium" style={{ color: "var(--text-primary)" }}>
-                      {row.feature}
-                    </td>
-                    <td className="px-6 py-4">
-                      <span
-                        className="flex items-center gap-2"
-                        style={{ color: row.jt.positive ? "var(--green)" : "var(--text-secondary)" }}
-                      >
-                        {row.jt.positive && (
-                          <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
-                        {row.jt.value}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4">
-                      <span
-                        style={{
-                          color: row.traditional.positive === false
-                            ? "var(--red)"
-                            : row.traditional.positive === null
-                            ? "var(--yellow)"
-                            : "var(--green)",
-                        }}
-                      >
-                        {row.traditional.positive === false && "✗ "}
-                        {row.traditional.positive === null && "⚠ "}
-                        {row.traditional.value}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </SectionWrapper>
-
-        {/* Tracking importance */}
-        <SectionWrapper className="py-16" style={{ background: "var(--bg-surface)" }}>
-          <div className="max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "var(--text-primary)" }}>
-              El problema no suele ser tus anuncios. Suele ser lo que mides.
-            </h2>
-            <p className="text-lg leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
-              Hemos diagnosticado cuentas donde el CPL reportado en Google Ads era $80. Al revisar
-              el tracking, el evento de "conversión" estaba disparando en la vista de la página de
-              agradecimiento — no en el submit real del formulario. Eso incluía rebotes, bots y
-              visitas directas a la URL. El CPL real, midiendo solo submits verificados, era $310.
-            </p>
-            <p className="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              No eran malas campañas. Era un evento mal configurado que llevaba meses distorsionando
-              las decisiones de presupuesto y puja. Antes de optimizar cualquier cosa, hay que saber
-              qué se está midiendo realmente. La sesión de diagnóstico empieza siempre por ahí.
-            </p>
-          </div>
-        </SectionWrapper>
-
-        {/* Services */}
-        <SectionWrapper>
-          <h2 className="text-2xl md:text-3xl font-bold mb-10" style={{ color: "var(--text-primary)" }}>
-            Qué gestionamos en Google Ads.
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="rounded-xl p-6"
-                style={{ background: "var(--bg-surface)", border: "1px solid var(--bg-border)" }}
-              >
-                <h3 className="font-semibold mb-3" style={{ color: "var(--text-primary)" }}>{s.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{s.body}</p>
-              </div>
-            ))}
-          </div>
-        </SectionWrapper>
-
-        {/* Markets */}
-        <SectionWrapper className="py-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10" style={{ color: "var(--text-primary)" }}>
-            Trabajamos en los mercados donde el español importa.
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {markets.map((m) => (
-              <div
-                key={m.country}
-                className="rounded-xl p-5"
-                style={{ background: "var(--bg-surface)", border: "1px solid var(--bg-border)" }}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">{m.flag}</span>
-                  <span className="font-semibold" style={{ color: "var(--text-primary)" }}>{m.country}</span>
+                    Sesión de Diagnóstico gratuito
+                  </a>
+                  <a
+                    href="https://www.google.com/partners/agency?id=1978608979"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block hover:opacity-80 transition-opacity"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg"
+                      alt="Google Partner"
+                      style={{ height: "52px", width: "auto" }}
+                    />
+                  </a>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{m.detail}</p>
+                <div className="text-sm text-slate-500 space-y-1">
+                  <p>• Sin llamada de ventas previa</p>
+                  <p>• Respuesta en menos de 4 horas hábiles</p>
+                </div>
               </div>
-            ))}
-          </div>
-        </SectionWrapper>
 
-        {/* Form */}
-        <SectionWrapper className="py-16" style={{ background: "var(--bg-surface)" }}>
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold mb-2 text-center" style={{ color: "var(--text-primary)" }}>
-              Primera sesión de diagnóstico. Sin compromiso.
-            </h2>
-            <p className="text-center mb-8" style={{ color: "var(--text-secondary)" }}>
-              Sesión de 60 minutos en vivo. Revisamos tu cuenta juntos, sin costo.
+              {/* Right: dashboard mockup */}
+              <div className="relative">
+                <div className="bg-slate-100 rounded-2xl p-4 shadow-2xl border border-slate-200">
+                  <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-slate-100">
+                    {/* Browser chrome */}
+                    <div className="h-8 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-1.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                    </div>
+                    <div className="p-6">
+                      {/* CPL metric */}
+                      <div className="flex justify-between items-end mb-6">
+                        <div>
+                          <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
+                            Costo por Lead (CPL)
+                          </p>
+                          <p className="text-3xl font-bold text-slate-900">
+                            $18.40{" "}
+                            <span className="text-green-500 text-sm font-medium">↓ 34%</span>
+                          </p>
+                        </div>
+                        {/* Sparkline — descending (CPL bajando) */}
+                        <div className="w-24 h-12 bg-blue-50 rounded flex items-center justify-center">
+                          <svg className="w-16 h-8 text-[#0061FF]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 100 40">
+                            <path d="M0 5 Q 25 8 40 18 T 70 30 T 100 36" strokeLinecap="round" />
+                          </svg>
+                        </div>
+                      </div>
+                      {/* Lead quality bar */}
+                      <div className="mb-5">
+                        <div className="flex justify-between text-xs text-slate-400 mb-1">
+                          <span>Calidad de Leads</span>
+                          <span className="text-green-500 font-semibold">↑ +2.4</span>
+                        </div>
+                        <p className="text-xl font-bold text-slate-900 mb-2">8.7 / 10</p>
+                        <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                          <div className="h-2 bg-[#0061FF] rounded-full" style={{ width: "87%" }} />
+                        </div>
+                        <div className="flex justify-between text-xs text-slate-400 mt-1">
+                          <span>Antes: 6.3</span><span>Ahora: 8.7</span>
+                        </div>
+                      </div>
+                      {/* Stats row */}
+                      <div className="grid grid-cols-3 gap-3 pt-3 border-t border-slate-100">
+                        {[
+                          { label: "ROAS", value: "4.8x" },
+                          { label: "Conv. Rate", value: "12.3%" },
+                          { label: "Ad Spend", value: "$22k" },
+                        ].map((s) => (
+                          <div key={s.label} className="text-center">
+                            <p className="text-xs text-slate-400">{s.label}</p>
+                            <p className="font-bold text-slate-900 text-sm">{s.value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── TRUST BAR ── */}
+        <section className="border-y border-slate-100 py-8 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-6">
+              Trabajamos con empresas en:
             </p>
-            <DiagnosticoForm />
+            <div className="flex flex-wrap justify-center gap-6 lg:gap-12 items-center opacity-70">
+              {[
+                { flag: "🇲🇽", label: "México" },
+                { flag: "🇨🇴", label: "Colombia" },
+                { flag: "🇨🇱", label: "Chile" },
+                { flag: "🇦🇷", label: "Argentina" },
+                { flag: "🇵🇪", label: "Perú" },
+                { flag: "🇺🇸", label: "USA" },
+              ].map((m) => (
+                <div key={m.label} className="flex items-center gap-2 font-semibold text-slate-600">
+                  <span>{m.flag}</span> {m.label}
+                </div>
+              ))}
+            </div>
           </div>
-        </SectionWrapper>
+        </section>
 
-        {/* FAQ */}
-        <SectionWrapper className="py-16">
-          <div className="max-w-2xl">
-            <FaqSection items={faqItems} title="Preguntas frecuentes sobre Google Ads" />
+        {/* ── COMPARISON TABLE ── */}
+        <section className="py-24 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+                Antes de contratar una agencia, compara lo que realmente importa.
+              </h2>
+              <p className="text-slate-600 max-w-2xl mx-auto">
+                La mayoría de las agencias venden bien. La diferencia está en lo que entregan después de firmar.
+              </p>
+            </div>
+            <div className="overflow-hidden border border-slate-200 rounded-2xl shadow-sm">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-200">
+                    <th className="p-6 text-sm font-bold text-slate-400 uppercase tracking-wider">
+                      Característica
+                    </th>
+                    <th className="p-6 text-sm font-bold text-[#0061FF] uppercase tracking-wider bg-blue-50/50">
+                      JT Ads
+                    </th>
+                    <th className="p-6 text-sm font-bold text-slate-400 uppercase tracking-wider">
+                      Agencia tradicional
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {comparison.map((row) => (
+                    <tr key={row.feature}>
+                      <td className="p-6 font-medium text-slate-700">{row.feature}</td>
+                      <td className="p-6 bg-blue-50/20">
+                        <span className={row.jtPositive ? "text-green-600 font-bold" : "text-slate-700"}>
+                          {row.jt}
+                        </span>
+                      </td>
+                      <td className="p-6 text-slate-500">{row.traditional}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </SectionWrapper>
+        </section>
 
-        {/* Final CTA */}
-        <SectionWrapper className="pb-24">
-          <FinalCTA
-            headline="Si estás evaluando agencias de Google Ads, empieza por ver qué tan bien está configurada tu cuenta actual."
-            subtext="La sesión es gratis. Las conclusiones son tuyas. La decisión de contratarnos es completamente tuya."
-          />
-        </SectionWrapper>
+        {/* ── TRACKING IMPORTANCE ── */}
+        <section className="py-24 bg-[#0F172A] text-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+                El problema no suele ser tus anuncios. Suele ser lo que mides.
+              </h2>
+              <div className="space-y-6 text-lg text-slate-300">
+                <p>
+                  Hemos auditado cuentas donde el CPL reportado en Google Ads era $80. Al revisar el
+                  tracking, el evento de "conversión" estaba disparando en la vista de la página de
+                  agradecimiento — no en el submit real del formulario. Eso incluía rebotes, bots y
+                  visitas directas a la URL. El CPL real, midiendo solo submits verificados, era $310.
+                </p>
+                <p>
+                  Eso no es un error de las campañas. Es un error de medición que lleva meses
+                  — a veces años — sin detectarse.
+                </p>
+                <p className="font-semibold text-white">
+                  Antes de optimizar, necesitas medir bien. Antes de contratar una agencia, necesitas
+                  saber qué miden.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── SERVICES GRID ── */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-16 text-slate-900">
+              Qué gestionamos en Google Ads
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((s, i) =>
+                s.quote ? (
+                  <div
+                    key={i}
+                    className="p-8 bg-[#0061FF] text-white rounded-2xl flex flex-col justify-center"
+                  >
+                    <p className="italic mb-4 text-sm leading-relaxed">{s.body}</p>
+                    <div className="h-px bg-white/20 w-full mb-4" />
+                    <p className="font-bold">{s.author}</p>
+                  </div>
+                ) : (
+                  <div
+                    key={s.title}
+                    className="p-8 border border-slate-100 rounded-2xl hover:border-blue-100 hover:bg-blue-50/30 transition-all"
+                  >
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-[#0061FF] mb-6">
+                      {s.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-slate-900">{s.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{s.body}</p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* ── FORM ── */}
+        <section className="py-24 bg-slate-50 border-y border-slate-200" id="diagnostico-form">
+          <div className="max-w-3xl mx-auto px-4">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+              <div className="p-8 lg:p-12">
+                <div className="text-center mb-10">
+                  <h2 className="text-3xl font-extrabold text-slate-900 mb-2">
+                    Primera sesión de diagnóstico. Sin compromiso.
+                  </h2>
+                  <p className="text-slate-500">
+                    Sesión de 60 minutos en vivo. Te respondemos en menos de 48h hábiles.
+                  </p>
+                </div>
+                <DiagnosticoForm />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-24 bg-white">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
+              Preguntas frecuentes
+            </h2>
+            <div className="space-y-6">
+              {faqItems.map((item) => (
+                <div key={item.q} className="border-b border-slate-100 pb-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">{item.q}</h3>
+                  <p className="text-slate-600 leading-relaxed">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── FINAL CTA ── */}
+        <section className="py-20 bg-[#0061FF] text-white text-center">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+              Si estás evaluando agencias de Google Ads, empieza por ver qué tan bien está
+              configurada tu cuenta actual.
+            </h2>
+            <p className="text-xl text-blue-100 mb-10">
+              La sesión es gratuita. El diagnóstico es tuyo. La decisión de contratarnos es
+              completamente tuya.
+            </p>
+            <a
+              href="#diagnostico-form"
+              className="inline-block bg-white text-[#0061FF] px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors"
+            >
+              Sesión de Diagnóstico gratuito
+            </a>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>

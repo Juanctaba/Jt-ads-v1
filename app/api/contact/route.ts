@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
 
       await resend.emails.send({
         from: "JT Ads <notificaciones@juantabares.co>",
-        to: "juan@juantabares.co",
+        to: "hola@juantabares.co",
         replyTo: data.email,
         subject,
         html: buildEmailHtml(data),

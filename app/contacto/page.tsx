@@ -137,11 +137,11 @@ export default function ContactoPage() {
             >
               <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--text-muted)" }}>Email</p>
               <a
-                href="mailto:juan@juantabares.co"
+                href="mailto:hola@juantabares.co"
                 className="font-medium hover:underline"
                 style={{ color: "var(--accent)" }}
               >
-                juan@juantabares.co
+                hola@juantabares.co
               </a>
               <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
                 Respondemos en menos de 4 horas hábiles

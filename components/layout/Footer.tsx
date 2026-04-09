@@ -31,10 +31,10 @@ export default function Footer() {
               LinkedIn
             </Link>
             <a
-              href="mailto:juan@juantabares.co"
+              href="mailto:hola@juantabares.co"
               className="hover:text-[var(--text-primary)] transition-colors"
             >
-              juan@juantabares.co
+              hola@juantabares.co
             </a>
             <Link href="/contacto" className="hover:text-[var(--text-primary)] transition-colors">
               Contacto

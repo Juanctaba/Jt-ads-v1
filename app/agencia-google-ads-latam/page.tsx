@@ -71,8 +71,12 @@ const services = [
     body: "Video ads para mercados donde el ciclo de ventas es más largo. Formatos: skippable, bumper, Demand Gen. Con métricas de impacto real, no solo de vistas.",
   },
   {
-    title: "Google Shopping — Para e-commerce en LATAM",
-    body: "Feeds optimizados, estructura de campañas por margen y rotación de producto. No todas las SKUs merecen el mismo presupuesto.",
+    title: "Demand Gen — Descubrimiento y consideración",
+    body: "Campañas visuales en YouTube, Gmail y Discover para audiencias de alta intención. Ideal para acortar ciclos de ventas largos con creativos que interrumpen sin molestar.",
+  },
+  {
+    title: "Campañas de Apps — Android e iOS",
+    body: "Promocionamos tu app en Búsqueda de Google, Play Store, YouTube y sitios asociados. Optimizamos por instalaciones, eventos in-app o valor del usuario según tu objetivo.",
   },
 ];
 
@@ -82,7 +86,7 @@ const markets = [
   { flag: "🇨🇱", country: "Chile", detail: "CPCs más altos, pero conversiones de mayor valor. Mercado maduro para performance." },
   { flag: "🇦🇷", country: "Argentina", detail: "Requiere estrategia específica por variabilidad económica. Manejamos campañas adaptadas." },
   { flag: "🇵🇪", country: "Perú", detail: "Mercado en expansión. Buenas oportunidades en costos vs. competencia." },
-  { flag: "🇺🇸", country: "USA Hispanic", detail: "Audiencias en español dentro de Estados Unidos. Targeting por idioma, ubicación y comportamiento." },
+  { flag: "🇺🇸", country: "USA", detail: "Empresas que venden en el mercado norteamericano. Google Ads en inglés y español." },
 ];
 
 const faqItems = [
@@ -120,10 +124,23 @@ export default function AgenciaGoogleAdsPage() {
               Primera sesión de diagnóstico en vivo sin costo — revisamos tu cuenta juntos y te
               decimos exactamente qué está fallando antes de que contrates a nadie.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
               <CTAButton href="/diagnostico-en-vivo" size="lg">
                 Reservar Sesión de Diagnóstico — Sin Costo
               </CTAButton>
+              <a
+                href="https://www.google.com/partners/agency?id=1978608979"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:opacity-80 transition-opacity"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg"
+                  alt="Google Partner"
+                  style={{ height: "56px", width: "auto" }}
+                />
+              </a>
             </div>
             <p className="mt-4 text-sm" style={{ color: "var(--text-muted)" }}>
               Sin llamada de ventas previa. Sesión disponible en 48 horas hábiles. Respuesta en menos de 4 horas.
@@ -209,13 +226,16 @@ export default function AgenciaGoogleAdsPage() {
               El problema no suele ser tus anuncios. Suele ser lo que mides.
             </h2>
             <p className="text-lg leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
-              Hemos diagnosticado cuentas donde el CPL reportado en Google Ads era $80. El CPL real
-              — conectando con el CRM y contando solo leads que llegaron a ventas — era $320.
+              Hemos diagnosticado cuentas donde el CPL reportado en Google Ads era $80, pero al
+              conectar con el CRM y filtrar solo los leads que avanzaban en el pipeline, el costo real
+              por oportunidad calificada superaba los $300. La plataforma no miente — simplemente mide
+              algo diferente a lo que el negocio necesita medir.
             </p>
             <p className="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              Eso no es un error de las campañas. Es un error de medición que lleva meses (a veces
-              años) sin detectarse. Antes de optimizar, necesitas medir bien. La sesión de diagnóstico
-              empieza siempre por ahí.
+              Eso no es un error de las campañas. Es un error de definición: qué se considera una
+              conversión, y si esa conversión tiene valor real para ventas. Antes de optimizar
+              presupuesto, hay que alinear qué se está midiendo. La sesión de diagnóstico empieza
+              siempre por ahí.
             </p>
           </div>
         </SectionWrapper>

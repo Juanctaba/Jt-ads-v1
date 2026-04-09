@@ -69,10 +69,10 @@ const steps = [
 ];
 
 const icpItems = [
-  "Empresas de 50–500 empleados con equipo de marketing interno",
+  "Empresas con equipo de marketing interno",
   "Ad spend mensual entre $5,000 y $50,000 USD",
   "Director de Marketing, CMO o VP de Growth",
-  "Mercados LATAM Tier 1 (México, Colombia, Chile, Argentina) + USA Hispanic",
+  "Mercados LATAM Tier 1 (México, Colombia, Chile, Argentina) + USA",
 ];
 
 export default function HomePage() {
@@ -211,7 +211,7 @@ export default function HomePage() {
               { flag: "🇨🇱", label: "Chile" },
               { flag: "🇦🇷", label: "Argentina" },
               { flag: "🇵🇪", label: "Perú" },
-              { flag: "🇺🇸", label: "USA Hispanic" },
+              { flag: "🇺🇸", label: "USA" },
             ].map((m) => (
               <span key={m.label} className="flex items-center gap-2 font-medium">
                 <span>{m.flag}</span>

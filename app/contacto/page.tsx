@@ -28,10 +28,10 @@ const expectations = [
 ];
 
 const icpTable = [
-  { criterio: "Tamaño", detalle: "50 – 500 empleados" },
+  { criterio: "Estructura", detalle: "Equipo de marketing interno" },
   { criterio: "Ad spend mensual", detalle: "$5,000 – $50,000 USD" },
   { criterio: "Estructura interna", detalle: "Director de Marketing, CMO o VP Growth" },
-  { criterio: "Mercados", detalle: "LATAM Tier 1 + USA Hispanic" },
+  { criterio: "Mercados", detalle: "LATAM Tier 1 + USA" },
   { criterio: "Plataformas", detalle: "Google Ads, Meta Ads, LinkedIn Ads" },
 ];
 

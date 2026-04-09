@@ -10,9 +10,9 @@ export default function Navbar() {
           <Image
             src="/logo-blue.png"
             alt="JT Ads — Ads Consulting & Performance"
-            width={120}
-            height={60}
-            className="h-12 w-auto"
+            width={180}
+            height={72}
+            className="h-16 w-auto"
             priority
           />
         </Link>

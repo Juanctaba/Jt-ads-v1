@@ -147,12 +147,12 @@ export default function HomePage() {
                       fill="none"
                       stroke="#0066ff"
                       strokeWidth="2"
-                      points="0,35 30,32 60,28 90,22 120,18 150,12 200,6"
+                      points="0,6 30,10 60,16 90,22 120,27 150,31 200,35"
                     />
                     <polyline
                       fill="url(#cplGrad)"
                       stroke="none"
-                      points="0,35 30,32 60,28 90,22 120,18 150,12 200,6 200,40 0,40"
+                      points="0,6 30,10 60,16 90,22 120,27 150,31 200,35 200,40 0,40"
                     />
                     <defs>
                       <linearGradient id="cplGrad" x1="0" y1="0" x2="0" y2="1">

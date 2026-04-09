@@ -11,9 +11,9 @@ export default function Footer() {
               <Image
                 src="/logo-blue.png"
                 alt="JT Ads"
-                width={100}
-                height={50}
-                className="h-10 w-auto"
+                width={160}
+                height={64}
+                className="h-14 w-auto"
               />
             </Link>
             <p className="text-sm text-[var(--text-muted)] mb-4">

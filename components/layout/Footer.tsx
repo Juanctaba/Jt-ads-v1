@@ -37,22 +37,22 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-[var(--text-secondary)]">
-            <Link
+            <a
               href="https://www.linkedin.com/in/juan-tabares-b1272b58/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[var(--text-primary)] transition-colors"
             >
               LinkedIn Personal
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.linkedin.com/company/jtadsllc"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[var(--text-primary)] transition-colors"
             >
               LinkedIn Agencia
-            </Link>
+            </a>
             <a
               href="mailto:hola@juantabares.co"
               className="hover:text-[var(--text-primary)] transition-colors"

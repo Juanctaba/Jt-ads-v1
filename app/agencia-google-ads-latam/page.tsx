@@ -108,9 +108,13 @@ const services = [
     body: "Campañas visuales en YouTube, Gmail y Discover para audiencias de alta intención. Ideal para acortar ciclos de ventas largos con creativos que interrumpen sin molestar.",
   },
   {
-    quote: true,
-    body: '"Estamos construyendo los primeros casos documentados. Mientras tanto, la sesión de diagnóstico en vivo es la mejor forma de ver cómo trabajamos — sin compromiso."',
-    author: "JT Ads",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+      </svg>
+    ),
+    title: "Campañas de Apps",
+    body: "Promocionamos tu app en Búsqueda de Google, Play Store, YouTube y sitios asociados. Optimizamos por instalaciones, eventos in-app o valor del usuario según tu objetivo.",
   },
 ];
 

@@ -62,6 +62,9 @@ export default function Footer() {
             <Link href="/contacto" className="hover:text-[var(--text-primary)] transition-colors">
               Contacto
             </Link>
+            <Link href="/pagos" className="hover:text-[var(--text-primary)] transition-colors">
+              Pagos
+            </Link>
           </div>
         </div>
 

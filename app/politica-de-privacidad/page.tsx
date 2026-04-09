@@ -4,14 +4,14 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad — JT Ads",
-  description: "Política de privacidad y tratamiento de datos personales de JT Ads.",
-  alternates: { canonical: "https://ads.juantabares.co/politica-de-privacidad" },
+  description: "Política de privacidad y tratamiento de datos personales de JT Ads Performance LLC.",
+  alternates: { canonical: "https://jtads.com/politica-de-privacidad" },
 };
 
 const sections = [
   {
     title: "1. Responsable del tratamiento",
-    content: `JT Ads (en adelante, "la Empresa", "nosotros" o "JT Ads"), operado por Juan Tabares, es el responsable del tratamiento de los datos personales recopilados a través del sitio web ads.juantabares.co y sus subpáginas. Puedes contactarnos en hola@juantabares.co para cualquier consulta relacionada con el tratamiento de tus datos.`,
+    content: `JT Ads Performance LLC (en adelante, "la Empresa", "nosotros" o "JT Ads") es el responsable del tratamiento de los datos personales recopilados a través del sitio web jtads.com y sus subpáginas. Puedes contactarnos en hola@juantabares.co para cualquier consulta relacionada con el tratamiento de tus datos.`,
   },
   {
     title: "2. Datos que recopilamos",
@@ -20,7 +20,7 @@ const sections = [
 • Datos de contacto: nombre, dirección de correo electrónico, nombre de empresa, cuando completas formularios en nuestro sitio.
 • Datos de diagnóstico: información sobre tus plataformas de publicidad, presupuesto mensual y problemática actual, cuando solicitas una sesión de diagnóstico.
 • Datos de uso: información técnica sobre tu visita al sitio, como dirección IP, tipo de navegador, páginas visitadas y duración de la sesión, recopilada de forma agregada y anónima.
-• Datos de pago: si realizas un pago a través de nuestro portal, este es procesado directamente por Stripe. JT Ads no almacena ni tiene acceso a datos de tarjetas de crédito o débito.`,
+• Datos de pago: si realizas un pago a través de nuestro portal, este es procesado directamente por Stripe. JT Ads Performance LLC no almacena ni tiene acceso a datos de tarjetas de crédito o débito.`,
   },
   {
     title: "3. Finalidad del tratamiento",
@@ -39,11 +39,11 @@ No utilizamos tus datos para marketing no solicitado ni los compartimos con terc
 
 • Tu consentimiento explícito, otorgado al completar formularios de contacto o solicitud.
 • La ejecución de un contrato o acuerdo de servicios, cuando aplique.
-• El interés legítimo de JT Ads en responder consultas comerciales y mejorar sus servicios.`,
+• El interés legítimo de JT Ads Performance LLC en responder consultas comerciales y mejorar sus servicios.`,
   },
   {
     title: "5. Compartición de datos con terceros",
-    content: `JT Ads puede compartir datos con los siguientes proveedores de servicios, exclusivamente para las finalidades descritas:
+    content: `JT Ads Performance LLC puede compartir datos con los siguientes proveedores de servicios, exclusivamente para las finalidades descritas:
 
 • Resend (procesamiento de emails): los datos del formulario se transmiten para enviar notificaciones internas. Resend actúa como encargado del tratamiento.
 • Stripe (procesamiento de pagos): si realizas un pago, los datos de pago son gestionados directamente por Stripe bajo su propia política de privacidad.
@@ -82,7 +82,7 @@ Para ejercer cualquiera de estos derechos, escríbenos a hola@juantabares.co. Re
   },
   {
     title: "11. Contacto",
-    content: `Si tienes preguntas, inquietudes o solicitudes relacionadas con el tratamiento de tus datos personales, puedes contactarnos en:\n\nhola@juantabares.co\n\nJT Ads · ads.juantabares.co`,
+    content: `Si tienes preguntas, inquietudes o solicitudes relacionadas con el tratamiento de tus datos personales, puedes contactarnos en:\n\nhola@juantabares.co\n\nJT Ads Performance LLC · jtads.com`,
   },
 ];
 

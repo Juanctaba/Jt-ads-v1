@@ -154,13 +154,13 @@ export default function ContactoPage() {
             >
               <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--text-muted)" }}>LinkedIn</p>
               <a
-                href="https://linkedin.com/in/juantabares"
+                href="https://www.linkedin.com/in/juan-tabares-b1272b58/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:underline"
                 style={{ color: "var(--accent)" }}
               >
-                linkedin.com/in/juantabares
+                linkedin.com/in/juan-tabares
               </a>
               <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
                 También puedes escribir un DM directo

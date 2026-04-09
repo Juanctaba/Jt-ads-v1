@@ -203,7 +203,7 @@ export default function DiagnosticoPage() {
                 demostrarlo.
               </p>
               <a
-                href="https://linkedin.com/in/juantabares"
+                href="https://www.linkedin.com/in/juan-tabares-b1272b58/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors"

@@ -226,16 +226,15 @@ export default function AgenciaGoogleAdsPage() {
               El problema no suele ser tus anuncios. Suele ser lo que mides.
             </h2>
             <p className="text-lg leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
-              Hemos diagnosticado cuentas donde el CPL reportado en Google Ads era $80, pero al
-              conectar con el CRM y filtrar solo los leads que avanzaban en el pipeline, el costo real
-              por oportunidad calificada superaba los $300. La plataforma no miente — simplemente mide
-              algo diferente a lo que el negocio necesita medir.
+              Hemos diagnosticado cuentas donde el CPL reportado en Google Ads era $80. Al revisar
+              el tracking, el evento de "conversión" estaba disparando en la vista de la página de
+              agradecimiento — no en el submit real del formulario. Eso incluía rebotes, bots y
+              visitas directas a la URL. El CPL real, midiendo solo submits verificados, era $310.
             </p>
             <p className="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              Eso no es un error de las campañas. Es un error de definición: qué se considera una
-              conversión, y si esa conversión tiene valor real para ventas. Antes de optimizar
-              presupuesto, hay que alinear qué se está midiendo. La sesión de diagnóstico empieza
-              siempre por ahí.
+              No eran malas campañas. Era un evento mal configurado que llevaba meses distorsionando
+              las decisiones de presupuesto y puja. Antes de optimizar cualquier cosa, hay que saber
+              qué se está midiendo realmente. La sesión de diagnóstico empieza siempre por ahí.
             </p>
           </div>
         </SectionWrapper>

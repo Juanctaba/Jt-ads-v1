@@ -26,8 +26,8 @@ export default function PagosPage() {
               <p className="text-[var(--text-secondary)] leading-relaxed max-w-md mx-auto">
                 Paga tu factura de forma segura con tarjeta de crédito o débito.
                 Si tienes dudas sobre el monto o referencia, escríbenos a{" "}
-                <a href="mailto:hola@juantabares.co" className="text-[var(--accent)] hover:underline">
-                  hola@juantabares.co
+                <a href="mailto:payments@juantabares.co" className="text-[var(--accent)] hover:underline">
+                  payments@juantabares.co
                 </a>
               </p>
             </div>

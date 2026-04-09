@@ -19,15 +19,15 @@ export default function CTAButton({
   external = false,
 }: CTAButtonProps) {
   const base =
-    "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 cursor-pointer";
+    "inline-flex items-center justify-center font-semibold rounded-[8px] transition-all duration-200 cursor-pointer";
 
   const variants = {
     primary:
-      "bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white shadow-lg hover:shadow-[var(--accent)]/25 hover:shadow-xl",
+      "bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white shadow-sm hover:shadow-md hover:shadow-[var(--accent)]/20",
     secondary:
-      "border border-[var(--bg-border)] text-[var(--text-secondary)] hover:text-white hover:border-white/30 bg-[var(--bg-surface)]",
+      "border border-gray-200 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-gray-300 bg-white",
     ghost:
-      "text-[var(--accent-light)] hover:text-white underline-offset-4 hover:underline",
+      "text-[var(--accent)] hover:text-[var(--accent-hover)] underline-offset-4 hover:underline",
   };
 
   const sizes = {

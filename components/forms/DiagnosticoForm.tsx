@@ -166,7 +166,7 @@ export default function DiagnosticoForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-[var(--accent)] hover:bg-[var(--accent-hover)] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-lg transition-colors text-base"
+        className="w-full bg-[var(--accent)] hover:bg-[var(--accent-hover)] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-[8px] transition-colors text-base"
       >
         {status === "loading" ? "Enviando..." : "Reservar mi Sesión de Diagnóstico →"}
       </button>

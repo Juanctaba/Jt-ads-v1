@@ -89,12 +89,12 @@ export default function DiagnosticoPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left: copy */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-full px-4 py-1.5 text-sm text-[var(--accent-light)] font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-[var(--accent-faint)] border border-[var(--accent)]/20 rounded-full px-4 py-1.5 text-sm text-[var(--accent)] font-medium mb-6">
                 Sin costo · Sin compromiso
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-tight mb-6">
                 Revisamos tu cuenta juntos.{" "}
-                <span className="text-[var(--accent-light)]">En tiempo real.</span>
+                <span className="text-[var(--accent)]">En tiempo real.</span>
               </h1>
               <p className="text-xl text-[var(--text-secondary)] leading-relaxed mb-8">
                 Una sesión de diagnóstico en vivo de 60 minutos. Compartimos pantalla, analizamos tu cuenta
@@ -159,7 +159,7 @@ export default function DiagnosticoPage() {
                 key={group.area}
                 className="bg-[var(--bg-surface)] border border-[var(--bg-border)] rounded-xl p-6"
               >
-                <h3 className="font-semibold text-[var(--text-primary)] mb-4 text-sm uppercase tracking-wider text-[var(--accent-light)]">
+                <h3 className="font-semibold mb-4 text-xs uppercase tracking-wider text-[var(--accent)]">
                   {group.area}
                 </h3>
                 <ul className="flex flex-col gap-2.5">
@@ -186,7 +186,7 @@ export default function DiagnosticoPage() {
         <SectionWrapper className="py-16">
           <div className="bg-[var(--bg-surface)] border border-[var(--bg-border)] rounded-2xl p-8 md:p-12">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[var(--accent-light)] mb-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[var(--accent)] mb-4">
                 Quién revisa tu cuenta
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-6">
@@ -206,7 +206,7 @@ export default function DiagnosticoPage() {
                 href="https://linkedin.com/in/juantabares"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-[var(--accent-light)] hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors"
               >
                 Ver perfil en LinkedIn →
               </a>
@@ -232,7 +232,7 @@ export default function DiagnosticoPage() {
             </p>
             <a
               href="#diagnostico-form"
-              className="inline-flex items-center gap-2 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-base cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold px-8 py-4 rounded-[8px] transition-colors text-base cursor-pointer"
             >
               Reservar mi Sesión de Diagnóstico ↑
             </a>

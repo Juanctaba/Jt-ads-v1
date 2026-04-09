@@ -12,7 +12,7 @@ export function FormField({ label, required, children, hint }: FormFieldProps) {
     <div className="flex flex-col gap-1.5">
       <label className="text-sm font-medium text-[var(--text-secondary)]">
         {label}
-        {required && <span className="text-[var(--accent-light)] ml-1">*</span>}
+        {required && <span className="text-[var(--accent)] ml-1">*</span>}
       </label>
       {children}
       {hint && <p className="text-xs text-[var(--text-muted)]">{hint}</p>}
@@ -36,7 +36,7 @@ export function Select(props: React.SelectHTMLAttributes<HTMLSelectElement>) {
     <select
       {...props}
       className={`${inputBase} cursor-pointer`}
-      style={{ colorScheme: "dark" }}
+      style={{ colorScheme: "light" }}
     />
   );
 }

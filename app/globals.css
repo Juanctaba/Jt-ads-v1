@@ -1,48 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --bg-base: #0A0E1A;
-  --bg-surface: #111827;
-  --bg-border: #1F2937;
-  --text-primary: #F9FAFB;
-  --text-secondary: #9CA3AF;
-  --text-muted: #6B7280;
-  --accent: #2563EB;
-  --accent-hover: #1D4ED8;
-  --accent-light: #3B82F6;
-  --green: #10B981;
-  --yellow: #F59E0B;
-  --red: #EF4444;
+  /* Light theme */
+  --bg-base:        #ffffff;
+  --bg-surface:     #f8fafc;
+  --bg-surface-2:   #f1f5f9;
+  --bg-dark:        #0a0a0a;
+  --bg-border:      #e5e7eb;
+  --bg-border-light:#f3f4f6;
+
+  /* Text */
+  --text-primary:   #1a1a1a;
+  --text-secondary: #4b5563;
+  --text-muted:     #9ca3af;
+  --text-on-dark:   #ffffff;
+  --text-on-dark-2: #9ca3af;
+
+  /* Brand */
+  --accent:         #0066ff;
+  --accent-hover:   #1d4ed8;
+  --accent-light:   #3b82f6;
+  --accent-faint:   rgba(0, 102, 255, 0.08);
+
+  /* Status */
+  --green:          #22c55e;
+  --red:            #ef4444;
+  --orange:         #f97316;
+  --yellow:         #facc15;
 }
 
 @theme inline {
-  --color-bg-base: var(--bg-base);
-  --color-bg-surface: var(--bg-surface);
-  --color-bg-border: var(--bg-border);
-  --color-text-primary: var(--text-primary);
+  --color-bg-base:        var(--bg-base);
+  --color-bg-surface:     var(--bg-surface);
+  --color-bg-surface-2:   var(--bg-surface-2);
+  --color-bg-dark:        var(--bg-dark);
+  --color-bg-border:      var(--bg-border);
+  --color-bg-border-light:var(--bg-border-light);
+  --color-text-primary:   var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-muted);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-accent-light: var(--accent-light);
-  --color-green: var(--green);
-  --color-yellow: var(--yellow);
-  --color-red: var(--red);
+  --color-text-muted:     var(--text-muted);
+  --color-accent:         var(--accent);
+  --color-accent-hover:   var(--accent-hover);
+  --color-accent-light:   var(--accent-light);
+  --color-green:          var(--green);
+  --color-red:            var(--red);
+  --color-orange:         var(--orange);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
   background-color: var(--bg-base);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
 }
 
 ::selection {

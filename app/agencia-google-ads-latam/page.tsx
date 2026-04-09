@@ -147,7 +147,7 @@ export default function AgenciaGoogleAdsPage() {
                   <th className="text-left px-6 py-4 font-medium" style={{ color: "var(--text-muted)" }}>
                     Criterio
                   </th>
-                  <th className="text-left px-6 py-4 font-semibold" style={{ color: "var(--accent-light)" }}>
+                  <th className="text-left px-6 py-4 font-semibold" style={{ color: "var(--accent)" }}>
                     JT Ads
                   </th>
                   <th className="text-left px-6 py-4 font-medium" style={{ color: "var(--text-muted)" }}>

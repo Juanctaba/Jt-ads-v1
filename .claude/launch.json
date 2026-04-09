@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jt-ads-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/juantabares/Claude code/jt-ads", "run", "dev"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

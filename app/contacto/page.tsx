@@ -64,13 +64,13 @@ export default function ContactoPage() {
             <div
               className="rounded-2xl p-8"
               style={{
-                background: "rgba(37,99,235,0.05)",
-                border: "2px solid rgba(37,99,235,0.3)",
+                background: "var(--accent-faint)",
+                border: "2px solid rgba(0,102,255,0.25)",
               }}
             >
               <div
                 className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-widest mb-5"
-                style={{ background: "rgba(37,99,235,0.15)", color: "var(--accent-light)" }}
+                style={{ background: "var(--accent-faint)", color: "var(--accent)" }}
               >
                 ★ Recomendado
               </div>
@@ -139,7 +139,7 @@ export default function ContactoPage() {
               <a
                 href="mailto:juan@juantabares.co"
                 className="font-medium hover:underline"
-                style={{ color: "var(--accent-light)" }}
+                style={{ color: "var(--accent)" }}
               >
                 juan@juantabares.co
               </a>
@@ -158,7 +158,7 @@ export default function ContactoPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:underline"
-                style={{ color: "var(--accent-light)" }}
+                style={{ color: "var(--accent)" }}
               >
                 linkedin.com/in/juantabares
               </a>

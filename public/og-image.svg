@@ -1,0 +1,8 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0E1A"/>
+  <rect x="0" y="0" width="4" height="630" fill="#2563EB"/>
+  <text x="80" y="260" font-family="system-ui,sans-serif" font-size="72" font-weight="700" fill="#F9FAFB">JT Ads</text>
+  <text x="80" y="340" font-family="system-ui,sans-serif" font-size="32" fill="#9CA3AF">Paid media para empresas en LATAM + USA</text>
+  <text x="80" y="420" font-family="system-ui,sans-serif" font-size="24" fill="#6B7280">Diagnóstico en vivo · Equipo senior · Sin contratos largos</text>
+  <text x="80" y="560" font-family="system-ui,sans-serif" font-size="22" fill="#2563EB">ads.juantabares.co</text>
+</svg>

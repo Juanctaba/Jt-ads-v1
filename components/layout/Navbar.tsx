@@ -5,14 +5,14 @@ import CTAButton from "@/components/ui/CTAButton";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-6 h-20 md:h-32 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
           <Image
             src="/logo-blue.png"
             alt="JT Ads — Ads Consulting & Performance"
-            width={320}
-            height={128}
-            className="h-16 md:h-28 w-auto"
+            width={160}
+            height={64}
+            className="h-14 w-auto"
             priority
           />
         </Link>

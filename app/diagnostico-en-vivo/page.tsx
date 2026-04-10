@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Diagnóstico Gratuito de Ads | JT Ads Performance",
   description:
     "Auditamos tu cuenta de Google Ads, Meta o LinkedIn sin costo. Analizamos +20 puntos críticos para encontrar oportunidades de crecimiento inmediato.",
-  alternates: { canonical: "https://ads.juantabares.co/diagnostico-en-vivo" },
+  alternates: { canonical: "https://jtads.com/diagnostico-en-vivo" },
 };
 
 const checklist = [
@@ -78,6 +78,122 @@ const faqItems = [
   },
 ];
 
+function DiagnosticoIllustration() {
+  const auditItems = [
+    { label: "Pixel & CAPI Setup", status: "ok", detail: "Verificado" },
+    { label: "Event Matching Rate", status: "warn", detail: "67% — bajo umbral" },
+    { label: "UTM Consistency", status: "ok", detail: "Verificado" },
+    { label: "Budget Allocation", status: "scanning", detail: "Analizando…" },
+    { label: "ROAS vs MER", status: "scanning", detail: "Analizando…" },
+  ];
+
+  return (
+    <div className="relative w-full">
+      {/* Floating badge */}
+      <div className="absolute -top-3 -right-3 z-10 px-3 py-1.5 bg-[#0050cb] text-white text-[10px] font-bold uppercase tracking-[0.15em] rounded-sm shadow-lg">
+        60 min · En Vivo
+      </div>
+
+      {/* Card */}
+      <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border border-[#c2c6d8]/15">
+        {/* Browser bar */}
+        <div className="bg-[#e5e2e1] px-4 py-3 flex items-center gap-2">
+          <div className="flex gap-1.5">
+            <div className="w-3 h-3 rounded-full bg-[#dcd9d9]" />
+            <div className="w-3 h-3 rounded-full bg-[#dcd9d9]" />
+            <div className="w-3 h-3 rounded-full bg-[#dcd9d9]" />
+          </div>
+          <div className="flex-1 bg-white/60 rounded-md h-5 mx-2 flex items-center px-3">
+            <span className="text-[9px] text-[#727687] font-mono">ads.google.com · acceso analista</span>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-5 bg-[#fcf9f8]">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#0050cb] mb-0.5">
+                Sesión de Diagnóstico
+              </p>
+              <h3 className="text-sm font-black text-[#1c1b1b]" style={{ fontFamily: "Manrope, sans-serif" }}>
+                Análisis en Curso
+              </h3>
+            </div>
+            {/* Pulse indicator */}
+            <div className="flex items-center gap-2 bg-[#f6f3f2] rounded-full px-3 py-1">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0066ff] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0066ff]" />
+              </span>
+              <span className="text-[9px] font-bold text-[#424656]">En vivo</span>
+            </div>
+          </div>
+
+          {/* Audit items */}
+          <div className="space-y-2 mb-4">
+            {auditItems.map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-3 bg-white rounded-lg px-3 py-2.5 border border-[#c2c6d8]/10"
+              >
+                {/* Status icon */}
+                {item.status === "ok" && (
+                  <svg className="w-4 h-4 text-[#10b981] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                  </svg>
+                )}
+                {item.status === "warn" && (
+                  <svg className="w-4 h-4 text-[#a33200] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                  </svg>
+                )}
+                {item.status === "scanning" && (
+                  <div className="w-4 h-4 rounded-full border-2 border-[#c2c6d8] border-t-[#0066ff] animate-spin flex-shrink-0" />
+                )}
+                <div className="flex-1 min-w-0">
+                  <p className="text-[10px] font-semibold text-[#1c1b1b] truncate">{item.label}</p>
+                </div>
+                <span
+                  className={`text-[9px] font-bold flex-shrink-0 ${
+                    item.status === "ok"
+                      ? "text-[#10b981]"
+                      : item.status === "warn"
+                      ? "text-[#a33200]"
+                      : "text-[#727687]"
+                  }`}
+                >
+                  {item.detail}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom: issues found */}
+          <div className="bg-[#0050cb]/5 border border-[#0050cb]/15 rounded-lg px-4 py-3 flex items-center justify-between">
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.1em] text-[#727687] mb-0.5">
+                Oportunidades detectadas
+              </p>
+              <p className="text-xl font-black text-[#0050cb]" style={{ fontFamily: "Manrope, sans-serif" }}>
+                4 <span className="text-xs font-bold text-[#424656]">puntos críticos</span>
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-[9px] font-bold uppercase tracking-[0.1em] text-[#727687] mb-0.5">
+                Ahorro potencial
+              </p>
+              <p className="text-xl font-black text-[#1c1b1b]" style={{ fontFamily: "Manrope, sans-serif" }}>
+                ~34%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function DiagnosticoPage() {
   return (
     <>
@@ -85,14 +201,14 @@ export default function DiagnosticoPage() {
       <main className="pt-0 bg-[#fcf9f8] text-[#1c1b1b] antialiased" style={{ fontFamily: "Inter, sans-serif" }}>
 
         {/* ── HERO ── */}
-        <section id="hero" className="relative min-h-[800px] flex items-center py-16 md:py-24 overflow-hidden">
+        <section id="hero" className="relative min-h-[680px] flex items-center py-16 md:py-24 overflow-hidden">
           {/* Skewed bg accent */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-[#f6f3f2] opacity-60 skew-x-12 translate-x-32" />
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-            <div className="grid lg:grid-cols-12 gap-12 items-start">
+            <div className="grid lg:grid-cols-12 gap-12 items-center">
 
               {/* Left — 7 cols */}
               <div className="lg:col-span-7 pt-4">
@@ -118,7 +234,7 @@ export default function DiagnosticoPage() {
                 </p>
 
                 {/* Stats */}
-                <div className="flex flex-wrap gap-8 opacity-80">
+                <div className="flex flex-wrap gap-8 opacity-80 mb-10">
                   {[
                     { value: "$5M+", label: "Inversión Auditada" },
                     { value: "200+", label: "Marcas Optimizadas" },
@@ -135,31 +251,52 @@ export default function DiagnosticoPage() {
                     </div>
                   ))}
                 </div>
+
+                <a
+                  href="#solicitar"
+                  className="inline-flex items-center gap-3 bg-[#0066ff] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#0050cb] transition-colors text-sm uppercase tracking-wide"
+                >
+                  Solicitar diagnóstico gratuito
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
               </div>
 
-              {/* Right — 5 cols: Form card */}
+              {/* Right — 5 cols: Illustration */}
               <div className="lg:col-span-5">
-                <div className="bg-white p-8 rounded-xl border border-[#c2c6d8]/15 shadow-2xl relative">
-                  {/* "Auditoría Gratuita" badge */}
-                  <div className="absolute -top-3 left-8 px-4 py-1 bg-[#0050cb] text-white text-[10px] font-bold uppercase tracking-[0.15em] rounded-sm">
-                    Auditoría Gratuita
-                  </div>
-                  <h2
-                    className="text-2xl font-bold mb-6 pt-2 text-[#1c1b1b]"
-                    style={{ fontFamily: "Manrope, sans-serif" }}
-                  >
-                    Solicita tu diagnóstico
-                  </h2>
-                  <AuditoriaForm />
-                </div>
+                <DiagnosticoIllustration />
               </div>
 
             </div>
           </div>
         </section>
 
+        {/* ── FORM SECTION ── */}
+        <section id="solicitar" className="py-24 bg-[#f6f3f2]">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0050cb] text-white rounded-sm text-[10px] font-bold uppercase tracking-[0.15em] mb-4">
+                Auditoría Gratuita
+              </div>
+              <h2
+                className="text-3xl md:text-4xl font-black text-[#1c1b1b] mb-3"
+                style={{ fontFamily: "Manrope, sans-serif" }}
+              >
+                Solicita tu diagnóstico
+              </h2>
+              <p className="text-[#424656]">
+                Te contactamos en menos de 4 horas hábiles para agendar la sesión.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-sm border border-[#c2c6d8]/10 p-2">
+              <AuditoriaForm />
+            </div>
+          </div>
+        </section>
+
         {/* ── CHECKLIST ── */}
-        <section className="py-24 bg-[#f6f3f2]" id="que-revisamos">
+        <section className="py-24 bg-[#fcf9f8]" id="que-revisamos">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
               <h2
@@ -176,7 +313,7 @@ export default function DiagnosticoPage() {
               {checklist.map((col) => (
                 <div
                   key={col.title}
-                  className="bg-[#fcf9f8] p-6 rounded-xl border border-[#c2c6d8]/10"
+                  className="bg-[#f6f3f2] p-6 rounded-xl border border-[#c2c6d8]/10"
                 >
                   <div className="text-[#0066ff] mb-4">{col.icon}</div>
                   <h3 className="font-bold text-sm uppercase tracking-widest mb-4 text-[#1c1b1b]">
@@ -199,7 +336,7 @@ export default function DiagnosticoPage() {
         </section>
 
         {/* ── JUAN TABARES BIO ── */}
-        <section className="py-24 bg-[#fcf9f8]">
+        <section className="py-24 bg-[#f6f3f2]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-xl p-8 md:p-12 border border-[#c2c6d8]/10 flex flex-col md:flex-row items-center gap-12 shadow-sm">
               {/* Photo */}
@@ -246,7 +383,7 @@ export default function DiagnosticoPage() {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="py-24 bg-[#f6f3f2]">
+        <section className="py-24 bg-[#fcf9f8]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
               className="text-3xl font-black mb-12 text-center text-[#1c1b1b]"
@@ -258,7 +395,7 @@ export default function DiagnosticoPage() {
               {faqItems.map((item) => (
                 <details
                   key={item.q}
-                  className="group bg-[#fcf9f8] rounded-xl p-6 border border-[#c2c6d8]/10 cursor-pointer"
+                  className="group bg-[#f6f3f2] rounded-xl p-6 border border-[#c2c6d8]/10 cursor-pointer"
                   {...(item.open ? { open: true } : {})}
                 >
                   <summary className="flex justify-between items-center font-bold text-lg list-none text-[#1c1b1b]" style={{ fontFamily: "Manrope, sans-serif" }}>
@@ -278,10 +415,10 @@ export default function DiagnosticoPage() {
             {/* CTA */}
             <div className="mt-16 text-center">
               <a
-                href="#hero"
+                href="#solicitar"
                 className="inline-flex items-center gap-3 bg-[#0066ff] text-white px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all active:scale-95 uppercase tracking-wide text-sm"
               >
-                Sesión de Diagnóstico Gratuito
+                Solicitar Diagnóstico Gratuito
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>

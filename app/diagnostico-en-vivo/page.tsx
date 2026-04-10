@@ -202,9 +202,14 @@ export default function DiagnosticoPage() {
         <section className="py-24 bg-[#fcf9f8]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-xl p-8 md:p-12 border border-[#c2c6d8]/10 flex flex-col md:flex-row items-center gap-12 shadow-sm">
-              {/* Avatar */}
-              <div className="w-40 h-40 md:w-56 md:h-56 rounded-xl flex-shrink-0 bg-[#0066ff]/10 flex items-center justify-center">
-                <span className="text-6xl font-black text-[#0050cb]" style={{ fontFamily: "Manrope, sans-serif" }}>JT</span>
+              {/* Photo */}
+              <div className="w-40 h-40 md:w-56 md:h-56 rounded-xl flex-shrink-0 overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/photos/juan-tabares.jpg"
+                  alt="Juan Tabares — Performance Marketing Lead"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               {/* Bio */}
               <div className="flex-1">

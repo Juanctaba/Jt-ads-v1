@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export default function ContactoForm() {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full">
       <iframe
         src="https://api.jtads.com/widget/form/D4pmggg9CUScHXgsEcpg"
         style={{ width: "100%", height: "602px", border: "none", borderRadius: "10px", display: "block" }}

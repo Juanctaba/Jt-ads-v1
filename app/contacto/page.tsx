@@ -131,7 +131,7 @@ export default function ContactoPage() {
               </div>
 
               {/* Right — 5 cols: Simple form */}
-              <div className="lg:col-span-5 bg-[#f6f3f2] p-8 md:p-12 rounded-xl">
+              <div className="lg:col-span-5 bg-[#f6f3f2] p-8 md:p-12 rounded-xl self-start">
                 <h2
                   className="text-xl font-bold mb-6 text-[#1c1b1b]"
                   style={{ fontFamily: "Manrope, sans-serif" }}

@@ -58,13 +58,13 @@ const steps = [
   },
   {
     n: "03",
-    title: "Te llevás las conclusiones",
+    title: "Te llevas las conclusiones",
     body: "Los hallazgos y prioridades son tuyos. Claridad sobre qué cambiar, en qué orden, y por qué cada punto impacta tu negocio.",
   },
   {
     n: "04",
-    title: "Decidís si seguimos",
-    body: "Si querés implementar con nosotros, conversamos. Si preferís hacerlo internamente, perfecto. Sin presión ni obligaciones.",
+    title: "Decides si seguimos",
+    body: "Si quieres implementar con nosotros, conversamos. Si prefieres hacerlo internamente, perfecto. Sin presión ni obligaciones.",
   },
 ];
 
@@ -331,7 +331,7 @@ export default function HomePage() {
                     presupuestos donde el margen no justifica la inversión en un equipo senior.
                   </p>
                   <p className="text-sm italic text-[var(--text-muted)]">
-                    "Si no cumplís exactamente este perfil, cuéntanos igual. Si podemos ayudarte,
+                    "Si no cumples exactamente este perfil, cuéntanos igual. Si podemos ayudarte,
                     lo hacemos. Si no, te orientamos sin costo."
                   </p>
                 </div>

@@ -31,7 +31,7 @@ export default function Footer() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg"
+                src="/google-partner-badge.svg"
                 alt="Google Partner"
                 style={{ height: "60px", width: "auto" }}
               />

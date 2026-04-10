@@ -84,13 +84,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/agencia-google-ads-latam" className="hover:text-[var(--text-primary)] transition-colors">
+                <Link href="/agencia-google-ads-chile" className="hover:text-[var(--text-primary)] transition-colors">
                   Google Ads Chile
                 </Link>
               </li>
               <li>
-                <Link href="/agencia-google-ads-latam" className="hover:text-[var(--text-primary)] transition-colors">
+                <Link href="/agencia-google-ads-argentina" className="hover:text-[var(--text-primary)] transition-colors">
                   Google Ads Argentina
+                </Link>
+              </li>
+              <li>
+                <Link href="/agencia-google-ads-usa" className="hover:text-[var(--text-primary)] transition-colors">
+                  Google Ads USA
                 </Link>
               </li>
             </ul>

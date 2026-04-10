@@ -289,7 +289,7 @@ export default function DiagnosticoPage() {
                 Te contactamos en menos de 4 horas hábiles para agendar la sesión.
               </p>
             </div>
-            <div className="bg-white rounded-2xl shadow-sm border border-[#c2c6d8]/10 p-2">
+            <div className="bg-white rounded-2xl shadow-sm border border-[#c2c6d8]/10 p-2 overflow-hidden">
               <AuditoriaForm />
             </div>
           </div>

@@ -4,10 +4,10 @@ import Script from "next/script";
 
 export default function AuditoriaForm() {
   return (
-    <div style={{ width: "100%", height: "814px" }}>
+    <div className="w-full overflow-hidden">
       <iframe
         src="https://api.jtads.com/widget/form/ExDq9WBVQ74hXB8YBmkH"
-        style={{ width: "100%", height: "100%", border: "none", borderRadius: "10px" }}
+        style={{ width: "100%", height: "814px", border: "none", borderRadius: "10px", display: "block" }}
         id="inline-ExDq9WBVQ74hXB8YBmkH"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
@@ -21,6 +21,7 @@ export default function AuditoriaForm() {
         data-layout-iframe-id="inline-ExDq9WBVQ74hXB8YBmkH"
         data-form-id="ExDq9WBVQ74hXB8YBmkH"
         title="Form LP JT Ads Nuevo Diagnostico"
+        scrolling="no"
       />
       <Script
         src="https://api.jtads.com/js/form_embed.js"

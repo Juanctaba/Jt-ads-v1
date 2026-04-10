@@ -31,15 +31,14 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
+        {/* Right side: hamburger (mobile only) + CTA always visible */}
+        <div className="flex items-center gap-2">
+          <MobileMenu />
           <CTAButton href="/diagnostico-en-vivo" size="sm">
-            Reservar Sesión
+            <span className="hidden sm:inline">Reservar Sesión</span>
+            <span className="sm:hidden">Reservar</span>
           </CTAButton>
         </div>
-
-        {/* Mobile: hamburger + dropdown */}
-        <MobileMenu />
       </div>
     </header>
   );

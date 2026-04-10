@@ -51,15 +51,6 @@ export default function MobileMenu() {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-3 mt-1 border-t border-gray-100">
-              <Link
-                href="/diagnostico-en-vivo"
-                onClick={() => setOpen(false)}
-                className="block w-full text-center bg-[#0066ff] text-white text-sm font-semibold py-3 px-4 rounded-[4px] hover:bg-[#0050cb] transition-colors"
-              >
-                Reservar Sesión
-              </Link>
-            </div>
           </nav>
         </div>
       )}

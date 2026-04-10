@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Contacto — JT Ads | Paid Media para Empresas en LATAM",
   description:
     "¿Tienes dudas sobre tu estrategia de ads? Respondemos en menos de 24h hábiles. Sin llamadas de ventas, sin procesos complicados.",
-  alternates: { canonical: "https://ads.juantabares.co/contacto" },
+  alternates: { canonical: "https://jtads.com/contacto" },
 };
 
 const icpRows = [

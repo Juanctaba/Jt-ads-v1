@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Agencia de Google Ads en LATAM — JT Ads | Sesión de Diagnóstico Gratis",
   description:
     "Especialistas en Google Ads para empresas en México, Colombia, Chile, Argentina y USA. Tracking server-side, sin contratos largos. Primera sesión de diagnóstico sin costo.",
-  alternates: { canonical: "https://ads.juantabares.co/agencia-google-ads-latam" },
+  alternates: { canonical: "https://jtads.com/agencia-google-ads-latam" },
   keywords: [
     "agencia google ads latam",
     "agencia google ads mexico",
@@ -137,9 +137,23 @@ const faqItems = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
 export default function AgenciaGoogleAdsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-0 bg-white text-slate-900 antialiased">
 

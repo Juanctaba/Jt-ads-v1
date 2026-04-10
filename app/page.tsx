@@ -4,12 +4,12 @@ import Footer from "@/components/layout/Footer";
 import CTAButton from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
-  title: "JT Ads — Paid Media para Empresas en LATAM",
+  title: "Agencia de Google Ads en LATAM — JT Ads | Performance Marketing",
   description:
     "Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior con experiencia gestionando $500k+/mes. Sin contratos largos.",
-  alternates: { canonical: "https://ads.juantabares.co" },
+  alternates: { canonical: "https://jtads.com" },
   openGraph: {
-    title: "JT Ads — Paid Media para Empresas en LATAM",
+    title: "Agencia de Google Ads en LATAM — JT Ads | Performance Marketing",
     description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, $500k+/mes gestionados.",
     images: ["/og-image.png"],
   },
@@ -75,9 +75,25 @@ const icpItems = [
   "Mercados LATAM Tier 1 (México, Colombia, Chile, Argentina) + USA",
 ];
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "JT Ads",
+  url: "https://jtads.com",
+  logo: "https://jtads.com/logo-blue.png",
+  description: "Agencia de Google Ads y performance marketing para empresas en LATAM y USA. Equipo senior con experiencia gestionando $500k+/mes.",
+  areaServed: ["México", "Colombia", "Chile", "Argentina", "USA"],
+  knowsAbout: ["Google Ads", "Meta Ads", "LinkedIn Ads", "Performance Marketing", "Server-Side Tracking"],
+  sameAs: ["https://www.linkedin.com/in/juan-tabares-b1272b58/"],
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <Navbar />
       <main className="flex-1">
 
@@ -92,8 +108,8 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-[var(--text-primary)]">
-                Paid media para equipos que ya{" "}
-                <span className="text-[var(--accent)]">saben lo que hacen.</span>
+                Google Ads y paid media para{" "}
+                <span className="text-[var(--accent)]">empresas en LATAM que exigen resultados reales.</span>
               </h1>
 
               <p className="text-lg md:text-xl leading-relaxed mb-10 text-[var(--text-secondary)] max-w-xl">

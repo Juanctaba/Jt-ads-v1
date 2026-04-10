@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "./AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Diagnóstico Gratuito de Ads | JT Ads Performance",
+  title: "Diagnóstico Gratuito de Google Ads | Auditoría en Vivo — JT Ads",
   description:
     "Auditamos tu cuenta de Google Ads, Meta o LinkedIn sin costo. Analizamos +20 puntos críticos para encontrar oportunidades de crecimiento inmediato.",
   alternates: { canonical: "https://jtads.com/diagnostico-en-vivo" },

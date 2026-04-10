@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Casos de Éxito — JT Ads Performance Marketing",
   description:
     "Resultados reales de empresas en LATAM y USA que corrigieron su tracking y estructura de campañas. CPL real vs. reportado. Sin métricas infladas.",
-  alternates: { canonical: "https://ads.juantabares.co/casos-de-exito" },
+  alternates: { canonical: "https://jtads.com/casos-de-exito" },
 };
 
 const cases = [

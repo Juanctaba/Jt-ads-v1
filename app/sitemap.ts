@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://ads.juantabares.co";
+  const base = "https://jtads.com";
   return [
     { url: base, lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
     { url: `${base}/diagnostico-en-vivo`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },

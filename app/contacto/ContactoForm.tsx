@@ -4,11 +4,11 @@ import Script from "next/script";
 
 export default function ContactoForm() {
   return (
-    <div style={{ width: "100%", height: "455px" }}>
+    <div style={{ width: "100%", height: "602px" }}>
       <iframe
-        src="https://api.jtads.com/widget/form/XDcMt9HwgIQDJIpP8AIP"
+        src="https://api.jtads.com/widget/form/D4pmggg9CUScHXgsEcpg"
         style={{ width: "100%", height: "100%", border: "none", borderRadius: "10px" }}
-        id="inline-XDcMt9HwgIQDJIpP8AIP"
+        id="inline-D4pmggg9CUScHXgsEcpg"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -16,11 +16,11 @@ export default function ContactoForm() {
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Form LP JT Ads Nuevo Contacto"
-        data-height="455"
-        data-layout-iframe-id="inline-XDcMt9HwgIQDJIpP8AIP"
-        data-form-id="XDcMt9HwgIQDJIpP8AIP"
-        title="Form LP JT Ads Nuevo Contacto"
+        data-form-name="Form LP JT Ads Nuevo Contacto v2"
+        data-height="602"
+        data-layout-iframe-id="inline-D4pmggg9CUScHXgsEcpg"
+        data-form-id="D4pmggg9CUScHXgsEcpg"
+        title="Form LP JT Ads Nuevo Contacto v2"
       />
       <Script
         src="https://api.jtads.com/js/form_embed.js"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import DiagnosticoForm from "@/components/forms/DiagnosticoForm";
+import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
   title: "Agencia de Google Ads en LATAM — JT Ads | Sesión de Diagnóstico Gratis",
@@ -380,7 +380,7 @@ export default function AgenciaGoogleAdsPage() {
                     Sesión de 60 minutos en vivo. Te respondemos en menos de 48h hábiles.
                   </p>
                 </div>
-                <DiagnosticoForm />
+                <AuditoriaForm />
               </div>
             </div>
           </div>

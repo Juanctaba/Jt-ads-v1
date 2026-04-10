@@ -6,6 +6,7 @@ import Link from "next/link";
 const links = [
   { href: "/agencia-google-ads-latam", label: "Google Ads" },
   { href: "/casos-de-exito", label: "Casos" },
+  { href: "/blog", label: "Blog" },
   { href: "/contacto", label: "Contacto" },
 ];
 

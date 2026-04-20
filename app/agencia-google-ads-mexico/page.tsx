@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "Agencia de Google Ads en México — JT Ads | Performance Marketing",
   description:
     "Especialistas en Google Ads para empresas en México. Tracking server-side, sin contratos largos. Gestión senior con $500k+/mes de experiencia. Primera sesión sin costo.",
-  alternates: { canonical: "https://jtads.com/agencia-google-ads-mexico" },
+  alternates: {
+    canonical: "https://jtads.com/agencia-google-ads-mexico",
+    languages: { "es-MX": "https://jtads.com/agencia-google-ads-mexico" },
+  },
   keywords: [
     "agencia google ads mexico",
     "google ads cdmx",
@@ -16,6 +19,13 @@ export const metadata: Metadata = {
     "agencia google ads mexicana",
     "performance marketing mexico",
   ],
+  openGraph: {
+    title: "Agencia de Google Ads en México — JT Ads | Performance Marketing",
+    description: "Especialistas en Google Ads para empresas en México. Tracking server-side, sin contratos. Gestión senior. Primera sesión sin costo.",
+    images: ["/og-image.png"],
+    url: "https://jtads.com/agencia-google-ads-mexico",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const comparisonRows = [
@@ -182,12 +192,25 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Google Ads México", item: "https://jtads.com/agencia-google-ads-mexico" },
+  ],
+};
+
 export default function AgenciaGoogleAdsMexicoPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
       <main
@@ -227,7 +250,7 @@ export default function AgenciaGoogleAdsMexicoPage() {
                 {/* Stats row */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "$2M+", label: "Ad Spend en MX" },
+                    { value: "$2M+ USD", label: "Ad Spend en MX" },
                     { value: "60+", label: "Empresas Mexicanas" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (

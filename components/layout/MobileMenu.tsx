@@ -4,10 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 
 const links = [
-  { href: "/agencia-google-ads-latam", label: "Google Ads" },
-  { href: "/casos-de-exito", label: "Casos" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contacto", label: "Contacto" },
+  { href: "/agencia-google-ads-latam", label: "Google Ads", sub: true },
+  { href: "/agencia-meta-ads-latam", label: "Meta Ads", sub: true },
+  { href: "/agencia-linkedin-ads-latam", label: "LinkedIn Ads", sub: true },
+  { href: "/casos-de-exito", label: "Casos", sub: false },
+  { href: "/blog", label: "Blog", sub: false },
+  { href: "/contacto", label: "Contacto", sub: false },
 ];
 
 export default function MobileMenu() {
@@ -42,7 +44,22 @@ export default function MobileMenu() {
       {open && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
           <nav className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1">
-            {links.map((link) => (
+            {/* Servicios label */}
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#727687] px-3 pt-2 pb-1">
+              Servicios
+            </p>
+            {links.filter(l => l.sub).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="text-[#1c1b1b] text-sm font-medium py-2.5 px-3 pl-5 rounded-lg hover:bg-[#f6f3f2] transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="h-px bg-gray-100 my-2" />
+            {links.filter(l => !l.sub).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

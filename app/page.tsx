@@ -4,15 +4,23 @@ import Footer from "@/components/layout/Footer";
 import CTAButton from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
-  title: "Agencia de Google Ads en LATAM — JT Ads | Performance Marketing",
+  title: "JT Ads | Agencia Google Ads Performance para LATAM + USA",
   description:
     "Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior con experiencia gestionando $500k+/mes. Sin contratos largos.",
-  alternates: { canonical: "https://jtads.com" },
+  alternates: {
+    canonical: "https://jtads.com",
+    languages: {
+      "es": "https://jtads.com",
+      "x-default": "https://jtads.com",
+    },
+  },
   openGraph: {
-    title: "Agencia de Google Ads en LATAM — JT Ads | Performance Marketing",
+    title: "JT Ads | Agencia Google Ads Performance para LATAM + USA",
     description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, $500k+/mes gestionados.",
     images: ["/og-image.png"],
+    url: "https://jtads.com",
   },
+  twitter: { card: "summary_large_image" },
 };
 
 const problems = [
@@ -70,7 +78,7 @@ const steps = [
 
 const icpItems = [
   "Empresas con equipo de marketing interno",
-  "Ad spend mensual entre $5,000 y $50,000 USD",
+  "Ad spend mensual de $5,000 USD en adelante",
   "Director de Marketing, CMO o VP de Growth",
   "Mercados LATAM Tier 1 (México, Colombia, Chile, Argentina) + USA",
 ];
@@ -87,9 +95,28 @@ const organizationSchema = {
   sameAs: ["https://www.linkedin.com/in/juan-tabares-b1272b58/"],
 };
 
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "JT Ads",
+  url: "https://jtads.com",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://jtads.com/blog?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description:
     "Los modelos de precios de agencias de Google Ads en México, Colombia y Chile. Qué incluye cada uno, cuál conviene según tu presupuesto y qué señales de alerta debes evitar.",
   alternates: {
-    canonical:
-      "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
+    canonical: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
+    languages: { "es": "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam" },
   },
   openGraph: {
     title:
@@ -17,12 +17,51 @@ export const metadata: Metadata = {
     description:
       "Guía de precios reales de agencias de Google Ads en México, Colombia y Chile. Modelos de cobro, qué incluir y señales de alerta.",
     images: ["/og-image.png"],
+    url: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
   },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales en 2026",
+  author: {
+    "@type": "Person",
+    name: "Juan Tabares",
+    url: "https://www.linkedin.com/in/juan-tabares-b1272b58/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "JT Ads",
+    logo: { "@type": "ImageObject", url: "https://jtads.com/logo-blue.png" },
+  },
+  datePublished: "2026-04-01",
+  dateModified: "2026-04-09",
+  image: "https://jtads.com/og-image.png",
+  url: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://jtads.com/blog" },
+    { "@type": "ListItem", position: 3, name: "¿Cuánto cobra una agencia de Google Ads?", item: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam" },
+  ],
 };
 
 export default function PostPreciosAgencia() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
 
       {/* Hero */}
@@ -421,6 +460,41 @@ export default function PostPreciosAgencia() {
           </div>
         </div>
       </article>
+
+      {/* CTA */}
+      <section className="bg-[#0050cb] py-16 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-black text-white mb-4" style={{ fontFamily: "Manrope, sans-serif" }}>
+            ¿Quieres saber exactamente qué estás pagando de más?
+          </h2>
+          <p className="text-white/80 mb-8">
+            En 60 minutos te mostramos en vivo qué está fallando en tu cuenta y cuánto te está costando.
+          </p>
+          <a
+            href="/diagnostico-en-vivo"
+            className="inline-block bg-white text-[#0050cb] font-bold px-8 py-4 rounded-sm hover:bg-[#f6f3f2] transition-colors"
+          >
+            Solicitar diagnóstico gratuito
+          </a>
+        </div>
+      </section>
+
+      {/* Related */}
+      <section className="bg-[#fcf9f8] py-12 px-6">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#727687] mb-4">Lee también</p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="/blog/tracking-server-side-cpl-plataforma" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
+              <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Tracking</p>
+              <p className="text-sm font-semibold text-[#1c1b1b]">Por qué el CPL de tu plataforma miente y cómo solucionarlo</p>
+            </a>
+            <a href="/agencia-google-ads-latam" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
+              <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Servicios</p>
+              <p className="text-sm font-semibold text-[#1c1b1b]">Agencia de Google Ads para LATAM — cómo trabajamos</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>

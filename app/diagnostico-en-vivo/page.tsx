@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "./AuditoriaForm";
 
 export const metadata: Metadata = {
@@ -8,6 +6,13 @@ export const metadata: Metadata = {
   description:
     "Auditamos tu cuenta de Google Ads, Meta o LinkedIn sin costo. Analizamos +20 puntos críticos para encontrar oportunidades de crecimiento inmediato.",
   alternates: { canonical: "https://jtads.com/diagnostico-en-vivo" },
+  openGraph: {
+    title: "Diagnóstico Gratuito de Google Ads | Auditoría en Vivo — JT Ads",
+    description: "Auditamos tu cuenta de Google Ads sin costo. +20 puntos críticos. Te contactamos en <4 horas hábiles.",
+    images: ["/og-image.png"],
+    url: "https://jtads.com/diagnostico-en-vivo",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const checklist = [
@@ -195,9 +200,41 @@ function DiagnosticoIllustration() {
 }
 
 export default function DiagnosticoPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+      { "@type": "ListItem", position: 2, name: "Diagnóstico Gratuito", item: "https://jtads.com/diagnostico-en-vivo" },
+    ],
+  };
+
   return (
     <>
-      <Navbar />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {/* Header mínimo — solo logo, sin navegación */}
+      <header className="bg-[#fcf9f8] border-b border-[#c2c6d8]/15 px-6 py-4 flex items-center justify-center">
+        <a href="https://jtads.com" aria-label="JT Ads">
+          <img src="/logo-blue.png" alt="JT Ads" className="h-7" />
+        </a>
+      </header>
       <main className="pt-0 bg-[#fcf9f8] text-[#1c1b1b] antialiased" style={{ fontFamily: "Inter, sans-serif" }}>
 
         {/* ── HERO ── */}
@@ -238,7 +275,7 @@ export default function DiagnosticoPage() {
                   {[
                     { value: "$5M+", label: "Inversión Auditada" },
                     { value: "200+", label: "Marcas Optimizadas" },
-                    { value: "48h", label: "Tiempo de Respuesta" },
+                    { value: "<4h", label: "Tiempo de Respuesta" },
                   ].map((stat, i) => (
                     <div key={stat.label} className="flex items-center gap-6">
                       {i > 0 && <div className="w-px h-12 bg-[#c2c6d8] opacity-40" />}
@@ -428,7 +465,10 @@ export default function DiagnosticoPage() {
         </section>
 
       </main>
-      <Footer />
+      {/* Footer mínimo — sin links */}
+      <footer className="bg-[#f6f3f2] border-t border-[#c2c6d8]/15 px-6 py-6 text-center">
+        <p className="text-xs text-[#727687]">© {new Date().getFullYear()} JT Ads. Todos los derechos reservados.</p>
+      </footer>
     </>
   );
 }

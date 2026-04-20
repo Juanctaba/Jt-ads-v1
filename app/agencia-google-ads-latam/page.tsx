@@ -7,7 +7,13 @@ export const metadata: Metadata = {
   title: "Agencia de Google Ads en LATAM — JT Ads | Sesión de Diagnóstico Gratis",
   description:
     "Especialistas en Google Ads para empresas en México, Colombia, Chile, Argentina y USA. Tracking server-side, sin contratos largos. Primera sesión de diagnóstico sin costo.",
-  alternates: { canonical: "https://jtads.com/agencia-google-ads-latam" },
+  alternates: {
+    canonical: "https://jtads.com/agencia-google-ads-latam",
+    languages: {
+      "es": "https://jtads.com/agencia-google-ads-latam",
+      "x-default": "https://jtads.com/agencia-google-ads-latam",
+    },
+  },
   keywords: [
     "agencia google ads latam",
     "agencia google ads mexico",
@@ -147,12 +153,25 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Agencia Google Ads LATAM", item: "https://jtads.com/agencia-google-ads-latam" },
+  ],
+};
+
 export default function AgenciaGoogleAdsPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
       <main className="pt-0 bg-white text-slate-900 antialiased">
@@ -400,6 +419,41 @@ export default function AgenciaGoogleAdsPage() {
             </div>
             <div className="bg-white rounded-2xl shadow-sm border border-[#c2c6d8]/10 p-2 overflow-hidden">
               <AuditoriaForm />
+            </div>
+          </div>
+        </section>
+
+        {/* ── MERCADOS ── */}
+        <section className="py-16 bg-[#f6f3f2]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#727687] mb-3 text-center">
+              Mercados donde operamos
+            </p>
+            <h2
+              className="text-2xl md:text-3xl font-black text-[#1c1b1b] text-center mb-10"
+              style={{ fontFamily: "Manrope, sans-serif" }}
+            >
+              Especializados en cada mercado de LATAM
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { href: "/agencia-google-ads-mexico", flag: "🇲🇽", label: "Google Ads México" },
+                { href: "/agencia-google-ads-colombia", flag: "🇨🇴", label: "Google Ads Colombia" },
+                { href: "/agencia-google-ads-chile", flag: "🇨🇱", label: "Google Ads Chile" },
+                { href: "/agencia-google-ads-argentina", flag: "🇦🇷", label: "Google Ads Argentina" },
+                { href: "/agencia-google-ads-usa", flag: "🇺🇸", label: "Google Ads USA" },
+              ].map((m) => (
+                <a
+                  key={m.href}
+                  href={m.href}
+                  className="flex flex-col items-center gap-2 bg-white rounded-xl p-5 text-center hover:shadow-md transition-shadow border border-[#c2c6d8]/10 group"
+                >
+                  <span className="text-3xl">{m.flag}</span>
+                  <span className="text-sm font-semibold text-[#1c1b1b] group-hover:text-[#0066ff] transition-colors">
+                    {m.label}
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
         </section>

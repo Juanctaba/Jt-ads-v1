@@ -239,9 +239,22 @@ function HeroIllustration() {
   );
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Casos de Éxito", item: "https://jtads.com/casos-de-exito" },
+  ],
+};
+
 export default function CasosDeExitoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main className="pt-0 bg-[#fcf9f8] text-[#1c1b1b] antialiased" style={{ fontFamily: "Inter, sans-serif" }}>
 
@@ -497,6 +510,79 @@ export default function CasosDeExitoPage() {
                     {p.title}
                   </h4>
                   <p className="text-sm text-[#424656] leading-relaxed">{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── MERCADOS ── */}
+        <section className="py-12 bg-[#f6f3f2]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-sm text-[#424656] mb-6">
+              Resultados similares para empresas en todo LATAM y USA
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { href: "/agencia-google-ads-mexico", label: "Google Ads México" },
+                { href: "/agencia-google-ads-colombia", label: "Google Ads Colombia" },
+                { href: "/agencia-google-ads-chile", label: "Google Ads Chile" },
+                { href: "/agencia-google-ads-argentina", label: "Google Ads Argentina" },
+                { href: "/agencia-google-ads-usa", label: "Google Ads USA" },
+              ].map((m) => (
+                <a
+                  key={m.href}
+                  href={m.href}
+                  className="px-4 py-2 rounded-full bg-white border border-[#c2c6d8]/20 text-sm font-medium text-[#424656] hover:text-[#0066ff] hover:border-[#0066ff]/30 transition-colors"
+                >
+                  {m.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── MARCAS ── */}
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#727687] mb-3">
+                Trayectoria
+              </p>
+              <h2
+                className="text-2xl md:text-3xl font-black text-[#1c1b1b]"
+                style={{ fontFamily: "Manrope, sans-serif" }}
+              >
+                Experiencia gestionando marcas líderes en LATAM
+              </h2>
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 items-center">
+              {[
+                { name: "Sodexo",              file: "sodexo_logo.png" },
+                { name: "Pluxee",              file: "logo-pluxee.png" },
+                { name: "Localiza",            file: "localiza_logo_2022.png" },
+                { name: "Renting Colombia",    file: "logo-renting.png" },
+                { name: "Hilton",              file: "hilton-logo.png" },
+                { name: "Atmopel",             file: "logo-atmopel.png" },
+                { name: "Betterfly",           file: "logo-betterfly.png" },
+                { name: "Kamina",              file: "logo-kamina.png" },
+                { name: "Ransomware Help",     file: "ransom-logo.png" },
+                { name: "Puntos Colombia",     file: "logo-puntos.png" },
+                { name: "GLT Logistics",       file: "logo_glt.png" },
+                { name: "ISC Connection",      file: "logo-iscconnection-group.png" },
+                { name: "Oro Express",         file: "cropped-logo-oroexpress-3.png" },
+                { name: "OPPO Mobile",         file: "oppo_logo_2019.png" },
+              ].map((brand) => (
+                <div
+                  key={brand.name}
+                  className="flex items-center justify-center p-3"
+                >
+                  <img
+                    src={`/logos-clientes/${brand.file}`}
+                    alt={brand.name}
+                    className="max-h-8 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-200 grayscale"
+                    title={brand.name}
+                  />
                 </div>
               ))}
             </div>

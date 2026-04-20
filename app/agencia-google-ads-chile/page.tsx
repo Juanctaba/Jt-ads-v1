@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "Agencia de Google Ads en Chile — JT Ads | Performance Marketing",
   description:
     "Especialistas en Google Ads para empresas en Chile. Tracking server-side, sin contratos largos. Gestión senior con $500k+/mes de experiencia. Primera sesión sin costo.",
-  alternates: { canonical: "https://jtads.com/agencia-google-ads-chile" },
+  alternates: {
+    canonical: "https://jtads.com/agencia-google-ads-chile",
+    languages: { "es-CL": "https://jtads.com/agencia-google-ads-chile" },
+  },
   keywords: [
     "agencia google ads chile",
     "google ads santiago",
@@ -15,6 +18,13 @@ export const metadata: Metadata = {
     "performance marketing chile",
     "google ads valparaiso",
   ],
+  openGraph: {
+    title: "Agencia de Google Ads en Chile — JT Ads | Performance Marketing",
+    description: "Especialistas en Google Ads para empresas en Chile. Optimizamos cada peso invertido. Tracking server-side, sin contratos. Primera sesión sin costo.",
+    images: ["/og-image.png"],
+    url: "https://jtads.com/agencia-google-ads-chile",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const faqJsonLd = {
@@ -300,12 +310,25 @@ const faqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Google Ads Chile", item: "https://jtads.com/agencia-google-ads-chile" },
+  ],
+};
+
 export default function AgenciaGoogleAdsChilePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
 
@@ -339,7 +362,7 @@ export default function AgenciaGoogleAdsChilePage() {
             {/* Stats */}
             <div className="flex flex-wrap gap-6 mb-8">
               {[
-                { label: "$1.2M+ Ad Spend en CL" },
+                { label: "$1.2M+ USD Ad Spend en CL" },
                 { label: "30+ Empresas Chilenas" },
                 { label: "< 4h Respuesta" },
               ].map((s) => (

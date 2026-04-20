@@ -4,10 +4,26 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia de Google Ads para Empresas en USA — JT Ads | Performance Marketing",
+  title: "Google Ads para Empresas en USA — JT Ads | Performance Marketing",
   description:
     "Google Ads para empresas en USA con operaciones en LATAM. Tracking server-side, gestión senior con $500k+/mes de experiencia. Primera sesión de diagnóstico sin costo.",
-  alternates: { canonical: "https://jtads.com/agencia-google-ads-usa" },
+  alternates: {
+    canonical: "https://jtads.com/agencia-google-ads-usa",
+    languages: { "es-US": "https://jtads.com/agencia-google-ads-usa" },
+  },
+  keywords: [
+    "agencia google ads usa",
+    "google ads hispanic market usa",
+    "google ads para empresas latinas en usa",
+    "performance marketing hispanico usa",
+  ],
+  openGraph: {
+    title: "Google Ads para Empresas en USA — JT Ads | Performance Marketing",
+    description: "Google Ads para empresas en USA con operaciones en LATAM. Equipo bilingüe, tracking server-side, gestión senior. Primera sesión de diagnóstico sin costo.",
+    images: ["/og-image.png"],
+    url: "https://jtads.com/agencia-google-ads-usa",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const comparisonRows = [
@@ -168,12 +184,25 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Google Ads USA", item: "https://jtads.com/agencia-google-ads-usa" },
+  ],
+};
+
 export default function AgenciaGoogleAdsUSAPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
       <main
@@ -210,7 +239,7 @@ export default function AgenciaGoogleAdsUSAPage() {
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "$3M+", label: "Ad Spend en USA" },
+                    { value: "$3M+ USD", label: "Ad Spend en USA" },
                     { value: "50+", label: "Cuentas USA/LATAM" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (

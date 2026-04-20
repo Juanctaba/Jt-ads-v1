@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const icpRows = [
   { criterio: "Estructura interna", detalle: "Equipo de marketing interno" },
-  { criterio: "Inversión Publicitaria", detalle: "$5k – $50k / mes" },
+  { criterio: "Inversión Publicitaria", detalle: "Más de $5,000 USD / mes" },
   { criterio: "Sector", detalle: "SaaS, B2B Tech, Fintech, Real Estate, Educación" },
   { criterio: "Mercados", detalle: "LATAM Tier 1 + USA" },
   { criterio: "Enfoque", detalle: "Performance & Rentabilidad" },
@@ -46,9 +46,22 @@ const expectations = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Contacto", item: "https://jtads.com/contacto" },
+  ],
+};
+
 export default function ContactoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main className="pt-0 bg-[#fcf9f8] text-[#1c1b1b] antialiased" style={{ fontFamily: "Inter, sans-serif" }}>
 

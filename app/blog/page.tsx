@@ -7,12 +7,16 @@ export const metadata: Metadata = {
   title: "Blog — Google Ads & Performance Marketing | JT Ads",
   description:
     "Recursos prácticos sobre Google Ads, tracking server-side y performance marketing para empresas en LATAM. Sin teoría — solo lo que funciona en cuentas reales.",
-  alternates: { canonical: "https://jtads.com/blog" },
+  alternates: {
+    canonical: "https://jtads.com/blog",
+    languages: { "es": "https://jtads.com/blog" },
+  },
   openGraph: {
     title: "Blog — Google Ads & Performance Marketing | JT Ads",
     description:
       "Recursos prácticos sobre Google Ads, tracking y performance marketing en LATAM.",
     images: ["/og-image.png"],
+    url: "https://jtads.com/blog",
   },
 };
 
@@ -37,11 +41,48 @@ const posts = [
     date: "Abril 2026",
     readTime: "10 min",
   },
+  {
+    slug: "como-reducir-cpl-google-ads-latam",
+    title: "Cómo reducir el CPL en Google Ads: 7 palancas reales para empresas en LATAM",
+    excerpt: "El CPL alto tiene causas concretas. Te explicamos las 7 palancas que ajustamos en cada cuenta para bajar el costo por lead sin sacrificar volumen ni calidad.",
+    category: "Optimización",
+    date: "Abril 2026",
+    readTime: "9 min",
+  },
+  {
+    slug: "performance-max-como-funciona-latam",
+    title: "Performance Max en LATAM: cómo funciona y cuándo realmente conviene usarlo",
+    excerpt: "Performance Max no es para todos. Explicamos cómo funciona el algoritmo, qué señales necesita y en qué casos conviene — o no — en el mercado latinoamericano.",
+    category: "Performance Max",
+    date: "Abril 2026",
+    readTime: "10 min",
+  },
+  {
+    slug: "google-ads-saas-b2b-latam",
+    title: "Google Ads para SaaS B2B en LATAM: guía completa 2026",
+    excerpt: "Estructura de campañas, tracking conectado al CRM, benchmarks de CPL por etapa del funnel y los tres errores que destruyen el rendimiento en cuentas activas de SaaS B2B.",
+    category: "SaaS & B2B",
+    date: "Abril 2026",
+    readTime: "11 min",
+  },
 ];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://jtads.com/blog" },
+  ],
+};
 
 export default function BlogPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
 
       {/* Hero */}
@@ -54,7 +95,7 @@ export default function BlogPage() {
             className="font-black text-white text-4xl md:text-5xl leading-tight mb-6"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
-            Recursos de Performance Marketing
+            Recursos de Google Ads y Performance Marketing para LATAM
           </h1>
           <p className="text-[#a8aab8] text-lg max-w-2xl mx-auto leading-relaxed">
             Sin teoría de manual. Solo lo que encontramos auditando cuentas

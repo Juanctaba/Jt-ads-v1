@@ -7,15 +7,24 @@ export const metadata: Metadata = {
   title: "Agencia de Google Ads en Argentina — JT Ads | Performance Marketing",
   description:
     "Especialistas en Google Ads para empresas en Argentina. Tracking server-side, sin contratos largos. Gestión senior con $500k+/mes de experiencia. Primera sesión sin costo.",
-  alternates: { canonical: "https://jtads.com/agencia-google-ads-argentina" },
+  alternates: {
+    canonical: "https://jtads.com/agencia-google-ads-argentina",
+    languages: { "es-AR": "https://jtads.com/agencia-google-ads-argentina" },
+  },
   keywords: [
     "agencia google ads argentina",
     "google ads buenos aires",
     "google ads cordoba",
     "google ads rosario",
-    "agencia google ads argentina",
     "performance marketing argentina",
   ],
+  openGraph: {
+    title: "Agencia de Google Ads en Argentina — JT Ads | Performance Marketing",
+    description: "Especialistas en Google Ads para empresas en Argentina. Gestión en USD en contexto inflacionario. Tracking server-side, sin contratos. Primera sesión sin costo.",
+    images: ["/og-image.png"],
+    url: "https://jtads.com/agencia-google-ads-argentina",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const comparisonRows = [
@@ -182,12 +191,25 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
+    { "@type": "ListItem", position: 2, name: "Google Ads Argentina", item: "https://jtads.com/agencia-google-ads-argentina" },
+  ],
+};
+
 export default function AgenciaGoogleAdsArgentinaPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
       <main
@@ -228,7 +250,7 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                 {/* Stats row */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "$800k+", label: "Ad Spend en AR" },
+                    { value: "$800k+ USD", label: "Ad Spend en AR" },
                     { value: "25+", label: "Empresas Argentinas" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (

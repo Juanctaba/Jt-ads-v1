@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CTAButton from "@/components/ui/CTAButton";
 import MobileMenu from "@/components/layout/MobileMenu";
+import ServicesDropdown from "@/components/layout/ServicesDropdown";
 
 export default function Navbar() {
   return (
@@ -20,9 +21,7 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-[var(--text-secondary)]">
-          <Link href="/agencia-google-ads-latam" className="hover:text-[var(--text-primary)] transition-colors">
-            Google Ads
-          </Link>
+          <ServicesDropdown />
           <Link href="/casos-de-exito" className="hover:text-[var(--text-primary)] transition-colors">
             Casos
           </Link>

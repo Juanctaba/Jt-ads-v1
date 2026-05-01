@@ -4,9 +4,9 @@ import Footer from "@/components/layout/Footer";
 import CTAButton from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
-  title: "JT Ads | Agencia Google Ads Performance para LATAM + USA",
+  title: "JT Ads | Agencia de Performance Marketing — Google Ads, Meta y LinkedIn LATAM",
   description:
-    "Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior con experiencia gestionando $500k+/mes. Sin contratos largos.",
+    "Agencia de performance marketing para empresas en LATAM. Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior con experiencia gestionando $500k+/mes. Sin contratos largos.",
   alternates: {
     canonical: "https://jtads.com",
     languages: {
@@ -135,7 +135,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-[var(--text-primary)]">
-                Google Ads y paid media para{" "}
+                Agencia de performance marketing para{" "}
                 <span className="text-[var(--accent)]">empresas en LATAM que exigen resultados reales.</span>
               </h1>
 
@@ -379,6 +379,48 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Brand logos ── */}
+        <section className="py-16 bg-white border-t border-gray-100">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#727687] mb-3">Trayectoria</p>
+              <h2
+                className="text-2xl md:text-3xl font-black text-[#1c1b1b]"
+                style={{ fontFamily: "Manrope, sans-serif" }}
+              >
+                Experiencia gestionando marcas líderes en LATAM
+              </h2>
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 items-center">
+              {[
+                { name: "Sodexo",           file: "sodexo_logo.png" },
+                { name: "Pluxee",           file: "logo-pluxee.png" },
+                { name: "Localiza",         file: "localiza_logo_2022.png" },
+                { name: "Renting Colombia", file: "logo-renting.png" },
+                { name: "Hilton",           file: "hilton-logo.png" },
+                { name: "Atmopel",          file: "logo-atmopel.png" },
+                { name: "Betterfly",        file: "logo-betterfly.png" },
+                { name: "Kamina",           file: "logo-kamina.png" },
+                { name: "Ransomware Help",  file: "ransom-logo.png" },
+                { name: "Puntos Colombia",  file: "logo-puntos.png" },
+                { name: "GLT Logistics",    file: "logo_glt.png" },
+                { name: "ISC Connection",   file: "logo-iscconnection-group.png" },
+                { name: "Oro Express",      file: "cropped-logo-oroexpress-3.png" },
+                { name: "OPPO Mobile",      file: "oppo_logo_2019.png" },
+              ].map((brand) => (
+                <div key={brand.name} className="flex items-center justify-center p-3">
+                  <img
+                    src={`/logos-clientes/${brand.file}`}
+                    alt={brand.name}
+                    className="max-h-8 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-200 grayscale"
+                    title={brand.name}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>

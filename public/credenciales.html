@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JT Ads — Credenciales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    /* ─────────────────────────────────────────────
+       TOKENS — exact match al design system del sitio
+    ───────────────────────────────────────────── */
+    :root {
+      /* Palette warm */
+      --warm-0:   #fcf9f8;
+      --warm-1:   #f6f3f2;
+      --warm-2:   #e5e2e1;
+      --warm-3:   #dcd9d9;
+
+      /* Dark (brownish, NOT pure black) */
+      --dark-0:   #1c1b1b;
+      --dark-1:   #424656;
+      --dark-2:   #727687;
+      --dark-3:   #c2c6d8;
+
+      /* Accent blue */
+      --blue:     #0066ff;
+      --blue-dk:  #0050cb;
+      --blue-lt:  #9bb4fe;
+      --blue-bg:  #dae1ff;
+      --blue-5:   rgba(0,102,255,0.05);
+
+      /* Status */
+      --red-w:    #a33200;
+      --green:    #16a34a;
+
+      /* Fonts */
+      --head:     'Manrope', sans-serif;
+      --body:     'Inter', sans-serif;
+
+      /* Responsive scale */
+      --xl:  clamp(2rem, 5.5vw, 4.5rem);
+      --lg:  clamp(1.4rem, 3.5vw, 2.8rem);
+      --md:  clamp(1.1rem, 2.2vw, 1.9rem);
+      --sm:  clamp(0.82rem, 1.3vw, 1rem);
+      --xs:  clamp(0.7rem,  1vw,  0.82rem);
+      --lbl: 0.625rem;
+
+      --pad:  clamp(2rem, 5vw, 5rem);
+      --gap:  clamp(0.75rem, 1.8vw, 1.25rem);
+    }
+
+    /* ─── RESET + SCROLL SNAP ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      height: 100%;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: var(--body);
+      background: var(--dark-0);
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── SLIDE BASE ─── */
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      scroll-snap-align: start;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      padding: var(--pad);
+    }
+    .inner   { max-width: 1160px; margin: 0 auto; width: 100%; }
+    .inner-c { max-width: 860px;  margin: 0 auto; width: 100%; text-align: center; }
+
+    /* ─── PROGRESS BAR ─── */
+    #pb {
+      position: fixed; top: 0; left: 0;
+      height: 2px; background: var(--blue);
+      z-index: 200; transition: width .4s ease; width: 0%;
+    }
+
+    /* ─── NAV DOTS ─── */
+    #nd {
+      position: fixed; right: clamp(.6rem,1.5vw,1.2rem);
+      top: 50%; transform: translateY(-50%);
+      display: flex; flex-direction: column; gap: 7px; z-index: 200;
+    }
+    .d {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      cursor: pointer; transition: all .3s;
+      border: none; outline: none;
+    }
+    .d.on { background: var(--blue); transform: scale(1.5); }
+
+    /* Dots color override for light slides */
+    body.light-slide .d { background: rgba(28,27,27,.18); }
+    body.light-slide .d.on { background: var(--blue); }
+
+    /* ─── SLIDE NUM ─── */
+    .sn {
+      position: absolute;
+      bottom: clamp(.75rem,2vw,1.25rem);
+      right: var(--pad);
+      font-size: var(--lbl);
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .25;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    .r   { opacity: 0; transform: translateY(22px);
+           transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+    .rl  { opacity: 0; transform: translateX(-26px);
+           transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+    .rs  { opacity: 0; transform: scale(.94);
+           transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1); }
+    .slide.vis .r,
+    .slide.vis .rl,
+    .slide.vis .rs { opacity: 1; transform: none; }
+    .r:nth-child(1),.rl:nth-child(1),.rs:nth-child(1)  { transition-delay: .05s; }
+    .r:nth-child(2),.rl:nth-child(2),.rs:nth-child(2)  { transition-delay: .13s; }
+    .r:nth-child(3),.rl:nth-child(3),.rs:nth-child(3)  { transition-delay: .21s; }
+    .r:nth-child(4),.rs:nth-child(4)  { transition-delay: .29s; }
+    .r:nth-child(5)  { transition-delay: .37s; }
+    .r:nth-child(6)  { transition-delay: .45s; }
+    .r:nth-child(7)  { transition-delay: .53s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .r,.rl,.rs { transition: opacity .3s ease; transform: none; }
+    }
+
+    /* ─── MICRO LABEL — exact site style ─── */
+    .micro {
+      font-family: var(--body);
+      font-size: var(--lbl);
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--dark-2);
+    }
+    .micro-w { color: rgba(255,255,255,.45); }
+
+    /* ─── BADGE — exact site style ─── */
+    .badge-blue {
+      display: inline-block;
+      padding: .3em 1em;
+      background: var(--blue-bg);
+      color: #294487;
+      border-radius: 99px;
+      font-size: var(--lbl);
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .badge-dark {
+      display: inline-block;
+      padding: .3em 1em;
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.65);
+      border-radius: 99px;
+      font-size: var(--lbl);
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .badge-accent {
+      display: inline-block;
+      padding: .25em .75em;
+      background: var(--blue);
+      color: white;
+      border-radius: 6px;
+      font-size: var(--lbl);
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    /* ─── SECTION DIVIDER — exact border-l-4 style ─── */
+    .sec-head {
+      border-left: 4px solid var(--blue);
+      padding-left: 1.25em;
+      margin-bottom: clamp(1rem,2.5vh,2rem);
+    }
+    .sec-head h2 {
+      font-family: var(--head);
+      font-size: var(--md);
+      font-weight: 900;
+      color: var(--dark-0);
+      line-height: 1.1;
+    }
+    .sec-head p { font-size: var(--xs); color: var(--dark-1); margin-top: .3em; }
+
+    /* ─── CARD — exact site shadow ─── */
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(28,27,27,.06), 0 0 0 1px rgba(194,198,216,.15);
+    }
+    .card-head {
+      background: var(--warm-1);
+      padding: clamp(.6rem,1.2vw,.9rem) clamp(.9rem,2vw,1.4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+    }
+
+    /* ─── RESULT ROW — exact site before/after ─── */
+    .res-row { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; margin-bottom: .45rem; }
+    .b4,.af  { border-radius: 8px; padding: clamp(.5rem,.9vw,.75rem); }
+    .b4 { background: var(--warm-1); }
+    .af { background: var(--blue-5); }
+    .res-lbl { display: block; font-size: calc(var(--lbl)*.95); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .2em; }
+    .b4 .res-lbl { color: var(--dark-2); }
+    .af .res-lbl { color: var(--blue-dk); }
+    .b4 .val { font-weight: 700; font-size: var(--xs); color: var(--dark-0); opacity: .4; text-decoration: line-through; }
+    .af .val { font-weight: 800; font-size: var(--xs); color: var(--blue); }
+    .delta {
+      font-size: calc(var(--lbl)*1.05); font-weight: 800;
+      background: var(--blue-bg); color: #294487;
+      padding: .15em .5em; border-radius: 99px; margin-left: .3em;
+    }
+    .res-metric { font-size: calc(var(--lbl)*.95); color: var(--dark-2); grid-column: 1/-1; margin-top: -.2rem; }
+
+    /* ─────────────────────────────────────────────
+       SHORT VIEWPORT SCALING
+    ───────────────────────────────────────────── */
+    @media (max-height: 700px) {
+      :root { --xl: clamp(1.6rem,4.5vw,3.2rem); --lg: clamp(1.1rem,3vw,2rem); --pad: clamp(1.25rem,3.5vw,3rem); --gap: clamp(.5rem,1.3vw,1rem); }
+    }
+    @media (max-height: 580px) {
+      :root { --xl: clamp(1.25rem,4vw,2.4rem); --lg: clamp(.9rem,2.5vw,1.6rem); --pad: clamp(.9rem,2.5vw,2rem); }
+      #nd { display: none; }
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 1 — PORTADA  (cinematic dark opener)
+    ══════════════════════════════════════════════ */
+    .s1 {
+      background: #08070a;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(2rem,5vw,5rem);
+      padding: var(--pad);
+      overflow: hidden;
+    }
+    @media (max-width: 768px) { .s1 { grid-template-columns: 1fr; } }
+
+    /* Animated ambient glow */
+    .s1-glow {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(ellipse 90% 90% at 30% 55%, rgba(0,102,255,.09) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 70% at 75% 40%, rgba(0,80,203,.06) 0%, transparent 60%);
+      animation: s1-glow-pulse 9s ease-in-out infinite alternate;
+    }
+    @keyframes s1-glow-pulse {
+      0%   { opacity: .6; transform: scale(1); }
+      100% { opacity: 1;  transform: scale(1.06); }
+    }
+
+    /* Dot grid */
+    .s1-dots {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: radial-gradient(ellipse 75% 75% at 40% 50%, black 0%, transparent 100%);
+      animation: s1-dots-in 1.8s ease-out both;
+    }
+    @keyframes s1-dots-in {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    /* Scan line */
+    .s1-scan {
+      position: absolute; top: 0; left: 0; right: 0; height: 1px; z-index: 2;
+      background: linear-gradient(90deg, transparent 0%, var(--blue) 50%, transparent 100%);
+      transform: scaleX(0); transform-origin: left;
+      animation: s1-scan-anim 1.2s cubic-bezier(.16,1,.3,1) .1s both;
+    }
+    @keyframes s1-scan-anim {
+      0%   { transform: scaleX(0); opacity: 1; }
+      70%  { transform: scaleX(1); opacity: 1; }
+      100% { transform: scaleX(1); opacity: 0; }
+    }
+
+    /* Left column (z above bg) */
+    .s1-left { position: relative; z-index: 1; }
+
+    .s1-logo {
+      height: clamp(36px,4.5vw,56px);
+      width: auto;
+      display: block;
+      margin-bottom: clamp(1.5rem,4vh,2.5rem);
+      filter: drop-shadow(0 0 18px rgba(0,102,255,.25));
+    }
+
+    .s1 h1, .s1-h1 {
+      font-family: var(--head);
+      font-size: var(--xl);
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      margin-bottom: clamp(.75rem,2vh,1.25rem);
+    }
+    .s1 h1 em, .s1-h1 em { color: var(--blue); font-style: normal; }
+
+    .s1 .sub {
+      font-size: var(--sm);
+      color: rgba(255,255,255,.45);
+      line-height: 1.65;
+      max-width: 440px;
+      margin-bottom: clamp(1.25rem,3vh,2rem);
+    }
+
+    .s1 .kpis { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .s1 .kpi {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 8px;
+      padding: .45em .9em;
+      font-size: var(--lbl);
+      font-weight: 700;
+      color: rgba(255,255,255,.7);
+      letter-spacing: .04em;
+    }
+    .s1 .kpi span { color: var(--blue); }
+
+    /* Right column card with 3D float */
+    .s1-card-wrap {
+      position: relative; z-index: 1;
+      animation: s1-float 7s ease-in-out infinite alternate;
+      transform: perspective(1100px) rotateY(-4deg) rotateX(2deg);
+      transform-style: preserve-3d;
+    }
+    @keyframes s1-float {
+      0%   { transform: perspective(1100px) rotateY(-4deg) rotateX(2deg) translateY(0); }
+      100% { transform: perspective(1100px) rotateY(-2deg) rotateX(3deg) translateY(-10px); }
+    }
+
+    /* ── Diagnostic card illustration (replica del sitio) ── */
+    .diag-card {
+      background: var(--warm-2);
+      border-radius: 18px;
+      padding: clamp(.9rem,2vw,1.25rem);
+      box-shadow: 0 8px 32px rgba(28,27,27,.12);
+    }
+    .diag-inner {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(28,27,27,.06);
+    }
+    .diag-hdr {
+      padding: clamp(.65rem,1.2vw,.9rem) clamp(.9rem,1.8vw,1.2rem);
+      border-bottom: 1px solid #f0edec;
+    }
+    .diag-hdr .micro { color: var(--dark-2); }
+    .diag-hdr p { font-size: var(--xs); font-weight: 600; color: var(--dark-0); margin-top: .2em; }
+    .diag-cols { display: grid; grid-template-columns: 1fr 1fr; }
+    .diag-col  { padding: clamp(.65rem,1.2vw,.9rem) clamp(.9rem,1.8vw,1.2rem); }
+    .diag-col:last-child { background: var(--blue-5); }
+    .diag-col .tiny { font-size: calc(var(--lbl)*.95); font-weight: 700; letter-spacing: .15em; text-transform: uppercase; margin-bottom: .25em; }
+    .diag-col:first-child .tiny { color: var(--dark-2); }
+    .diag-col:last-child .tiny  { color: var(--blue-dk); }
+    .diag-big { font-family: var(--head); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 900; line-height: 1; }
+    .diag-col:first-child .diag-big { color: var(--dark-0); text-decoration: line-through; opacity: .35; }
+    .diag-col:last-child .diag-big  { color: var(--blue); }
+    .diag-sub { font-size: calc(var(--lbl)*1.05); font-weight: 700; margin-top: .25em; }
+    .diag-col:first-child .diag-sub { color: var(--red-w); }
+    .diag-col:last-child .diag-sub  { color: var(--green); }
+    .diag-bar { padding: clamp(.5rem,1vw,.75rem) clamp(.9rem,1.8vw,1.2rem); background: var(--warm-0); }
+    .diag-bar .micro { margin-bottom: .5em; }
+    .funnel {
+      display: flex; align-items: center; gap: .35rem; flex-wrap: wrap;
+    }
+    .funnel-step {
+      padding: .2em .55em; border-radius: 5px;
+      font-size: calc(var(--lbl)*1.05); font-weight: 700;
+    }
+    .funnel-sep { color: var(--dark-3); font-size: .65rem; font-weight: 700; }
+    .diag-result {
+      padding: clamp(.5rem,1vw,.75rem) clamp(.9rem,1.8vw,1.2rem);
+    }
+    .diag-prog-row {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: .35em;
+    }
+    .diag-prog-row .micro {}
+    .diag-prog-row .win { font-size: var(--xs); font-weight: 900; color: var(--green); }
+    .diag-prog-bg {
+      height: 6px; background: var(--warm-2); border-radius: 99px; overflow: hidden;
+    }
+    .diag-prog-fill {
+      height: 100%; background: var(--blue); border-radius: 99px; width: 78%;
+    }
+    .diag-prog-labels {
+      display: flex; justify-content: space-between;
+      font-size: calc(var(--lbl)*.9); color: var(--dark-2); margin-top: .2em;
+    }
+    /* floating badge top-right */
+    .diag-float {
+      position: absolute; top: -8px; right: -8px;
+      background: var(--blue); color: white;
+      font-size: calc(var(--lbl)*.95);
+      font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+      padding: .35em .7em; border-radius: 7px;
+      box-shadow: 0 4px 12px rgba(0,102,255,.35);
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 2 — VERDAD INCÓMODA / BENCHMARKS
+    ══════════════════════════════════════════════ */
+    .s2 { background: var(--dark-0); color: white; }
+    .s2 .bench-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: var(--gap);
+      margin-top: clamp(1.5rem,3.5vh,2.5rem);
+    }
+    @media (max-width: 768px) { .s2 .bench-grid { grid-template-columns: 1fr; } }
+    .s2 .bench {
+      background: rgba(255,255,255,.04);
+      border-radius: 14px;
+      padding: clamp(.9rem,2vw,1.5rem);
+      border-left: 3px solid;
+    }
+    .s2 .bench .num {
+      font-family: var(--head);
+      font-size: clamp(2.2rem,5vw,4rem);
+      font-weight: 900; line-height: 1;
+      margin-bottom: .25em;
+    }
+    .s2 .bench h4 {
+      font-size: var(--sm); font-weight: 700;
+      color: white; margin-bottom: .3em;
+    }
+    .s2 .bench p {
+      font-size: var(--xs);
+      color: rgba(255,255,255,.45);
+      line-height: 1.6;
+    }
+    .s2 h2 {
+      font-family: var(--head);
+      font-size: var(--lg);
+      font-weight: 900; line-height: 1.1;
+      max-width: 680px;
+    }
+    .s2 .sub {
+      font-size: var(--xs); color: rgba(255,255,255,.45);
+      margin-top: .5em;
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 3 — DIFERENCIA vs AGENCIA TÍPICA
+    ══════════════════════════════════════════════ */
+    .s3 { background: var(--warm-0); }
+    .s3 table {
+      width: 100%; border-collapse: collapse;
+      margin-top: clamp(1rem,2.5vh,1.75rem);
+    }
+    .s3 th {
+      padding: .7em 1em; text-align: left;
+      font-size: var(--lbl); font-weight: 700;
+      letter-spacing: .15em; text-transform: uppercase;
+      border-bottom: 2px solid var(--warm-2);
+    }
+    .s3 th:nth-child(2) { color: var(--blue); }
+    .s3 th:nth-child(3) { color: var(--dark-2); }
+    .s3 td {
+      padding: .7em 1em;
+      font-size: var(--xs); color: var(--dark-0);
+      border-bottom: 1px solid var(--warm-1);
+      vertical-align: middle;
+    }
+    .s3 td:first-child { font-weight: 600; color: var(--dark-1); }
+    .s3 td:nth-child(2) { color: var(--blue); font-weight: 600; }
+    .s3 td:nth-child(3) { color: var(--dark-2); }
+    .s3 tr:last-child td { border-bottom: none; }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 4 — QUIÉN EJECUTA (personal)
+    ══════════════════════════════════════════════ */
+    .s4 { background: var(--dark-0); }
+    .s4 .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem,5vw,5rem);
+      align-items: center;
+    }
+    @media (max-width: 768px) { .s4 .grid { grid-template-columns: 1fr; } }
+    .s4 .name {
+      font-family: var(--head);
+      font-size: var(--xl);
+      font-weight: 900;
+      color: white; line-height: 1;
+      margin-bottom: .2em;
+    }
+    .s4 .role {
+      font-size: var(--sm); color: var(--blue-lt);
+      font-weight: 600; margin-bottom: clamp(.75rem,2vh,1.25rem);
+    }
+    .s4 .bio {
+      font-size: var(--xs); color: rgba(255,255,255,.5);
+      line-height: 1.7; max-width: 400px;
+    }
+    .s4 .cred-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap);
+    }
+    .s4 .cred {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px;
+      padding: clamp(.75rem,1.5vw,1.1rem);
+    }
+    .s4 .cred .num {
+      font-family: var(--head);
+      font-size: clamp(1.4rem,3vw,2.4rem);
+      font-weight: 900; color: var(--blue);
+      line-height: 1; margin-bottom: .2em;
+    }
+    .s4 .cred .lbl {
+      font-size: var(--lbl); font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      line-height: 1.4;
+    }
+    .s4 .cred-note {
+      margin-top: var(--gap);
+      background: rgba(0,102,255,.08);
+      border: 1px solid rgba(0,102,255,.2);
+      border-radius: 10px;
+      padding: .85em 1em;
+      font-size: var(--xs);
+      color: var(--blue-lt);
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 5 — TRAYECTORIA / LOGOS
+    ══════════════════════════════════════════════ */
+    .s5 { background: var(--warm-0); }
+    .s5 h2 {
+      font-family: var(--head);
+      font-size: var(--lg); font-weight: 900;
+      color: var(--dark-0); line-height: 1.1;
+      margin-bottom: .3em;
+    }
+    .s5 .sub { font-size: var(--xs); color: var(--dark-1); margin-bottom: clamp(1.25rem,3vh,2rem); }
+    .s5 .brand-wrap {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-bottom: clamp(1.25rem,3vh,2rem);
+    }
+    .s5 .brand {
+      background: white;
+      border: 1px solid var(--warm-2);
+      border-radius: 8px;
+      padding: .4em .9em;
+      font-size: var(--xs);
+      font-weight: 600;
+      color: var(--dark-0);
+    }
+    .s5 .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: .5rem;
+    }
+    @media (max-width: 768px) { .s5 .industry-grid { grid-template-columns: repeat(2,1fr); } }
+    .s5 .ind {
+      background: var(--warm-1);
+      border-radius: 8px;
+      padding: .6em 1em;
+      font-size: var(--lbl);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--dark-1);
+      text-align: center;
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 6 — CASO 1 (SaaS B2B)
+    ══════════════════════════════════════════════ */
+    .s6 { background: var(--warm-0); padding-top: calc(var(--pad)*.7); padding-bottom: calc(var(--pad)*.7); }
+    .s6 .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap);
+    }
+    @media (max-width: 768px) { .s6 .two-col { grid-template-columns: 1fr; } }
+    .s6 .case-body { padding: clamp(.75rem,1.5vw,1.1rem) clamp(.9rem,2vw,1.4rem); }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 7 — BIG NUMBER (Servicios Financieros)
+    ══════════════════════════════════════════════ */
+    .s7 { background: var(--dark-0); }
+    .s7 .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem,5vw,5rem);
+      align-items: center;
+    }
+    @media (max-width: 768px) { .s7 .grid { grid-template-columns: 1fr; } }
+    .s7 .big-num {
+      font-family: var(--head);
+      font-size: clamp(4rem,11vw,9rem);
+      font-weight: 900; color: var(--blue);
+      line-height: 1; letter-spacing: -.03em;
+    }
+    .s7 .big-lbl {
+      font-size: var(--sm); color: rgba(255,255,255,.5);
+      line-height: 1.5; margin-top: .4em;
+      max-width: 320px;
+    }
+    .s7 .results-stack { display: flex; flex-direction: column; gap: var(--gap); }
+    .s7 .res-item {
+      border-left: 3px solid var(--blue);
+      padding-left: 1em;
+    }
+    .s7 .res-item .val {
+      font-family: var(--head);
+      font-size: clamp(1.4rem,3.5vw,2.6rem);
+      font-weight: 900; color: white; line-height: 1;
+    }
+    .s7 .res-item .meta {
+      font-size: var(--xs); color: rgba(255,255,255,.45); margin-top: .2em;
+    }
+    .s7 h3 {
+      font-family: var(--head);
+      font-size: var(--md); font-weight: 900;
+      color: white; line-height: 1.1;
+      margin-bottom: clamp(.75rem,2vh,1.25rem);
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 8 — PROCESO
+    ══════════════════════════════════════════════ */
+    .s8 { background: var(--warm-1); }
+    .s8 h2 {
+      font-family: var(--head);
+      font-size: var(--lg); font-weight: 900;
+      color: var(--dark-0); line-height: 1.1;
+      margin-bottom: clamp(1.25rem,3vh,2rem);
+    }
+    .s8 .proc-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: var(--gap);
+    }
+    @media (max-width: 768px) { .s8 .proc-grid { grid-template-columns: 1fr 1fr; } }
+    .s8 .proc {
+      background: white;
+      border-radius: 14px;
+      border-top: 3px solid var(--blue);
+      padding: clamp(.9rem,2vw,1.5rem);
+      box-shadow: 0 1px 3px rgba(28,27,27,.06);
+    }
+    .s8 .proc .n {
+      font-family: var(--head);
+      font-size: clamp(2rem,4vw,3rem);
+      font-weight: 900;
+      color: rgba(0,102,255,.12);
+      line-height: 1; margin-bottom: .4em;
+    }
+    .s8 .proc h4 {
+      font-weight: 700; font-size: var(--sm);
+      color: var(--dark-0); margin-bottom: .35em;
+    }
+    .s8 .proc p {
+      font-size: var(--xs); color: var(--dark-1); line-height: 1.65;
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 9 — CASO ABM / PIPELINE
+    ══════════════════════════════════════════════ */
+    .s9 { background: var(--warm-0); padding-top: calc(var(--pad)*.7); padding-bottom: calc(var(--pad)*.7); }
+    .s9 .grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(2rem,4vw,3.5rem);
+      align-items: start;
+    }
+    @media (max-width: 768px) { .s9 .grid { grid-template-columns: 1fr; } }
+    .s9 .context h3 {
+      font-family: var(--head);
+      font-size: var(--md); font-weight: 900;
+      color: var(--dark-0); line-height: 1.1;
+      margin-bottom: .4em;
+    }
+    .s9 .context .geo {
+      font-size: var(--xs); color: var(--dark-2);
+      margin-bottom: clamp(.75rem,2vh,1.1rem);
+    }
+    .s9 .context p {
+      font-size: var(--xs); color: var(--dark-1);
+      line-height: 1.7;
+    }
+    .s9 .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--gap);
+    }
+    @media (max-width: 768px) { .s9 .metrics { grid-template-columns: 1fr; } }
+    .s9 .metric-card {
+      background: white;
+      border-radius: 14px;
+      padding: clamp(.9rem,1.8vw,1.3rem);
+      box-shadow: 0 1px 3px rgba(28,27,27,.06), 0 0 0 1px rgba(194,198,216,.15);
+      text-align: center;
+    }
+    .s9 .metric-card .big {
+      font-family: var(--head);
+      font-size: clamp(1.5rem,3.5vw,2.8rem);
+      font-weight: 900; color: var(--blue);
+      line-height: 1; margin-bottom: .2em;
+    }
+    .s9 .metric-card .lbl {
+      font-size: var(--lbl); font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--dark-2); line-height: 1.4;
+    }
+    .s9 .platforms {
+      margin-top: var(--gap);
+      font-size: var(--xs); color: var(--dark-2);
+      font-weight: 500;
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 10 — PARA QUIÉN
+    ══════════════════════════════════════════════ */
+    .s10 { background: var(--dark-0); }
+    .s10 .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem,5vw,5rem);
+      align-items: start;
+    }
+    @media (max-width: 768px) { .s10 .grid { grid-template-columns: 1fr; } }
+    .s10 h2 {
+      font-family: var(--head);
+      font-size: var(--lg); font-weight: 900;
+      color: white; line-height: 1.1;
+      margin-bottom: clamp(1rem,2.5vh,1.75rem);
+    }
+    .s10 .icp-list { display: flex; flex-direction: column; gap: .6rem; }
+    .s10 .icp-item {
+      display: flex; align-items: flex-start; gap: .75em;
+      font-size: var(--sm); color: rgba(255,255,255,.65); line-height: 1.5;
+    }
+    .s10 .chk {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: rgba(22,163,74,.15);
+      border: 1px solid rgba(22,163,74,.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .s10 .chk svg { color: #22c55e; }
+    .s10 .why {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 16px;
+      padding: clamp(1.1rem,2.5vw,1.75rem);
+    }
+    .s10 .why .lbl {
+      font-size: var(--lbl); font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--blue-lt); margin-bottom: .75em;
+    }
+    .s10 .why p {
+      font-size: var(--xs); color: rgba(255,255,255,.45);
+      line-height: 1.7; margin-bottom: .75em;
+    }
+    .s10 .why .quote {
+      font-style: italic;
+      border-left: 2px solid rgba(0,102,255,.4);
+      padding-left: 1em;
+      color: rgba(255,255,255,.3);
+    }
+
+    /* ══════════════════════════════════════════════
+       SLIDE 11 — CTA
+    ══════════════════════════════════════════════ */
+    .s11 {
+      background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 100%);
+      align-items: center; text-align: center;
+    }
+    .s11 .glow {
+      position: absolute; width: 560px; height: 560px;
+      background: rgba(255,255,255,.07); filter: blur(90px);
+      border-radius: 50%; top: 50%; left: 50%;
+      transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .s11 .rel { position: relative; z-index: 1; }
+    .s11 h2, .s11-h2 {
+      font-family: var(--head);
+      font-size: var(--lg); font-weight: 900;
+      color: white; line-height: 1.1;
+      max-width: 680px; margin: 0 auto clamp(.75rem,2vh,1.1rem);
+    }
+    .s11 .sub {
+      font-size: var(--sm); color: rgba(255,255,255,.7);
+      max-width: 500px; margin: 0 auto clamp(1.5rem,3.5vh,2.5rem);
+      line-height: 1.65;
+    }
+    .s11 .cta-btn {
+      display: inline-block; background: white; color: var(--blue);
+      font-weight: 800; font-size: var(--sm);
+      padding: .9em 2.2em; border-radius: 10px;
+      text-decoration: none; margin-bottom: .75rem;
+      transition: background .2s;
+    }
+    .s11 .cta-btn:hover { background: #f0f4ff; }
+    .s11 .micro-cta { font-size: var(--xs); color: rgba(255,255,255,.4); margin-bottom: clamp(1.25rem,3vh,2rem); }
+    .s11 .contacts {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      justify-content: center;
+    }
+    .s11 .ct { font-size: var(--xs); color: rgba(255,255,255,.55); font-weight: 500; }
+    .s11 .ct strong { color: rgba(255,255,255,.85); }
+
+    /* ══════════════════════════════════════════════
+       EPIC DESIGN — Cursor · Particles · Tilt · Reveal
+    ══════════════════════════════════════════════ */
+    @media (pointer: fine) { body, a, button { cursor: none !important; } }
+    .cur-dot {
+      position: fixed; width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(0,102,255,.9);
+      box-shadow: 0 0 14px rgba(0,102,255,.7), 0 0 32px rgba(0,102,255,.2);
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%); will-change: left, top;
+    }
+    .cur-ring {
+      position: fixed; width: 38px; height: 38px; border-radius: 50%;
+      border: 1px solid rgba(0,102,255,.35); pointer-events: none; z-index: 9998;
+      transform: translate(-50%,-50%); will-change: left, top;
+      transition: width .2s, height .2s, border-color .2s;
+    }
+    .cur-ring.hover { width: 52px; height: 52px; border-color: rgba(0,102,255,.6); }
+    .epic-canvas {
+      position: absolute; inset: 0;
+      width: 100% !important; height: 100% !important;
+      pointer-events: none; z-index: 0;
+    }
+    .s1 .epic-canvas { pointer-events: auto; }
+    .hl  { display: block; overflow: hidden; }
+    .hl-i { display: inline-block; will-change: transform; }
+    .card-shine {
+      position: absolute; inset: 0; border-radius: 18px; z-index: 10;
+      pointer-events: none; opacity: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.18) 0%, transparent 55%);
+      transition: opacity .1s;
+    }
+    .s1-card-wrap { animation: none !important; will-change: transform; }
+    .s11 .cta-btn { will-change: transform; display: inline-block; position: relative; overflow: hidden; }
+    .ripple {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      background: rgba(255,255,255,.35); transform: scale(0);
+      animation: ripple-anim .65s ease-out forwards;
+    }
+    @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
+    .s11 .glow { animation: s11-glow-pulse 4s ease-in-out infinite alternate !important; }
+    @keyframes s11-glow-pulse {
+      0%   { transform: translate(-50%,-50%) scale(1);   opacity:.07; }
+      100% { transform: translate(-50%,-50%) scale(1.3); opacity:.14; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .cur-dot, .cur-ring, .epic-canvas { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="pb"></div>
+<nav id="nd" aria-label="Slides"></nav>
+
+<!-- ══════════════════════════════════════════════
+     S01 — PORTADA
+══════════════════════════════════════════════ -->
+<section class="slide s1" data-i="0">
+  <!-- Cinematic background layers -->
+  <canvas class="epic-canvas" aria-hidden="true"></canvas>
+  <div class="s1-glow" aria-hidden="true"></div>
+  <div class="s1-dots" aria-hidden="true"></div>
+  <div class="s1-scan" aria-hidden="true"></div>
+
+  <!-- Left: copy -->
+  <div class="s1-left">
+    <img src="./public/logo-white.png" alt="JT Ads" class="s1-logo r"/>
+    <h1 class="s1-h1">
+      <span class="hl"><span class="hl-i">Ads que se <em>miden</em></span></span>
+      <span class="hl"><span class="hl-i">en ventas,</span></span>
+      <span class="hl"><span class="hl-i">no en clics.</span></span>
+    </h1>
+    <p class="sub r">Si inviertes en ads y no sabes qué campaña te trajo las ventas del mes — no los leads, las ventas — estamos hablando del mismo problema.</p>
+    <div class="kpis r">
+      <span class="kpi"><span>$500k+</span>/mes gestionados</span>
+      <span class="kpi">Google · Meta · LinkedIn</span>
+      <span class="kpi">6 mercados · LATAM + USA</span>
+    </div>
+  </div>
+  <!-- Right: diagnostic card with 3D float -->
+  <div class="s1-card-wrap rs">
+    <div class="diag-card">
+      <div class="diag-inner">
+        <div class="diag-hdr">
+          <p class="micro">Diagnóstico de Tracking</p>
+          <p>SaaS B2B · Google Ads</p>
+        </div>
+        <div class="diag-cols">
+          <div class="diag-col">
+            <p class="tiny">CPL Plataforma</p>
+            <p class="diag-big">$45</p>
+            <p class="diag-sub">⚠ Evento incorrecto</p>
+          </div>
+          <div class="diag-col">
+            <p class="tiny">CPL Real</p>
+            <p class="diag-big">$94</p>
+            <p class="diag-sub">✓ Demo calificada</p>
+          </div>
+        </div>
+        <div class="diag-bar">
+          <p class="micro" style="margin-bottom:.45em;">Flujo de medición corregido</p>
+          <div class="funnel">
+            <span class="funnel-step" style="background:var(--warm-2);color:var(--dark-2);">Click</span>
+            <span class="funnel-sep">›</span>
+            <span class="funnel-step" style="background:var(--blue-bg);color:#294487;">Lead</span>
+            <span class="funnel-sep">›</span>
+            <span class="funnel-step" style="background:var(--blue);color:white;">Demo</span>
+            <span class="funnel-sep">›</span>
+            <span class="funnel-step" style="background:var(--blue-dk);color:white;">Venta</span>
+          </div>
+        </div>
+        <div class="diag-result">
+          <div class="diag-prog-row">
+            <p class="micro">Tasa demo → propuesta</p>
+            <p class="win">+245%</p>
+          </div>
+          <div class="diag-prog-bg">
+            <div class="diag-prog-fill"></div>
+          </div>
+          <div class="diag-prog-labels">
+            <span>Antes: 11%</span><span>Ahora: 38%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="diag-float">Caso Real</div>
+  </div>
+  </div><!-- /s1-card-wrap -->
+  <span class="sn" style="color:rgba(255,255,255,.25);">01 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S02 — VERDAD INCÓMODA
+══════════════════════════════════════════════ -->
+<section class="slide s2" data-i="1">
+  <div class="inner">
+    <div class="r"><span class="badge-dark">Lo que encontramos en el 90% de las auditorías</span></div>
+    <h2 class="r" style="margin-top:.75em;">El dashboard dice que funcionó. El equipo de ventas dice otra cosa. Los dos tienen razón.</h2>
+    <p class="sub r">Más de 100 auditorías técnicas. Siempre aparece lo mismo.</p>
+    <div class="bench-grid">
+      <div class="bench rs" style="border-color:var(--blue);">
+        <div class="num" style="color:var(--blue);">60%</div>
+        <h4>Tracking roto o duplicado</h4>
+        <p>Eventos incorrectos en Píxel o API de Conversiones. La plataforma optimiza hacia lo que nunca fue una venta.</p>
+      </div>
+      <div class="bench rs" style="border-color:var(--red-w);">
+        <div class="num" style="color:var(--red-w);">42%</div>
+        <h4>Ventas que nunca se atribuyeron</h4>
+        <p>Cierres en el CRM invisibles para Google y Meta. El algoritmo aprende de los leads malos.</p>
+      </div>
+      <div class="bench rs" style="border-color:var(--blue-lt);">
+        <div class="num" style="color:var(--blue-lt);">15%</div>
+        <h4>Presupuesto en el ICP equivocado</h4>
+        <p>Tráfico que convierte en la plataforma pero no en el pipeline. No es un problema de budget — es de señal.</p>
+      </div>
+    </div>
+  </div>
+  <span class="sn">02 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S03 — JT ADS vs AGENCIA TÍPICA
+══════════════════════════════════════════════ -->
+<section class="slide s3" data-i="2">
+  <div class="inner">
+    <div class="sec-head r">
+      <h2>Si ya trabajaste con una agencia y los números no cerraron, esto probablemente explica por qué.</h2>
+    </div>
+    <table class="r">
+      <thead>
+        <tr>
+          <th style="color:var(--dark-2);width:35%;">Criterio</th>
+          <th>JT Ads</th>
+          <th>Agencia Típica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tracking server-side activo</td>
+          <td>✅ Sí, desde el día 1</td>
+          <td>❌ Raro — depende del cliente</td>
+        </tr>
+        <tr>
+          <td>Quién ejecuta la cuenta</td>
+          <td>✅ El mismo experto siempre</td>
+          <td>❌ Junior después del onboarding</td>
+        </tr>
+        <tr>
+          <td>Reportes con CPL real (CRM)</td>
+          <td>✅ Conectado a ventas</td>
+          <td>⚠️ CPL de plataforma, no de negocio</td>
+        </tr>
+        <tr>
+          <td>Contrato de permanencia</td>
+          <td>✅ Mes a mes</td>
+          <td>❌ 6–12 meses típico</td>
+        </tr>
+        <tr>
+          <td>Acceso al tomador de decisiones</td>
+          <td>✅ Directo</td>
+          <td>❌ Account manager intermediario</td>
+        </tr>
+        <tr>
+          <td>Si no hay resultados en 90 días</td>
+          <td>✅ Terminamos sin discusión</td>
+          <td>❌ Queda contrato por pagar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <span class="sn" style="color:var(--dark-2);">03 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S04 — QUIÉN EJECUTA
+══════════════════════════════════════════════ -->
+<section class="slide s4" data-i="3">
+  <div class="inner">
+    <div class="grid">
+      <div>
+        <span class="badge-dark r" style="margin-bottom:1em;display:inline-block;">Quién ejecuta — siempre el mismo</span>
+        <p class="name r">Juan<br/>Tabares</p>
+        <p class="role r">Founder & Lead Strategist — JT Ads</p>
+        <p class="bio r">Me especialicé en el punto donde los ads se convierten en dinero real: la conexión entre plataforma, CRM y decisión de compra. Gestiono cada cuenta directamente — no hay un junior asignado después del onboarding.</p>
+      </div>
+      <div>
+        <div class="cred-grid">
+          <div class="cred rs">
+            <div class="num">$500k<span style="font-size:.45em;color:rgba(255,255,255,.3)">/mes</span></div>
+            <div class="lbl">Ad spend gestionado</div>
+          </div>
+          <div class="cred rs">
+            <div class="num">7</div>
+            <div class="lbl">Casos documentados con CRM</div>
+          </div>
+          <div class="cred rs">
+            <div class="num">6</div>
+            <div class="lbl">Mercados activos</div>
+          </div>
+          <div class="cred rs">
+            <div class="num">3</div>
+            <div class="lbl">Plataformas · Search · Social · ABM</div>
+          </div>
+        </div>
+        <div class="cred-note r">
+          La persona que hace la primera llamada es la misma que configura el tracking, optimiza las campañas y te llama cuando algo no está funcionando. Sin capas. Sin sorpresas.
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">04 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S05 — TRAYECTORIA
+══════════════════════════════════════════════ -->
+<section class="slide s5" data-i="4">
+  <div class="inner">
+    <p class="micro r" style="margin-bottom:.6em;">Trayectoria</p>
+    <h2 class="r">Empresas donde un lead mal atribuido cuesta más que la solución.</h2>
+    <p class="sub r">SaaS B2B · Servicios Financieros · E-commerce · Real Estate · Educación · Tecnología</p>
+    <div class="brand-wrap r">
+      <span class="brand">Sodexo</span>
+      <span class="brand">Pluxee</span>
+      <span class="brand">Hilton</span>
+      <span class="brand">Betterfly</span>
+      <span class="brand">Localiza</span>
+      <span class="brand">Renting Colombia</span>
+      <span class="brand">Atmopel</span>
+      <span class="brand">Kamina</span>
+      <span class="brand">GLT Logistics</span>
+      <span class="brand">ISC Connection</span>
+      <span class="brand">Puntos Colombia</span>
+      <span class="brand">Oro Express</span>
+      <span class="brand">OPPO Mobile</span>
+      <span class="brand">Ransomware Help</span>
+    </div>
+    <div class="industry-grid r">
+      <span class="ind">🇲🇽 México</span>
+      <span class="ind">🇨🇴 Colombia</span>
+      <span class="ind">🇨🇱 Chile</span>
+      <span class="ind">🇦🇷 Argentina</span>
+      <span class="ind">🇵🇪 Perú</span>
+      <span class="ind">🇺🇸 USA</span>
+      <span class="ind">Google Ads</span>
+      <span class="ind">Meta Ads</span>
+      <span class="ind">LinkedIn Ads</span>
+      <span class="ind">Server-Side</span>
+      <span class="ind">CRM Loop</span>
+      <span class="ind">ABM</span>
+    </div>
+  </div>
+  <span class="sn" style="color:var(--dark-2);">05 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S06 — CASOS 1 + 2
+══════════════════════════════════════════════ -->
+<section class="slide s6" data-i="5">
+  <div class="inner">
+    <div class="sec-head r">
+      <h2>Mismo presupuesto. Más ventas. En números reales.</h2>
+      <p>Medidos contra el CRM — no contra el dashboard de la plataforma.</p>
+    </div>
+    <div class="two-col">
+      <!-- Caso 1 -->
+      <div class="card rs">
+        <div class="card-head">
+          <div>
+            <p style="font-weight:700;font-size:var(--xs);color:var(--dark-0);">SaaS B2B — México</p>
+            <p style="font-size:var(--lbl);color:var(--dark-2);">Google Ads · Search</p>
+          </div>
+          <span class="badge-blue">Tracking</span>
+        </div>
+        <div class="case-body">
+          <div class="res-row">
+            <div class="b4"><span class="res-lbl">Antes</span><span class="val">$380</span></div>
+            <div class="af"><span class="res-lbl">Después</span><span class="val">$94<span class="delta">−75%</span></span></div>
+            <p class="res-metric">CPL real (demo calificada)</p>
+          </div>
+          <div class="res-row">
+            <div class="b4"><span class="res-lbl">Antes</span><span class="val">11%</span></div>
+            <div class="af"><span class="res-lbl">Después</span><span class="val">38%<span class="delta">+245%</span></span></div>
+            <p class="res-metric">Tasa demo → propuesta</p>
+          </div>
+          <div class="res-row">
+            <div class="b4"><span class="res-lbl">Ad Spend</span><span class="val">$8,000</span></div>
+            <div class="af"><span class="res-lbl">Cambio</span><span class="val">$0 <span class="delta" style="background:#d1fae5;color:#065f46;">Sin tocar</span></span></div>
+            <p class="res-metric">Mismo presupuesto, mejores resultados</p>
+          </div>
+        </div>
+      </div>
+      <!-- Caso 2 -->
+      <div class="card rs">
+        <div class="card-head">
+          <div>
+            <p style="font-weight:700;font-size:var(--xs);color:var(--dark-0);">Servicios Financieros — Colombia</p>
+            <p style="font-size:var(--lbl);color:var(--dark-2);">Google Ads · Search + Performance Max</p>
+          </div>
+          <span class="badge-blue">Calidad Leads</span>
+        </div>
+        <div class="case-body">
+          <div class="res-row">
+            <div class="b4"><span class="res-lbl">Antes</span><span class="val">210</span></div>
+            <div class="af"><span class="res-lbl">Después</span><span class="val">87<span class="delta">−59%</span></span></div>
+            <p class="res-metric">Leads/mes (menos, pero mejores)</p>
+          </div>
+          <div class="res-row">
+            <div class="b4"><span class="res-lbl">Antes</span><span class="val">2.8%</span></div>
+            <div class="af"><span class="res-lbl">Después</span><span class="val">11.4%<span class="delta">+307%</span></span></div>
+            <p class="res-metric">Tasa lead → cliente</p>
+          </div>
+          <div class="res-row">
+            <div class="b4"><span class="res-lbl">Antes</span><span class="val">$1,240</span></div>
+            <div class="af"><span class="res-lbl">Después</span><span class="val">$490<span class="delta">−60%</span></span></div>
+            <p class="res-metric">Costo por cliente adquirido</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="sn" style="color:var(--dark-2);">06 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S07 — BIG NUMBER (E-comm + Educación)
+══════════════════════════════════════════════ -->
+<section class="slide s7" data-i="6">
+  <div class="inner">
+    <div class="grid">
+      <div>
+        <span class="badge-dark r" style="margin-bottom:.75em;display:inline-block;">E-commerce — Chile</span>
+        <p class="big-num r">+89%</p>
+        <p class="big-lbl r">De 1.8× a 3.4× de ROAS real — sin tocar el presupuesto. Solo filtrando productos de bajo margen del feed y enviando señales de devolución a la plataforma.</p>
+      </div>
+      <div>
+        <h3 class="r">Educación Online — Argentina<br/><span style="color:var(--blue);">Meta Ads + CAPI Server-Side</span></h3>
+        <div class="results-stack">
+          <div class="res-item r">
+            <div class="val">+358%</div>
+            <div class="meta">Tasa lead → inscripción (1.9% → 8.7%)</div>
+          </div>
+          <div class="res-item r">
+            <div class="val">−22%</div>
+            <div class="meta">Costo por inscripción ($168 → $131)</div>
+          </div>
+          <div class="res-item r">
+            <div class="val" style="font-size:clamp(.9rem,1.8vw,1.3rem);color:rgba(255,255,255,.5);">El CPL "subió" de $3 a $11</div>
+            <div class="meta">Porque antes contaban vistas de landing como conversiones. Ahora miden submits reales.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">07 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S08 — PROCESO
+══════════════════════════════════════════════ -->
+<section class="slide s8" data-i="7">
+  <div class="inner">
+    <div class="sec-head r" style="border-color:var(--blue);">
+      <h2 style="color:var(--dark-0);">Cuatro fases. La primera siempre rompe algo que creías que estaba funcionando.</h2>
+    </div>
+    <div class="proc-grid">
+      <div class="proc rs">
+        <div class="n">01</div>
+        <h4>Diagnóstico en vivo — contigo</h4>
+        <p>Pantalla compartida. Revisamos tracking, estructura de campañas y calidad de leads. 20+ puntos. Los hallazgos son tuyos — decidas trabajar con nosotros o no.</p>
+      </div>
+      <div class="proc rs">
+        <div class="n">02</div>
+        <h4>Primero medimos bien</h4>
+        <p>Server-side tracking antes de escalar. Cada evento tiene que representar una acción que tu equipo de ventas reconocería como valiosa. Sin eso, todo lo demás es ruido.</p>
+      </div>
+      <div class="proc rs">
+        <div class="n">03</div>
+        <h4>El CRM le habla a la plataforma</h4>
+        <p>Conectamos los cierres reales con Google y Meta. El algoritmo deja de aprender de formularios basura y empieza a encontrar los perfiles que sí compran.</p>
+      </div>
+      <div class="proc rs">
+        <div class="n">04</div>
+        <h4>Escalamos cuando el P&L lo dice</h4>
+        <p>No cuando el dashboard se ve bien. Cuando el costo por cliente adquirido justifica subir la inversión en tu cuenta bancaria — ahí escalamos.</p>
+      </div>
+    </div>
+  </div>
+  <span class="sn" style="color:var(--dark-2);">08 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S09 — CASO ABM B2B
+══════════════════════════════════════════════ -->
+<section class="slide s9" data-i="8">
+  <div class="inner">
+    <div class="sec-head r">
+      <h2>De 4 a 11 oportunidades calificadas por mes. Sin aumentar el presupuesto.</h2>
+      <p>Tecnología B2B · LinkedIn + Google · México + USA · $18k/mes</p>
+    </div>
+    <div class="grid">
+      <div class="context rl">
+        <p class="geo">El problema</p>
+        <p>LinkedIn generaba pocas conversiones. Google generaba volumen pero fuera del ICP. Ventas cerraba 4 oportunidades al mes con un ciclo de 94 días — sin poder predecir el pipeline siguiente.</p>
+        <p style="margin-top:.75em;"><strong style="color:var(--dark-0);">Lo que hicimos:</strong> Mapeamos el funnel con el equipo de ventas. LinkedIn para ABM puro — cuentas target por industria y tamaño de empresa. Google Search para capturar demanda activa ya educada. Las audiencias dejaron de ser "interesados en software" y pasaron a ser el ICP real.</p>
+      </div>
+      <div class="metrics r">
+        <div class="metric-card">
+          <div class="big">+175%</div>
+          <div class="lbl">Oportunidades calificadas/mes<br/>(4 → 11)</div>
+        </div>
+        <div class="metric-card">
+          <div class="big">−35%</div>
+          <div class="lbl">Ciclo de ventas<br/>(94 → 61 días)</div>
+        </div>
+        <div class="metric-card">
+          <div class="big" style="font-size:clamp(1.2rem,3vw,2.2rem);">+176%</div>
+          <div class="lbl">Pipeline 90 días<br/>($210k → $580k)</div>
+        </div>
+      </div>
+    </div>
+    <p class="platforms r">Plataformas: LinkedIn Sponsored Content + Google Search · Integración CRM para señales de audiencia</p>
+  </div>
+  <span class="sn" style="color:var(--dark-2);">09 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S10 — PARA QUIÉN
+══════════════════════════════════════════════ -->
+<section class="slide s10" data-i="9">
+  <div class="inner">
+    <div class="grid">
+      <div>
+        <span class="badge-dark r" style="margin-bottom:.9em;display:inline-block;">¿Es para ti?</span>
+        <h2 class="r">Somos selectivos. No porque seamos exclusivos — porque así funciona el modelo.</h2>
+        <div class="icp-list">
+          <div class="icp-item r">
+            <div class="chk"><svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Diriges marketing y tienes visibilidad del pipeline de ventas — no solo del CPL</span>
+          </div>
+          <div class="icp-item r">
+            <div class="chk"><svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Inviertes $5,000 USD o más al mes en ads — y el número ya no justifica los resultados</span>
+          </div>
+          <div class="icp-item r">
+            <div class="chk"><svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Tienes CRM y equipo de ventas — los leads existen, el problema es su calidad</span>
+          </div>
+          <div class="icp-item r">
+            <div class="chk"><svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Operas en MX, CO, CL, AR, PE o USA</span>
+          </div>
+          <div class="icp-item r">
+            <div class="chk"><svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+            <span>Sabes que algo está roto en tu medición — y ya no quieres seguir adivinando</span>
+          </div>
+        </div>
+      </div>
+      <div class="why rs">
+        <p class="lbl">¿Por qué el filtro?</p>
+        <p>No somos una agencia de volumen. Aceptamos un número limitado de cuentas porque el trabajo que hacemos requiere foco real — no un playbook genérico ejecutado por un junior. Si no encajamos, no tiene sentido para ninguno de los dos.</p>
+        <p class="quote">Si no encajas exactamente: cuéntanos igual. Si podemos ayudarte, lo decimos. Si no, te orientamos sin costo y sin discurso de ventas.</p>
+      </div>
+    </div>
+  </div>
+  <span class="sn">10 / 11</span>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     S11 — CTA
+══════════════════════════════════════════════ -->
+<section class="slide s11" data-i="10">
+  <canvas class="epic-canvas s11-canvas" aria-hidden="true"></canvas>
+  <div class="glow"></div>
+  <div class="rel inner-c">
+    <span class="badge-dark r" style="margin-bottom:1.25em;display:inline-block;background:rgba(255,255,255,.15);">Siguiente paso</span>
+    <h2 class="s11-h2">
+      <span class="hl"><span class="hl-i">¿Hablamos de tus ventas,</span></span>
+      <span class="hl"><span class="hl-i">no de tus clics?</span></span>
+    </h2>
+    <p class="sub r">60 minutos en pantalla compartida. Revisamos tracking, estructura y calidad de leads. Te llevas los hallazgos documentados — decidas trabajar con nosotros o no.</p>
+    <div class="r">
+      <a href="https://jtads.com/diagnostico-en-vivo" class="cta-btn">Reservar Sesión de Diagnóstico</a>
+    </div>
+    <p class="micro-cta r">Sin contrato mínimo · Sin permanencia · Respuesta en menos de 4 horas</p>
+    <div class="contacts r">
+      <span class="ct">🌐 <strong>jtads.com</strong></span>
+      <span class="ct">✉️ <strong>hola@juantabares.co</strong></span>
+      <span class="ct">📍 <strong>LATAM + USA</strong></span>
+    </div>
+  </div>
+  <span class="sn" style="color:rgba(255,255,255,.3);">11 / 11</span>
+</section>
+
+<script>
+(function(){
+  'use strict';
+  const isMobile = window.matchMedia('(pointer: coarse)').matches;
+  const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── Slides + nav ── */
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const total  = slides.length;
+  const pb     = document.getElementById('pb');
+  const nd     = document.getElementById('nd');
+  slides.forEach((_,i)=>{
+    const btn = document.createElement('button');
+    btn.className='d'+(i===0?' on':'');
+    btn.setAttribute('aria-label','Slide '+(i+1));
+    btn.addEventListener('click',()=>slides[i].scrollIntoView({behavior:'smooth'}));
+    nd.appendChild(btn);
+  });
+  const dots = nd.querySelectorAll('.d');
+  const LIGHT = new Set([2,4,5,8]);
+
+  /* ── Custom cursor ── */
+  if (!isMobile && !noMotion) {
+    const dot  = Object.assign(document.createElement('div'),{className:'cur-dot'});
+    const ring = Object.assign(document.createElement('div'),{className:'cur-ring'});
+    document.body.append(dot, ring);
+    let mx=window.innerWidth/2, my=window.innerHeight/2, rx=mx, ry=my;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>ring.classList.add('hover'));
+      el.addEventListener('mouseleave',()=>ring.classList.remove('hover'));
+    });
+    (function cursorLoop(){
+      dot.style.left=mx+'px'; dot.style.top=my+'px';
+      rx+=(mx-rx)*.1; ry+=(my-ry)*.1;
+      ring.style.left=rx+'px'; ring.style.top=ry+'px';
+      requestAnimationFrame(cursorLoop);
+    })();
+  }
+
+  /* ── Particle system ── */
+  function initParticles(canvas, opts) {
+    if (!canvas || noMotion) return;
+    const O = Object.assign({n:60,col:'0,102,255',spd:.35,connD:125,repR:85,maxR:1.8},opts);
+    const ctx = canvas.getContext('2d');
+    let W,H,pts,raf;
+    function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; }
+    function mkPts(){ pts=Array.from({length:O.n},()=>({
+      x:Math.random()*W, y:Math.random()*H,
+      vx:(Math.random()-.5)*O.spd, vy:(Math.random()-.5)*O.spd,
+      r:Math.random()*O.maxR+.7, op:Math.random()*.3+.1
+    }));}
+    let mx=-9999,my=-9999;
+    canvas.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;},{passive:true});
+    canvas.addEventListener('mouseleave',()=>{mx=-9999;my=-9999;},{passive:true});
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      pts.forEach(p=>{
+        const dx=p.x-mx,dy=p.y-my,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<O.repR&&d>0){const f=(O.repR-d)/O.repR;p.vx+=(dx/d)*f*.14;p.vy+=(dy/d)*f*.14;}
+        const sp=Math.sqrt(p.vx*p.vx+p.vy*p.vy);
+        if(sp>1.4){p.vx*=.91;p.vy*=.91;}
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
+        p.x=Math.max(0,Math.min(W,p.x)); p.y=Math.max(0,Math.min(H,p.y));
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283);
+        ctx.fillStyle=`rgba(${O.col},${p.op})`; ctx.fill();
+      });
+      for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
+        const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<O.connD){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+          ctx.strokeStyle=`rgba(${O.col},${(1-d/O.connD)*.11})`;ctx.lineWidth=.7;ctx.stroke();}
+      }}
+      raf=requestAnimationFrame(draw);
+    }
+    resize(); mkPts(); draw();
+    window.addEventListener('resize',()=>{resize();mkPts();});
+  }
+
+  /* Init particle canvases */
+  const s1Canvas  = document.querySelector('.s1 .epic-canvas');
+  const s11Canvas = document.querySelector('.s11-canvas');
+  initParticles(s1Canvas,  {n:65, col:'0,102,255',  spd:.4, connD:130});
+  initParticles(s11Canvas, {n:70, col:'155,180,254', spd:.28, connD:110, repR:70});
+
+  /* ── GSAP headline reveals ── */
+  if (typeof gsap !== 'undefined' && !noMotion) {
+    gsap.set('.s1-h1 .hl-i',  {y:'108%', opacity:0});
+    gsap.set('.s11-h2 .hl-i', {y:'108%', opacity:0});
+  }
+
+  /* ── Card 3-D tilt + specular shine ── */
+  const cardWrap = document.querySelector('.s1-card-wrap');
+  if (cardWrap) {
+    const shine = Object.assign(document.createElement('div'),{className:'card-shine'});
+    shine.setAttribute('aria-hidden','true');
+    cardWrap.appendChild(shine);
+    if (!isMobile && !noMotion && typeof gsap !== 'undefined') {
+      const s1El = document.querySelector('.s1');
+      /* Floating loop via GSAP */
+      gsap.to(cardWrap,{y:-12,duration:3.5,ease:'sine.inOut',yoyo:true,repeat:-1});
+      s1El.addEventListener('mousemove',e=>{
+        const r=cardWrap.getBoundingClientRect();
+        const cx=r.left+r.width/2, cy=r.top+r.height/2;
+        const rX=(e.clientY-cy)/r.height*18, rY=(e.clientX-cx)/r.width*-18;
+        const sX=(e.clientX-r.left)/r.width*100, sY=(e.clientY-r.top)/r.height*100;
+        gsap.to(cardWrap,{rotateX:rX,rotateY:rY,duration:.35,ease:'power2.out'});
+        gsap.to(shine,{opacity:.65,duration:.15});
+        shine.style.background=`radial-gradient(circle at ${sX}% ${sY}%, rgba(255,255,255,.2) 0%, transparent 55%)`;
+      });
+      s1El.addEventListener('mouseleave',()=>{
+        gsap.to(cardWrap,{rotateX:2,rotateY:-4,duration:1.3,ease:'elastic.out(1,.4)'});
+        gsap.to(shine,{opacity:0,duration:.5});
+      });
+    }
+  }
+
+  /* ── Magnetic CTA button ── */
+  const ctaBtn = document.querySelector('.s11 .cta-btn');
+  if (ctaBtn && !isMobile && !noMotion && typeof gsap !== 'undefined') {
+    ctaBtn.addEventListener('mousemove',e=>{
+      const r=ctaBtn.getBoundingClientRect();
+      const dx=(e.clientX-r.left-r.width/2)*.35;
+      const dy=(e.clientY-r.top-r.height/2)*.35;
+      gsap.to(ctaBtn,{x:dx,y:dy,duration:.25,ease:'power2.out'});
+    });
+    ctaBtn.addEventListener('mouseleave',()=>{
+      gsap.to(ctaBtn,{x:0,y:0,duration:.85,ease:'elastic.out(1,.4)'});
+    });
+    ctaBtn.addEventListener('click',e=>{
+      const r=ctaBtn.getBoundingClientRect();
+      const rip=document.createElement('span'); rip.className='ripple';
+      const sz=Math.max(r.width,r.height);
+      rip.style.cssText=`width:${sz}px;height:${sz}px;left:${e.clientX-r.left-sz/2}px;top:${e.clientY-r.top-sz/2}px`;
+      ctaBtn.appendChild(rip); setTimeout(()=>rip.remove(),750);
+    });
+  }
+
+  /* ── IntersectionObserver ── */
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      e.target.classList.add('vis');
+      const i=+e.target.dataset.i;
+      pb.style.width=((i+1)/total*100)+'%';
+      dots.forEach((d,j)=>d.classList.toggle('on',j===i));
+      document.body.classList.toggle('light-slide',LIGHT.has(i));
+
+      if (typeof gsap==='undefined'||noMotion) return;
+
+      /* Slide 1 headline reveal */
+      if (i===0) {
+        gsap.to('.s1-h1 .hl-i',{y:'0%',opacity:1,duration:.8,stagger:.1,ease:'power3.out',delay:.15});
+      }
+      /* Slide 11 headline reveal */
+      if (i===10) {
+        gsap.to('.s11-h2 .hl-i',{y:'0%',opacity:1,duration:.75,stagger:.12,ease:'power3.out',delay:.1});
+      }
+    });
+  },{threshold:.5});
+  slides.forEach(s=>io.observe(s));
+
+  /* ── Keyboard ── */
+  document.addEventListener('keydown',e=>{
+    const cur=slides.find(s=>s.classList.contains('vis')); if(!cur) return;
+    const i=+cur.dataset.i;
+    if((e.key==='ArrowDown'||e.key==='ArrowRight'||e.key===' ')&&i<total-1){e.preventDefault();slides[i+1].scrollIntoView({behavior:'smooth'});}
+    if((e.key==='ArrowUp'||e.key==='ArrowLeft')&&i>0){e.preventDefault();slides[i-1].scrollIntoView({behavior:'smooth'});}
+  });
+
+  /* ── Swipe ── */
+  let ty=0;
+  document.addEventListener('touchstart',e=>{ty=e.touches[0].clientY;},{passive:true});
+  document.addEventListener('touchend',e=>{
+    const dy=ty-e.changedTouches[0].clientY;
+    const cur=slides.find(s=>s.classList.contains('vis'));
+    if(!cur||Math.abs(dy)<50) return;
+    const i=+cur.dataset.i;
+    if(dy>0&&i<total-1)slides[i+1].scrollIntoView({behavior:'smooth'});
+    if(dy<0&&i>0)slides[i-1].scrollIntoView({behavior:'smooth'});
+  },{passive:true});
+})();
+</script>
+
+</body>
+</html>

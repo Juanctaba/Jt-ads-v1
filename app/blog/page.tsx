@@ -66,12 +66,12 @@ const posts = [
     readTime: "11 min",
   },
   {
-    slug: "mas-alla-pmax-advantage-autonomia-campanas",
+    slug: "hiper-automatizacion-campanas-mas-alla-performance-max",
     title: "Más allá de Performance Max y Advantage+: la próxima frontera de la autonomía en campañas",
-    excerpt: "PMax y Advantage+ ya son el estándar. Las plataformas van más lejos con AI Max, generación creativa autónoma y campañas totalmente automatizadas. Analizamos qué se gana, qué se pierde y cuándo el control humano sigue siendo irremplazable.",
+    excerpt: "PMax y Advantage+ ya son el estándar. Analizamos qué viene después — AI Max, Advantage+ Shopping, LinkedIn Accelerate — y cuándo la automatización total se convierte en un riesgo real para tu estrategia.",
     category: "Automatización",
-    date: "Mayo 2026",
-    readTime: "11 min",
+    date: "Abril 2026",
+    readTime: "12 min",
   },
 ];
 

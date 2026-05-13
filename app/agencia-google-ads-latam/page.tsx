@@ -198,19 +198,6 @@ export default function AgenciaGoogleAdsPage() {
                   >
                     Sesión de Diagnóstico gratuito
                   </a>
-                  <a
-                    href="https://www.google.com/partners/agency?id=1978608979"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block hover:opacity-80 transition-opacity"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="https://www.gstatic.com/partners/badge/images/2026/PartnerBadgeClickable.svg"
-                      alt="Google Partner"
-                      style={{ height: "52px", width: "auto" }}
-                    />
-                  </a>
                 </div>
                 <div className="text-sm text-slate-500 space-y-1">
                   <p>• Sin llamada de ventas previa</p>

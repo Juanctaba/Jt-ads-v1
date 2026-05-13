@@ -785,11 +785,11 @@
     }
 
     .logo-cell img {
-      max-height: clamp(20px, 2.5vh, 32px);
+      max-height: clamp(30px, 4vh, 48px);
       max-width: 100%;
       object-fit: contain;
       filter: grayscale(100%);
-      opacity: 0.35;
+      opacity: 0.45;
       transition: opacity 0.2s;
     }
 
@@ -966,6 +966,39 @@
       .logo-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
+    /* ─── DARK MODE ────────────────────────────────────────── */
+    html[data-mode="dark"] {
+      --white:      #111114;
+      --warm-1:     #17161a;
+      --warm-2:     #1c1b1f;
+      --text-1:     #eeeef0;
+      --text-2:     #9da2b0;
+      --text-3:     #636875;
+      --blue-light: rgba(0,102,255,0.18);
+    }
+
+    #theme-btn {
+      position: fixed;
+      bottom: clamp(16px, 2.5vw, 28px);
+      left: clamp(16px, 2.5vw, 28px);
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 8px;
+      padding: 0.55em 0.85em;
+      font-family: var(--f-body);
+      font-size: var(--t-small);
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+      z-index: 100;
+      transition: opacity 0.2s, background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    #theme-btn:hover { opacity: 0.85; }
+
     /* ─── PRINT / PDF ───────────────────────────────────── */
     @media print {
       html { scroll-snap-type: none; }
@@ -988,7 +1021,7 @@
       /* Print background colors */
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 
-      #progress, #dots, #dl-btn { display: none !important; }
+      #progress, #dots, #dl-btn, #theme-btn { display: none !important; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1003,6 +1036,13 @@
 
 <!-- Navigation dots -->
 <nav id="dots" aria-label="Navegación por slides"></nav>
+
+<!-- Theme toggle button -->
+<button id="theme-btn" onclick="toggleTheme()" aria-label="Cambiar tema">
+  <svg id="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+  <svg id="icon-sun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  <span id="theme-label">Oscuro</span>
+</button>
 
 <!-- Download PDF button -->
 <button id="dl-btn" onclick="window.print()" aria-label="Descargar como PDF">
@@ -1444,20 +1484,20 @@
     <h2 class="r" style="font-family: var(--f-head);">Experiencia gestionando marcas líderes en LATAM</h2>
 
     <div class="logo-grid r">
-      <div class="logo-cell"><img src="public/logos-clientes/sodexo_logo.png" alt="Sodexo"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo-pluxee.png" alt="Pluxee"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/localiza_logo_2022.png" alt="Localiza"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo-renting.png" alt="Renting Colombia"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/hilton-logo.png" alt="Hilton"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo-atmopel.png" alt="Atmopel"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo-betterfly.png" alt="Betterfly"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo-kamina.png" alt="Kamina"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/ransom-logo.png" alt="Ransomware Help"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo-puntos.png" alt="Puntos Colombia"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo_glt.png" alt="GLT Logistics"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/logo-iscconnection-group.png" alt="ISC Connection"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/cropped-logo-oroexpress-3.png" alt="Oro Express"></div>
-      <div class="logo-cell"><img src="public/logos-clientes/oppo_logo_2019.png" alt="OPPO Mobile"></div>
+      <div class="logo-cell"><img src="/logos-clientes/sodexo_logo.png" alt="Sodexo"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo-pluxee.png" alt="Pluxee"></div>
+      <div class="logo-cell"><img src="/logos-clientes/localiza_logo_2022.png" alt="Localiza"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo-renting.png" alt="Renting Colombia"></div>
+      <div class="logo-cell"><img src="/logos-clientes/hilton-logo.png" alt="Hilton"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo-atmopel.png" alt="Atmopel"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo-betterfly.png" alt="Betterfly"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo-kamina.png" alt="Kamina"></div>
+      <div class="logo-cell"><img src="/logos-clientes/ransom-logo.png" alt="Ransomware Help"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo-puntos.png" alt="Puntos Colombia"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo_glt.png" alt="GLT Logistics"></div>
+      <div class="logo-cell"><img src="/logos-clientes/logo-iscconnection-group.png" alt="ISC Connection"></div>
+      <div class="logo-cell"><img src="/logos-clientes/cropped-logo-oroexpress-3.png" alt="Oro Express"></div>
+      <div class="logo-cell"><img src="/logos-clientes/oppo_logo_2019.png" alt="OPPO Mobile"></div>
     </div>
 
     <p class="note r">$500,000+ USD / mes gestionados en simultáneo · México · Colombia · Chile · Argentina · USA</p>
@@ -1737,6 +1777,23 @@
       scrollToSlide(dy > 0 ? currentIdx + 1 : currentIdx - 1);
     }
   }, { passive: true });
+
+  /* ── Theme toggle ─────────────────────────────────────── */
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-mode') === 'dark';
+    if (isDark) {
+      html.removeAttribute('data-mode');
+      document.getElementById('icon-moon').style.display = '';
+      document.getElementById('icon-sun').style.display  = 'none';
+      document.getElementById('theme-label').textContent = 'Oscuro';
+    } else {
+      html.setAttribute('data-mode', 'dark');
+      document.getElementById('icon-moon').style.display = 'none';
+      document.getElementById('icon-sun').style.display  = '';
+      document.getElementById('theme-label').textContent = 'Claro';
+    }
+  }
 
   /* ── Init ─────────────────────────────────────────────── */
   setActive(0);

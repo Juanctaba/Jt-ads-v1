@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -128,9 +127,11 @@ export default function BlogPage() {
             </h2>
           </div>
           <div id="soro-blog" />
-          <Script
+          {/* Plain script tag: rendered in the initial SSR HTML so Soro's
+              embed loads in document order (div first, then script).
+              This keeps the daily-published articles crawlable for SEO. */}
+          <script
             src="https://app.trysoro.com/api/embed/16dc3cb9-65c1-4fb8-8d4e-bfb06a25ea80"
-            strategy="afterInteractive"
             defer
           />
         </div>

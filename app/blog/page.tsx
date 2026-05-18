@@ -126,12 +126,22 @@ export default function BlogPage() {
               Recursos adicionales
             </h2>
           </div>
-          {/* Soro injects article cards into #soro-blog after the script
-              runs. suppressHydrationWarning prevents React 19 from wiping
-              Soro's DOM mutations during client hydration. The plain
-              <script defer> ships in the SSR HTML so Googlebot can fetch
-              the embed and index the daily-published articles. */}
-          <div id="soro-blog" suppressHydrationWarning />
+          {/* Soro injects article cards into #soro-blog after the deferred
+              script executes. We need React to treat this div's children as
+              "not React-managed" so its hydration/reconciliation does not
+              wipe Soro's mutations. suppressHydrationWarning only silences
+              the warning — it does NOT stop reconciliation. The proper
+              opt-out is dangerouslySetInnerHTML with an empty string: it
+              marks the element as having raw, externally-managed HTML, so
+              React leaves the subtree alone after hydration.
+
+              The plain <script defer> still ships in the SSR HTML so
+              Googlebot fetches the embed and indexes the daily articles. */}
+          <div
+            id="soro-blog"
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{ __html: "" }}
+          />
           <script
             src="https://app.trysoro.com/api/embed/16dc3cb9-65c1-4fb8-8d4e-bfb06a25ea80"
             defer

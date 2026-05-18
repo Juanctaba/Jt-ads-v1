@@ -112,43 +112,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Soro embed — biblioteca complementaria */}
-      <section className="bg-white py-16 px-6 border-b border-[#f6f3f2]">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-8">
-            <span className="inline-block mb-3 px-3 py-1 rounded-full bg-[#9bb4fe]/20 text-[#294487] text-xs font-semibold tracking-widest uppercase">
-              Biblioteca complementaria
-            </span>
-            <h2
-              className="text-2xl md:text-3xl font-black text-[#1c1b1b] leading-tight"
-              style={{ fontFamily: "Manrope, sans-serif" }}
-            >
-              Recursos adicionales
-            </h2>
-          </div>
-          {/* Soro injects article cards into #soro-blog after the deferred
-              script executes. We need React to treat this div's children as
-              "not React-managed" so its hydration/reconciliation does not
-              wipe Soro's mutations. suppressHydrationWarning only silences
-              the warning — it does NOT stop reconciliation. The proper
-              opt-out is dangerouslySetInnerHTML with an empty string: it
-              marks the element as having raw, externally-managed HTML, so
-              React leaves the subtree alone after hydration.
-
-              The plain <script defer> still ships in the SSR HTML so
-              Googlebot fetches the embed and indexes the daily articles. */}
-          <div
-            id="soro-blog"
-            suppressHydrationWarning
-            dangerouslySetInnerHTML={{ __html: "" }}
-          />
-          <script
-            src="https://app.trysoro.com/api/embed/16dc3cb9-65c1-4fb8-8d4e-bfb06a25ea80"
-            defer
-          />
-        </div>
-      </section>
-
       {/* Post Grid */}
       <section className="bg-[#fcf9f8] py-20 px-6">
         <div className="max-w-5xl mx-auto">

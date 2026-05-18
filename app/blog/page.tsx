@@ -126,10 +126,12 @@ export default function BlogPage() {
               Recursos adicionales
             </h2>
           </div>
-          <div id="soro-blog" />
-          {/* Plain script tag: rendered in the initial SSR HTML so Soro's
-              embed loads in document order (div first, then script).
-              This keeps the daily-published articles crawlable for SEO. */}
+          {/* Soro injects article cards into #soro-blog after the script
+              runs. suppressHydrationWarning prevents React 19 from wiping
+              Soro's DOM mutations during client hydration. The plain
+              <script defer> ships in the SSR HTML so Googlebot can fetch
+              the embed and index the daily-published articles. */}
+          <div id="soro-blog" suppressHydrationWarning />
           <script
             src="https://app.trysoro.com/api/embed/16dc3cb9-65c1-4fb8-8d4e-bfb06a25ea80"
             defer

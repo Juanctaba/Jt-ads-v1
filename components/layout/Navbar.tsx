@@ -28,6 +28,9 @@ export default function Navbar() {
           <Link href="/blog" className="hover:text-[var(--text-primary)] transition-colors">
             Blog
           </Link>
+          <Link href="/blog/recursos" className="hover:text-[var(--text-primary)] transition-colors">
+            Recursos
+          </Link>
           <Link href="/contacto" className="hover:text-[var(--text-primary)] transition-colors">
             Contacto
           </Link>

@@ -9,6 +9,7 @@ const links = [
   { href: "/agencia-linkedin-ads-latam", label: "LinkedIn Ads", sub: true },
   { href: "/casos-de-exito", label: "Casos", sub: false },
   { href: "/blog", label: "Blog", sub: false },
+  { href: "/blog/recursos", label: "Recursos", sub: false },
   { href: "/contacto", label: "Contacto", sub: false },
 ];
 

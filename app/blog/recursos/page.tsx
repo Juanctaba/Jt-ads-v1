@@ -76,7 +76,7 @@ export default function RecursosPage() {
             dangerouslySetInnerHTML={{ __html: "" }}
           />
           <script
-            src="https://app.trysoro.com/api/embed/16dc3cb9-65c1-4fb8-8d4e-bfb06a25ea80"
+            src="https://app.trysoro.com/api/embed/35797203-3c96-4dad-8d14-65b87f4d9634"
             defer
           />
         </div>

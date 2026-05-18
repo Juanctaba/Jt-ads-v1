@@ -66,6 +66,15 @@ const posts = [
     readTime: "11 min",
   },
   {
+    slug: "biblioteca",
+    title: "Biblioteca de Recursos: plantillas y guías de Performance Marketing",
+    excerpt:
+      "Colección curada de recursos accionables sobre Google Ads, tracking server-side y optimización de campañas en LATAM. Plantillas y guías que usamos en cuentas reales.",
+    category: "Biblioteca",
+    date: "Mayo 2026",
+    readTime: "Ver recursos",
+  },
+  {
     slug: "mas-alla-pmax-advantage-autonomia-campanas",
     title: "Más allá de Performance Max y Advantage+: la próxima frontera de la autonomía en campañas",
     excerpt: "PMax y Advantage+ ya son el estándar. Las plataformas van más lejos con AI Max, generación creativa autónoma y campañas totalmente automatizadas. Analizamos qué se gana, qué se pierde y cuándo el control humano sigue siendo irremplazable.",

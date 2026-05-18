@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -109,6 +110,29 @@ export default function BlogPage() {
             Sin teoría de manual. Solo lo que encontramos auditando cuentas
             reales en México, Colombia y Chile — y cómo lo corregimos.
           </p>
+        </div>
+      </section>
+
+      {/* Soro embed — biblioteca complementaria */}
+      <section className="bg-white py-16 px-6 border-b border-[#f6f3f2]">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-8">
+            <span className="inline-block mb-3 px-3 py-1 rounded-full bg-[#9bb4fe]/20 text-[#294487] text-xs font-semibold tracking-widest uppercase">
+              Biblioteca complementaria
+            </span>
+            <h2
+              className="text-2xl md:text-3xl font-black text-[#1c1b1b] leading-tight"
+              style={{ fontFamily: "Manrope, sans-serif" }}
+            >
+              Recursos adicionales
+            </h2>
+          </div>
+          <div id="soro-blog" />
+          <Script
+            src="https://app.trysoro.com/api/embed/16dc3cb9-65c1-4fb8-8d4e-bfb06a25ea80"
+            strategy="afterInteractive"
+            defer
+          />
         </div>
       </section>
 

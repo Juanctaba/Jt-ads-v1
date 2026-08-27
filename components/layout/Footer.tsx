@@ -43,6 +43,21 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/agencia-meta-ads-latam" className="hover:text-[var(--text-primary)] transition-colors">
+                  Meta Ads LATAM
+                </Link>
+              </li>
+              <li>
+                <Link href="/agencia-linkedin-ads-latam" className="hover:text-[var(--text-primary)] transition-colors">
+                  LinkedIn Ads LATAM
+                </Link>
+              </li>
+              <li>
+                <Link href="/soluciones" className="hover:text-[var(--text-primary)] transition-colors">
+                  Automatización & IA
+                </Link>
+              </li>
+              <li>
                 <Link href="/diagnostico-en-vivo" className="hover:text-[var(--text-primary)] transition-colors">
                   Diagnóstico Gratuito
                 </Link>

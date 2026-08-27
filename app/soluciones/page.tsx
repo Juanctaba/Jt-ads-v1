@@ -96,12 +96,47 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Automatización, IA y CRM para empresas",
-  provider: { "@type": "Organization", name: "JT Ads", url: "https://jtads.com" },
+  serviceType: "Automatización de marketing e implementación de CRM",
+  provider: {
+    "@type": "Organization",
+    name: "JT Ads",
+    url: "https://jtads.com",
+    logo: "https://jtads.com/logo-blue.png",
+  },
   areaServed: ["México", "Colombia", "Chile", "Argentina", "Perú", "USA"],
   description:
     "Implementación de automatización de marketing, agentes conversacionales con IA y CRM para empresas en LATAM. Plataforma agnóstica: HubSpot, GoHighLevel, Omnix y cualquier stack.",
   url: "https://jtads.com/soluciones",
   inLanguage: "es",
+  isAccessibleForFree: true,
+  about: [
+    "Automatización de marketing",
+    "Agentes conversacionales con inteligencia artificial",
+    "Implementación de CRM",
+    "Integración de stack de marketing y ventas",
+  ],
+  knowsAbout: [
+    "HubSpot",
+    "GoHighLevel",
+    "Omnix",
+    "Salesforce",
+    "Make",
+    "Zapier",
+    "n8n",
+    "ActiveCampaign",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Capacidades de automatización e IA",
+    itemListElement: capabilities.map((cap) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: cap.title,
+        description: cap.body,
+      },
+    })),
+  },
 };
 
 const faqSchema = {
@@ -149,13 +184,36 @@ export default function SolucionesPage() {
               plataforma que ya tienes — o te ayudamos a elegir la correcta.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CTAButton href="/diagnostico-en-vivo" size="lg">
-                Agendar diagnóstico — Gratis
+              <CTAButton href="/contacto" size="lg">
+                Cuéntanos tu operación
               </CTAButton>
               <CTAButton href="#capacidades" variant="secondary" size="lg">
                 Ver qué implementamos ↓
               </CTAButton>
             </div>
+          </div>
+        </section>
+
+        {/* ── Resumen extraíble ──
+            Respuesta directa y autocontenida al inicio del <main>: es el bloque
+            que buscadores e IA generativas citan cuando alguien pregunta qué
+            hace JT Ads en automatización. Debe leerse completo fuera de contexto. */}
+        <section className="py-12 px-6 bg-white border-b border-gray-100">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#727687] mb-4">
+              En resumen
+            </p>
+            <p className="text-[var(--text-primary)] text-lg leading-relaxed">
+              <strong>JT Ads implementa automatización de marketing, agentes conversacionales
+              con inteligencia artificial y CRM para empresas en LATAM.</strong>{" "}
+              Diseñamos y construimos flujos de nurturing y calificación de leads, agentes de
+              texto y voz que atienden 24/7, arquitecturas multiagente e integraciones entre
+              CRM, plataformas de ads y herramientas de ventas. Trabajamos de forma agnóstica
+              a la plataforma: implementamos sobre HubSpot, GoHighLevel, Omnix, Salesforce,
+              Make, Zapier o n8n según lo que el negocio ya use — y si no tiene ninguna,
+              ayudamos a elegir la adecuada según su operación actual y su proyección de
+              crecimiento.
+            </p>
           </div>
         </section>
 
@@ -192,7 +250,7 @@ export default function SolucionesPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {capabilities.map((cap) => (
-                <div
+                <article
                   key={cap.title}
                   className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm"
                 >
@@ -213,7 +271,7 @@ export default function SolucionesPage() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
@@ -428,15 +486,15 @@ export default function SolucionesPage() {
                 Hablemos de tu operación actual.
               </h2>
               <p className="text-[var(--text-secondary)] mb-8 leading-relaxed">
-                En la primera sesión revisamos tu proceso, tu stack y dónde se está perdiendo
-                tiempo o dinero. Te decimos qué automatizar primero — con o sin nosotros.
+                Escríbenos con el contexto de tu proceso y tu stack actual. Te respondemos
+                con una lectura concreta de qué automatizar primero — con o sin nosotros.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton href="/diagnostico-en-vivo" size="lg" className="flex-1 justify-center">
-                  Agendar diagnóstico gratuito
+                <CTAButton href="/contacto" size="lg" className="flex-1 justify-center">
+                  Cuéntanos tu operación
                 </CTAButton>
-                <CTAButton href="/contacto" variant="secondary" size="lg">
-                  Tengo preguntas
+                <CTAButton href="/casos-de-exito" variant="secondary" size="lg">
+                  Ver casos
                 </CTAButton>
               </div>
               <p className="mt-5 text-sm text-[var(--text-muted)] text-center">

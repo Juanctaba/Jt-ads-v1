@@ -23,19 +23,12 @@ export default function Footer() {
             <p className="text-sm text-[var(--text-muted)] mb-4">
               Paid media para empresas en LATAM + USA
             </p>
-            <a
-              href="https://www.google.com/partners/agency?id=1978608979"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block hover:opacity-80 transition-opacity"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/google-partner-badge.svg"
-                alt="Google Partner"
-                style={{ height: "60px", width: "auto" }}
-              />
-            </a>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/google-partner-badge.svg"
+              alt="Google Partner"
+              style={{ height: "60px", width: "auto" }}
+            />
           </div>
 
           {/* Servicios */}

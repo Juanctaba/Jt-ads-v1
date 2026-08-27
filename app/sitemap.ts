@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/agencia-google-ads-latam`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/agencia-meta-ads-latam`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/agencia-linkedin-ads-latam`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/soluciones`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/agencia-google-ads-mexico`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/agencia-google-ads-colombia`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/agencia-google-ads-chile`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },

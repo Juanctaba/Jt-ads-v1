@@ -7,6 +7,7 @@ const links = [
   { href: "/agencia-google-ads-latam", label: "Google Ads", sub: true },
   { href: "/agencia-meta-ads-latam", label: "Meta Ads", sub: true },
   { href: "/agencia-linkedin-ads-latam", label: "LinkedIn Ads", sub: true },
+  { href: "/soluciones", label: "Automatización & IA", sub: true },
   { href: "/casos-de-exito", label: "Casos", sub: false },
   { href: "/blog", label: "Blog", sub: false },
   { href: "/blog/recursos", label: "Recursos", sub: false },

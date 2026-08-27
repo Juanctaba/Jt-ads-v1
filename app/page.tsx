@@ -425,6 +425,121 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── Automatización & IA ── */}
+        <section className="py-20 px-6 bg-[#fcf9f8]">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="inline-block mb-5 px-4 py-1.5 rounded-full bg-[var(--accent-faint)] text-[var(--accent)] text-xs font-semibold tracking-widest uppercase">
+                Automatización & IA
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-tight mb-5">
+                Automatización, IA y CRM: hacemos que<br className="hidden md:inline" /> tu operación escale sin contratar más.
+              </h2>
+              <p className="text-[var(--text-secondary)] text-lg max-w-2xl mx-auto leading-relaxed">
+                No somos solo una agencia de paid media. Implementamos los sistemas que hacen que tu marketing y ventas funcionen solos — flujos automáticos, agentes con IA y CRM conectado a tus canales. La plataforma es lo de menos; lo que importa es saber construirlo.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  icon: (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  ),
+                  title: "Automatización de marketing y operaciones",
+                  body: "Flujos de nurturing, pipelines automáticos, asignación de leads y notificaciones — todo sin intervención manual. Tu equipo cierra, el sistema trabaja.",
+                },
+                {
+                  icon: (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                  ),
+                  title: "Agentes conversacionales con IA",
+                  body: "Agentes de texto y voz que califican leads, responden preguntas y escalan al momento correcto — en WhatsApp, email o cualquier canal. Disponibles 24/7.",
+                },
+                {
+                  icon: (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                  ),
+                  title: "Integración de stack completo",
+                  body: "Conectamos tu CRM, plataforma de ads, herramientas de ventas y datos en un solo ecosistema. Sin silos, sin exportaciones manuales, sin información perdida.",
+                },
+              ].map((cap) => (
+                <div
+                  key={cap.title}
+                  className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-[var(--accent-faint)] text-[var(--accent)] flex items-center justify-center mb-5">
+                    {cap.icon}
+                  </div>
+                  <h3 className="font-semibold text-[var(--text-primary)] mb-3 text-base">{cap.title}</h3>
+                  <p className="text-sm leading-relaxed text-[var(--text-secondary)]">{cap.body}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="flex flex-col gap-4">
+                  <div className="w-8 h-0.5 bg-[var(--accent)]" />
+                  <h3 className="text-xl font-bold text-[var(--text-primary)]">¿Ya tienes una plataforma?</h3>
+                  <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                    Si ya usas HubSpot, GoHighLevel u otra herramienta, la implementamos al máximo y extraemos todo su potencial. No empezamos de cero — mejoramos lo que ya tienes.
+                  </p>
+                  {[
+                    "Auditoría + optimización de tu stack actual",
+                    "Flujos, automatizaciones y agentes IA sobre lo que ya tienes",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-sm text-[var(--text-secondary)]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col gap-4 border-t md:border-t-0 md:border-l border-gray-100 pt-6 md:pt-0 md:pl-8">
+                  <div className="w-8 h-0.5 bg-[var(--accent)]" />
+                  <h3 className="text-xl font-bold text-[var(--text-primary)]">¿No tienes plataforma aún?</h3>
+                  <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                    Te ayudamos a elegir la solución correcta según tu operación actual y proyección de crecimiento. Sin sesgos — recomendamos lo que necesitas, no lo que es más fácil de vender.
+                  </p>
+                  {[
+                    "Evaluación honesta de plataformas según tu caso",
+                    "Implementación completa + onboarding de equipo",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-sm text-[var(--text-secondary)]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <p className="text-xs text-[var(--text-muted)]">
+                  HubSpot · GoHighLevel · Omnix · Make · Zapier · y cualquier stack que ya uses
+                </p>
+                <a href="/soluciones" className="text-sm font-semibold text-[var(--accent)] hover:underline whitespace-nowrap">
+                  Conoce cómo lo hacemos →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── CTA with glow ── */}
         <section className="relative overflow-hidden py-24 px-6 bg-[#0a0a0a]">
           {/* Radial glow */}

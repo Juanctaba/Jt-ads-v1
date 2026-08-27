@@ -40,6 +40,19 @@ const services = [
     color: "text-[#0A66C2]",
     bg: "bg-[#0A66C2]/10",
   },
+  {
+    href: "/soluciones",
+    label: "Automatización & IA",
+    description: "CRM, flujos, agentes conversacionales",
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    color: "text-[#6366f1]",
+    bg: "bg-[#6366f1]/10",
+    divider: true,
+  },
 ];
 
 export default function ServicesDropdown() {
@@ -79,22 +92,24 @@ export default function ServicesDropdown() {
         <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
           <div className="p-2">
             {services.map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#f6f3f2] transition-colors group"
-              >
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${s.bg} ${s.color}`}>
-                  {s.icon}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-[#1c1b1b] group-hover:text-[#0066ff] transition-colors">
-                    {s.label}
-                  </p>
-                  <p className="text-xs text-[#727687]">{s.description}</p>
-                </div>
-              </Link>
+              <div key={s.href}>
+                {s.divider && <div className="h-px bg-gray-100 mx-2 my-1.5" />}
+                <Link
+                  href={s.href}
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#f6f3f2] transition-colors group"
+                >
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${s.bg} ${s.color}`}>
+                    {s.icon}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-[#1c1b1b] group-hover:text-[#0066ff] transition-colors">
+                      {s.label}
+                    </p>
+                    <p className="text-xs text-[#727687]">{s.description}</p>
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         </div>

@@ -566,6 +566,10 @@ export default function PostTrackingServerSide() {
               <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Precios</p>
               <p className="text-sm font-semibold text-[#1c1b1b]">¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales en 2026</p>
             </a>
+            <a href="/blog/7-senales-de-que-tu-pixel-infla-tus-conversiones" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
+              <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Tracking Técnico</p>
+              <p className="text-sm font-semibold text-[#1c1b1b]">7 señales de que tu píxel está inflando tus conversiones</p>
+            </a>
             <a href="/agencia-google-ads-latam" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
               <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Servicios</p>
               <p className="text-sm font-semibold text-[#1c1b1b]">Agencia de Google Ads para LATAM — cómo trabajamos</p>

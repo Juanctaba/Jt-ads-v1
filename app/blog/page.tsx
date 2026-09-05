@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "7-senales-de-que-tu-pixel-infla-tus-conversiones",
+    title:
+      "7 señales de que tu píxel está inflando tus conversiones (y cómo comprobarlo)",
+    excerpt:
+      "Tu reporte dice 200 conversiones. Ventas dice 45. Siete banderas rojas de que el píxel está contando de más, y cómo comprobar cada una en menos de una hora.",
+    category: "Tracking Técnico",
+    date: "Agosto 2026",
+    readTime: "7 min",
+  },
+  {
     slug: "cuanto-cobra-agencia-google-ads-latam",
     title:
       "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales en 2026",

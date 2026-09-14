@@ -4,9 +4,9 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia LinkedIn Ads LATAM — SaaS B2B & Enterprise | JT Ads",
+  title: "Agencia de LinkedIn Ads en LATAM | SaaS B2B y Enterprise",
   description:
-    "Gestión profesional de LinkedIn Ads para SaaS B2B y empresas enterprise en LATAM. Lead Gen Forms, Sponsored Content, ABM y tracking conectado al CRM. Diagnóstico gratuito.",
+    "Gestión de LinkedIn Ads para SaaS B2B y empresas enterprise: Lead Gen Forms, ABM y tracking conectado al CRM. Agenda tu diagnóstico gratuito de la cuenta.",
   alternates: {
     canonical: "https://jtads.com/agencia-linkedin-ads-latam",
     languages: {

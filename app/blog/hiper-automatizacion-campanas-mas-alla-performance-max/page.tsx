@@ -4,9 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Más allá de Performance Max y Advantage+: la hiper-automatización en campañas 2026 | JT Ads",
+  title: "Hiper-automatización en campañas: más allá de PMax",
   description:
-    "Performance Max y Advantage+ ya son el estándar. Analizamos qué viene después — AI Max, Advantage+ Shopping, LinkedIn Accelerate — y cuándo la automatización total se convierte en un riesgo real para tu estrategia.",
+    "Qué viene después de Performance Max y Advantage+: AI Max, Advantage+ Shopping y cuándo la automatización total pasa a ser un riesgo real en tu cuenta.",
   alternates: {
     canonical: "https://jtads.com/blog/hiper-automatizacion-campanas-mas-alla-performance-max",
     languages: { es: "https://jtads.com/blog/hiper-automatizacion-campanas-mas-alla-performance-max" },

@@ -4,12 +4,20 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Google Ads para Empresas en USA — JT Ads | Performance Marketing",
+  title: "Agencia de Google Ads en USA | Mercado Hispano LATAM",
   description:
-    "Google Ads para empresas en USA con operaciones en LATAM. Tracking server-side, gestión senior con $500k+/mes de experiencia. Primera sesión de diagnóstico sin costo.",
+    "Google Ads para empresas en USA que venden al mercado hispano o que tienen operación en LATAM. Equipo bilingüe y tracking server-side. Sesión sin costo.",
   alternates: {
     canonical: "https://jtads.com/agencia-google-ads-usa",
-    languages: { "es-US": "https://jtads.com/agencia-google-ads-usa" },
+    languages: {
+        "es-CO": "https://jtads.com/agencia-google-ads-colombia",
+        "es-MX": "https://jtads.com/agencia-google-ads-mexico",
+        "es-CL": "https://jtads.com/agencia-google-ads-chile",
+        "es-AR": "https://jtads.com/agencia-google-ads-argentina",
+        "es-US": "https://jtads.com/agencia-google-ads-usa",
+        "es": "https://jtads.com/agencia-google-ads-latam",
+        "x-default": "https://jtads.com/agencia-google-ads-latam",
+      },
   },
   keywords: [
     "agencia google ads usa",

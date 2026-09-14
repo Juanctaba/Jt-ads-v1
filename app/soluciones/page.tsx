@@ -5,9 +5,9 @@ import Footer from "@/components/layout/Footer";
 import CTAButton from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
-  title: "Automatización, IA y CRM para Empresas en LATAM | JT Ads Soluciones",
+  title: "Automatización e IA para Empresas en LATAM | JT Ads",
   description:
-    "Implementamos HubSpot, GoHighLevel y agentes conversacionales con IA para automatizar tu marketing y operaciones. Plataforma agnóstica — trabajamos con lo que ya tienes o te ayudamos a elegir.",
+    "Implementamos automatización de marketing, agentes de IA y CRM sobre HubSpot, GoHighLevel o la plataforma que tu empresa ya usa. Diagnóstico sin costo.",
   alternates: {
     canonical: "https://jtads.com/soluciones",
     languages: { es: "https://jtads.com/soluciones" },

@@ -4,9 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Cómo reducir el CPL en Google Ads: 7 palancas reales para empresas en LATAM",
+  title: "Cómo reducir el CPL en Google Ads: 7 palancas reales",
   description:
-    "El CPL alto en Google Ads tiene causas concretas. Te explicamos las 7 palancas que ajustamos en cada cuenta para bajar el costo por lead sin sacrificar volumen ni calidad.",
+    "El CPL alto en Google Ads tiene causas concretas. Las 7 palancas que ajustamos en cada cuenta para bajar el costo por lead sin perder volumen ni calidad.",
   alternates: {
     canonical: "https://jtads.com/blog/como-reducir-cpl-google-ads-latam",
     languages: { "es": "https://jtads.com/blog/como-reducir-cpl-google-ads-latam" },

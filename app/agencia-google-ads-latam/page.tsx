@@ -4,15 +4,20 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia de Google Ads en LATAM — JT Ads | Sesión de Diagnóstico Gratis",
+  title: "Agencia de Google Ads en LATAM | Diagnóstico Gratis",
   description:
-    "Especialistas en Google Ads para empresas en México, Colombia, Chile, Argentina y USA. Tracking server-side, sin contratos largos. Primera sesión de diagnóstico sin costo.",
+    "Especialistas en Google Ads para empresas de México, Colombia, Chile y Argentina. Tracking server-side y sin contratos largos. Primera sesión sin costo.",
   alternates: {
     canonical: "https://jtads.com/agencia-google-ads-latam",
     languages: {
-      "es": "https://jtads.com/agencia-google-ads-latam",
-      "x-default": "https://jtads.com/agencia-google-ads-latam",
-    },
+        "es-CO": "https://jtads.com/agencia-google-ads-colombia",
+        "es-MX": "https://jtads.com/agencia-google-ads-mexico",
+        "es-CL": "https://jtads.com/agencia-google-ads-chile",
+        "es-AR": "https://jtads.com/agencia-google-ads-argentina",
+        "es-US": "https://jtads.com/agencia-google-ads-usa",
+        "es": "https://jtads.com/agencia-google-ads-latam",
+        "x-default": "https://jtads.com/agencia-google-ads-latam",
+      },
   },
   keywords: [
     "agencia google ads latam",

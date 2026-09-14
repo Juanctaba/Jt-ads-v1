@@ -4,9 +4,9 @@ import Footer from "@/components/layout/Footer";
 import CTAButton from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
-  title: "JT Ads | Agencia de Performance Marketing — Google Ads, Meta y LinkedIn LATAM",
+  title: "Agencia de Pauta Digital y Performance | JT Ads LATAM",
   description:
-    "Agencia de performance marketing para empresas en LATAM. Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior con experiencia gestionando $500k+/mes. Sin contratos largos.",
+    "Gestionamos tu pauta en Google, Meta y LinkedIn con tracking server-side y reportes conectados a ventas reales, no al dashboard. Diagnóstico gratuito.",
   alternates: {
     canonical: "https://jtads.com",
     languages: {
@@ -85,13 +85,38 @@ const icpItems = [
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ProfessionalService",
+  "@id": "https://jtads.com/#organization",
   name: "JT Ads",
   url: "https://jtads.com",
   logo: "https://jtads.com/logo-blue.png",
-  description: "Agencia de Google Ads y performance marketing para empresas en LATAM y USA. Equipo senior con experiencia gestionando $500k+/mes.",
-  areaServed: ["México", "Colombia", "Chile", "Argentina", "USA"],
-  knowsAbout: ["Google Ads", "Meta Ads", "LinkedIn Ads", "Performance Marketing", "Server-Side Tracking"],
+  image: "https://jtads.com/logo-blue.png",
+  description:
+    "Agencia de pauta digital y performance marketing, y de automatización con IA, para empresas en LATAM y el mercado hispano de USA.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Medellín",
+    addressRegion: "Antioquia",
+    addressCountry: "CO",
+  },
+  areaServed: [
+    { "@type": "Country", name: "Colombia" },
+    { "@type": "Country", name: "México" },
+    { "@type": "Country", name: "Chile" },
+    { "@type": "Country", name: "Argentina" },
+    { "@type": "Country", name: "Estados Unidos" },
+  ],
+  knowsAbout: [
+    "Google Ads",
+    "Meta Ads",
+    "LinkedIn Ads",
+    "Pauta digital",
+    "Performance marketing",
+    "Tracking server-side",
+    "Automatización de marketing",
+    "Agentes conversacionales con IA",
+  ],
+  priceRange: "$$",
   sameAs: ["https://www.linkedin.com/in/juan-tabares-b1272b58/"],
 };
 
@@ -140,9 +165,9 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg md:text-xl leading-relaxed mb-10 text-[var(--text-secondary)] max-w-xl">
-                Diagnóstico en vivo de tu cuenta actual. Te decimos exactamente qué cambiar
-                para bajar tu CPL y mejorar la calidad de leads. Sin rodeos, sin reportes
-                que esconden la verdad.
+                Gestionamos tu pauta en Google, Meta y LinkedIn. Diagnóstico en vivo de tu
+                cuenta actual: te decimos exactamente qué cambiar para bajar tu CPL y mejorar
+                la calidad de leads. Sin rodeos, sin reportes que esconden la verdad.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -323,7 +348,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-tight">
-                El proceso es simple. La ejecución es lo que cambia.
+                Pauta digital que se mide en ventas, no en clics.
               </h2>
             </div>
 

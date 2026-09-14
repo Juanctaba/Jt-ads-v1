@@ -4,9 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Performance Max en LATAM: cómo funciona y cuándo realmente conviene usarlo",
+  title: "Performance Max en LATAM: cómo funciona y cuándo usarlo",
   description:
-    "Performance Max no es para todos. Te explicamos cómo funciona el algoritmo de Google, qué señales necesita para optimizar bien y en qué casos conviene usarlo en LATAM.",
+    "Cómo funciona el algoritmo de Performance Max, qué señales necesita para optimizar bien y en qué casos conviene (y en cuáles no) usarlo en LATAM en 2026.",
   alternates: {
     canonical: "https://jtads.com/blog/performance-max-como-funciona-latam",
     languages: { "es": "https://jtads.com/blog/performance-max-como-funciona-latam" },

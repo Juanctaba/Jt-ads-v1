@@ -19,6 +19,14 @@ const nextConfig: NextConfig = {
         destination: "/blog/hiper-automatizacion-campanas-mas-alla-performance-max",
         permanent: true,
       },
+      // URLs heredadas del WordPress anterior: siguen en 404 y Ahrefs las rastrea.
+      // Las reglas especificas de /en/... van antes del comodin, o este las
+      // captura primero y /en/agenda-reunion terminaria en / y no en el diagnostico.
+      { source: "/agenda-reunion", destination: "/diagnostico-en-vivo", permanent: true },
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/agenda-reunion", destination: "/diagnostico-en-vivo", permanent: true },
+      { source: "/en/comments/feed", destination: "/blog", permanent: true },
+      { source: "/en/:path*", destination: "/", permanent: true },
     ];
   },
   async rewrites() {

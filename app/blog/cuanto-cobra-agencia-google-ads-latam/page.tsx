@@ -4,9 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales 2026",
+  title: "¿Cuánto cobra una agencia de Google Ads en LATAM? 2026",
   description:
-    "Los modelos de precios de agencias de Google Ads en México, Colombia y Chile. Qué incluye cada uno, cuál conviene según tu presupuesto y qué señales de alerta debes evitar.",
+    "Modelos de precios de agencias de Google Ads en México, Colombia y Chile: qué incluye cada uno, cuál te conviene y qué señales de alerta debes evitar.",
   alternates: {
     canonical: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
     languages: { "es": "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam" },

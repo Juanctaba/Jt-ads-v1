@@ -4,12 +4,20 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia de Google Ads en Chile — JT Ads | Performance Marketing",
+  title: "Agencia de Google Ads en Chile | JT Ads Performance",
   description:
-    "Especialistas en Google Ads para empresas en Chile. Tracking server-side, sin contratos largos. Gestión senior con $500k+/mes de experiencia. Primera sesión sin costo.",
+    "Especialistas en Google Ads para empresas en Chile. Tracking server-side, sin contratos largos y gestión senior. Primera sesión de diagnóstico gratis.",
   alternates: {
     canonical: "https://jtads.com/agencia-google-ads-chile",
-    languages: { "es-CL": "https://jtads.com/agencia-google-ads-chile" },
+    languages: {
+        "es-CO": "https://jtads.com/agencia-google-ads-colombia",
+        "es-MX": "https://jtads.com/agencia-google-ads-mexico",
+        "es-CL": "https://jtads.com/agencia-google-ads-chile",
+        "es-AR": "https://jtads.com/agencia-google-ads-argentina",
+        "es-US": "https://jtads.com/agencia-google-ads-usa",
+        "es": "https://jtads.com/agencia-google-ads-latam",
+        "x-default": "https://jtads.com/agencia-google-ads-latam",
+      },
   },
   keywords: [
     "agencia google ads chile",

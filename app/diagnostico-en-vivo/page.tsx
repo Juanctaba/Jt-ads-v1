@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AuditoriaForm from "./AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Diagnóstico Gratuito de Google Ads | Auditoría en Vivo — JT Ads",
+  title: "Diagnóstico Gratuito de Google Ads, Meta y LinkedIn",
   description:
-    "Auditamos tu cuenta de Google Ads, Meta o LinkedIn sin costo. Analizamos +20 puntos críticos para encontrar oportunidades de crecimiento inmediato.",
+    "Auditamos tu cuenta sin costo: revisamos más de 20 puntos críticos y te decimos qué está fallando y qué deberías cambiar esta misma semana. Sin compromiso.",
   alternates: { canonical: "https://jtads.com/diagnostico-en-vivo" },
   openGraph: {
     title: "Diagnóstico Gratuito de Google Ads | Auditoría en Vivo — JT Ads",
@@ -465,8 +465,16 @@ export default function DiagnosticoPage() {
         </section>
 
       </main>
-      {/* Footer mínimo — sin links */}
+      {/* Footer mínimo — los links van aquí, después del CTA, para no competir con la conversión */}
       <footer className="bg-[#f6f3f2] border-t border-[#c2c6d8]/15 px-6 py-6 text-center">
+        <p className="text-xs text-[#727687] mb-3">
+          Qué revisamos en cada plataforma:{" "}
+          <a href="/agencia-google-ads-latam" className="underline hover:text-[#1c1b1b]">Google Ads</a>
+          {" · "}
+          <a href="/agencia-meta-ads-latam" className="underline hover:text-[#1c1b1b]">Meta Ads</a>
+          {" · "}
+          <a href="/agencia-linkedin-ads-latam" className="underline hover:text-[#1c1b1b]">LinkedIn Ads</a>
+        </p>
         <p className="text-xs text-[#727687]">© {new Date().getFullYear()} JT Ads. Todos los derechos reservados.</p>
       </footer>
     </>

@@ -4,12 +4,20 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia de Google Ads en Colombia — JT Ads | Performance Marketing",
+  title: "Agencia de Google Ads en Colombia | Pauta Digital B2B",
   description:
-    "Especialistas en Google Ads para empresas en Colombia. Tracking server-side, sin contratos largos. Gestión senior con $500k+/mes de experiencia. Primera sesión sin costo.",
+    "Manejamos tu pauta en Google Ads en Colombia con tracking server-side y el CPL medido en el CRM, no en el dashboard. Diagnóstico gratuito de tu cuenta.",
   alternates: {
     canonical: "https://jtads.com/agencia-google-ads-colombia",
-    languages: { "es-CO": "https://jtads.com/agencia-google-ads-colombia" },
+    languages: {
+        "es-CO": "https://jtads.com/agencia-google-ads-colombia",
+        "es-MX": "https://jtads.com/agencia-google-ads-mexico",
+        "es-CL": "https://jtads.com/agencia-google-ads-chile",
+        "es-AR": "https://jtads.com/agencia-google-ads-argentina",
+        "es-US": "https://jtads.com/agencia-google-ads-usa",
+        "es": "https://jtads.com/agencia-google-ads-latam",
+        "x-default": "https://jtads.com/agencia-google-ads-latam",
+      },
   },
   keywords: [
     "agencia google ads colombia",
@@ -667,7 +675,7 @@ export default function AgenciaGoogleAdsColombiaPage() {
                 className="text-3xl lg:text-4xl font-bold"
                 style={{ fontFamily: "Manrope, sans-serif", color: "#1c1b1b" }}
               >
-                Qué gestionamos en Google Ads para empresas colombianas
+                Qué incluye nuestra gestión de pauta en Google Ads
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

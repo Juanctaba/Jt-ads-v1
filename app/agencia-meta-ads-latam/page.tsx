@@ -4,9 +4,9 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia Meta Ads LATAM — Facebook & Instagram Ads | JT Ads",
+  title: "Agencia de Meta Ads en LATAM | Facebook e Instagram",
   description:
-    "Gestión profesional de Meta Ads para empresas en LATAM. Facebook Ads, Instagram Ads, Advantage+, retargeting y tracking server-side. Diagnóstico gratuito de tu cuenta.",
+    "Gestión de Meta Ads para empresas en LATAM: Facebook, Instagram, Advantage+ y retargeting con tracking server-side. Diagnóstico gratuito de tu cuenta.",
   alternates: {
     canonical: "https://jtads.com/agencia-meta-ads-latam",
     languages: {

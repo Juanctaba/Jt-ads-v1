@@ -4,9 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Por qué el CPL de tu plataforma miente y cómo solucionarlo | JT Ads",
+  title: "Tracking server-side: por qué tu CPL te está mintiendo",
   description:
-    "El dashboard de Google Ads muestra un CPL de $45. Tu CRM dice que los leads no convierten. Esta guía explica por qué sucede y cómo el tracking server-side soluciona la discrepancia.",
+    "Google Ads dice que tu CPL es de $45 y el CRM dice otra cosa muy distinta. Por qué pasa y cómo el tracking server-side corrige la discrepancia de raíz.",
   alternates: {
     canonical: "https://jtads.com/blog/tracking-server-side-cpl-plataforma",
     languages: { "es": "https://jtads.com/blog/tracking-server-side-cpl-plataforma" },

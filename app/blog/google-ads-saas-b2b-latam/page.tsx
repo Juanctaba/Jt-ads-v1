@@ -4,9 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Google Ads para SaaS B2B en LATAM: guía completa 2026 | JT Ads",
+  title: "Google Ads para SaaS B2B en LATAM | Guía completa 2026",
   description:
-    "Cómo estructurar Google Ads para SaaS B2B en LATAM: keywords por intención, tracking conectado al CRM, benchmarks de CPL por etapa del funnel y errores frecuentes en cuentas activas.",
+    "Cómo estructurar Google Ads para SaaS B2B en LATAM: keywords por intención, tracking conectado al CRM y benchmarks de CPL por cada etapa del funnel B2B.",
   alternates: {
     canonical: "https://jtads.com/blog/google-ads-saas-b2b-latam",
     languages: { es: "https://jtads.com/blog/google-ads-saas-b2b-latam" },

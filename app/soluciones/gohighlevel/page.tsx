@@ -305,8 +305,11 @@ export default function GoHighLevelPage() {
                   <tr className="bg-[#f6f3f2]">
                     <th scope="col" className="p-5 text-xs font-bold uppercase tracking-wider text-[#424656]">Criterio</th>
                     <th scope="col" className="p-5 text-xs font-bold uppercase tracking-wider text-[#294487] bg-[#eff4ff]">GoHighLevel</th>
-                    {/* TODO(enlace): HubSpot → /soluciones/hubspot al publicarse (commit 6) */}
-                    <th scope="col" className="p-5 text-xs font-bold uppercase tracking-wider text-[#424656]">HubSpot</th>
+                    <th scope="col" className="p-5 text-xs font-bold uppercase tracking-wider text-[#424656]">
+                      <Link href="/soluciones/hubspot" className="hover:text-[var(--accent)] underline underline-offset-2">
+                        HubSpot
+                      </Link>
+                    </th>
                     <th scope="col" className="p-5 text-xs font-bold uppercase tracking-wider text-[#424656]">Kommo</th>
                   </tr>
                 </thead>
@@ -437,7 +440,14 @@ export default function GoHighLevelPage() {
                 <Link href="/soluciones" className="text-[var(--accent)] font-semibold hover:underline">
                   vertical de automatización e IA
                 </Link>
-                , que también trabaja sobre HubSpot y otras plataformas.
+                , que también trabaja sobre{" "}
+                <Link href="/soluciones/hubspot" className="text-[var(--accent)] font-semibold hover:underline">
+                  HubSpot
+                </Link>{" "}
+                y otras plataformas.{" "}
+                <Link href="/soluciones/stack" className="text-[var(--accent)] font-semibold hover:underline">
+                  El stack completo con el que trabajamos →
+                </Link>
               </p>
             </div>
           </div>

@@ -291,7 +291,10 @@ export default function AgentesDeIAPage() {
                 <Link href="/soluciones/automatizacion-de-procesos" className="text-[var(--accent)] font-semibold hover:underline">
                   automatización de procesos
                 </Link>{" "}
-                se encarga de lo que pasa después.
+                se encarga de lo que pasa después.{" "}
+                <Link href="/soluciones/stack" className="text-[var(--accent)] font-semibold hover:underline">
+                  El stack completo con el que trabajamos →
+                </Link>
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

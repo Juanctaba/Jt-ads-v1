@@ -395,7 +395,15 @@ export default function PostTrackingServerSide() {
                   enviados, sino solo de los leads que tu equipo de ventas marcó
                   como calificados. Esto le dice al algoritmo exactamente qué
                   tipo de usuario debe buscar — y mejora drásticamente la calidad
-                  del tráfico generado.
+                  del tráfico generado. Si tu CRM es HubSpot, así es como hacemos
+                  la{" "}
+                  <Link
+                    href="/soluciones/hubspot"
+                    className="text-[#0066ff] font-semibold hover:underline"
+                  >
+                    implementación de HubSpot conectada a Google Ads y Meta
+                  </Link>
+                  .
                 </p>
               </div>
             </li>

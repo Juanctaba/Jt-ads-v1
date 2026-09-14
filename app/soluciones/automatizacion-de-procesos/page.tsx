@@ -268,7 +268,18 @@ export default function AutomatizacionDeProcesosPage() {
                 <Link href="/soluciones" className="text-[var(--accent)] font-semibold hover:underline">
                   vertical de automatización e IA
                 </Link>
-                . Implementamos sobre HubSpot, GoHighLevel, Salesforce, Make, n8n o Zapier.
+                . Implementamos sobre{" "}
+                <Link href="/soluciones/hubspot" className="text-[var(--accent)] font-semibold hover:underline">
+                  HubSpot
+                </Link>
+                ,{" "}
+                <Link href="/soluciones/gohighlevel" className="text-[var(--accent)] font-semibold hover:underline">
+                  GoHighLevel
+                </Link>
+                , Salesforce, Make, n8n o Zapier.{" "}
+                <Link href="/soluciones/stack" className="text-[var(--accent)] font-semibold hover:underline">
+                  El stack completo con el que trabajamos →
+                </Link>
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

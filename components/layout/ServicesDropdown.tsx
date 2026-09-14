@@ -65,6 +65,18 @@ const services = [
     color: "text-[#6366f1]",
     bg: "bg-[#6366f1]/10",
   },
+  {
+    href: "/soluciones/agentes-de-ia",
+    label: "Agentes de IA",
+    description: "WhatsApp, web y voz 24/7",
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM2.25 12c0 4.556 4.03 8.25 9 8.25a9.764 9.764 0 002.555-.337A5.972 5.972 0 0018.75 21a5.969 5.969 0 01-.474-3.041C19.605 16.566 20.25 14.36 20.25 12c0-4.556-4.03-8.25-9-8.25S2.25 7.444 2.25 12z" />
+      </svg>
+    ),
+    color: "text-[#6366f1]",
+    bg: "bg-[#6366f1]/10",
+  },
 ];
 
 export default function ServicesDropdown() {

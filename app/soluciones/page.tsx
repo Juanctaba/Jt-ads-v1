@@ -35,8 +35,7 @@ const capabilities = [
     ],
   },
   {
-    // TODO(enlace): /soluciones/agentes-de-ia al publicarse (commit 4)
-    href: undefined,
+    href: "/soluciones/agentes-de-ia",
     title: "Agentes conversacionales con IA (texto y voz)",
     body: "Implementamos agentes que atienden, califican y escalan leads en tiempo real — con el tono y el conocimiento específico de tu negocio. No son chatbots de árbol de decisión: entienden contexto y resuelven.",
     deliverables: [
@@ -47,8 +46,7 @@ const capabilities = [
     ],
   },
   {
-    // TODO(enlace): /soluciones/agentes-de-ia al publicarse (commit 4)
-    href: undefined,
+    href: "/soluciones/agentes-de-ia",
     title: "Arquitecturas multiagente",
     body: "Cuando un solo agente no alcanza, diseñamos sistemas donde varios agentes especializados colaboran: uno califica, otro agenda, otro hace seguimiento, otro reporta. Cada uno con su rol y sus límites bien definidos.",
     deliverables: [
@@ -79,6 +77,12 @@ const childPages = [
     path: "/soluciones/automatizacion-de-procesos",
     description:
       "Flujos de nurturing, calificación y enrutamiento de leads, sincronización con el CRM y automatización de tareas operativas.",
+  },
+  {
+    name: "Agentes de IA",
+    path: "/soluciones/agentes-de-ia",
+    description:
+      "Agentes conversacionales con IA en WhatsApp, web y voz que atienden, califican y agendan, conectados al CRM.",
   },
 ];
 

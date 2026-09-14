@@ -434,6 +434,8 @@ export default function DiagnosticoOperacionPage() {
           <a href="/soluciones/agentes-de-ia" className="underline hover:text-[#1c1b1b]">Agentes de IA</a>
           {" · "}
           <a href="/soluciones/gohighlevel" className="underline hover:text-[#1c1b1b]">GoHighLevel</a>
+          {" · "}
+          <a href="/soluciones/hubspot" className="underline hover:text-[#1c1b1b]">HubSpot</a>
         </p>
         <p className="text-xs text-[#727687]">© {new Date().getFullYear()} JT Ads. Todos los derechos reservados.</p>
       </footer>

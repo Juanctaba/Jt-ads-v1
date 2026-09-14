@@ -90,13 +90,18 @@ const childPages = [
     description:
       "Guía, precios e implementación de GoHighLevel en español, y Omnix, la plataforma construida sobre GoHighLevel que opera JT Ads.",
   },
+  {
+    name: "Implementación de HubSpot CRM",
+    path: "/soluciones/hubspot",
+    description:
+      "Implementación de HubSpot CRM en español: migración de datos, pipelines, flujos, integración con ads y reportes de atribución.",
+  },
 ];
 
 // Fila de plataformas: solo enlaces internos, nunca afiliados desde el hub.
-// TODO(enlace): HubSpot → /soluciones/hubspot (commit 6), el resto →
-// /soluciones/stack (commit 7).
+// TODO(enlace): el resto → /soluciones/stack (commit 7).
 const platforms: { name: string; href?: string }[] = [
-  { name: "HubSpot" },
+  { name: "HubSpot", href: "/soluciones/hubspot" },
   { name: "GoHighLevel", href: "/soluciones/gohighlevel" },
   { name: "Omnix" },
   { name: "Respond.io" },

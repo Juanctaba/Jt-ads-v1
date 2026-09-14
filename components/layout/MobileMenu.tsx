@@ -10,6 +10,7 @@ const links = [
   { href: "/soluciones", label: "Automatización & IA", sub: true },
   { href: "/soluciones/automatizacion-de-procesos", label: "Automatización de procesos", sub: true },
   { href: "/soluciones/agentes-de-ia", label: "Agentes de IA", sub: true },
+  { href: "/soluciones/gohighlevel", label: "GoHighLevel", sub: true },
   { href: "/casos-de-exito", label: "Casos", sub: false },
   { href: "/blog", label: "Blog", sub: false },
   { href: "/blog/recursos", label: "Recursos", sub: false },

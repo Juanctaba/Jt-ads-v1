@@ -84,14 +84,20 @@ const childPages = [
     description:
       "Agentes conversacionales con IA en WhatsApp, web y voz que atienden, califican y agendan, conectados al CRM.",
   },
+  {
+    name: "Implementación de GoHighLevel",
+    path: "/soluciones/gohighlevel",
+    description:
+      "Guía, precios e implementación de GoHighLevel en español, y Omnix, la plataforma construida sobre GoHighLevel que opera JT Ads.",
+  },
 ];
 
 // Fila de plataformas: solo enlaces internos, nunca afiliados desde el hub.
-// TODO(enlace): HubSpot → /soluciones/hubspot (commit 6), GoHighLevel →
-// /soluciones/gohighlevel (commit 5), el resto → /soluciones/stack (commit 7).
+// TODO(enlace): HubSpot → /soluciones/hubspot (commit 6), el resto →
+// /soluciones/stack (commit 7).
 const platforms: { name: string; href?: string }[] = [
   { name: "HubSpot" },
-  { name: "GoHighLevel" },
+  { name: "GoHighLevel", href: "/soluciones/gohighlevel" },
   { name: "Omnix" },
   { name: "Respond.io" },
   { name: "ManyChat" },

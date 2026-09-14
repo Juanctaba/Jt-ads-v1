@@ -1,0 +1,68 @@
+// Fuente única de verdad para enlaces de afiliado y datos de terceros que
+// caducan. Cuando una oferta o un precio cambian se toca este archivo y nada más.
+//
+// Reglas (ver AUTOMATIZACION-PLAN.md):
+// - Los enlaces se renderizan solo con app/soluciones/_components/AffiliateLink.tsx,
+//   que fuerza rel="sponsored nofollow noopener" y data-cta.
+// - Solo aparecen en /soluciones/gohighlevel y /soluciones/stack. Nunca en el hub.
+// - `oferta` vacía = la página no promete ninguna oferta para esa herramienta.
+// - Una herramienta sale de aquí el día que JT Ads deja de usarla.
+
+export type Affiliate = {
+  nombre: string;
+  url: string;
+  oferta: string;
+};
+
+export const AFFILIATES = {
+  gohighlevel: {
+    nombre: "GoHighLevel",
+    url: "https://www.gohighlevel.com/highlevel-bootcamp-es?fp_ref=jt-ads-performance-llc93",
+    oferta: "30 días gratis + bootcamp de implementación",
+  },
+} satisfies Record<string, Affiliate>;
+
+export type AffiliateSlug = keyof typeof AFFILIATES;
+
+export const AFFILIATES_REVISADO = "2026-09-14";
+
+// Precios públicos de HighLevel. Leídos en la fuente en la fecha indicada;
+// la página muestra la fecha de revisión para que un cambio de precios no
+// quede como promesa incumplida.
+export const GHL_PRICING = {
+  fuente: "https://www.gohighlevel.com/pricing",
+  revisadoEl: "2026-09-14",
+  revisadoElTexto: "14 de septiembre de 2026",
+  moneda: "USD",
+  pruebaEstandarDias: 14,
+  planes: [
+    {
+      nombre: "Starter",
+      mensual: 97,
+      anual: 970,
+      incluye: ["Hasta 3 sub-cuentas", "Contactos y usuarios ilimitados", "Funciones principales de la plataforma"],
+    },
+    {
+      nombre: "Unlimited",
+      mensual: 297,
+      anual: 2970,
+      incluye: ["Sub-cuentas ilimitadas", "Refacturación de teléfono y email sin recargo", "Acceso básico a la API"],
+    },
+    {
+      nombre: "Agency Pro",
+      mensual: 497,
+      anual: 4970,
+      incluye: ["Modo SaaS y creación automática de sub-cuentas", "Refacturación con margen propio", "Acceso avanzado a la API"],
+    },
+    {
+      nombre: "Enterprise",
+      mensual: null,
+      anual: null,
+      incluye: ["Precio a medida", "Gestor de cuenta dedicado", "Desarrollo y soporte premium"],
+    },
+  ],
+  adicionales: [
+    { nombre: "AI Employee Growth", precio: "$50/mes por sub-cuenta" },
+    { nombre: "AI Employee Unlimited", precio: "$97/mes por sub-cuenta" },
+  ],
+} as const;

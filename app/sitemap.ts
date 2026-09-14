@@ -30,6 +30,8 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/como-reducir-cpl-google-ads-latam", "2026-04-20", 0.7],
   ["/blog/performance-max-como-funciona-latam", "2026-04-20", 0.7],
   ["/blog/google-ads-saas-b2b-latam", "2026-04-20", 0.7],
+  ["/sistema", "2026-09-13", 0.8],
+  ["/crm-agencia-ads", "2026-09-13", 0.8],
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

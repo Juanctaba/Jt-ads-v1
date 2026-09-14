@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f1419">
+  <title>CRM para agencia de ads: GoHighLevel vs HubSpot | JT Ads</title>
+  <meta name="description" content="Comparación honesta para quien opera Meta o Google. HubSpot sirve para una marca. Si tienes varios clientes y WhatsApp, el agujero es speed-to-lead, no el logo. Alta self-serve.">
+  <link rel="canonical" href="https://jtads.com/crm-agencia-ads">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="JT Ads">
+  <meta property="og:title" content="CRM para agencia de ads: GoHighLevel vs HubSpot">
+  <meta property="og:description" content="HubSpot no es el debate. El form sí. Speed-to-lead detrás de Meta y Google. Sin métricas inventadas.">
+  <meta property="og:url" content="https://jtads.com/crm-agencia-ads">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CRM para agencia de ads: GoHighLevel vs HubSpot | JT Ads">
+  <meta name="twitter:description" content="Alternativa HubSpot para agencia, sin fanboy. El lead tiene dueño en minutos, o no.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://jtads.com/crm-agencia-ads#webpage",
+        "url": "https://jtads.com/crm-agencia-ads",
+        "name": "CRM para agencia de ads: GoHighLevel vs HubSpot",
+        "inLanguage": "es",
+        "isPartOf": { "@id": "https://jtads.com/#website" },
+        "description": "Comparación honesta de CRM para agencia de ads. HubSpot vs GoHighLevel. Speed-to-lead después del form de Meta o Google."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jtads.com/#website",
+        "url": "https://jtads.com/",
+        "name": "JT Ads",
+        "publisher": { "@id": "https://jtads.com/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://jtads.com/#org",
+        "name": "JT Ads Performance LLC",
+        "url": "https://jtads.com/",
+        "founder": { "@type": "Person", "name": "Juan Tabares" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuál es el mejor CRM para una agencia de ads?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No hay un ganador universal. Si operas una marca con equipo de marketing, HubSpot encaja. Si operas varios clientes de Meta o Google, con WhatsApp y un closer por cuenta, importa más si el form crea una oportunidad con owner en minutos. GoHighLevel está hecho para ese piso, no para ser el CRM enterprise más maduro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿GoHighLevel reemplaza a HubSpot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No en todos los casos. HubSpot sigue siendo sólido para una marca, inbound largo y reporting de revenue ops. GoHighLevel cubre subcuentas, form, pipeline, WhatsApp y calendario en un solo sitio. Si el closer ya toca el lead en minutos sobre HubSpot, no hay que cambiar de logo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El alta de GoHighLevel incluye implementación?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. El alta es self-serve: tú abres la cuenta, tú operas. La implementación white-label de JT Ads es otro servicio y no va en esta página."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Sirve si solo tengo una marca in-house?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, si el follow-up de Meta o Google hoy vive en una hoja o un inbox. Plan mensual si estás probando; anual si ya lo vas a usar todos los días. No armes 14 workflows el día 1."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg:#0f1419;
+      --card:#1a222c;
+      --fg:#f4f1ea;
+      --muted:#b7b2a7;
+      --line:#c45c26;
+      --btn:#e8e2d6;
+      --btntxt:#111;
+      --hair:#2a3440;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100dvh;
+    }
+    a:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--line);
+      outline-offset: 3px;
+    }
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 8px;
+      background: var(--btn);
+      color: var(--btntxt);
+      padding: 8px 12px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      z-index: 10;
+    }
+    .skip:focus { left: 8px; }
+    .top {
+      border-bottom: 1px solid var(--hair);
+      padding: 14px 20px;
+      padding-top: max(14px, env(safe-area-inset-top));
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .top a.brand {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--fg);
+      text-decoration: none;
+    }
+    .top a.aux {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .top a.aux:hover { color: var(--fg); }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+      padding-bottom: max(56px, env(safe-area-inset-bottom));
+    }
+    p.kicker {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--line);
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-size: clamp(26px, 7.2vw, 40px);
+      line-height: 1.12;
+      font-weight: 400;
+      margin: 0 0 16px;
+    }
+    h2 {
+      font-size: clamp(20px, 4.6vw, 26px);
+      line-height: 1.2;
+      font-weight: 400;
+      margin: 36px 0 12px;
+    }
+    .lead {
+      font-size: 17px;
+      line-height: 1.42;
+      color: var(--muted);
+      margin: 0 0 28px;
+    }
+    .body p {
+      font-size: 17px;
+      line-height: 1.45;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    .body p strong { color: var(--fg); font-weight: 400; }
+    ol.piso, ul.plain {
+      margin: 0 0 20px;
+      padding-left: 1.2em;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+    ol.piso li, ul.plain li { margin: 0 0 8px; }
+    .grid {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 24px;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--hair);
+      padding: 20px;
+    }
+    .grid .card h3 {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--line);
+      margin: 0 0 10px;
+      font-weight: 600;
+    }
+    .grid .card ul {
+      margin: 0;
+      padding-left: 1.1em;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .grid .card li { margin: 0 0 8px; }
+    a.btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: var(--btn);
+      color: var(--btntxt);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      min-height: 52px;
+      padding: 12px 14px;
+      margin: 0 0 10px;
+    }
+    a.btn:last-child { margin-bottom: 0; }
+    a.btn span {
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      color: #444;
+      margin-top: 3px;
+    }
+    .wrap {
+      overflow-x: auto;
+      margin: 0 0 16px;
+      -webkit-overflow-scrolling: touch;
+    }
+    table.cmp {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 520px;
+    }
+    table.cmp th, table.cmp td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--hair);
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    table.cmp th {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--fg);
+      font-weight: 600;
+    }
+    table.cmp td:first-child { color: var(--fg); width: 34%; }
+    details.faq {
+      border-top: 1px solid var(--hair);
+      padding: 12px 0;
+    }
+    details.faq:last-of-type { border-bottom: 1px solid var(--hair); }
+    details.faq summary {
+      font-size: 17px;
+      cursor: pointer;
+      color: var(--fg);
+      line-height: 1.4;
+    }
+    details.faq p {
+      margin: 10px 0 4px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    .cta-kicker {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--line);
+      margin: 28px 0 12px;
+    }
+    .wl {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      color: var(--fg);
+      line-height: 1.4;
+      margin: 20px 0 0;
+      padding: 12px 14px;
+      border: 1px solid var(--hair);
+    }
+    .note {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 24px 0 0;
+      line-height: 1.4;
+    }
+    .note a { color: #c4bdb0; }
+    footer.site {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      color: #7a756c;
+      margin-top: 36px;
+    }
+    footer.site a { color: #9a9488; }
+    @media (min-width: 480px) {
+      main { padding: 48px 24px 72px; }
+      .card { padding: 28px; }
+      .lead { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="top">
+    <a class="brand" href="https://jtads.com/">JT Ads · jtads.com</a>
+    <a class="aux" href="/sistema">Speed-to-lead</a>
+  </header>
+  <main id="contenido" class="body">
+    <p class="kicker">JT Ads Performance · Medellín · LATAM + USA</p>
+    <h1>CRM para agencia de ads: HubSpot no es el debate. El form sí.</h1>
+    <p class="lead">Si operas Meta o Google para varios clientes, el agujero casi nunca es “falta un CRM más lindo”. El agujero es el minuto 0–15: el Instant Form se llena y nadie es owner. Esta página compara GoHighLevel vs HubSpot en ese trabajo — no en el brochure.</p>
+
+    <h2>Qué está buscando la gente</h2>
+    <p>“CRM para agencia de ads”. “Alternativa HubSpot agencia”. “GoHighLevel vs HubSpot”. Tres búsquedas, un mismo operador: media buyer o dueño de agencia que ya paga clics y el follow-up vive en una hoja, un inbox o “el closer lo ve mañana”.</p>
+    <p>No hay gurú. No hay reto de 30 días. No hay testimonios ni números de caso en esta página. Si alguien te vende un CRM con ROAS de plantilla, cierra la pestaña.</p>
+
+    <h2>El trabajo de un CRM detrás de ads</h2>
+    <p>Un CRM para agencia de ads tiene un piso. Si eso no corre, el resto es teatro:</p>
+    <ol class="piso">
+      <li>El form de Meta o Google crea una <strong>oportunidad</strong> — no un contacto suelto.</li>
+      <li>Un <strong>owner</strong> queda asignado en el acto. No “el equipo lo ve”.</li>
+      <li>Un <strong>primer toque</strong> sale en minutos (WhatsApp del negocio, SMS o llamada), con fallback si la API se cae.</li>
+      <li>Un <strong>calendario</strong> existe para quien sí respondió. No para reemplazar el primer toque.</li>
+    </ol>
+    <p>Cuando eso corre siete días sin que alguien “se acuerde”, recién tiene sentido hablar de IA, 14 workflows o un SaaS. Paid media primero; el CRM es el piso de follow-up.</p>
+
+    <h2>HubSpot: cuándo sí es la respuesta</h2>
+    <p>HubSpot es un CRM sólido. Si operas <strong>una marca</strong>, con equipo de marketing, inbound largo y reporting para un CMO, está bien. No hay que cambiarlo por moda.</p>
+    <p>Donde se pudre para una agencia de ads: duplicar el stack por cliente. WhatsApp, SMS, booking, landings, un pipeline por cuenta. Seats, hubs y add-ons. El costo no es el logo; es armar el mismo Frankenstein ocho veces.</p>
+    <p>Si tu operación es una sola empresa y el closer ya toca el lead en minutos, no cambies de CRM por esta página.</p>
+
+    <h2>GoHighLevel vs HubSpot (sin fanboy)</h2>
+    <p>GoHighLevel no “gana” porque tenga más módulos. Gana, cuando gana, porque una agencia de ads puede poner el follow-up detrás de Meta y Google sin pagar tres tools por cliente. Si lo usas como curso de automatización, también se pudre. Nosotros lo ponemos <strong>detrás</strong> de los ads, no al revés.</p>
+    <div class="wrap">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th>El trabajo</th>
+            <th>HubSpot</th>
+            <th>GoHighLevel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Una marca, un equipo</td>
+            <td>Encaja.</td>
+            <td>Sobra si no lo vas a usar todos los días.</td>
+          </tr>
+          <tr>
+            <td>Varios clientes / subcuentas</td>
+            <td>Workspaces y coste por asiento.</td>
+            <td>Subcuentas. Tú operas. Tú registras.</td>
+          </tr>
+          <tr>
+            <td>Form de ads → oportunidad + owner</td>
+            <td>Se arma. No viene de fábrica para Instant Forms de agencia.</td>
+            <td>El trabajo típico: form → workflow → pipeline.</td>
+          </tr>
+          <tr>
+            <td>WhatsApp, SMS, calendario</td>
+            <td>Add-on u otra herramienta.</td>
+            <td>En el mismo sitio.</td>
+          </tr>
+          <tr>
+            <td>Reporting enterprise / revenue ops</td>
+            <td>Más maduro.</td>
+            <td>No es el CRM “enterprise” del mercado.</td>
+          </tr>
+          <tr>
+            <td>La pregunta que importa</td>
+            <td>¿El lead tiene dueño en cinco minutos?</td>
+            <td>La misma.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Qué sí hace GHL aquí</h3>
+        <ul>
+          <li>Unificar form, pipeline, WhatsApp y booking por cliente.</li>
+          <li>Asignar owner cuando cae el lead de ads, no “cuando haya tiempo”.</li>
+          <li>Dejar de exportar CSV el viernes.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Qué no promete esta página</h3>
+        <ul>
+          <li>No reemplaza a un closer. El humano entra cuando hay respuesta.</li>
+          <li>No baja el CPC. Si subes budget sobre una cola que nadie trabaja, compras nombres más fríos.</li>
+          <li>No hay cifras de “cuánto sube el ROAS” inventadas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Alternativa HubSpot para agencia — sin romance</h2>
+    <p>Si buscas “alternativa HubSpot agencia” porque el Marketing Hub se te fue de precio, el reemplazo no es un logo más barato. Es dejar de duplicar:</p>
+    <ul class="plain">
+      <li>Un form por cuenta de ads que no crea oportunidad.</li>
+      <li>Un WhatsApp Business suelto que no escribe al pipeline.</li>
+      <li>Un calendario que no sabe si el lead ya habló.</li>
+      <li>Un closer que “revisa el CRM” a la hora dos.</li>
+    </ul>
+    <p>GoHighLevel es una de las alternativas que unifican eso. No es la única. Un CRM liviano + la API oficial de WhatsApp + un automatizador también pueden. La pregunta sigue siendo speed-to-lead, no el vendor.</p>
+
+    <h2>Día 1. Nada más.</h2>
+    <p>No armes 14 workflows. No toques AI. No armes SaaS el primer día.</p>
+    <ol class="piso">
+      <li>Dominio de mail con SPF / DKIM / DMARC.</li>
+      <li>Un form de ads → una oportunidad en un pipeline.</li>
+      <li>Un owner asignado en el acto.</li>
+      <li>Un primer toque en minutos, con fallback.</li>
+      <li>Un calendario para quien sí tiene intención.</li>
+    </ol>
+    <p>Alta self-serve. Tú abres. Tú operas. Cuando eso corre siete días, recién el resto.</p>
+
+    <h2>Qué no es esta página</h2>
+    <ul class="plain">
+      <li>No es implementación white-label de JT Ads. Eso es otro servicio.</li>
+      <li>No es mentoría ni recetario de 40 automatizaciones.</li>
+      <li>No es un curso.</li>
+      <li>El alta de GoHighLevel es self-serve.</li>
+    </ul>
+
+    <p class="cta-kicker">Cuatro altas, según quién eres</p>
+    <div class="card">
+      <a class="btn" rel="sponsored noopener noreferrer" href="https://www.gohighlevel.com/highlevel-bootcamp?fp_ref=jt-ads-performance-llc93">Bootcamp 30 días<span>Prueba HighLevel. Alta self-serve.</span></a>
+      <a class="btn" rel="sponsored noopener noreferrer" href="https://www.gohighlevel.com/?fp_ref=jt-ads-performance-llc93">Plan mensual<span>Una marca. Tú abres. In-house.</span></a>
+      <a class="btn" rel="sponsored noopener noreferrer" href="https://gohighlevel.com/annual?fp_ref=jt-ads-performance-llc93">Plan anual<span>Si ya lo vas a usar todos los días.</span></a>
+      <a class="btn" rel="sponsored noopener noreferrer" href="https://www.gohighlevel.com/protrial?fp_ref=jt-ads-performance-llc93">Agencias / SaaS<span>Subcuentas. Tú operas. Tú registras.</span></a>
+    </div>
+    <p class="wl">La implementación white-label de JT Ads es otro servicio. El alta de GoHighLevel es self-serve: tú abres, tú operas.</p>
+    <p class="note">Juan Tabares — JT Ads Performance LLC. Versión corta, sin tabla: <a href="/sistema">el lead se muere en el form</a>.</p>
+
+    <h2>Preguntas cortas</h2>
+    <details class="faq">
+      <summary>¿Cuál es el mejor CRM para una agencia de ads?</summary>
+      <p>No hay un ganador universal. Si operas una marca con equipo de marketing, HubSpot encaja. Si operas varios clientes de Meta o Google, con WhatsApp y un closer por cuenta, importa más si el form crea una oportunidad con owner en minutos. GoHighLevel está hecho para ese piso, no para ser el CRM enterprise más maduro.</p>
+    </details>
+    <details class="faq">
+      <summary>¿GoHighLevel reemplaza a HubSpot?</summary>
+      <p>No en todos los casos. HubSpot sigue siendo sólido para una marca, inbound largo y reporting de revenue ops. GoHighLevel cubre subcuentas, form, pipeline, WhatsApp y calendario en un solo sitio. Si el closer ya toca el lead en minutos sobre HubSpot, no hay que cambiar de logo.</p>
+    </details>
+    <details class="faq">
+      <summary>¿El alta incluye implementación?</summary>
+      <p>No. El alta es self-serve: tú abres la cuenta, tú operas. La implementación white-label de JT Ads es otro servicio y no va en esta página.</p>
+    </details>
+    <details class="faq">
+      <summary>¿Sirve si solo tengo una marca in-house?</summary>
+      <p>Sí, si el follow-up de Meta o Google hoy vive en una hoja o un inbox. Plan mensual si estás probando; anual si ya lo vas a usar todos los días. No armes 14 workflows el día 1.</p>
+    </details>
+
+    <footer class="site">
+      <a href="https://jtads.com/">jtads.com</a>
+      · Medellín
+      · agosto 2026
+      · HTML estático, sin pauta
+    </footer>
+  </main>
+</body>
+</html>

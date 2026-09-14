@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CTAButton from "@/components/ui/CTAButton";
+import { toJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Automatización e IA para Empresas en LATAM | JT Ads",
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
 
 const capabilities = [
   {
+    href: "/soluciones/automatizacion-de-procesos",
     title: "Automatización de marketing y operaciones",
     body: "Diseñamos y construimos los flujos que eliminan trabajo manual de tu equipo: nurturing por comportamiento, asignación automática de leads, movimiento de pipeline, notificaciones y handoffs entre marketing y ventas.",
     deliverables: [
@@ -33,6 +35,8 @@ const capabilities = [
     ],
   },
   {
+    // TODO(enlace): /soluciones/agentes-de-ia al publicarse (commit 4)
+    href: undefined,
     title: "Agentes conversacionales con IA (texto y voz)",
     body: "Implementamos agentes que atienden, califican y escalan leads en tiempo real — con el tono y el conocimiento específico de tu negocio. No son chatbots de árbol de decisión: entienden contexto y resuelven.",
     deliverables: [
@@ -43,6 +47,8 @@ const capabilities = [
     ],
   },
   {
+    // TODO(enlace): /soluciones/agentes-de-ia al publicarse (commit 4)
+    href: undefined,
     title: "Arquitecturas multiagente",
     body: "Cuando un solo agente no alcanza, diseñamos sistemas donde varios agentes especializados colaboran: uno califica, otro agenda, otro hace seguimiento, otro reporta. Cada uno con su rol y sus límites bien definidos.",
     deliverables: [
@@ -53,6 +59,7 @@ const capabilities = [
     ],
   },
   {
+    href: "/soluciones/automatizacion-de-procesos",
     title: "Integración de stack completo",
     body: "Conectamos CRM, plataformas de ads, herramientas de ventas, facturación y datos en un solo ecosistema. Sin exportaciones manuales, sin silos, sin información que se pierde entre sistemas.",
     deliverables: [
@@ -62,6 +69,33 @@ const capabilities = [
       "Reporting unificado de punta a punta",
     ],
   },
+];
+
+// Landings hijas ya publicadas. El OfferCatalog del hub lista solo estas; cada
+// commit que publica una hija la añade aquí.
+const childPages = [
+  {
+    name: "Automatización de procesos",
+    path: "/soluciones/automatizacion-de-procesos",
+    description:
+      "Flujos de nurturing, calificación y enrutamiento de leads, sincronización con el CRM y automatización de tareas operativas.",
+  },
+];
+
+// Fila de plataformas: solo enlaces internos, nunca afiliados desde el hub.
+// TODO(enlace): HubSpot → /soluciones/hubspot (commit 6), GoHighLevel →
+// /soluciones/gohighlevel (commit 5), el resto → /soluciones/stack (commit 7).
+const platforms: { name: string; href?: string }[] = [
+  { name: "HubSpot" },
+  { name: "GoHighLevel" },
+  { name: "Omnix" },
+  { name: "Respond.io" },
+  { name: "ManyChat" },
+  { name: "ElevenLabs" },
+  { name: "Make" },
+  { name: "n8n" },
+  { name: "Zapier" },
+  { name: "Salesforce" },
 ];
 
 const faqs = [
@@ -97,12 +131,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Automatización, IA y CRM para empresas",
   serviceType: "Automatización de marketing e implementación de CRM",
-  provider: {
-    "@type": "Organization",
-    name: "JT Ads",
-    url: "https://jtads.com",
-    logo: "https://jtads.com/logo-blue.png",
-  },
+  provider: { "@id": "https://jtads.com/#organization" },
   areaServed: ["México", "Colombia", "Chile", "Argentina", "Perú", "USA"],
   description:
     "Implementación de automatización de marketing, agentes conversacionales con IA y CRM para empresas en LATAM. Plataforma agnóstica: HubSpot, GoHighLevel, Omnix y cualquier stack.",
@@ -124,16 +153,20 @@ const serviceSchema = {
     "Zapier",
     "n8n",
     "ActiveCampaign",
+    "Respond.io",
+    "ManyChat",
+    "ElevenLabs",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Capacidades de automatización e IA",
-    itemListElement: capabilities.map((cap) => ({
+    name: "Soluciones de automatización e IA",
+    itemListElement: childPages.map((c) => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: cap.title,
-        description: cap.body,
+        name: c.name,
+        description: c.description,
+        url: `https://jtads.com${c.path}`,
       },
     })),
   },
@@ -155,15 +188,15 @@ export default function SolucionesPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: toJsonLd(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchema) }}
       />
       <Navbar />
       <main className="flex-1">
@@ -184,9 +217,13 @@ export default function SolucionesPage() {
               plataforma que ya tienes — o te ayudamos a elegir la correcta.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CTAButton href="/contacto" size="lg">
-                Cuéntanos tu operación
-              </CTAButton>
+              <Link
+                href="/diagnostico-operacion"
+                data-cta="diag-operacion-hub-hero"
+                className="inline-flex items-center justify-center gap-2 bg-[#0066ff] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#0050cb] transition-colors text-sm"
+              >
+                Diagnóstico gratuito de tu operación
+              </Link>
               <CTAButton href="#capacidades" variant="secondary" size="lg">
                 Ver qué implementamos ↓
               </CTAButton>
@@ -271,6 +308,14 @@ export default function SolucionesPage() {
                       </div>
                     ))}
                   </div>
+                  {cap.href && (
+                    <Link
+                      href={cap.href}
+                      className="inline-block mt-6 text-sm font-semibold text-[var(--accent)] hover:underline"
+                    >
+                      Ver cómo lo implementamos →
+                    </Link>
+                  )}
                 </article>
               ))}
             </div>
@@ -355,14 +400,24 @@ export default function SolucionesPage() {
                 Plataformas con las que trabajamos
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
-                {["HubSpot", "GoHighLevel", "Omnix", "Salesforce", "Make", "Zapier", "n8n", "ActiveCampaign"].map((p) => (
-                  <span
-                    key={p}
-                    className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300"
-                  >
-                    {p}
-                  </span>
-                ))}
+                {platforms.map((p) =>
+                  p.href ? (
+                    <Link
+                      key={p.name}
+                      href={p.href}
+                      className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200 hover:border-[#9bb4fe]/60 hover:text-white transition-colors"
+                    >
+                      {p.name} →
+                    </Link>
+                  ) : (
+                    <span
+                      key={p.name}
+                      className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300"
+                    >
+                      {p.name}
+                    </span>
+                  )
+                )}
               </div>
               <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
@@ -486,13 +541,17 @@ export default function SolucionesPage() {
                 Hablemos de tu operación actual.
               </h2>
               <p className="text-[var(--text-secondary)] mb-8 leading-relaxed">
-                Escríbenos con el contexto de tu proceso y tu stack actual. Te respondemos
-                con una lectura concreta de qué automatizar primero — con o sin nosotros.
+                En el diagnóstico mapeamos dónde se pierde el lead entre canal y CRM y qué
+                automatizar en las primeras cuatro semanas — trabajes o no con nosotros.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton href="/contacto" size="lg" className="flex-1 justify-center">
-                  Cuéntanos tu operación
-                </CTAButton>
+                <Link
+                  href="/diagnostico-operacion"
+                  data-cta="diag-operacion-hub-final"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-[#0066ff] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#0050cb] transition-colors text-sm"
+                >
+                  Diagnóstico gratuito de tu operación
+                </Link>
                 <CTAButton href="/casos-de-exito" variant="secondary" size="lg">
                   Ver casos
                 </CTAButton>

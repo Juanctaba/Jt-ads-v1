@@ -21,6 +21,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      { source: "/sistema", destination: "/sistema.html" },
+      { source: "/sistema/", destination: "/sistema.html" },
+      { source: "/crm-agencia-ads", destination: "/crm-agencia-ads.html" },
+      { source: "/crm-agencia-ads/", destination: "/crm-agencia-ads.html" },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -99,18 +99,17 @@ const childPages = [
 ];
 
 // Fila de plataformas: solo enlaces internos, nunca afiliados desde el hub.
-// TODO(enlace): el resto → /soluciones/stack (commit 7).
 const platforms: { name: string; href?: string }[] = [
   { name: "HubSpot", href: "/soluciones/hubspot" },
   { name: "GoHighLevel", href: "/soluciones/gohighlevel" },
-  { name: "Omnix" },
-  { name: "Respond.io" },
-  { name: "ManyChat" },
-  { name: "ElevenLabs" },
-  { name: "Make" },
-  { name: "n8n" },
-  { name: "Zapier" },
-  { name: "Salesforce" },
+  { name: "Omnix", href: "/soluciones/stack" },
+  { name: "Respond.io", href: "/soluciones/stack" },
+  { name: "ManyChat", href: "/soluciones/stack" },
+  { name: "ElevenLabs", href: "/soluciones/stack" },
+  { name: "Make", href: "/soluciones/stack" },
+  { name: "n8n", href: "/soluciones/stack" },
+  { name: "Zapier", href: "/soluciones/stack" },
+  { name: "Salesforce", href: "/soluciones/stack" },
 ];
 
 const faqs = [

@@ -14,6 +14,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/soluciones/agentes-de-ia", "2026-09-14", 0.8],
   ["/soluciones/gohighlevel", "2026-09-14", 0.8],
   ["/soluciones/hubspot", "2026-09-14", 0.8],
+  ["/soluciones/stack", "2026-09-14", 0.6],
   ["/agencia-google-ads-latam", "2026-09-14", 0.9],
   ["/diagnostico-en-vivo", "2026-09-14", 0.9],
   ["/diagnostico-operacion", "2026-09-14", 0.9],

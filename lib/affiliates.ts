@@ -20,6 +20,27 @@ export const AFFILIATES = {
     url: "https://www.gohighlevel.com/highlevel-bootcamp-es?fp_ref=jt-ads-performance-llc93",
     oferta: "30 días gratis + bootcamp de implementación",
   },
+  respondio: {
+    nombre: "Respond.io",
+    url: "https://get.respond.io/fbj14s44qmov",
+    oferta: "7 días de prueba",
+  },
+  manychat: {
+    nombre: "ManyChat",
+    url: "https://manychat.partnerlinks.io/p7b7yziotma7-wki14",
+    oferta: "2 meses con 50% de descuento",
+  },
+  elevenlabs: {
+    nombre: "ElevenLabs",
+    url: "https://try.elevenlabs.io/ejw3834hfy5k",
+    oferta: "",
+  },
+  make: {
+    nombre: "Make",
+    url: "https://www.make.com/en/register?pc=jtads",
+    oferta: "",
+  },
+  // stape: pendiente de enlace de afiliado.
 } satisfies Record<string, Affiliate>;
 
 export type AffiliateSlug = keyof typeof AFFILIATES;

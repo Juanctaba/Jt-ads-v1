@@ -6,15 +6,18 @@ import Footer from "@/components/layout/Footer";
 const URL = "https://jtads.com/blog/tracking-server-side-que-es-por-que-pixel-miente";
 const TITLE =
   "Tracking server-side para principiantes: qué es y por qué tu píxel miente";
+// <title> corto (50-58, como el resto del sitio). El H1 y el headline del
+// schema conservan el titulo completo.
+const SEO_TITLE = "Qué es el tracking server-side y por qué tu píxel miente";
 const DESC =
   "Qué es el tracking server-side, cómo funciona y por qué tu píxel infla tus conversiones. Guía para principiantes para tener leads reales y auditables.";
 
 export const metadata: Metadata = {
-  title: `${TITLE} | JT Ads`,
+  title: SEO_TITLE,
   description: DESC,
   alternates: { canonical: URL, languages: { es: URL } },
   openGraph: {
-    title: `${TITLE} | JT Ads`,
+    title: SEO_TITLE,
     description: DESC,
     images: ["/og-image.png"],
     url: URL,

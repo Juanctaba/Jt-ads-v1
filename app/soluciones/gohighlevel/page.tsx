@@ -58,10 +58,8 @@ const comparativa = [
 ];
 
 const noUsarlo = [
-  "Solo necesitas un CRM sencillo para dos o tres vendedores y nada más. Hay opciones más simples y baratas.",
   "Tu empresa ya tiene HubSpot o Salesforce bien implementado y el equipo lo usa. Migrar por migrar no suma.",
   "No tienes a nadie que lo configure ni lo mantenga. Mal armado, se convierte en otra herramienta que nadie abre.",
-  "Necesitas integraciones corporativas profundas o requisitos de cumplimiento muy específicos de tu industria.",
   "Esperas que la plataforma ordene tu proceso comercial por sí sola. Automatiza lo que diseñes, no lo diseña por ti.",
 ];
 
@@ -92,7 +90,7 @@ const faqs: Faq[] = [
   },
   {
     q: "¿Reemplaza a HubSpot?",
-    a: "Depende de lo que uses de HubSpot. Si buscas CRM, automatizaciones, embudos y mensajería en una sola cuenta con tarifa plana, GoHighLevel cubre ese caso. Si tu equipo depende de reportes avanzados, integraciones corporativas o del ecosistema de HubSpot, no conviene cambiar solo por precio.",
+    a: "Depende de lo que uses de HubSpot. Si buscas CRM, automatizaciones, embudos y mensajería en una sola cuenta con tarifa plana, GoHighLevel cubre ese caso. Si tu equipo depende de reportes avanzados o del ecosistema de HubSpot, no conviene cambiar solo por precio.",
   },
   {
     q: "¿Se puede pagar GoHighLevel desde Colombia o México?",
@@ -260,9 +258,10 @@ export default function GoHighLevelPage() {
             </div>
             <div className="max-w-3xl mx-auto space-y-5 text-[var(--text-secondary)] leading-relaxed">
               <p>
-                <strong className="text-[var(--text-primary)]">Qué plan necesita una empresa.</strong> Si vas a usar
-                GoHighLevel solo para tu negocio, trabajas en una sub-cuenta y el plan Starter suele ser suficiente.
-                Unlimited y Agency Pro tienen sentido cuando gestionas varios negocios o quieres revender la plataforma.
+                <strong className="text-[var(--text-primary)]">Qué plan necesita una empresa.</strong> Para usar
+                GoHighLevel en tu empresa, el plan Starter suele ser suficiente: ya incluye contactos y usuarios
+                ilimitados. Los planes superiores tienen sentido cuando necesitas conectar la plataforma con otros
+                sistemas por API o reportes más detallados por usuario.
               </p>
               <p>
                 <strong className="text-[var(--text-primary)]">Lo que se cobra aparte.</strong> Los mensajes SMS, los

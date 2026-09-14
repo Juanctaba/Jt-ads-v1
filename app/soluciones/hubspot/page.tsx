@@ -131,7 +131,7 @@ const faqs: Faq[] = [
   },
   {
     q: "¿Y si mejor me conviene GoHighLevel?",
-    a: "Puede ser. GoHighLevel reúne CRM, embudos, agenda y mensajería con tarifa plana, y suele encajar mejor en empresas que quieren un solo sistema y venden mucho por WhatsApp. HubSpot destaca cuando hay equipos de marketing y ventas estructurados y necesidad de reportes e integraciones. Te decimos cuál conviene en el diagnóstico.",
+    a: "Puede ser. GoHighLevel reúne CRM, embudos, agenda y mensajería con tarifa plana, y suele encajar mejor en empresas que quieren un solo sistema y venden mucho por WhatsApp. HubSpot destaca cuando hay equipos de marketing y ventas estructurados y necesidad de reportes avanzados. Te decimos cuál conviene en el diagnóstico.",
     extra: (
       <>
         {" "}

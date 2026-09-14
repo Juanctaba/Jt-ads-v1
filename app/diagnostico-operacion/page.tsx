@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import GhlInlineForm from "@/components/forms/GhlInlineForm";
 
-// TODO(ghl-form): reemplazar null por el ID del form "Diagnóstico de operación"
-// cuando Juan lo cree en GHL. Mientras sea null, la sección del formulario
-// muestra un CTA a /contacto en lugar del iframe: el form de ads pide datos
-// solo de pauta y mezclaría los dos tipos de lead.
-const DIAG_OPERACION_FORM_ID: string | null = null;
-const DIAG_OPERACION_FORM_NAME = "Diagnóstico de operación";
+// Formulario propio del embudo de operación (no el de ads, que pide datos de
+// pauta). Servido desde el dominio white-label de Omnix. Si se retira, poner
+// null: la sección cae a un CTA hacia /contacto.
+const DIAG_OPERACION_FORM_ID: string | null = "azNkDnlHWDexRIOMjNnr";
+const DIAG_OPERACION_FORM_NAME = "Formulario Diagnostico";
+const DIAG_OPERACION_FORM_HOST = "api.omnixapp.one";
 
 const URL = "https://jtads.com/diagnostico-operacion";
 
@@ -276,7 +276,7 @@ export default function DiagnosticoOperacionPage() {
             </div>
             {DIAG_OPERACION_FORM_ID ? (
               <div className="bg-white rounded-2xl shadow-sm border border-[#c2c6d8]/10 p-2 overflow-hidden">
-                <GhlInlineForm formId={DIAG_OPERACION_FORM_ID} formName={DIAG_OPERACION_FORM_NAME} />
+                <GhlInlineForm formId={DIAG_OPERACION_FORM_ID} formName={DIAG_OPERACION_FORM_NAME} host={DIAG_OPERACION_FORM_HOST} cookieConsent />
               </div>
             ) : (
               <div className="bg-white rounded-2xl shadow-sm border border-[#c2c6d8]/10 p-8 md:p-10 text-center">

@@ -91,7 +91,7 @@ const sinAfiliado: StackTool[] = [
     nombre: "HubSpot",
     categoria: "CRM",
     resuelve: "CRM con módulos de marketing, ventas y servicio al cliente.",
-    usamos: "Con empresas que tienen equipos de marketing y ventas estructurados y necesitan reportes e integraciones maduras.",
+    usamos: "Con empresas que tienen equipos de marketing y ventas estructurados y necesitan reportes avanzados y su ecosistema de módulos.",
     guia: { href: "/soluciones/hubspot", label: "Implementación de HubSpot en español" },
   },
   {

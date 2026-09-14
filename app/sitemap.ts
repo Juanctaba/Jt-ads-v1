@@ -25,6 +25,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/contacto", "2026-04-20", 0.6],
   ["/politica-de-privacidad", "2026-04-20", 0.3],
   ["/pagos", "2026-04-20", 0.3],
+  ["/blog/tracking-server-side-que-es-por-que-pixel-miente", "2026-09-14", 0.7],
   ["/blog/7-senales-de-que-tu-pixel-infla-tus-conversiones", "2026-08-27", 0.7],
   ["/blog/hiper-automatizacion-campanas-mas-alla-performance-max", "2026-09-14", 0.7],
   ["/blog/cuanto-cobra-agencia-google-ads-latam", "2026-09-14", 0.7],

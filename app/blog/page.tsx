@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "tracking-server-side-que-es-por-que-pixel-miente",
+    title:
+      "Tracking server-side para principiantes: qué es y por qué tu píxel miente",
+    excerpt:
+      "Tu píxel pierde conversiones reales y a la vez cuenta de más. Qué es el tracking server-side, cómo funciona y por qué tu reporte y tu equipo comercial nunca coinciden.",
+    category: "Tracking Técnico",
+    date: "Septiembre 2026",
+    readTime: "8 min",
+  },
+  {
     slug: "7-senales-de-que-tu-pixel-infla-tus-conversiones",
     title:
       "7 señales de que tu píxel está inflando tus conversiones (y cómo comprobarlo)",

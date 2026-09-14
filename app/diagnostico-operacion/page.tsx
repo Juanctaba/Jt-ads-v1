@@ -428,6 +428,8 @@ export default function DiagnosticoOperacionPage() {
         <p className="text-xs text-[#727687] mb-3">
           Qué automatizamos:{" "}
           <a href="/soluciones" className="underline hover:text-[#1c1b1b]">Automatización e IA</a>
+          {" · "}
+          <a href="/soluciones/automatizacion-de-procesos" className="underline hover:text-[#1c1b1b]">Automatización de procesos</a>
         </p>
         <p className="text-xs text-[#727687]">© {new Date().getFullYear()} JT Ads. Todos los derechos reservados.</p>
       </footer>

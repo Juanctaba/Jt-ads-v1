@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "whatsapp-business-bloqueado-que-hacer",
+    title:
+      "WhatsApp Business bloqueado: los cuatro estados que se confunden",
+    excerpt:
+      "Calidad baja, cuenta restringida, plantilla pausada o la app limitada: cuatro problemas distintos que se llaman igual, se comprueban en pantallas distintas y se resuelven distinto.",
+    category: "WhatsApp",
+    date: "Septiembre 2026",
+    readTime: "8 min",
+  },
+  {
     slug: "tracking-server-side-que-es-por-que-pixel-miente",
     title:
       "Tracking server-side para principiantes: qué es y por qué tu píxel miente",

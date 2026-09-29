@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "que-es-meta-business-agent",
+    title:
+      "Qué es Meta Business Agent y cómo te lo cobran por tokens",
+    excerpt:
+      "La categoría que Meta factura por tokens desde agosto de 2026: $2 por millón, entre 4 y 5 centavos por respuesta, y sustituye al cargo de servicio en lugar de sumarse.",
+    category: "WhatsApp",
+    date: "Septiembre 2026",
+    readTime: "7 min",
+  },
+  {
     slug: "limites-mensajes-whatsapp-business",
     title:
       "Límites de mensajes en WhatsApp Business: cómo funcionan y cómo suben",

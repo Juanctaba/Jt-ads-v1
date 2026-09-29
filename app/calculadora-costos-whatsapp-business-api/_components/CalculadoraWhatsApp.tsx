@@ -96,11 +96,14 @@ function calcular(e: Estado) {
 
   // Reglas hasta el 30 de septiembre de 2026: el servicio no se cobraba y la
   // utilidad enviada respondiendo dentro de la ventana de 24 h tampoco.
+  // Meta Business Agent sí se facturaba ya, desde el 1 de agosto de 2026, así
+  // que entra igual en la comparación: no es parte del cambio de octubre.
   const utilidadFueraDeVentana = U * pagable * (1 - e.pctUtilidadEnVentana / 100);
   const metaAntes =
     M * pagable * antes.marketing +
     utilidadFueraDeVentana * antes.utilidad +
-    A * pagable * antes.autenticacion;
+    A * pagable * antes.autenticacion +
+    costoMBA;
 
   const mensajesFacturados =
     M * pagable + U * pagable + A * pagable + (e.mbaOn ? S : servicioFacturable);
@@ -110,7 +113,9 @@ function calcular(e: Estado) {
     pctServicio,
     M, U, A, S,
     costoMarketing, costoUtilidad, costoAuth, costoServicio, costoMBA,
-    ahorroVentana: V * f,
+    // Con MBA activo la ventana no libera los mensajes de servicio: esos se
+    // cobran por tokens de todas formas.
+    ahorroVentana: (e.mbaOn ? M + U + A : V) * f,
     servicioCubiertoGratis: Math.min(servicioTrasVentana, servicioGratis),
     metaTotal,
     metaAntes,
@@ -128,9 +133,23 @@ const inputCls =
 const rangeCls = "w-full accent-[#0066ff]";
 const ayudaCls = "mt-1 text-xs text-[#727687]";
 
+type PctMezcla = "pctMarketing" | "pctUtilidad" | "pctAuth";
+
 export default function CalculadoraWhatsApp() {
   const [e, setE] = useState<Estado>(INICIAL);
   const set = <K extends keyof Estado>(k: K, v: Estado[K]) => setE((p) => ({ ...p, [k]: v }));
+
+  // Los tres porcentajes de la mezcla comparten un presupuesto de 100. Sin este
+  // tope, subir dos deslizadores facturaría más mensajes de los que el usuario
+  // declaró: el resto (servicio) se quedaba en 0 y el exceso seguía contando.
+  const setPct = (k: PctMezcla, v: number) =>
+    setE((p) => {
+      const otros = (["pctMarketing", "pctUtilidad", "pctAuth"] as const)
+        .filter((x) => x !== k)
+        .reduce((acc, x) => acc + p[x], 0);
+      return { ...p, [k]: Math.max(0, Math.min(v, 100 - otros)) };
+    });
+
   const r = calcular(e);
 
   const filas = [
@@ -231,7 +250,7 @@ export default function CalculadoraWhatsApp() {
                 id={k} type="range" min={0} max={100} step={5} className={`${rangeCls} mt-2`}
                 aria-describedby={`${k}-val ${k}-help`}
                 value={e[k]}
-                onChange={(ev) => set(k, Number(ev.target.value))}
+                onChange={(ev) => setPct(k, Number(ev.target.value))}
               />
               <p id={`${k}-help`} className={ayudaCls}>{ayuda}</p>
             </div>

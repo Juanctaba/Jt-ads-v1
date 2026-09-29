@@ -14,6 +14,7 @@ const links = [
   { href: "/soluciones/hubspot", label: "HubSpot", sub: true },
   { href: "/casos-de-exito", label: "Casos", sub: false },
   { href: "/blog", label: "Blog", sub: false },
+  { href: "/calculadora-costos-whatsapp-business-api", label: "Calculadora de WhatsApp", sub: false },
   { href: "/blog/recursos", label: "Recursos", sub: false },
   { href: "/contacto", label: "Contacto", sub: false },
 ];

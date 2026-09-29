@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -103,7 +104,9 @@ const cualificacion = [
   "Quieres atender 24/7 sin sumar turnos al equipo",
 ];
 
-const faqs = [
+type Faq = { q: string; a: string; extra?: ReactNode };
+
+const faqs: Faq[] = [
   {
     q: "¿En qué se diferencia de un chatbot normal?",
     a: "Un chatbot de flujo sigue un árbol de opciones: si el cliente escribe algo que no está previsto, se traba. Un agente de IA entiende lenguaje natural, sostiene una conversación que no sigue un orden fijo, califica con los criterios de tu negocio y puede agendar o escalar a una persona según lo que pase en la conversación.",
@@ -122,7 +125,15 @@ const faqs = [
   },
   {
     q: "¿Cuánto cuesta mantenerlo al mes?",
-    a: "Depende del volumen de conversaciones. El costo mensual combina los cargos de Meta por los mensajes de WhatsApp, la plataforma donde vive el agente y el uso del modelo de IA. En el diagnóstico te damos un estimado con tu volumen real, no un precio de catálogo.",
+    a: "Depende del volumen de conversaciones. El costo mensual combina los cargos de Meta por los mensajes de WhatsApp, la plataforma donde vive el agente y el uso del modelo de IA. Los cargos de Meta cambiaron el 1 de octubre de 2026: ahora también se cobran los mensajes de servicio y los de utilidad enviados dentro de la ventana de 24 horas.",
+    extra: (
+      <>
+        {" "}
+        <Link href="/calculadora-costos-whatsapp-business-api" className="text-[var(--accent)] font-semibold hover:underline">
+          Calcula lo que te cobraría Meta con tu volumen →
+        </Link>
+      </>
+    ),
   },
   {
     q: "¿El cliente se da cuenta de que habla con una IA?",
@@ -393,7 +404,10 @@ export default function AgentesDeIAPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <p className="px-6 pb-5 text-sm leading-relaxed text-[var(--text-secondary)]">{f.a}</p>
+                  <p className="px-6 pb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                    {f.a}
+                    {f.extra}
+                  </p>
                 </details>
               ))}
             </div>

@@ -58,6 +58,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/calculadora-costos-whatsapp-business-api" className="hover:text-[var(--text-primary)] transition-colors">
+                  Calculadora de WhatsApp
+                </Link>
+              </li>
+              <li>
                 <Link href="/diagnostico-en-vivo" className="hover:text-[var(--text-primary)] transition-colors">
                   Diagnóstico Gratuito
                 </Link>

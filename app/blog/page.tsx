@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "limites-mensajes-whatsapp-business",
+    title:
+      "Límites de mensajes en WhatsApp Business: cómo funcionan y cómo suben",
+    excerpt:
+      "De 250 destinatarios a ilimitado, por portafolio y no por número. Qué mide el límite, cómo se consigue el primer salto y por qué algunas cuentas se quedan estancadas.",
+    category: "WhatsApp",
+    date: "Septiembre 2026",
+    readTime: "7 min",
+  },
+  {
     slug: "como-evitar-bloqueos-whatsapp-business",
     title:
       "Cómo evitar bloqueos en WhatsApp Business: siete reglas que sí dependen de ti",

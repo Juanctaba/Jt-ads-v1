@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "como-evitar-bloqueos-whatsapp-business",
+    title:
+      "Cómo evitar bloqueos en WhatsApp Business: siete reglas que sí dependen de ti",
+    excerpt:
+      "El bloqueo no llega por azar. Consentimiento demostrable, categoría correcta de plantilla, ritmo por escalones y bajas fáciles: lo que de verdad mueve la calificación de tu número.",
+    category: "WhatsApp",
+    date: "Septiembre 2026",
+    readTime: "8 min",
+  },
+  {
     slug: "nuevos-costos-whatsapp-business-api-octubre-2026",
     title:
       "Nuevos costos de WhatsApp Business API: qué cambia el 1 de octubre de 2026",

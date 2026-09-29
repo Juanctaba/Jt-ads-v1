@@ -22,6 +22,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "envio-directo-whatsapp-direct-send",
+    title: "Envío directo en WhatsApp: mensajes de utilidad sin crear plantillas",
+    excerpt:
+      "Direct Send deja enviar mensajes de utilidad y autenticación sin preparar plantillas: Meta las empareja o las crea por detrás. Qué resuelve, qué no y quién puede usarlo hoy.",
+    category: "WhatsApp",
+    date: "Septiembre 2026",
+    readTime: "6 min",
+  },
+  {
     slug: "que-es-meta-business-agent",
     title:
       "Qué es Meta Business Agent y cómo te lo cobran por tokens",

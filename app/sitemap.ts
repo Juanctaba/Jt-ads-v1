@@ -23,6 +23,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/nuevos-costos-whatsapp-business-api-octubre-2026", "2026-09-29", 0.7],
   ["/blog/como-evitar-bloqueos-whatsapp-business", "2026-09-29", 0.7],
   ["/blog/limites-mensajes-whatsapp-business", "2026-09-29", 0.7],
+  ["/blog/envio-directo-whatsapp-direct-send", "2026-09-29", 0.7],
   ["/blog/que-es-meta-business-agent", "2026-09-29", 0.7],
   ["/agencia-meta-ads-latam", "2026-09-14", 0.8],
   ["/agencia-linkedin-ads-latam", "2026-09-14", 0.8],

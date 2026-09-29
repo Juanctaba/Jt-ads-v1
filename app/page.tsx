@@ -76,12 +76,6 @@ const steps = [
   },
 ];
 
-const icpItems = [
-  "Empresas con equipo de marketing interno",
-  "Ad spend mensual de $5,000 USD en adelante",
-  "Director de Marketing, CMO o VP de Growth",
-  "Mercados LATAM Tier 1 (México, Colombia, Chile, Argentina) + USA",
-];
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -362,48 +356,6 @@ export default function HomePage() {
                   <p className="text-sm leading-relaxed text-[var(--text-secondary)]">{s.body}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── ICP ── */}
-        <section className="py-20 px-6 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm">
-              <div className="grid md:grid-cols-2 gap-10 items-start">
-                {/* Left: checklist */}
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8">
-                    JT Ads trabaja con un perfil específico.
-                  </h2>
-                  <div className="space-y-4">
-                    {icpItems.map((item) => (
-                      <div key={item} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-sm leading-relaxed text-[var(--text-secondary)]">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Right: why card */}
-                <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                  <p className="text-xs font-semibold text-[var(--accent)] uppercase tracking-widest mb-4">¿Por qué este filtro?</p>
-                  <p className="text-sm leading-relaxed text-[var(--text-secondary)] mb-4">
-                    Trabajamos con empresas donde el ad spend es suficientemente significativo para
-                    que un cambio estratégico tenga impacto real y medible en el negocio. No en
-                    presupuestos donde el margen no justifica la inversión en un equipo senior.
-                  </p>
-                  <p className="text-sm italic text-[var(--text-muted)]">
-                    "Si no cumples exactamente este perfil, cuéntanos igual. Si podemos ayudarte,
-                    lo hacemos. Si no, te orientamos sin costo."
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>

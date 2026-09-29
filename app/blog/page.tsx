@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "nuevos-costos-whatsapp-business-api-octubre-2026",
+    title:
+      "Nuevos costos de WhatsApp Business API: qué cambia el 1 de octubre de 2026",
+    excerpt:
+      "Meta cobra los mensajes de servicio, deja de regalar los de utilidad dentro de la ventana de 24 horas y estrena un nivel gratuito de 1.000 por número. Tres cambios encarecen y uno abarata.",
+    category: "WhatsApp",
+    date: "Septiembre 2026",
+    readTime: "7 min",
+  },
+  {
     slug: "whatsapp-business-bloqueado-que-hacer",
     title:
       "WhatsApp Business bloqueado: los cuatro estados que se confunden",

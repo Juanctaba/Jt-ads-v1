@@ -191,6 +191,20 @@ export default function PostNuevosCostos() {
             {P.mba.desdeTexto}: ahí el cargo aplica también dentro de la ventana gratuita.
           </p>
 
+          <h2 className={H2}>Dos cosas que cambian junto con esto</h2>
+          <p className={P_}>
+            Si respondes con un agente de IA, el cargo que aplica no es el de servicio sino el de{" "}
+            <Link href="/blog/que-es-meta-business-agent" className="text-[#0066ff] font-semibold hover:underline">
+              Meta Business Agent, que se factura por tokens
+            </Link>{" "}
+            y sustituye al de servicio en lugar de sumarse. Y para los mensajes de utilidad hay ahora un camino que
+            evita crear plantillas, el{" "}
+            <Link href="/blog/envio-directo-whatsapp-direct-send" className="text-[#0066ff] font-semibold hover:underline">
+              envío directo
+            </Link>
+            , que ahorra trabajo pero no dinero: el mensaje se cobra igual.
+          </p>
+
           <h2 className={H2}>Qué hacer antes de que te llegue la factura</h2>
           <p className={P_}>
             <strong className="text-[#1c1b1b]">Registra un método de pago.</strong> Es lo único con consecuencia

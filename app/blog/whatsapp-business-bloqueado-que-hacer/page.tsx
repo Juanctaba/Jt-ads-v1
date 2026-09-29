@@ -222,7 +222,12 @@ export default function PostWhatsAppBloqueado() {
             <Link href="/calculadora-costos-whatsapp-business-api" className="text-[#0066ff] font-semibold hover:underline">
               calculadora de costos de WhatsApp Business API
             </Link>{" "}
-            usa las tarifas oficiales por país y te muestra cuánto pagas al mes con tu volumen real.
+            usa las tarifas oficiales por país y te muestra cuánto pagas al mes con tu volumen real. Y si lo que te
+            frenó fue el techo de destinatarios y no una sanción, el artículo sobre{" "}
+            <Link href="/blog/limites-mensajes-whatsapp-business" className="text-[#0066ff] font-semibold hover:underline">
+              los límites de mensajería de WhatsApp Business
+            </Link>{" "}
+            explica cómo suben de nivel.
           </p>
 
           <h2 className={H2}>Preguntas frecuentes</h2>

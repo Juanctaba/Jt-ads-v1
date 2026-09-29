@@ -61,6 +61,39 @@ const ctaPrimary =
 
 const tarifa = (n: number) => `$${n.toLocaleString("es-CO", { minimumFractionDigits: 4, maximumFractionDigits: 4 })}`;
 
+const guias = [
+  {
+    slug: "nuevos-costos-whatsapp-business-api-octubre-2026",
+    titulo: "Qué cambia en la facturación el 1 de octubre de 2026",
+    resumen: "Los cuatro cambios de Meta, con el nivel gratuito de servicio incluido.",
+  },
+  {
+    slug: "que-es-meta-business-agent",
+    titulo: "Qué es Meta Business Agent y cómo se cobra por tokens",
+    resumen: "La categoría que sustituye al cargo de servicio en lugar de sumarse.",
+  },
+  {
+    slug: "envio-directo-whatsapp-direct-send",
+    titulo: "Envío directo: mensajes de utilidad sin crear plantillas",
+    resumen: "Qué trabajo te ahorra y por qué no cambia lo que pagas por mensaje.",
+  },
+  {
+    slug: "limites-mensajes-whatsapp-business",
+    titulo: "Límites de mensajería: de 250 a ilimitado",
+    resumen: "Cómo escalan los niveles y cuándo conviene migrar de la app a la API.",
+  },
+  {
+    slug: "como-evitar-bloqueos-whatsapp-business",
+    titulo: "Siete reglas para no perder el número",
+    resumen: "Lo que sostiene la calidad antes de que Meta te restrinja.",
+  },
+  {
+    slug: "whatsapp-business-bloqueado-que-hacer",
+    titulo: "WhatsApp Business bloqueado: qué hacer",
+    resumen: "Cuatro estados distintos, cada uno con su síntoma y su camino.",
+  },
+];
+
 export default function CalculadoraPage() {
   const webApp = {
     "@context": "https://schema.org",
@@ -239,6 +272,30 @@ export default function CalculadoraPage() {
                   </summary>
                   <p className="px-6 pb-5 text-sm leading-relaxed text-[var(--text-secondary)]">{f.a}</p>
                 </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Guías del clúster ── */}
+        <section className="py-20 px-6 bg-[#fcf9f8]">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] leading-tight mb-4 text-center">
+              Guías para entender la factura
+            </h2>
+            <p className="text-[var(--text-secondary)] text-center max-w-2xl mx-auto mb-10 leading-relaxed">
+              La calculadora te da el número. Estas guías explican de dónde sale y qué puede romperlo.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {guias.map((g) => (
+                <Link
+                  key={g.slug}
+                  href={`/blog/${g.slug}`}
+                  className="block bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-sm transition-shadow"
+                >
+                  <p className="font-semibold text-[var(--text-primary)] text-sm leading-snug mb-2">{g.titulo}</p>
+                  <p className="text-[var(--text-secondary)] text-sm leading-relaxed">{g.resumen}</p>
+                </Link>
               ))}
             </div>
           </div>

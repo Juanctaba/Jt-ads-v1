@@ -116,7 +116,9 @@ function calcular(e: Estado) {
     // Con MBA activo la ventana no libera los mensajes de servicio: esos se
     // cobran por tokens de todas formas.
     ahorroVentana: (e.mbaOn ? M + U + A : V) * f,
+    servicioGratis,
     servicioCubiertoGratis: Math.min(servicioTrasVentana, servicioGratis),
+    servicioGratisSinUsar: Math.max(0, servicioGratis - servicioTrasVentana),
     metaTotal,
     metaAntes,
     delta: metaTotal - metaAntes,
@@ -391,7 +393,9 @@ export default function CalculadoraWhatsApp() {
                 )}
                 {!e.mbaOn && r.servicioCubiertoGratis > 0 && (
                   <tr>
-                    <th scope="row" className="py-2 font-medium text-[#16704a]">Servicio gratis ({num(e.numeros)} × {num(P.servicioGratisPorNumero)})</th>
+                    <th scope="row" className="py-2 font-medium text-[#16704a]">
+                      Servicio gratis ({num(e.numeros)} × {num(P.servicioGratisPorNumero)} = {num(r.servicioGratis)})
+                    </th>
                     <td className="py-2 text-right tabular-nums text-[#16704a]">−{num(r.servicioCubiertoGratis)}</td>
                     <td className="py-2 text-right text-[#16704a]">incluido</td>
                   </tr>
@@ -399,6 +403,14 @@ export default function CalculadoraWhatsApp() {
               </tbody>
             </table>
           </div>
+
+          {!e.mbaOn && r.servicioGratisSinUsar > 0 && (
+            <p className="mt-3 text-xs leading-relaxed text-[#16704a]">
+              Tus {num(e.numeros)} números te dan {num(r.servicioGratis)} mensajes de servicio gratis al mes y solo
+              gastas {num(r.servicioCubiertoGratis)}. Añadir más números no baja la factura: los{" "}
+              {num(r.servicioGratisSinUsar)} restantes no se acumulan ni cubren otras categorías.
+            </p>
+          )}
 
           <dl className="mt-5 space-y-2 border-t border-gray-100 pt-4 text-sm">
             <div className="flex items-baseline justify-between">

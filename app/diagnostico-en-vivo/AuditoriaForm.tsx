@@ -1,32 +1,35 @@
 "use client";
 
 import Script from "next/script";
+import LazyMount from "@/components/forms/LazyMount";
 
 export default function AuditoriaForm() {
   return (
     <div className="w-full overflow-hidden">
-      <iframe
-        src="https://api.jtads.com/widget/form/ExDq9WBVQ74hXB8YBmkH"
-        style={{ width: "100%", height: "814px", border: "none", borderRadius: "10px", display: "block" }}
-        id="inline-ExDq9WBVQ74hXB8YBmkH"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Form LP JT Ads Nuevo Diagnostico"
-        data-height="814"
-        data-layout-iframe-id="inline-ExDq9WBVQ74hXB8YBmkH"
-        data-form-id="ExDq9WBVQ74hXB8YBmkH"
-        title="Form LP JT Ads Nuevo Diagnostico"
-        scrolling="no"
-      />
-      <Script
-        src="https://api.jtads.com/js/form_embed.js"
-        strategy="afterInteractive"
-      />
+      <LazyMount minHeight={814}>
+        <iframe
+          src="https://api.jtads.com/widget/form/ExDq9WBVQ74hXB8YBmkH"
+          style={{ width: "100%", height: "814px", border: "none", borderRadius: "10px", display: "block" }}
+          id="inline-ExDq9WBVQ74hXB8YBmkH"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Form LP JT Ads Nuevo Diagnostico"
+          data-height="814"
+          data-layout-iframe-id="inline-ExDq9WBVQ74hXB8YBmkH"
+          data-form-id="ExDq9WBVQ74hXB8YBmkH"
+          title="Form LP JT Ads Nuevo Diagnostico"
+          scrolling="no"
+        />
+        <Script
+          src="https://api.jtads.com/js/form_embed.js"
+          strategy="afterInteractive"
+        />
+      </LazyMount>
     </div>
   );
 }

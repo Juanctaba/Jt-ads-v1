@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Agencia LinkedIn Ads LATAM — SaaS B2B & Enterprise | JT Ads",
     description:
       "Gestión profesional de LinkedIn Ads para SaaS B2B y enterprise en LATAM. Leads de calidad con tracking conectado al CRM.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/agencia-linkedin-ads-latam",
   },
   twitter: { card: "summary_large_image" },

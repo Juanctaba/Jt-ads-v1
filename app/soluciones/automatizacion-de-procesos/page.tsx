@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Automatización de Procesos para Empresas en LATAM | JT Ads",
     description:
       "Nurturing, calificación y enrutamiento de leads, sincronización con tu CRM y tareas operativas sin trabajo manual. Sobre la plataforma que ya usas.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };

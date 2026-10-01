@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description:
       "Calidad baja, cuenta inhabilitada, plantilla rechazada o app restringida: cuatro problemas distintos que se llaman igual y se resuelven distinto.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -115,7 +115,7 @@ export default function PostWhatsAppBloqueado() {
     },
     datePublished: "2026-09-29",
     dateModified: "2026-09-29",
-    image: "https://jtads.com/og-image.png",
+    image: "https://jtads.com/opengraph-image",
     url: URL,
     inLanguage: "es",
     about: ["WhatsApp Business", "Restricciones de cuenta", "Calidad del número", "Plantillas de mensajes"],

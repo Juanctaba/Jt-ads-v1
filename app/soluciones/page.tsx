@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Automatización, IA y CRM para Empresas en LATAM | JT Ads",
     description:
       "Automatizamos marketing y operaciones con flujos, agentes conversacionales y CRM conectado. HubSpot, GoHighLevel, Omnix y cualquier stack.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/soluciones",
   },
 };

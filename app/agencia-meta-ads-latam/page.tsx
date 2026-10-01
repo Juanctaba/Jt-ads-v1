@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Agencia Meta Ads LATAM — Facebook & Instagram Ads | JT Ads",
     description:
       "Gestión profesional de Meta Ads para empresas en LATAM. Tracking correcto, creativos que convierten y resultados medibles.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/agencia-meta-ads-latam",
   },
   twitter: { card: "summary_large_image" },

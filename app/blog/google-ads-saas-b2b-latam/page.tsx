@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Google Ads para SaaS B2B en LATAM: guía completa 2026",
     description:
       "Estructura de campañas, tracking con CRM, benchmarks de CPL y errores frecuentes en cuentas de SaaS B2B en LATAM.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/google-ads-saas-b2b-latam",
   },
 };
@@ -38,7 +38,7 @@ const articleSchema = {
   },
   datePublished: "2026-04-14",
   dateModified: "2026-04-14",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/google-ads-saas-b2b-latam",
   about: [
     { "@type": "Thing", name: "Google Ads" },

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description:
       "Los tiers de mensajería de la API de WhatsApp, cómo se escalan y en qué se diferencian de los límites de la aplicación.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -75,7 +75,7 @@ export default function PostLimites() {
     },
     datePublished: "2026-09-29",
     dateModified: "2026-09-29",
-    image: "https://jtads.com/og-image.png",
+    image: "https://jtads.com/opengraph-image",
     url: URL,
     inLanguage: "es",
     about: ["WhatsApp Business API", "Límites de mensajería", "Portafolio comercial"],

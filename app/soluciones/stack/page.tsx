@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Herramientas de Automatización e IA que Usamos | JT Ads",
     description:
       "El stack real de JT Ads: CRM, mensajería, voz con IA y orquestación de flujos, con el caso concreto en que usamos cada herramienta.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: absoluteUrl(PATH),
   },
 };

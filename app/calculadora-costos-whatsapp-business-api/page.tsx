@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Calculadora de Costos de WhatsApp Business API 2026",
     description:
       "Tarifas oficiales de Meta por país, nivel gratuito de mensajes de servicio y Meta Business Agent, en una sola estimación mensual.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };

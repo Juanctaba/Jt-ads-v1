@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Agencia de Google Ads en Colombia — JT Ads | Performance Marketing",
     description: "Especialistas en Google Ads para empresas en Colombia. Tracking server-side, sin contratos. Gestión senior. Primera sesión sin costo.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/agencia-google-ads-colombia",
   },
   twitter: { card: "summary_large_image" },

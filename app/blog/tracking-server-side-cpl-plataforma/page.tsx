@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Por qué el CPL de tu plataforma miente y cómo solucionarlo | JT Ads",
     description:
       "Guía sobre tracking server-side para directores de marketing: cómo corregir la discrepancia entre el CPL de plataforma y el CPL real.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/tracking-server-side-cpl-plataforma",
   },
 };
@@ -37,7 +37,7 @@ const articleSchema = {
   },
   datePublished: "2026-04-01",
   dateModified: "2026-04-09",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/tracking-server-side-cpl-plataforma",
 };
 
@@ -402,6 +402,13 @@ export default function PostTrackingServerSide() {
                     className="text-[#0066ff] font-semibold hover:underline"
                   >
                     implementación de HubSpot conectada a Google Ads y Meta
+                  </Link>
+                  . Para que ese lead no se enfríe después del formulario, este es el{" "}
+                  <Link
+                    href="/sistema"
+                    className="text-[#0066ff] font-semibold hover:underline"
+                  >
+                    flujo de speed-to-lead: form → oportunidad + owner
                   </Link>
                   .
                 </p>

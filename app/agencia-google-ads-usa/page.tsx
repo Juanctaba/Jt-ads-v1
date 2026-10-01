@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Google Ads para Empresas en USA — JT Ads | Performance Marketing",
     description: "Google Ads para empresas en USA con operaciones en LATAM. Equipo bilingüe, tracking server-side, gestión senior. Primera sesión de diagnóstico sin costo.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/agencia-google-ads-usa",
   },
   twitter: { card: "summary_large_image" },

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "HubSpot CRM en Español: Implementación para LATAM | JT Ads",
     description:
       "Migración de datos, pipelines, flujos, integración con Google Ads y Meta y reportes de atribución. HubSpot bien implementado, en español.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };

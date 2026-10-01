@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "GoHighLevel en Español: Qué Es, Precios y Cómo Usarlo",
     description:
       "Guía en español de GoHighLevel: qué incluye, cuánto cuesta en USD, cómo se compara con HubSpot y Kommo, y cuándo no conviene usarlo.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -184,7 +184,11 @@ export default function GoHighLevelPage() {
               <Link href="/soluciones/agentes-de-ia" className="text-[var(--accent)] font-semibold hover:underline">
                 agentes de IA
               </Link>{" "}
-              que implementamos, no como el objetivo en sí.
+              que implementamos, no como el objetivo en sí. Si el lead de tus anuncios se queda en el formulario, mira{" "}
+              <Link href="/sistema" className="text-[var(--accent)] font-semibold hover:underline">
+                cómo armar el speed-to-lead del día 1
+              </Link>
+              .
             </p>
           </div>
         </section>

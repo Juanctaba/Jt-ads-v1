@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Blog — Google Ads & Performance Marketing | JT Ads",
     description:
       "Recursos prácticos sobre Google Ads, tracking y performance marketing en LATAM.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog",
   },
 };

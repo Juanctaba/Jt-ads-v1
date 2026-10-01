@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "7 señales de que tu píxel infla tus conversiones | JT Ads",
     description:
       "Siete banderas rojas de que tu píxel está inflando tus conversiones y cómo comprobar cada una antes de renovar con tu agencia.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -39,7 +39,7 @@ const articleSchema = {
   },
   datePublished: "2026-08-27",
   dateModified: "2026-08-27",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: URL,
   inLanguage: "es",
   about: [

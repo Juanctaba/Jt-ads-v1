@@ -63,6 +63,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/sistema" className="hover:text-[var(--text-primary)] transition-colors">
+                  Speed-to-lead (form → CRM)
+                </Link>
+              </li>
+              <li>
                 <Link href="/diagnostico-en-vivo" className="hover:text-[var(--text-primary)] transition-colors">
                   Diagnóstico Gratuito
                 </Link>

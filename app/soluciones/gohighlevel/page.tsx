@@ -184,7 +184,11 @@ export default function GoHighLevelPage() {
               <Link href="/soluciones/agentes-de-ia" className="text-[var(--accent)] font-semibold hover:underline">
                 agentes de IA
               </Link>{" "}
-              que implementamos, no como el objetivo en sí.
+              que implementamos, no como el objetivo en sí. Si el lead de tus anuncios se queda en el formulario, mira{" "}
+              <Link href="/sistema" className="text-[var(--accent)] font-semibold hover:underline">
+                cómo armar el speed-to-lead del día 1
+              </Link>
+              .
             </p>
           </div>
         </section>

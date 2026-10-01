@@ -335,7 +335,15 @@ export default function PostReducirCPL() {
                   no necesariamente leads calificados. Integrar las conversiones
                   del CRM — marcando solo los leads que avanzaron en el pipeline
                   — le da al algoritmo las señales correctas y, con ellas, la
-                  capacidad de encontrar tráfico de mayor intención real.
+                  capacidad de encontrar tráfico de mayor intención real. Si el
+                  lead queda como contacto sin owner, revisa el{" "}
+                  <Link
+                    href="/sistema"
+                    className="text-[#0066ff] font-semibold hover:underline"
+                  >
+                    flujo form → oportunidad en el CRM
+                  </Link>
+                  .
                 </p>
               </div>
             </li>

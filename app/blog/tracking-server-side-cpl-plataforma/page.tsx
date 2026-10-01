@@ -403,6 +403,13 @@ export default function PostTrackingServerSide() {
                   >
                     implementación de HubSpot conectada a Google Ads y Meta
                   </Link>
+                  . Para que ese lead no se enfríe después del formulario, este es el{" "}
+                  <Link
+                    href="/sistema"
+                    className="text-[#0066ff] font-semibold hover:underline"
+                  >
+                    flujo de speed-to-lead: form → oportunidad + owner
+                  </Link>
                   .
                 </p>
               </div>

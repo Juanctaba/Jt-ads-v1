@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "GoHighLevel en Español: Qué Es, Precios y Cómo Usarlo",
     description:
       "Guía en español de GoHighLevel: qué incluye, cuánto cuesta en USD, cómo se compara con HubSpot y Kommo, y cuándo no conviene usarlo.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };

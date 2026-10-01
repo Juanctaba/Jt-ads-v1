@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Agentes de IA para Empresas: WhatsApp y Voz | JT Ads",
     description:
       "Agentes de IA que califican y agendan en WhatsApp, web y voz, conectados a tu CRM. No un chatbot de menú: conversaciones reales con criterio de negocio.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };

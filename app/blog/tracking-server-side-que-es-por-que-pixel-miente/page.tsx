@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: SEO_TITLE,
     description: DESC,
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -41,7 +41,7 @@ const articleSchema = {
   },
   datePublished: "2026-09-14",
   dateModified: "2026-09-14",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: URL,
   inLanguage: "es",
   about: [

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales 2026",
     description:
       "Guía de precios reales de agencias de Google Ads en México, Colombia y Chile. Modelos de cobro, qué incluir y señales de alerta.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
   },
 };
@@ -37,7 +37,7 @@ const articleSchema = {
   },
   datePublished: "2026-04-01",
   dateModified: "2026-04-09",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
 };
 

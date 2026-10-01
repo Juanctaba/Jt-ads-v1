@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Agencia de Google Ads en Chile — JT Ads | Performance Marketing",
     description: "Especialistas en Google Ads para empresas en Chile. Optimizamos cada peso invertido. Tracking server-side, sin contratos. Primera sesión sin costo.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/agencia-google-ads-chile",
   },
   twitter: { card: "summary_large_image" },

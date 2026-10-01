@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description:
       "$2 USD por millón de tokens, entre 4 y 5 centavos por respuesta. Cómo se compara con usar tu propia IA sobre la API de WhatsApp.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -75,7 +75,7 @@ export default function PostMBA() {
     },
     datePublished: "2026-09-29",
     dateModified: "2026-09-29",
-    image: "https://jtads.com/og-image.png",
+    image: "https://jtads.com/opengraph-image",
     url: URL,
     inLanguage: "es",
     about: ["Meta Business Agent", "WhatsApp Business API", "Precios por tokens", "Agentes de IA"],

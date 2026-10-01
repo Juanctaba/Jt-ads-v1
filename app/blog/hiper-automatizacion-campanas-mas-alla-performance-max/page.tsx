@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Más allá de Performance Max y Advantage+: la hiper-automatización en campañas 2026",
     description:
       "Analizamos la próxima frontera de la automatización en Google Ads, Meta y LinkedIn — y cuándo delegar al algoritmo se convierte en un riesgo.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/hiper-automatizacion-campanas-mas-alla-performance-max",
   },
 };
@@ -38,7 +38,7 @@ const articleSchema = {
   },
   datePublished: "2026-04-21",
   dateModified: "2026-04-21",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/hiper-automatizacion-campanas-mas-alla-performance-max",
   about: [
     { "@type": "Thing", name: "Performance Max" },

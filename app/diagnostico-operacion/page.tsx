@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Diagnóstico Gratuito de Automatización y CRM | JT Ads",
     description:
       "Mapeamos tus procesos manuales, dónde se pierde el lead entre canal y CRM y qué automatizar primero. Sin costo y sin llamada de ventas.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
   twitter: { card: "summary_large_image" },

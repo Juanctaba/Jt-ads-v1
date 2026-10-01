@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Diagnóstico Gratuito de Google Ads | Auditoría en Vivo — JT Ads",
     description: "Auditamos tu cuenta de Google Ads sin costo. +20 puntos críticos. Te contactamos en <4 horas hábiles.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/diagnostico-en-vivo",
   },
   twitter: { card: "summary_large_image" },

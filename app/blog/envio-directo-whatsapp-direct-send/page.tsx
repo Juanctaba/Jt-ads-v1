@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description:
       "Qué es el envío directo de WhatsApp, cómo genera plantillas automáticamente y por qué no cambia lo que pagas por mensaje.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -75,7 +75,7 @@ export default function PostDirectSend() {
     },
     datePublished: "2026-09-29",
     dateModified: "2026-09-29",
-    image: "https://jtads.com/og-image.png",
+    image: "https://jtads.com/opengraph-image",
     url: URL,
     inLanguage: "es",
     about: ["Direct Send", "WhatsApp Business API", "Plantillas de mensajes"],

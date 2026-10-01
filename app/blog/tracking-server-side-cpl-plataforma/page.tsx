@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Por qué el CPL de tu plataforma miente y cómo solucionarlo | JT Ads",
     description:
       "Guía sobre tracking server-side para directores de marketing: cómo corregir la discrepancia entre el CPL de plataforma y el CPL real.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/tracking-server-side-cpl-plataforma",
   },
 };
@@ -37,7 +37,7 @@ const articleSchema = {
   },
   datePublished: "2026-04-01",
   dateModified: "2026-04-09",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/tracking-server-side-cpl-plataforma",
 };
 

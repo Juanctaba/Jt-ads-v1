@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description:
       "Consentimiento verificable, categoría correcta de plantilla, ritmo de envío y gestión de bajas. Lo que de verdad mueve la calificación de calidad.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -119,7 +119,7 @@ export default function PostEvitarBloqueos() {
     },
     datePublished: "2026-09-29",
     dateModified: "2026-09-29",
-    image: "https://jtads.com/og-image.png",
+    image: "https://jtads.com/opengraph-image",
     url: URL,
     inLanguage: "es",
     about: ["WhatsApp Business", "Calidad del número", "Plantillas de mensajes", "Consentimiento"],

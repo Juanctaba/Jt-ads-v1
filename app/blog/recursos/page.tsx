@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Recursos | JT Ads",
     description:
       "Plantillas y guías accionables sobre Google Ads, tracking y performance marketing.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/recursos",
   },
 };

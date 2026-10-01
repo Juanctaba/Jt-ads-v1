@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Performance Max en LATAM: cómo funciona y cuándo realmente conviene usarlo",
     description:
       "Cómo funciona el algoritmo de PMax, qué señales necesita y en qué casos conviene — o no — en el mercado latinoamericano.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/performance-max-como-funciona-latam",
   },
 };
@@ -36,7 +36,7 @@ const articleSchema = {
   },
   datePublished: "2026-04-09",
   dateModified: "2026-04-09",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/performance-max-como-funciona-latam",
 };
 

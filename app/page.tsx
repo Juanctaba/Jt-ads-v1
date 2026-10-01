@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JT Ads | Agencia Google Ads Performance para LATAM + USA",
     description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, $500k+/mes gestionados.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com",
   },
   twitter: { card: "summary_large_image" },

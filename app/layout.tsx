@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior con experiencia en $500k+/mes. Sin contratos largos.",
   openGraph: {
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
 };
 

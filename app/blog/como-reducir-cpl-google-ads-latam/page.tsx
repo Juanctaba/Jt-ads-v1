@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Cómo reducir el CPL en Google Ads: 7 palancas reales para empresas en LATAM",
     description:
       "Las 7 palancas que ajustamos en cada cuenta para bajar el costo por lead sin sacrificar volumen ni calidad.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: "https://jtads.com/blog/como-reducir-cpl-google-ads-latam",
   },
 };
@@ -36,7 +36,7 @@ const articleSchema = {
   },
   datePublished: "2026-04-09",
   dateModified: "2026-04-09",
-  image: "https://jtads.com/og-image.png",
+  image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/como-reducir-cpl-google-ads-latam",
 };
 

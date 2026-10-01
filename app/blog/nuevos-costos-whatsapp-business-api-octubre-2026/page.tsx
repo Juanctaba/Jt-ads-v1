@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description:
       "Cuatro cambios en la facturación de WhatsApp, uno de ellos a tu favor. Explicados con la documentación oficial de Meta y la fecha de cada uno.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
     url: URL,
   },
 };
@@ -102,7 +102,7 @@ export default function PostNuevosCostos() {
     },
     datePublished: "2026-09-29",
     dateModified: "2026-09-29",
-    image: "https://jtads.com/og-image.png",
+    image: "https://jtads.com/opengraph-image",
     url: URL,
     inLanguage: "es",
     about: ["WhatsApp Business API", "Precios de Meta", "Mensajes de servicio", "Facturación"],

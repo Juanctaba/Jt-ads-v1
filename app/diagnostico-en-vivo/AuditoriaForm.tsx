@@ -6,7 +6,7 @@ import LazyMount from "@/components/forms/LazyMount";
 export default function AuditoriaForm() {
   return (
     <div className="w-full overflow-hidden">
-      <LazyMount minHeight={814}>
+      <LazyMount minHeight={814} waitForInteraction>
         <iframe
           src="https://api.jtads.com/widget/form/ExDq9WBVQ74hXB8YBmkH"
           style={{ width: "100%", height: "814px", border: "none", borderRadius: "10px", display: "block" }}

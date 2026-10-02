@@ -4,9 +4,9 @@ import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia de Meta Ads en LATAM | Facebook e Instagram",
+  title: "Agencia de Instagram Ads y Facebook Ads en LATAM | JT Ads",
   description:
-    "Gestión de Meta Ads para empresas en LATAM: Facebook, Instagram, Advantage+ y retargeting con tracking server-side. Diagnóstico gratuito de tu cuenta.",
+    "Gestionamos Instagram Ads y Facebook Ads (Meta): Reels, Stories, Lead Ads y CAPI server-side. Diagnóstico gratis de tu cuenta en 60 minutos.",
   alternates: {
     canonical: "https://jtads.com/agencia-meta-ads-latam",
     languages: {
@@ -17,13 +17,15 @@ export const metadata: Metadata = {
   keywords: [
     "agencia meta ads latam",
     "agencia facebook ads latam",
+    "agencia instagram ads",
+    "agencia de instagram ads",
     "agencia instagram ads latam",
     "meta ads mexico",
     "meta ads colombia",
     "facebook ads para empresas",
   ],
   openGraph: {
-    title: "Agencia Meta Ads LATAM — Facebook & Instagram Ads | JT Ads",
+    title: "Agencia de Instagram Ads y Facebook Ads en LATAM | JT Ads",
     description:
       "Gestión profesional de Meta Ads para empresas en LATAM. Tracking correcto, creativos que convierten y resultados medibles.",
     images: ["/opengraph-image"],
@@ -49,7 +51,7 @@ const services = [
       </svg>
     ),
     title: "Reels Ads",
-    body: "Video corto nativo para awareness y consideración. Producimos o adaptamos tus creativos para el formato vertical, con hooks probados en los primeros 3 segundos.",
+    body: "Video corto nativo de Instagram y Facebook para awareness y consideración. Producimos o adaptamos tus creativos para el formato vertical, con hooks probados en los primeros 3 segundos.",
   },
   {
     icon: (
@@ -106,6 +108,30 @@ const faqItems = [
     q: "¿Cómo manejan el impacto de iOS 14 en el tracking?",
     a: "Implementamos Meta Conversions API (CAPI) desde el servidor para recuperar entre el 20% y el 40% de eventos perdidos por restricciones de cookies y trackers de dispositivo. Eso significa que el algoritmo toma decisiones con datos más completos y el CPL real es más bajo de lo que reporta el píxel solo.",
   },
+  {
+    q: "¿Gestionan Instagram Ads por separado o junto con Facebook Ads?",
+    a: "Juntos. Instagram Ads y Facebook Ads se compran en el mismo Administrador de anuncios de Meta, con las mismas audiencias y el mismo píxel. Lo que cambia es el placement y el creativo: Reels y Stories piden video vertical nativo. Por eso separamos campañas por formato en lugar de dejar que Meta reparta el presupuesto donde el CPL se ve más barato.",
+  },
+  {
+    q: "¿Instagram Ads es lo mismo que manejar el perfil de Instagram de la marca?",
+    a: "No. Manejar el perfil es contenido orgánico y comunidad. Instagram Ads es pauta pagada: campañas con objetivo, presupuesto y conversiones medidas. Esta página trata de lo segundo: campañas que traen leads o ventas y se miden contra tu CRM, no contra likes.",
+  },
+  {
+    q: "¿Qué formato rinde mejor en Instagram: Reels, Stories o Feed?",
+    a: "Depende del objetivo y se decide con datos, no por moda. Reels sirve para llegar a gente nueva con video corto; Stories, para acciones inmediatas y retargeting; Feed y carrusel, para explicar la oferta. Montamos cada formato en su propia campaña o conjunto para leer su CPL real por separado.",
+  },
+  {
+    q: "¿Necesito una landing page para anunciar en Instagram?",
+    a: "No siempre. Los Lead Ads (formularios nativos de Meta) capturan el lead sin salir de Instagram y se conectan directo a tu CRM o webhook. Para ofertas complejas o de ticket alto, una landing coherente con el anuncio suele filtrar mejor. Lo definimos en el diagnóstico según tu ciclo de venta.",
+  },
+  {
+    q: "¿Cómo es el proceso para empezar?",
+    a: "Completas un formulario breve y te contactamos en menos de 4 horas hábiles. Revisamos tu cuenta de Meta en vivo, en una sesión de 60 minutos: tracking, estructura, audiencias y creativos. Las conclusiones son tuyas. Si quieres que implementemos, conversamos; si prefieres hacerlo internamente, también sirve.",
+  },
+  {
+    q: "¿En qué moneda y zona horaria conviene crear la cuenta publicitaria de Meta en cada país?",
+    a: "En la moneda con la que vas a pagar y en la zona horaria donde opera tu equipo comercial (por ejemplo, Bogotá UTC-5, Ciudad de México UTC-6, Buenos Aires UTC-3; Santiago y la mayoría de ciudades de USA cambian de hora en el año). Los métodos de pago disponibles dependen de la moneda que elijas. Cambiar moneda o zona horaria después no edita la cuenta: Meta crea una cuenta publicitaria nueva, cierra la anterior y sus anuncios dejan de correr. Además, solo se permite una vez cada 60 días y sin saldo pendiente.",
+  },
 ];
 
 const faqSchema = {
@@ -152,7 +178,7 @@ export default function AgenciaMetaAdsPage() {
                   Facebook · Instagram · Reels · WhatsApp
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
-                  Agencia de Meta Ads para empresas en LATAM
+                  Agencia de Meta Ads: Instagram y Facebook Ads para empresas en LATAM
                 </h1>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   Gestión profesional de Facebook e Instagram Ads con tracking server-side,
@@ -301,11 +327,11 @@ export default function AgenciaMetaAdsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Qué gestionamos en Meta Ads
+                Agencia de Instagram Ads y Facebook Ads: qué gestionamos
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto">
                 No es solo poner presupuesto y esperar que el algoritmo haga su trabajo.
-                Cada tipo de campaña requiere estructura, creativos y medición distintos.
+                Cada tipo de campaña en Instagram y Facebook requiere estructura, creativos y medición distintos.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -353,7 +379,7 @@ export default function AgenciaMetaAdsPage() {
         <section className="py-24 bg-white">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
-              Preguntas frecuentes sobre Meta Ads
+              Preguntas frecuentes sobre Instagram Ads y Meta Ads
             </h2>
             <div className="space-y-6">
               {faqItems.map((item) => (

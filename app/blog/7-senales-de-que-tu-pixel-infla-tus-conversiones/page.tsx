@@ -253,7 +253,12 @@ export default function PostPixelInflaConversiones() {
             tracking server-side honesto y una estructura de medición que sigue
             cada evento hasta que llega a la venta final. Nada de conversiones
             infladas, nada de leads que se pierden en el camino. Se mide lo que
-            se vende, y se optimiza contra eso.
+            se vende, y se optimiza contra eso. En Meta eso significa Conversions
+            API (CAPI) desde el servidor, que es la base de nuestra{" "}
+            <a href="/agencia-meta-ads-latam" className="text-[#0066ff] font-semibold hover:underline">
+              gestión de Instagram Ads y Facebook Ads
+            </a>
+            .
           </p>
           <p className="text-[#424656] leading-relaxed mb-10 text-base" style={INTER}>
             Si alguna de estas señales te sonó familiar, ese es el momento

@@ -453,7 +453,11 @@ export default function PostReducirCPL() {
             Lo que sí es consistente: ninguna de estas palancas requiere aumentar
             el presupuesto. La reducción de CPL no viene de gastar más — viene de
             gastar mejor, con datos más precisos y una estructura que concentra el
-            gasto donde realmente convierte.
+            gasto donde realmente convierte. Si vendes software, en la guía de{" "}
+            <Link href="/blog/google-ads-saas-b2b-latam" className="text-[#0066ff] font-semibold hover:underline">
+              Google Ads para software B2B
+            </Link>{" "}
+            explicamos cómo conectar estas palancas con el CRM.
           </p>
 
           <div className="bg-[#f6f3f2] rounded-xl p-8 my-8 text-center">

@@ -4,15 +4,22 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Google Ads para SaaS B2B en LATAM | Guía completa 2026",
+  title: "Google Ads para Software B2B y SaaS en LATAM | Guía 2026",
   description:
-    "Cómo estructurar Google Ads para SaaS B2B en LATAM: keywords por intención, tracking conectado al CRM y benchmarks de CPL por cada etapa del funnel B2B.",
+    "Cómo usar Google Ads en software B2B/SaaS: keywords por intención, conversiones offline desde el CRM y CPL por etapa del funnel. Guía para LATAM.",
+  keywords: [
+    "google ads para software b2b",
+    "google ads saas",
+    "google ads b2b saas",
+    "google ads for saas",
+    "conversiones offline google ads crm",
+  ],
   alternates: {
     canonical: "https://jtads.com/blog/google-ads-saas-b2b-latam",
     languages: { es: "https://jtads.com/blog/google-ads-saas-b2b-latam" },
   },
   openGraph: {
-    title: "Google Ads para SaaS B2B en LATAM: guía completa 2026",
+    title: "Google Ads para software B2B y SaaS en LATAM: guía 2026",
     description:
       "Estructura de campañas, tracking con CRM, benchmarks de CPL y errores frecuentes en cuentas de SaaS B2B en LATAM.",
     images: ["/opengraph-image"],
@@ -23,7 +30,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Google Ads para SaaS B2B en LATAM: guía completa 2026",
+  headline: "Google Ads para software B2B y SaaS en LATAM: guía completa 2026",
   description:
     "Cómo estructurar Google Ads para SaaS B2B en LATAM: keywords por intención, tracking conectado al CRM, benchmarks de CPL y errores frecuentes.",
   author: {
@@ -37,7 +44,7 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: "https://jtads.com/logo-blue.png" },
   },
   datePublished: "2026-04-14",
-  dateModified: "2026-04-14",
+  dateModified: "2026-10-01",
   image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/google-ads-saas-b2b-latam",
   about: [
@@ -108,6 +115,38 @@ const faqSchema = {
         text: "En la mayoría de los casos de SaaS B2B en LATAM en 2026, Performance Max no es la primera opción. Requiere mínimo 30–50 conversiones de calidad por mes para salir de la fase de aprendizaje, y la mayoría de los SaaS B2B en LATAM no alcanzan ese volumen en demos calificadas. Se recomienda empezar con campañas de Search segmentadas y activar PMax solo cuando existan datos de conversión robustos.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Cómo envío a Google Ads las oportunidades que se cierran en el CRM?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Con la importación de conversiones offline o con las conversiones avanzadas para clientes potenciales. El formulario guarda el identificador del clic (GCLID) o el email del lead; cuando ese lead avanza en el CRM (demo calificada, oportunidad, venta), la etapa se sube a Google Ads como una conversión. Si el formulario está embebido en un iframe, prueba que el GCLID realmente llegue al CRM antes de confiar en los datos.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo evalúo Google Ads si mi ciclo de venta dura meses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mide en paralelo las tres etapas (lead, demo calificada y SQL) y evalúa cada grupo de clics cuando haya tenido tiempo de madurar, no al cierre de cada mes. Google Ads atribuye la conversión importada a la fecha del clic, así que las semanas recientes siempre se ven peor de lo que terminarán siendo. Para las pujas, usa la etapa más profunda del funnel que tenga volumen suficiente.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Conviene optimizar Google Ads para demos o para free trials?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende de cómo vendes. Si el cierre pasa por un comercial, la demo calificada es la mejor señal intermedia. Si el producto se vende solo (product-led), el registro al trial es una señal débil: conviene importar como conversión el momento en que el trial se activa o pasa a pago, para que el algoritmo no optimice por registros que nunca usan el producto.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué cambia si mi SaaS anuncia en varios países de LATAM?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La moneda y la zona horaria de la cuenta de Google Ads quedan fijas al crearla, así que defínelas según dónde facturas y dónde atiende tu equipo comercial. Los impuestos dependen del país de facturación: IVA del 16% en México, IVA del 19% en Colombia y Chile si no registras tu información fiscal, y percepciones de IVA e Ingresos Brutos en Argentina. Y como el CPL cambia entre mercados, conviene separar campañas por país para leer y ajustar el presupuesto de cada uno.",
+      },
+    },
   ],
 };
 
@@ -151,7 +190,7 @@ export default function PostSaaSB2B() {
             className="font-black text-white text-3xl md:text-4xl leading-tight mb-6"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
-            Google Ads para SaaS B2B en LATAM: guía completa 2026
+            Google Ads para software B2B y SaaS en LATAM: guía completa 2026
           </h1>
           <p
             className="text-[#a8aab8] text-base leading-relaxed mb-6 max-w-2xl"
@@ -185,7 +224,7 @@ export default function PostSaaSB2B() {
 
           {/* Section 1 */}
           <h2 className="font-black text-2xl text-[#1c1b1b] mt-12 mb-4" style={{ fontFamily: "Manrope, sans-serif" }}>
-            Por qué Google Ads funciona diferente en SaaS B2B
+            Por qué Google Ads funciona diferente en software B2B y SaaS
           </h2>
           <p className="text-[#424656] leading-relaxed mb-6 text-base" style={{ fontFamily: "Inter, sans-serif" }}>
             En e-commerce, el viaje del comprador es corto: el usuario ve un anuncio, entra al sitio y compra. El píxel registra la conversión y el algoritmo optimiza.
@@ -506,6 +545,11 @@ export default function PostSaaSB2B() {
           </p>
           <p className="text-[#424656] leading-relaxed mb-10 text-base" style={{ fontFamily: "Inter, sans-serif" }}>
             Si tu cuenta lleva más de tres meses activa y el equipo de ventas sigue reportando que los leads no califican, el problema casi siempre está en el tracking o en la señal de optimización — no en el presupuesto ni en las keywords.
+            {" "}Si prefieres que lo gestione un equipo especializado, así trabajamos como{" "}
+            <Link href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">
+              agencia de Google Ads en LATAM
+            </Link>
+            .
           </p>
 
           {/* Inline CTA */}

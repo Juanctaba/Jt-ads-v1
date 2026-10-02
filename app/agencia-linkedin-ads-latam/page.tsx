@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { publishedFaq, withLinks, type FaqItem } from "@/lib/faqLinks";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
@@ -89,7 +90,7 @@ const services = [
   },
 ];
 
-const faqItems = [
+const faqAll: FaqItem[] = [
   {
     q: "¿LinkedIn Ads funciona para empresas en LATAM?",
     a: "Sí, especialmente para SaaS B2B, consultoría enterprise, servicios financieros y educación ejecutiva. La penetración de LinkedIn en LATAM ha crecido significativamente — México, Colombia y Argentina tienen volúmenes suficientes para campañas B2B efectivas. El CPL es más alto que Meta, pero la calidad del lead es notablemente mejor para ciclos de venta complejos.",
@@ -104,9 +105,12 @@ const faqItems = [
   },
   {
     q: "¿Trabajan solo con LinkedIn o también hacen mix con otras plataformas?",
-    a: "Dependiendo de tu ciclo de venta y ICP, combinamos LinkedIn con Google Ads (Search de intención) y Meta Ads (retargeting). LinkedIn es excelente para prospecting de decision-makers, pero complementado con Google captura la intención cuando están buscando activamente una solución.",
+    a: "Dependiendo de tu ciclo de venta y ICP, combinamos LinkedIn con Google Ads (Search de intención) y Meta Ads (retargeting). LinkedIn es excelente para prospecting de decision-makers, pero complementado con Google captura la intención cuando están buscando activamente una solución. Si vendes software, mira cómo estructuramos Google Ads para software B2B.",
+    links: [{ text: "Google Ads para software B2B", href: "/blog/google-ads-saas-b2b-latam" }],
   },
 ];
+
+const faqItems = publishedFaq(faqAll);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -423,7 +427,7 @@ export default function AgenciaLinkedInAdsPage() {
               {faqItems.map((item) => (
                 <div key={item.q} className="border-b border-slate-100 pb-6">
                   <h3 className="text-lg font-bold text-slate-900 mb-3">{item.q}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.a}</p>
+                  <p className="text-slate-600 leading-relaxed">{withLinks(item.a, item.links)}</p>
                 </div>
               ))}
             </div>

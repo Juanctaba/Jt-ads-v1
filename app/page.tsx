@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { publishedFaq, withLinks, type FaqItem } from "@/lib/faqLinks";
 import CTAButton from "@/components/ui/CTAButton";
 
 export const metadata: Metadata = {
-  title: "Agencia de Pauta Digital y Performance | JT Ads LATAM",
+  title: "Agencia de Pauta Digital y Performance en LATAM | JT Ads",
   description:
-    "Gestionamos tu pauta en Google, Meta y LinkedIn con tracking server-side y reportes conectados a ventas reales, no al dashboard. Diagnóstico gratuito.",
+    "Pauta en Google, Meta y LinkedIn con tracking server-side y reportes atados a ventas reales. Mes a mes, sin contratos de 12 meses. Diagnóstico gratis.",
   alternates: {
     canonical: "https://jtads.com",
     languages: {
@@ -76,6 +77,62 @@ const steps = [
   },
 ];
 
+const faqAll: FaqItem[] = [
+  {
+    q: "¿Qué hace una agencia de pauta digital y performance como JT Ads?",
+    a: "Gestionamos tu pauta en Google, Meta y LinkedIn y la medimos contra ventas, no contra el dashboard de la plataforma. Antes de subir presupuesto revisamos el tracking: implementamos server-side para medir leads que llegan a ventas, no conversiones infladas. El equipo que vende es el que ejecuta.",
+  },
+  {
+    q: "¿Qué plataformas gestionan?",
+    a: "Google Ads (Search, Performance Max, Display, YouTube, Demand Gen y campañas de apps), Meta Ads (Instagram Ads y Facebook Ads) y LinkedIn Ads. El mix depende de tu objetivo y presupuesto: no todas las empresas necesitan los tres canales.",
+    links: [
+      { text: "Google Ads", href: "/agencia-google-ads-latam" },
+      { text: "Instagram Ads y Facebook Ads", href: "/agencia-meta-ads-latam" },
+      { text: "LinkedIn Ads", href: "/agencia-linkedin-ads-latam" },
+    ],
+  },
+  {
+    q: "¿Cómo miden los resultados?",
+    a: "Con el CPL real conectado a tu CRM, no con el CPL que reporta la plataforma. Desde el primer mes tienes acceso directo a la cuenta: ves lo mismo que vemos nosotros. Si quieres ver el diagnóstico antes de decidir, la primera sesión es gratis.",
+    links: [{ text: "la primera sesión es gratis", href: "/diagnostico-en-vivo" }],
+  },
+  {
+    q: "¿Cuándo se empiezan a ver resultados?",
+    a: "Las primeras señales de optimización suelen verse entre las semanas 2 y 4; resultados estables, con datos suficientes para escalar, entre el mes 2 y el 3. Si en los primeros 90 días no ves mejoras concretas y medibles, no tiene sentido que sigamos.",
+  },
+  {
+    q: "¿Hay contratos de permanencia?",
+    a: "No. Trabajamos mes a mes, sin contratos de 12 meses. Confiamos en los resultados para retener clientes.",
+  },
+  {
+    q: "¿En qué países trabajan?",
+    a: "Trabajamos de forma remota desde Medellín con empresas en México, Colombia, Chile, Argentina, Perú y el mercado hispano de USA. Para Google Ads tenemos páginas por mercado: México, Colombia, Chile, Argentina y USA.",
+    links: [
+      { text: "México, Colombia, Chile, Argentina y USA", href: "/agencia-google-ads-latam" },
+    ],
+  },
+  {
+    q: "¿Qué cambia por país al pagar Google Ads o Meta Ads?",
+    a: "Impuestos, moneda y zona horaria. Google, por ejemplo, agrega IVA del 19% en Colombia y en Chile si no registras tu información fiscal en la cuenta, cobra IVA del 16% en México y aplica una percepción de IVA del 21% en Argentina. En Google Ads la moneda y la zona horaria quedan fijas al crear la cuenta; en Meta, cambiarlas cierra la cuenta publicitaria y crea una nueva. Por eso las definimos antes de lanzar, con tu contador para la parte fiscal.",
+  },
+  {
+    q: "¿Cuánto cuesta trabajar con JT Ads?",
+    a: "[[PENDIENTE JUAN: modelo de honorarios (fee fijo, % de inversión o mixto), si la inversión en medios se paga directo a la plataforma y mínimo de inversión unificado: hoy las páginas dicen USD 5.000/mes (LATAM, Meta, México), 2.000 (Colombia, Argentina), 3.000 (Chile) y 8.000 (USA)]]",
+    pending: true,
+  },
+];
+
+const faqItems = publishedFaq(faqAll);
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -139,6 +196,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Navbar />
       <main className="flex-1">
@@ -513,6 +574,23 @@ export default function HomePage() {
                   Conoce cómo lo hacemos →
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ (mismo patrón que /agencia-*-latam) ── */}
+        <section className="py-24 bg-white">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
+              Preguntas frecuentes sobre nuestra agencia de pauta digital
+            </h2>
+            <div className="space-y-6">
+              {faqItems.map((item) => (
+                <div key={item.q} className="border-b border-slate-100 pb-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">{item.q}</h3>
+                  <p className="text-slate-600 leading-relaxed">{withLinks(item.a, item.links)}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

@@ -188,7 +188,11 @@ export default function PostMBA() {
             <strong className="text-[#1c1b1b]">El cargo por tokens no perdona la ventana gratuita.</strong> Cuando una
             conversación nace de un anuncio de clic a WhatsApp, la entrega no se cobra en ninguna categoría. Meta
             Business Agent es la excepción: los tokens se pagan igual. Si buena parte de tu volumen entra por anuncios,
-            esa diferencia pesa.
+            esa diferencia pesa. Pasa sobre todo con campañas de clic a WhatsApp en{" "}
+            <Link href="/agencia-meta-ads-latam" className="text-[#0066ff] font-semibold hover:underline">
+              Instagram Ads y Facebook Ads
+            </Link>
+            .
           </p>
           <p className={P_}>
             <strong className="text-[#1c1b1b]">El costo depende de la conversación, no del plan.</strong> Una consulta

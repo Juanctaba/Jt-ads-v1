@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { publishedFaq, withLinks, type FaqItem } from "@/lib/faqLinks";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
 
 export const metadata: Metadata = {
-  title: "Agencia de Google Ads en LATAM | Diagnóstico Gratis",
+  title: "Agencia de Google Ads en LATAM | Mes a mes, sin contratos",
   description:
-    "Especialistas en Google Ads para empresas de México, Colombia, Chile y Argentina. Tracking server-side y sin contratos largos. Primera sesión sin costo.",
+    "Agencia de Google Ads para empresas en México, Colombia, Chile, Argentina y USA. Tracking server-side, mes a mes y el experto gestiona tu cuenta.",
   alternates: {
     canonical: "https://jtads.com/agencia-google-ads-latam",
     languages: {
@@ -20,6 +21,8 @@ export const metadata: Metadata = {
       },
   },
   keywords: [
+    "agencia google ads",
+    "agencia de google ads",
     "agencia google ads latam",
     "agencia google ads mexico",
     "agencia google ads colombia",
@@ -129,10 +132,15 @@ const services = [
   },
 ];
 
-const faqItems = [
+const faqAll: FaqItem[] = [
   {
     q: "¿Trabajan solo con Google o también otras plataformas?",
-    a: "Google es una de nuestras especialidades principales. También gestionamos Meta Ads y LinkedIn Ads. En la mayoría de los casos, el mix correcto depende de tu objetivo y presupuesto — te recomendamos la combinación que tenga sentido para tu negocio.",
+    a: "Google es una de nuestras especialidades principales. También gestionamos Meta Ads y LinkedIn Ads: somos una agencia de pauta digital y performance, no solo de Google. En la mayoría de los casos, el mix correcto depende de tu objetivo y presupuesto — te recomendamos la combinación que tenga sentido para tu negocio.",
+    links: [
+      { text: "Meta Ads", href: "/agencia-meta-ads-latam" },
+      { text: "LinkedIn Ads", href: "/agencia-linkedin-ads-latam" },
+      { text: "agencia de pauta digital y performance", href: "/" },
+    ],
   },
   {
     q: "¿Cuál es el presupuesto mínimo para trabajar con JT Ads?",
@@ -146,7 +154,52 @@ const faqItems = [
     q: "¿Trabajan con cuentas que ya tienen historial o solo cuentas nuevas?",
     a: "Ambas. Con cuentas nuevas construimos la estructura correcta desde el inicio. Con cuentas con historial, el primer paso es siempre el diagnóstico para entender qué tiene sentido conservar y qué hay que reconstruir.",
   },
+  {
+    q: "¿Cuánto tiempo tarda en verse resultados con Google Ads?",
+    a: "Las primeras señales de optimización se ven entre las semanas 2 y 4. Resultados estables, con datos suficientes para escalar, entre el mes 2 y el 3. Google Ads no es un canal de resultados inmediatos: es un canal de resultados sostenibles cuando está bien construido y bien medido.",
+  },
+  {
+    q: "¿Voy a hablar con quien gestiona la cuenta o con un account manager?",
+    a: "Con quien la gestiona. Juan gestiona la cuenta y el equipo que vende es el que ejecuta: no hay un account manager intermediario ni juniors aprendiendo con tu presupuesto.",
+  },
+  {
+    q: "¿Trabajan con empresas de software B2B o SaaS?",
+    a: "Sí. En software B2B el ciclo de venta es largo y el formulario no es la venta, así que optimizamos hacia oportunidades del CRM y no hacia leads de plataforma. Lo explicamos paso a paso en nuestra guía de Google Ads para software B2B.",
+    links: [{ text: "Google Ads para software B2B", href: "/blog/google-ads-saas-b2b-latam" }],
+  },
+  {
+    q: "¿Pueden gestionar campañas en varios países a la vez?",
+    a: "Sí. Gestionamos cuentas multi-país con tracking unificado, para comparar el CPL real por mercado y mover presupuesto según ventas, no según la plataforma. Cada país tiene su propia página con sus particularidades: México, Colombia, Chile, Argentina y USA.",
+    links: [
+      { text: "México", href: "/agencia-google-ads-mexico" },
+      { text: "Colombia", href: "/agencia-google-ads-colombia" },
+      { text: "Chile", href: "/agencia-google-ads-chile" },
+      { text: "Argentina", href: "/agencia-google-ads-argentina" },
+      { text: "USA", href: "/agencia-google-ads-usa" },
+    ],
+  },
+  {
+    q: "¿Qué cambia por país al pagar Google Ads (moneda, impuestos y zona horaria)?",
+    a: "Moneda y zona horaria se eligen al crear la cuenta y después no se pueden cambiar: hay que abrir una cuenta nueva y se pierde el histórico. En impuestos, Google agrega IVA del 19% en Colombia y Chile si no registras tu información fiscal en la cuenta, cobra IVA del 16% en México y en Argentina aplica una percepción de IVA del 21% más percepciones de Ingresos Brutos según la provincia. Revísalo con tu contador antes de lanzar.",
+  },
+  {
+    q: "¿Son Google Partner?",
+    a: "[[PENDIENTE JUAN: estado de Google Partner / certificaciones vigentes de Google Ads, con enlace verificable]]",
+    pending: true,
+  },
+  {
+    q: "¿A nombre de quién queda la cuenta de Google Ads?",
+    a: "[[PENDIENTE JUAN: confirmar que la cuenta queda a nombre del cliente (propiedad, admin e histórico) también cuando la crean ustedes]]",
+    pending: true,
+  },
+  {
+    q: "¿Cómo cobran la gestión de Google Ads?",
+    a: "[[PENDIENTE JUAN: modelo de honorarios (fee fijo, % de inversión o mixto) y si la inversión en medios se paga directo a Google]]",
+    pending: true,
+  },
 ];
+
+const faqItems = publishedFaq(faqAll);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -460,7 +513,7 @@ export default function AgenciaGoogleAdsPage() {
               {faqItems.map((item) => (
                 <div key={item.q} className="border-b border-slate-100 pb-6">
                   <h3 className="text-lg font-bold text-slate-900 mb-3">{item.q}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.a}</p>
+                  <p className="text-slate-600 leading-relaxed">{withLinks(item.a, item.links)}</p>
                 </div>
               ))}
             </div>

@@ -180,6 +180,14 @@ const faqItems = [
     q: "¿Pueden gestionar campañas que corren simultáneamente en USA y LATAM?",
     a: "Sí, es uno de nuestros casos de uso más comunes. Gestionamos cuentas multi-geo con tracking unificado, lo que permite comparar el CPL real por mercado y tomar decisiones de asignación de presupuesto basadas en datos de ventas reales, no de plataforma.",
   },
+  {
+    q: "¿Qué impuestos aplica Google Ads a anunciantes en USA?",
+    a: "Depende de la dirección de facturación: Google cobra los impuestos estatales y locales que correspondan a fin de mes. Un ejemplo reciente: desde el 1 de enero de 2026 recauda el impuesto sobre ventas del estado de Washington a la publicidad digital. Si declaras el gasto, Google publica en su centro de ayuda los datos fiscales de Google LLC que te pide tu contador.",
+  },
+  {
+    q: "¿Qué zona horaria usar si anuncio en varios estados de USA y en LATAM?",
+    a: "USA tiene varias zonas horarias y casi todas cambian de hora en el año (la mayor parte de Arizona y Hawái no). La zona horaria de la cuenta define cuándo corre la programación de anuncios y cómo se corta el día en los reportes, y queda fija al crear la cuenta. Conviene alinearla con donde atiende tu equipo comercial y, si los horarios de atención son muy distintos, separar cuentas o campañas por mercado.",
+  },
 ];
 
 const faqSchema = {
@@ -241,7 +249,9 @@ export default function AgenciaGoogleAdsUSAPage() {
                 </h1>
 
                 <p className="text-lg leading-relaxed mb-8" style={{ color: "#424656" }}>
-                  Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM. Experiencia en cuentas de $500k+/mes en mercados de alta competencia.
+                  Somos una{" "}
+                  <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
+                  para LATAM y el mercado hispano de USA. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM. Experiencia en cuentas de $500k+/mes en mercados de alta competencia.
                 </p>
 
                 {/* Stats */}

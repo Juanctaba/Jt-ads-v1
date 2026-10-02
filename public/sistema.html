@@ -3,11 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!-- Google Tag Manager -->
+  <link rel="preload" as="image" href="/landings/flujo-01.svg" fetchpriority="high">
+  <!-- Google Tag Manager: misma semántica que strategy="lazyOnload" de next/script en
+       app/layout.tsx (window.load -> requestIdleCallback, sin timeout ni retrasos extra).
+       Los push a dataLayer previos quedan en cola. -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  new Date().getTime(),event:'gtm.js'});function g(){var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
+  function r(){if(w.requestIdleCallback){w.requestIdleCallback(g)}else{setTimeout(g,1)}}
+  if(d.readyState==='complete'){r()}else{w.addEventListener('load',r)}
   })(window,document,'script','dataLayer','GTM-W3MS2WPT');</script>
   <!-- End Google Tag Manager -->
   <script>(function(){if(window.__jtadsClickTracking)return;window.__jtadsClickTracking=true;window.dataLayer=window.dataLayer||[];document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var u;try{u=new URL(a.getAttribute('href'),location.href)}catch(x){return}var pp=location.pathname;if(/(^|\.)gohighlevel\.com$|(^|\.)highlevel\.com$/i.test(u.hostname)&&u.searchParams.has('fp_ref')){window.dataLayer.push({event:'affiliate_click',link_url:u.href,page_path:pp});return}if((u.hostname===location.hostname||/(^|\.)jtads\.com$/i.test(u.hostname))&&/^\/(diagnostico-en-vivo|diagnostico-operacion)\/?$/.test(u.pathname)){window.dataLayer.push({event:'generate_lead',form:'diagnostico',page_path:pp})}},true)})();</script>
@@ -145,7 +150,7 @@
     <h2>La prueba en pantalla</h2>
     <p>Cuenta DEMO. Form de prueba. Misma lógica que usamos en operación.</p>
     <figure class="shot">
-      <img src="/landings/flujo-01.svg" width="900" height="461" alt="Contacto Lead Meta en CRM DEMO: owner Unassigned, sin oportunidad vinculada" loading="eager">
+      <img src="/landings/flujo-01.svg" width="900" height="461" alt="Contacto Lead Meta en CRM DEMO: owner Unassigned, sin oportunidad vinculada" loading="eager" fetchpriority="high" decoding="async">
       <figcaption>1 · Form enviado → contacto. Owner: Unassigned. Cero oportunidad.</figcaption>
     </figure>
     <figure class="shot">

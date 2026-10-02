@@ -274,8 +274,11 @@ export default function CasosDeExitoPage() {
                 <span style={{ color: "#0066ff" }}>ventas</span>, no en clics.
               </h1>
               <p className="text-xl text-[#424656] max-w-2xl leading-relaxed mb-10">
-                La mayoría de las agencias optimizan para el algoritmo de Facebook o Google. Nosotros
-                conectamos tus campañas directamente con los datos de tu CRM para optimizar el retorno
+                La mayoría de las agencias optimizan para el algoritmo de Facebook o Google. Como{" "}
+                <a href="/" className="text-[#0066ff] font-semibold hover:underline">
+                  agencia de pauta digital y performance
+                </a>
+                , conectamos tus campañas directamente con los datos de tu CRM para optimizar el retorno
                 de inversión real.
               </p>
               <Link

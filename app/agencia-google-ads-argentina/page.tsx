@@ -187,6 +187,14 @@ const faqItems = [
     q: "¿Qué diferencia a JT Ads de las agencias locales en Argentina?",
     a: "La diferencia principal es el nivel de tracking. La mayoría de agencias locales reporta el CPL de plataforma. Nosotros conectamos las conversiones directamente con tu CRM para reportar el CPL real de ventas. Esa diferencia puede representar entre el 30% y el 60% de discrepancia en los números.",
   },
+  {
+    q: "¿Qué impuestos suma Google Ads en Argentina?",
+    a: "Google aplica una percepción de IVA del 21% sobre los pagos y percepciones de Ingresos Brutos en las provincias donde estás inscripto y Google actúa como agente de percepción (hoy son nueve, entre ellas CABA, Buenos Aires y Córdoba). Las calcula con la documentación fiscal que subas a la cuenta (inscripción en AFIP/ARCA, CM01, CM02, CM05): si falta o está desactualizada, aplica las tasas más altas. La factura legal (tipo A con CUIT responsable inscripto, tipo B con DNI) se emite entre el día 3 y el 5 de cada mes.",
+  },
+  {
+    q: "¿Cómo manejan la diferencia horaria con Argentina?",
+    a: "Argentina está en UTC-3 todo el año y nosotros operamos desde Medellín (UTC-5): son dos horas de diferencia, sin cambios de horario. Lo que sí importa es la zona horaria de la cuenta de Google Ads: debería ser la de Argentina para que la programación de anuncios y los reportes diarios cuadren con tu operación, y queda fija al crear la cuenta.",
+  },
 ];
 
 const faqSchema = {
@@ -251,7 +259,9 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                 </h1>
 
                 <p className="text-lg leading-relaxed mb-8" style={{ color: "#424656" }}>
-                  Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes
+                  Somos una{" "}
+                  <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
+                  que opera en toda LATAM. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes
                   conectados a tu CRM — no al dashboard de Google.
                 </p>
 

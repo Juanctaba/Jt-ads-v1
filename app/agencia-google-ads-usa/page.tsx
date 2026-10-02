@@ -166,15 +166,15 @@ const useCases = [
 const faqItems = [
   {
     q: "¿Trabajan con empresas que solo operan en USA?",
-    a: "Sí. Trabajamos con empresas 100% enfocadas en el mercado de USA, especialmente si tienen un componente de mercado hispano o si invierten $5,000+ USD/mes en Google Ads. Nuestra diferenciación es el nivel de tracking y la conexión real con ventas.",
+    a: "Sí. Trabajamos con empresas 100% enfocadas en el mercado de USA, especialmente si tienen un componente de mercado hispano. Nuestra diferenciación es el nivel de tracking y la conexión real con ventas.",
   },
   {
     q: "¿El servicio se ofrece en inglés o en español?",
     a: "El servicio se puede gestionar en ambos idiomas. Las comunicaciones internas y reportes los adaptamos al idioma de tu equipo. La mayoría de nuestros clientes en USA trabajan en español como idioma principal de gestión.",
   },
   {
-    q: "¿Cuál es el presupuesto mínimo para trabajar en USA?",
-    a: "Para el mercado de USA recomendamos un mínimo de $8,000 USD/mes en la plataforma. El CPC en USA es significativamente más alto que en LATAM, por lo que se necesita mayor volumen para que los algoritmos optimicen correctamente.",
+    q: "¿Cuánto cuesta la gestión de Google Ads en USA?",
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios la pagas directamente a Google. Ten en cuenta que el CPC en USA es significativamente más alto que en LATAM, así que el presupuesto de pauta se planifica con eso en mente.",
   },
   {
     q: "¿Pueden gestionar campañas que corren simultáneamente en USA y LATAM?",
@@ -251,14 +251,14 @@ export default function AgenciaGoogleAdsUSAPage() {
                 <p className="text-lg leading-relaxed mb-8" style={{ color: "#424656" }}>
                   Somos una{" "}
                   <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
-                  para LATAM y el mercado hispano de USA. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM. Experiencia en cuentas de $500k+/mes en mercados de alta competencia.
+                  para LATAM y el mercado hispano de USA. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM. +$500k/mes gestionados.
                 </p>
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "$3M+ USD", label: "Ad Spend en USA" },
-                    { value: "50+", label: "Cuentas USA/LATAM" },
+                    { value: "+$3M USD", label: "invertidos en pauta" },
+                    { value: "+50", label: "cuentas en USA y LATAM" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (
                     <div key={stat.label} className="flex flex-col">

@@ -96,7 +96,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta un lead de Google Ads para SaaS B2B en LATAM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El CPL (costo por lead) de Google Ads para SaaS B2B en LATAM varía entre $30 y $90 USD por formulario completado. El costo por demo calificada oscila entre $80 y $250 USD. El costo por SQL (oportunidad en CRM) está entre $200 y $600 USD. Si el CPL de plataforma supera los $150 USD o el costo por SQL supera los $900 USD, es señal de problemas estructurales en la cuenta.",
+        text: "Depende del país, del ticket y de la etapa del funnel. Como referencia, en cuentas activas de LATAM un lead de formulario suele costar menos de $100 USD, una demo calificada hasta unos $250 USD y una oportunidad en CRM (SQL) hasta unos $600 USD. Si el lead supera los $150 USD o la oportunidad los $900 USD, es señal de problemas estructurales en la cuenta.",
       },
     },
     {
@@ -151,9 +151,9 @@ const faqSchema = {
 };
 
 const benchmarks = [
-  { etapa: "Lead (formulario completado)", rango: "$30 – $90 USD", alerta: "Más de $150 USD" },
-  { etapa: "Demo calificada", rango: "$80 – $250 USD", alerta: "Más de $400 USD" },
-  { etapa: "SQL (oportunidad en CRM)", rango: "$200 – $600 USD", alerta: "Más de $900 USD" },
+  { etapa: "Lead (formulario completado)", rango: "Menos de $100 USD", alerta: "Más de $150 USD" },
+  { etapa: "Demo calificada", rango: "Hasta ~$250 USD", alerta: "Más de $400 USD" },
+  { etapa: "SQL (oportunidad en CRM)", rango: "Hasta ~$600 USD", alerta: "Más de $900 USD" },
 ];
 
 export default function PostSaaSB2B() {
@@ -261,7 +261,7 @@ export default function PostSaaSB2B() {
             La estructura de campañas para SaaS B2B en LATAM
           </h2>
           <p className="text-[#424656] leading-relaxed mb-8 text-base" style={{ fontFamily: "Inter, sans-serif" }}>
-            No existe una estructura universal, pero este esquema de tres capas funciona en cuentas de SaaS B2B con $5k–$30k USD/mes de ad spend en México, Colombia, Chile y Argentina:
+            No existe una estructura universal, pero este esquema de tres capas funciona en cuentas de SaaS B2B en México, Colombia, Chile y Argentina:
           </p>
 
           {[
@@ -453,7 +453,7 @@ export default function PostSaaSB2B() {
             Benchmarks de CPL para SaaS B2B en LATAM (2026)
           </h2>
           <p className="text-[#424656] leading-relaxed mb-6 text-base" style={{ fontFamily: "Inter, sans-serif" }}>
-            Los siguientes rangos reflejan datos de cuentas activas de SaaS B2B en México, Colombia, Chile y Argentina con ad spend mensual entre $5,000 y $30,000 USD:
+            Estos rangos son una referencia de cuentas activas de SaaS B2B en México, Colombia, Chile y Argentina:
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-[#c2c6d8]/20 mb-6">

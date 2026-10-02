@@ -96,8 +96,8 @@ const faqAll: FaqItem[] = [
     a: "Sí, especialmente para SaaS B2B, consultoría enterprise, servicios financieros y educación ejecutiva. La penetración de LinkedIn en LATAM ha crecido significativamente — México, Colombia y Argentina tienen volúmenes suficientes para campañas B2B efectivas. El CPL es más alto que Meta, pero la calidad del lead es notablemente mejor para ciclos de venta complejos.",
   },
   {
-    q: "¿Cuál es el presupuesto mínimo recomendado para LinkedIn Ads?",
-    a: "Recomendamos mínimo $5,000 USD/mes en inversión en plataforma. LinkedIn tiene costos por clic y CPM más altos que otras plataformas — por eso el volumen importa para que el algoritmo aprenda correctamente. Con presupuestos menores, el volumen de datos es insuficiente para optimizar.",
+    q: "¿Cuánto cuesta la gestión de LinkedIn Ads?",
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios la pagas directamente a LinkedIn. Ten en cuenta que LinkedIn tiene costos por clic y CPM más altos que otras plataformas, así que el presupuesto de pauta se planifica con eso en mente.",
   },
   {
     q: "¿Cómo miden el ROI de LinkedIn Ads más allá del CPL?",
@@ -339,7 +339,6 @@ export default function AgenciaLinkedInAdsPage() {
                     "Vendes B2C o productos de consumo masivo",
                     "Tu ciclo de venta es menor a 2 semanas",
                     "Tu ICP no tiene título profesional claro",
-                    "Tu presupuesto mensual es menor a $5,000 USD",
                     "No tienes proceso de calificación de leads",
                   ],
                   color: "border-amber-200 bg-amber-50/50",

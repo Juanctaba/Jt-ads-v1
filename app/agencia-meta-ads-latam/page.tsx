@@ -93,8 +93,16 @@ const services = [
 
 const faqItems = [
   {
-    q: "¿Cuál es el presupuesto mínimo para Meta Ads con JT Ads?",
-    a: "Mínimo $5,000 USD/mes en inversión en plataforma. Por debajo de ese monto, el volumen de datos es insuficiente para que el algoritmo de Meta aprenda correctamente y los resultados no justifican nuestros honorarios.",
+    q: "¿Cuánto cuesta la gestión de Meta Ads con JT Ads?",
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Meta.",
+  },
+  {
+    q: "¿Son Meta Partner?",
+    a: "Sí. Juan Tabares, quien gestiona tu cuenta, es Meta Partner y también Google Partner.",
+  },
+  {
+    q: "¿A nombre de quién queda la cuenta publicitaria?",
+    a: "A tu nombre. La cuenta publicitaria queda a nombre del cliente, no de la agencia.",
   },
   {
     q: "¿Trabajan con ecommerce, SaaS o generación de leads?",
@@ -310,7 +318,7 @@ export default function AgenciaMetaAdsPage() {
             <div className="mt-10 grid sm:grid-cols-3 gap-6">
               {[
                 { stat: "20–40%", label: "de eventos recuperados con CAPI server-side" },
-                { stat: "$5k+", label: "inversión mensual mínima para resultados consistentes" },
+                { stat: "Partner", label: "Juan es Meta Partner y Google Partner" },
                 { stat: "<4h", label: "tiempo de respuesta para agendar tu diagnóstico" },
               ].map((item) => (
                 <div key={item.stat} className="bg-white/5 rounded-xl p-6 border border-white/10">

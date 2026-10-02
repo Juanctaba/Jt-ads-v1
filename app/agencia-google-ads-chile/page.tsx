@@ -67,7 +67,7 @@ const comparison = [
   },
   {
     feature: "Experiencia en ad spend",
-    jt: "✅ $500k+/mes gestionados",
+    jt: "✅ +$500k/mes gestionados",
     jtPositive: true,
     traditional: "⚠️ Variable — no verificable",
     tradPositive: null,
@@ -263,8 +263,8 @@ const cities = [
 
 const faqs = [
   {
-    q: "¿Cuál es la inversión mínima recomendada en Google Ads para Chile?",
-    a: "Trabajamos con empresas que invierten mínimo $3,000 USD/mes en la plataforma. En Chile, este presupuesto permite generar el volumen de datos necesario para que los algoritmos de Google optimicen correctamente.",
+    q: "¿Cuánto cuesta la gestión de Google Ads en Chile?",
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Google.",
   },
   {
     q: "¿Trabajan con empresas fuera de Santiago?",
@@ -352,8 +352,8 @@ export default function AgenciaGoogleAdsChilePage() {
             {/* Stats */}
             <div className="flex flex-wrap gap-6 mb-8">
               {[
-                { label: "$1.2M+ USD Ad Spend en CL" },
-                { label: "30+ Empresas Chilenas" },
+                { label: "+$1.2M USD invertidos en pauta" },
+                { label: "+30 empresas chilenas" },
                 { label: "< 4h Respuesta" },
               ].map((s) => (
                 <div key={s.label} className="flex items-center gap-2">

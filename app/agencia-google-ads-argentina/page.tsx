@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Agencia de Google Ads en Argentina — JT Ads | Performance Marketing",
-    description: "Especialistas en Google Ads para empresas en Argentina. Gestión en USD en contexto inflacionario. Tracking server-side, sin contratos. Primera sesión sin costo.",
+    description: "Especialistas en Google Ads para empresas en Argentina. Facturación en USD o ARS. Tracking server-side, sin contratos. Primera sesión sin costo.",
     images: ["/opengraph-image"],
     url: "https://jtads.com/agencia-google-ads-argentina",
   },
@@ -63,7 +63,7 @@ const comparisonRows = [
   {
     criterio: "Experiencia en ad spend",
     tradicional: "Sin dato publicado",
-    jtads: "$500k+/mes gestionados",
+    jtads: "+$500k/mes gestionados",
     differentiate: true,
   },
   {
@@ -173,7 +173,7 @@ const services = [
 const faqItems = [
   {
     q: "¿En qué moneda se maneja el presupuesto de Google Ads en Argentina?",
-    a: "Google Ads en Argentina factura en USD. Recomendamos gestionar el presupuesto en dólares para evitar la exposición a la variabilidad cambiaria. El mínimo que trabajamos es de $2,000 USD/mes en la plataforma.",
+    a: "Puedes facturar Google Ads en dólares (USD) o en pesos argentinos (ARS). La moneda se elige al crear la cuenta y después no se puede cambiar, así que la definimos antes de lanzar según cómo pagas y cómo quieres manejar la variabilidad cambiaria.",
   },
   {
     q: "¿Tienen experiencia con el mercado argentino específicamente?",
@@ -268,8 +268,8 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                 {/* Stats row */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "$800k+ USD", label: "Ad Spend en AR" },
-                    { value: "25+", label: "Empresas Argentinas" },
+                    { value: "+$800k USD", label: "invertidos en pauta" },
+                    { value: "+25", label: "empresas argentinas" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (
                     <div key={stat.label}>
@@ -700,9 +700,9 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                   Gestión en mercados de alta inflación
                 </h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#424656" }}>
-                  En Argentina, gestionamos cuentas en USD para mantener la estabilidad del presupuesto
-                  frente a la volatilidad cambiaria. La estructura de campañas se adapta al contexto
-                  local para maximizar la eficiencia del ad spend real.
+                  En Argentina, la cuenta puede facturar en USD o en ARS: elegimos la moneda con la que
+                  el presupuesto se mantiene más estable frente a la volatilidad cambiaria. La estructura de
+                  campañas se adapta al contexto local para maximizar la eficiencia del ad spend real.
                 </p>
               </div>
             </div>

@@ -67,10 +67,10 @@ const comparison = [
     tradPositive: false,
   },
   {
-    feature: "Mínimo de presupuesto",
-    jt: "$5,000/mes",
+    feature: "Inversión en medios",
+    jt: "✅ La pagas directo a Google",
     jtPositive: true,
-    traditional: "Variable — aceptan cualquier cosa",
+    traditional: "Variable según la agencia",
     tradPositive: null,
   },
 ];
@@ -143,10 +143,6 @@ const faqAll: FaqItem[] = [
     ],
   },
   {
-    q: "¿Cuál es el presupuesto mínimo para trabajar con JT Ads?",
-    a: "Mínimo de $5,000/mes en la plataforma. Por debajo de ese monto, el impacto que podemos generar no justifica nuestros honorarios ni tu inversión de tiempo. No tiene sentido para ninguna de las dos partes.",
-  },
-  {
     q: "¿Cómo sé que están gestionando bien mi cuenta si no tengo acceso técnico?",
     a: "Desde el primer mes tienes acceso directo a la cuenta — ves todo lo que vemos nosotros. Los reportes mensuales incluyen el CPL real conectado con tu CRM, no el CPL de plataforma. Sin intermediarios.",
   },
@@ -160,7 +156,7 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Voy a hablar con quien gestiona la cuenta o con un account manager?",
-    a: "Con quien la gestiona. Juan gestiona la cuenta y el equipo que vende es el que ejecuta: no hay un account manager intermediario ni juniors aprendiendo con tu presupuesto.",
+    a: "Con quien la gestiona. Juan, que es Google Partner y Meta Partner, gestiona la cuenta y el equipo que vende es el que ejecuta: no hay un account manager intermediario ni juniors aprendiendo con tu presupuesto.",
   },
   {
     q: "¿Trabajan con empresas de software B2B o SaaS?",
@@ -184,18 +180,15 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Son Google Partner?",
-    a: "[[PENDIENTE JUAN: estado de Google Partner / certificaciones vigentes de Google Ads, con enlace verificable]]",
-    pending: true,
+    a: "Sí. Juan Tabares, quien gestiona tu cuenta, es Google Partner y también Meta Partner.",
   },
   {
     q: "¿A nombre de quién queda la cuenta de Google Ads?",
-    a: "[[PENDIENTE JUAN: confirmar que la cuenta queda a nombre del cliente (propiedad, admin e histórico) también cuando la crean ustedes]]",
-    pending: true,
+    a: "A tu nombre. La cuenta publicitaria queda a nombre del cliente, no de la agencia.",
   },
   {
     q: "¿Cómo cobran la gestión de Google Ads?",
-    a: "[[PENDIENTE JUAN: modelo de honorarios (fee fijo, % de inversión o mixto) y si la inversión en medios se paga directo a Google]]",
-    pending: true,
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Google.",
   },
 ];
 

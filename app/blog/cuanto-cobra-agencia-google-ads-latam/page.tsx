@@ -220,9 +220,6 @@ export default function PostPreciosAgencia() {
                   <th className="px-6 py-4 font-bold text-[#1c1b1b]">
                     Honorarios / mes
                   </th>
-                  <th className="px-6 py-4 font-bold text-[#1c1b1b]">
-                    Ad spend mínimo recomendado
-                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f6f3f2]">
@@ -231,21 +228,18 @@ export default function PostPreciosAgencia() {
                     México
                   </td>
                   <td className="px-6 py-4 text-[#424656]">$800 – $3,500 USD</td>
-                  <td className="px-6 py-4 text-[#424656]">$5,000 USD</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-[#1c1b1b] font-medium">
                     Colombia
                   </td>
                   <td className="px-6 py-4 text-[#424656]">$600 – $2,500 USD</td>
-                  <td className="px-6 py-4 text-[#424656]">$2,000 – $3,000 USD</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-[#1c1b1b] font-medium">
                     Chile
                   </td>
                   <td className="px-6 py-4 text-[#424656]">$900 – $3,500 USD</td>
-                  <td className="px-6 py-4 text-[#424656]">$5,000 USD</td>
                 </tr>
               </tbody>
             </table>

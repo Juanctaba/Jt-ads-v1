@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="preload" as="image" href="/landings/flujo-01.svg" fetchpriority="high">
-  <!-- Google Tag Manager (diferido: se inyecta tras window.load + idle, igual que
-       strategy="lazyOnload" en app/layout.tsx; los push a dataLayer previos quedan en cola) -->
+  <!-- Google Tag Manager: misma semántica que strategy="lazyOnload" de next/script en
+       app/layout.tsx (window.load -> requestIdleCallback, sin timeout ni retrasos extra).
+       Los push a dataLayer previos quedan en cola. -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});function g(){var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
-  function r(){if(w.requestIdleCallback){w.requestIdleCallback(g,{timeout:3000})}else{setTimeout(g,1)}}
+  function r(){if(w.requestIdleCallback){w.requestIdleCallback(g)}else{setTimeout(g,1)}}
   if(d.readyState==='complete'){r()}else{w.addEventListener('load',r)}
   })(window,document,'script','dataLayer','GTM-W3MS2WPT');</script>
   <!-- End Google Tag Manager -->

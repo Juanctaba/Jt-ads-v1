@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "JT Ads | Agencia Google Ads Performance para LATAM + USA",
-    description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, $500k+/mes gestionados.",
+    description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, +$500k/mes gestionados.",
     images: ["/opengraph-image"],
     url: "https://jtads.com",
   },
@@ -84,7 +84,7 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Qué plataformas gestionan?",
-    a: "Google Ads (Search, Performance Max, Display, YouTube, Demand Gen y campañas de apps), Meta Ads (Instagram Ads y Facebook Ads) y LinkedIn Ads. El mix depende de tu objetivo y presupuesto: no todas las empresas necesitan los tres canales.",
+    a: "Google Ads (Search, Performance Max, Display, YouTube, Demand Gen y campañas de apps), Meta Ads (Instagram Ads y Facebook Ads) y LinkedIn Ads. El mix depende de tu objetivo y presupuesto: no todas las empresas necesitan los tres canales. Juan Tabares es Google Partner y Meta Partner.",
     links: [
       { text: "Google Ads", href: "/agencia-google-ads-latam" },
       { text: "Instagram Ads y Facebook Ads", href: "/agencia-meta-ads-latam" },
@@ -102,7 +102,7 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Hay contratos de permanencia?",
-    a: "No. Trabajamos mes a mes, sin contratos de 12 meses. Confiamos en los resultados para retener clientes.",
+    a: "No. Trabajamos mes a mes, sin contratos de 12 meses, y la cuenta publicitaria queda a tu nombre. Confiamos en los resultados para retener clientes.",
   },
   {
     q: "¿En qué países trabajan?",
@@ -117,8 +117,7 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Cuánto cuesta trabajar con JT Ads?",
-    a: "[[PENDIENTE JUAN: modelo de honorarios (fee fijo, % de inversión o mixto), si la inversión en medios se paga directo a la plataforma y mínimo de inversión unificado: hoy las páginas dicen USD 5.000/mes (LATAM, Meta, México), 2.000 (Colombia, Argentina), 3.000 (Chile) y 8.000 (USA)]]",
-    pending: true,
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a cada plataforma (Google, Meta o LinkedIn).",
   },
 ];
 
@@ -342,7 +341,7 @@ export default function HomePage() {
               </span>
             ))}
             <span className="hidden md:inline-block h-4 w-px bg-gray-200" />
-            <span className="font-semibold text-[var(--text-secondary)]">$500k+/mes gestionados</span>
+            <span className="font-semibold text-[var(--text-secondary)]">+$500k/mes gestionados</span>
           </div>
         </section>
 

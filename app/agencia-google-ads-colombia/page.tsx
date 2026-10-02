@@ -72,10 +72,10 @@ const comparison = [
     tradPositive: false,
   },
   {
-    feature: "Inversión mínima recomendada",
-    jt: "$2,000 USD/mes en plataforma",
+    feature: "Inversión en medios",
+    jt: "✅ La pagas directo a Google",
     jtPositive: true,
-    traditional: "Variable — aceptan cualquier presupuesto",
+    traditional: "Variable según la agencia",
     tradPositive: null,
   },
 ];
@@ -262,8 +262,8 @@ const cities = [
 
 const faqItems = [
   {
-    q: "¿Cuál es la inversión mínima recomendada en Google Ads para Colombia?",
-    a: "Trabajamos con empresas que invierten mínimo $2,000 USD/mes en la plataforma. En Colombia, este presupuesto permite suficiente volumen de datos para optimizar correctamente tanto en Bogotá como en otras ciudades principales.",
+    q: "¿Cuánto cuesta la gestión de Google Ads en Colombia?",
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Google.",
   },
   {
     q: "¿Trabajan con empresas en cualquier ciudad de Colombia?",
@@ -361,8 +361,8 @@ export default function AgenciaGoogleAdsColombiaPage() {
                 {/* Stats row */}
                 <div className="flex flex-wrap gap-8 mb-10">
                   {[
-                    { value: "$1.5M+ USD", label: "Ad Spend en CO" },
-                    { value: "40+", label: "Empresas Colombianas" },
+                    { value: "+$1.5M USD", label: "invertidos en pauta" },
+                    { value: "+40", label: "empresas colombianas" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (
                     <div key={stat.label}>

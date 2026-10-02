@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 const icpRows = [
   { criterio: "Estructura interna", detalle: "Equipo de marketing interno" },
-  { criterio: "Inversión Publicitaria", detalle: "Más de $5,000 USD / mes" },
   { criterio: "Sector", detalle: "SaaS, B2B Tech, Fintech, Real Estate, Educación" },
   { criterio: "Mercados", detalle: "LATAM Tier 1 + USA" },
   { criterio: "Enfoque", detalle: "Performance & Rentabilidad" },
@@ -113,8 +112,7 @@ export default function ContactoPage() {
                     </h2>
                   </div>
                   <p className="text-lg text-[#424656] mb-8 leading-relaxed">
-                    Ideal para empresas con una inversión publicitaria superior a{" "}
-                    <strong className="text-[#1c1b1b]">$5,000/mes</strong> que buscan escalar resultados
+                    Ideal para empresas con inversión publicitaria activa que buscan escalar resultados
                     mediante precisión técnica y análisis de datos.
                   </p>
                   <div className="space-y-4 mb-12">

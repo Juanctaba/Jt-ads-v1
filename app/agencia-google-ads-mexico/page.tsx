@@ -64,7 +64,7 @@ const comparisonRows = [
   {
     criterio: "Experiencia en ad spend",
     tradicional: "Sin dato publicado",
-    jtads: "$500k+/mes gestionados",
+    jtads: "+$500k/mes gestionados",
     differentiate: true,
   },
   {
@@ -173,8 +173,8 @@ const services = [
 
 const faqItems = [
   {
-    q: "¿Cuál es el presupuesto mínimo para anunciar en Google Ads en México?",
-    a: "Recomendamos un mínimo de $5,000 USD/mes en la plataforma para que los datos sean suficientes para optimizar. Por debajo de ese monto, las campañas no tienen el volumen necesario para que el aprendizaje de los algoritmos funcione correctamente.",
+    q: "¿Cuánto cuesta la gestión de Google Ads en México?",
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Google.",
   },
   {
     q: "¿Trabajan con empresas en cualquier ciudad de México?",
@@ -268,8 +268,8 @@ export default function AgenciaGoogleAdsMexicoPage() {
                 {/* Stats row */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "$2M+ USD", label: "Ad Spend en MX" },
-                    { value: "60+", label: "Empresas Mexicanas" },
+                    { value: "+$2M USD", label: "invertidos en pauta" },
+                    { value: "+60", label: "empresas mexicanas" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (
                     <div key={stat.label}>

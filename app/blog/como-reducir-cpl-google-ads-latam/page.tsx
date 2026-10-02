@@ -437,9 +437,8 @@ export default function PostReducirCPL() {
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               <strong className="text-[#1c1b1b]">Caso de referencia:</strong> en
-              cuentas de SaaS B2B en México con inversión mensual de $8,000–$12,000
-              USD, hemos logrado reducciones del CPL del 40% en 60 días implementando
-              las 7 palancas de forma secuencial. El primer mes se concentra en
+              cuentas de SaaS B2B en México hemos logrado reducir el CPL en los
+              primeros meses implementando las 7 palancas de forma secuencial. El primer mes se concentra en
               estructura y tracking; el segundo en optimización de landing y señales
               de CRM. Los resultados no son instantáneos — requieren un ciclo
               completo de datos para que el algoritmo recalibbre.

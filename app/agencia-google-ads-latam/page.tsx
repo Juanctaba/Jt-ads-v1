@@ -156,7 +156,7 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Voy a hablar con quien gestiona la cuenta o con un account manager?",
-    a: "Con quien la gestiona. Juan, que es Google Partner y Meta Partner, gestiona la cuenta y el equipo que vende es el que ejecuta: no hay un account manager intermediario ni juniors aprendiendo con tu presupuesto.",
+    a: "Con quien la gestiona. Juan gestiona la cuenta y el equipo que vende es el que ejecuta: no hay un account manager intermediario ni juniors aprendiendo con tu presupuesto. Además, JT Ads es Google Partner y Meta Partner.",
   },
   {
     q: "¿Trabajan con empresas de software B2B o SaaS?",
@@ -180,7 +180,7 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Son Google Partner?",
-    a: "Sí. Juan Tabares, quien gestiona tu cuenta, es Google Partner y también Meta Partner.",
+    a: "Sí. JT Ads es Google Partner y también Meta Partner.",
   },
   {
     q: "¿A nombre de quién queda la cuenta de Google Ads?",

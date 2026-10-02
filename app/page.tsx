@@ -84,7 +84,7 @@ const faqAll: FaqItem[] = [
   },
   {
     q: "¿Qué plataformas gestionan?",
-    a: "Google Ads (Search, Performance Max, Display, YouTube, Demand Gen y campañas de apps), Meta Ads (Instagram Ads y Facebook Ads) y LinkedIn Ads. El mix depende de tu objetivo y presupuesto: no todas las empresas necesitan los tres canales. Juan Tabares es Google Partner y Meta Partner.",
+    a: "Google Ads (Search, Performance Max, Display, YouTube, Demand Gen y campañas de apps), Meta Ads (Instagram Ads y Facebook Ads) y LinkedIn Ads. El mix depende de tu objetivo y presupuesto: no todas las empresas necesitan los tres canales. JT Ads es Google Partner y Meta Partner.",
     links: [
       { text: "Google Ads", href: "/agencia-google-ads-latam" },
       { text: "Instagram Ads y Facebook Ads", href: "/agencia-meta-ads-latam" },

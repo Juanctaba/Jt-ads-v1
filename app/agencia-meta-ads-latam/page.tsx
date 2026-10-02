@@ -98,7 +98,7 @@ const faqItems = [
   },
   {
     q: "¿Son Meta Partner?",
-    a: "Sí. Juan Tabares, quien gestiona tu cuenta, es Meta Partner y también Google Partner.",
+    a: "Sí. JT Ads es Meta Partner y también Google Partner.",
   },
   {
     q: "¿A nombre de quién queda la cuenta publicitaria?",
@@ -318,7 +318,7 @@ export default function AgenciaMetaAdsPage() {
             <div className="mt-10 grid sm:grid-cols-3 gap-6">
               {[
                 { stat: "20–40%", label: "de eventos recuperados con CAPI server-side" },
-                { stat: "Partner", label: "Juan es Meta Partner y Google Partner" },
+                { stat: "Partner", label: "JT Ads es Meta Partner y Google Partner" },
                 { stat: "<4h", label: "tiempo de respuesta para agendar tu diagnóstico" },
               ].map((item) => (
                 <div key={item.stat} className="bg-white/5 rounded-xl p-6 border border-white/10">

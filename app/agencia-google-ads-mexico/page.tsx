@@ -188,6 +188,14 @@ const faqItems = [
     q: "¿Qué pasa si ya tengo una cuenta de Google Ads activa?",
     a: "Perfecto. El primer paso es siempre el diagnóstico de tu cuenta actual. En la sesión identificamos qué funciona, qué hay que corregir y qué hay que reconstruir. No empezamos de cero si no tiene sentido hacerlo.",
   },
+  {
+    q: "¿Cómo se factura Google Ads en México y cuánto IVA se paga?",
+    a: "Google cobra IVA del 16% sobre la inversión publicitaria a los anunciantes que residen en México, ya sea con pagos automáticos, manuales o facturación mensual. Registra bien tu RFC y tus datos fiscales desde el inicio: si los corriges después, Google actualiza la cuenta pero no reemite las facturas ya generadas. La deducibilidad y el tratamiento contable revísalos con tu contador.",
+  },
+  {
+    q: "¿Qué zona horaria y moneda conviene para una cuenta de Google Ads en México?",
+    a: "La de tu operación. En la mayor parte del país, incluida Ciudad de México, rige UTC-6 todo el año desde que se eliminó el horario de verano en 2022; Quintana Roo está en UTC-5 y algunos municipios de la frontera norte cambian de hora junto con USA. La zona horaria define cuándo corren los anuncios programados y cómo se corta el día en los reportes. Igual que la moneda, queda fija al crear la cuenta: cambiarla obliga a abrir una cuenta nueva sin el histórico.",
+  },
 ];
 
 const faqSchema = {
@@ -251,7 +259,9 @@ export default function AgenciaGoogleAdsMexicoPage() {
                 </h1>
 
                 <p className="text-lg leading-relaxed mb-8" style={{ color: "#424656" }}>
-                  Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes
+                  Somos una{" "}
+                  <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
+                  que opera en toda LATAM. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes
                   conectados a tu CRM — no al dashboard de Google.
                 </p>
 

@@ -277,6 +277,14 @@ const faqItems = [
     q: "¿Trabajan con sectores específicos en Colombia?",
     a: "Sí. Tenemos experiencia en SaaS B2B, Fintech, educación online, real estate y servicios profesionales. Si tu sector tiene dinámicas particulares de compra, el diagnóstico es precisamente el espacio para evaluar si Google Ads tiene sentido para tu modelo de negocio.",
   },
+  {
+    q: "¿Cómo se factura Google Ads en Colombia y qué pasa con el IVA?",
+    a: "Google pide tu información fiscal en Facturación > Configuración: si estás registrado en el Régimen Común, tu RUT en PDF y tu NIT. Si no la registras, agrega IVA del 19% a tus facturas. Además, desde enero de 2024 Google paga el impuesto por presencia económica significativa (3% sobre ventas brutas), así que sus facturas por servicios digitales no deben llevar retención. La autoliquidación del IVA y el soporte contable revísalos con tu contador.",
+  },
+  {
+    q: "¿Qué zona horaria y moneda usar en una cuenta de Google Ads para Colombia?",
+    a: "Colombia está en UTC-5 todo el año, sin horario de verano, así que la programación de anuncios no se corre. La zona horaria y la moneda se eligen al crear la cuenta y no se pueden cambiar después: elige la moneda con la que vas a pagar y la hora de tu equipo comercial. Si la cuenta se creó con otra zona, la única salida es abrir una nueva y copiar las campañas, sin el histórico.",
+  },
 ];
 
 const faqSchema = {
@@ -345,7 +353,9 @@ export default function AgenciaGoogleAdsColombiaPage() {
                 </h1>
 
                 <p className="text-lg leading-relaxed mb-8" style={{ color: "#424656" }}>
-                  Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM — no al dashboard de Google.
+                  Somos una{" "}
+                  <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
+                  con base en Medellín. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM — no al dashboard de Google.
                 </p>
 
                 {/* Stats row */}

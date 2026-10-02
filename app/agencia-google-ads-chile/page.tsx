@@ -35,44 +35,6 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Cuál es la inversión mínima recomendada en Google Ads para Chile?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Trabajamos con empresas que invierten mínimo $3,000 USD/mes en la plataforma. En Chile, este presupuesto permite generar el volumen de datos necesario para que los algoritmos de Google optimicen correctamente.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Trabajan con empresas fuera de Santiago?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. Trabajamos de forma remota con empresas en todo Chile. La gestión es 100% digital — revisamos tu cuenta en pantalla compartida y nos comunicamos vía email y videollamada sin restricciones geográficas.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuánto tiempo tarda en verse resultados con Google Ads en Chile?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Las primeras señales de mejora aparecen entre las semanas 2 y 4. Resultados estables y escalables se consolidan entre el mes 2 y 3. El mercado chileno tiene buena penetración digital, lo que favorece la eficiencia del canal.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Trabajáis con empresas de sectores como minería o agroindustria?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. Aunque nuestra especialidad es SaaS B2B, Fintech y servicios profesionales, hemos gestionado cuentas en sectores industriales donde el ciclo de venta es largo y la calidad del lead es crítica. El diagnóstico nos permite evaluar la viabilidad.",
-      },
-    },
-  ],
-};
 
 const comparison = [
   {
@@ -316,7 +278,25 @@ const faqs = [
     q: "¿Trabajáis con empresas de sectores como minería o agroindustria?",
     a: "Sí. Aunque nuestra especialidad es SaaS B2B, Fintech y servicios profesionales, hemos gestionado cuentas en sectores industriales donde el ciclo de venta es largo y la calidad del lead es crítica. El diagnóstico nos permite evaluar la viabilidad.",
   },
+  {
+    q: "¿Google Ads cobra IVA en Chile?",
+    a: "Sí, si no registras tu información fiscal. Desde el 1 de septiembre de 2020 Google pide en Facturación > Configuración si estás registrado como contribuyente de IVA en Chile y si estás exento del Impuesto Adicional. Sin esos datos, agrega IVA del 19% a tus facturas. El tratamiento contable revísalo con tu contador.",
+  },
+  {
+    q: "¿Cómo afecta el cambio de hora de Chile a las campañas?",
+    a: "Chile continental cambia de hora dos veces al año (UTC-4 en invierno y UTC-3 en verano). Si la cuenta de Google Ads usa la zona horaria de Santiago, la programación de anuncios sigue la hora oficial; si se creó con otra zona, tus horarios quedan corridos parte del año. La zona horaria queda fija al crear la cuenta, así que conviene revisarla antes de lanzar.",
+  },
 ];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -363,7 +343,9 @@ export default function AgenciaGoogleAdsChilePage() {
             </h1>
 
             <p className="text-lg mb-8" style={{ color: "#424656", fontFamily: "Inter, sans-serif" }}>
-              Gestionamos campañas con tracking correcto, estructura alineada al
+              Somos una{" "}
+              <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
+              que opera en toda LATAM. Gestionamos campañas con tracking correcto, estructura alineada al
               funnel y reportes conectados a tu CRM — no al dashboard de Google.
             </p>
 

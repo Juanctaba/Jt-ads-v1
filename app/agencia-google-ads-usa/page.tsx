@@ -251,13 +251,13 @@ export default function AgenciaGoogleAdsUSAPage() {
                 <p className="text-lg leading-relaxed mb-8" style={{ color: "#424656" }}>
                   Somos una{" "}
                   <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
-                  para LATAM y el mercado hispano de USA. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM.
+                  para LATAM y el mercado hispano de USA. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM. +$500k/mes gestionados.
                 </p>
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "+$5M USD", label: "en inversión auditada" },
+                    { value: "CAPI", label: "Tracking server-side" },
                     { value: "Partner", label: "Meta y Google" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (

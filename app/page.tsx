@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "JT Ads | Agencia Google Ads Performance para LATAM + USA",
-    description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, tracking server-side y CPL real.",
+    description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, +$500k/mes gestionados.",
     images: ["/opengraph-image"],
     url: "https://jtads.com",
   },
@@ -42,7 +42,7 @@ const problems = [
 const valueProp = [
   {
     title: "Equipo senior desde el día 1",
-    body: "Account manager senior dedicado desde el inicio. Nuestro equipo gestiona cuentas de Google Ads, Meta y LinkedIn todos los días — no aprendemos con tu cuenta.",
+    body: "Account manager senior dedicado desde el inicio. Nuestro equipo ha gestionado más de $500,000 USD/mes en Google Ads, Meta y LinkedIn — no aprendemos con tu cuenta.",
   },
   {
     title: "Tracking honesto desde cero",
@@ -341,7 +341,7 @@ export default function HomePage() {
               </span>
             ))}
             <span className="hidden md:inline-block h-4 w-px bg-gray-200" />
-            <span className="font-semibold text-[var(--text-secondary)]">+$5M USD en inversión auditada</span>
+            <span className="font-semibold text-[var(--text-secondary)]">+$500k/mes gestionados</span>
           </div>
         </section>
 

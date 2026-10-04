@@ -342,16 +342,16 @@ export default function AgenciaGoogleAdsMexicoPage() {
                           style={{ backgroundColor: "#f6f3f2" }}
                         >
                           <p className="text-xs font-medium mb-1" style={{ color: "#424656" }}>
-                            CPL Meta Platform
+                            CPL plataforma
                           </p>
                           <p
                             className="text-2xl font-extrabold line-through"
                             style={{ fontFamily: "Manrope, sans-serif", color: "#a33200" }}
                           >
-                            $340 MXN
+                            Inflada
                           </p>
                           <p className="text-xs mt-1" style={{ color: "#424656" }}>
-                            Reportado en plataforma
+                            Así suele venir la atribución de plataforma
                           </p>
                         </div>
                         <div
@@ -365,7 +365,7 @@ export default function AgenciaGoogleAdsMexicoPage() {
                             className="text-2xl font-extrabold"
                             style={{ fontFamily: "Manrope, sans-serif", color: "#0066ff" }}
                           >
-                            $178 MXN
+                            Real
                           </p>
                           <p className="text-xs mt-1" style={{ color: "#424656" }}>
                             Conectado a ventas
@@ -390,13 +390,13 @@ export default function AgenciaGoogleAdsMexicoPage() {
                       <div>
                         <div className="flex justify-between items-center mb-2">
                           <p className="text-xs font-medium" style={{ color: "#424656" }}>
-                            Reducción de desperdicio de presupuesto
+                            Leads de Google con su venta en el CRM
                           </p>
                           <span
                             className="text-xs font-bold"
                             style={{ color: "#0066ff" }}
                           >
-                            +41%
+                            Trazable
                           </span>
                         </div>
                         <div

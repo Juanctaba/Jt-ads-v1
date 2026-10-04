@@ -411,7 +411,7 @@ export default function AgenciaGoogleAdsChilePage() {
                   className="text-xl font-bold line-through"
                   style={{ color: "#a33200", fontFamily: "Manrope, sans-serif" }}
                 >
-                  $18.500 CLP
+                  Inflada
                 </p>
               </div>
               <div
@@ -423,7 +423,7 @@ export default function AgenciaGoogleAdsChilePage() {
                   className="text-xl font-bold"
                   style={{ color: "#0066ff", fontFamily: "Manrope, sans-serif" }}
                 >
-                  $9.800 CLP
+                  Real
                 </p>
               </div>
             </div>
@@ -444,8 +444,8 @@ export default function AgenciaGoogleAdsChilePage() {
             {/* Progress bar */}
             <div>
               <div className="flex justify-between text-xs mb-1" style={{ color: "#424656" }}>
-                <span>Reducción de costo por lead</span>
-                <span className="font-semibold" style={{ color: "#0066ff" }}>+47%</span>
+                <span>Leads de Google con su venta en el CRM</span>
+                <span className="font-semibold" style={{ color: "#0066ff" }}>Trazable</span>
               </div>
               <div className="h-2 rounded-full" style={{ backgroundColor: "#d6d3d2" }}>
                 <div
@@ -745,7 +745,7 @@ export default function AgenciaGoogleAdsChilePage() {
             ¿Tu agencia en Chile te reporta ventas o solo clics?
           </h2>
           <p className="text-white/80 mb-10 text-base max-w-xl mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
-            La diferencia entre ambas métricas puede costar hasta el 40% de tu
+            La diferencia entre ambas métricas puede costar una parte importante de tu
             presupuesto mensual. Descúbrelo en una sesión sin costo.
           </p>
           <a

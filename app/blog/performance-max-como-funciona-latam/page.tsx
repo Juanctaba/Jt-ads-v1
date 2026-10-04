@@ -269,8 +269,8 @@ export default function PostPerformanceMax() {
                 desc: "Cuando el objetivo es maximizar el alcance en un mercado donde ya tienes reconocimiento de marca, la naturaleza multi-canal de PMax puede ser más eficiente que gestionar campañas separadas.",
               },
               {
-                title: "Cuentas con +50 conversiones/mes con datos de calidad",
-                desc: "El algoritmo necesita datos para aprender. Por debajo de 50 conversiones mensuales, PMax tiene muy poco con qué trabajar y el rendimiento es inconsistente. En mercados LATAM de volumen medio, esto muchas veces descalifica a PMax como opción principal.",
+                title: "Cuentas con volumen constante de conversiones y datos de calidad",
+                desc: "El algoritmo necesita datos para aprender. Con pocas conversiones mensuales, PMax tiene muy poco con qué trabajar y el rendimiento es inconsistente. En mercados LATAM de volumen medio, esto muchas veces descalifica a PMax como opción principal.",
               },
             ].map((item) => (
               <li key={item.title} className="flex items-start gap-3">
@@ -346,11 +346,17 @@ export default function PostPerformanceMax() {
               </span>
               <div>
                 <p className="text-[#1c1b1b] font-bold text-sm mb-1">
-                  Cuentas con menos de 50 conversiones al mes
+                  Cuentas con pocas conversiones al mes
                 </p>
                 <p className="text-[#424656] text-sm leading-relaxed">
-                  El umbral de datos mínimos para que PMax funcione bien es de
-                  50 conversiones mensuales de calidad. Por debajo de eso, el
+                  PMax necesita un volumen constante de conversiones de calidad.
+                  Como referencia, la{" "}
+                  <a href="https://support.google.com/google-ads/answer/13775965?hl=es" target="_blank" rel="noopener noreferrer" className="underline">
+                    Ayuda de Google Ads
+                  </a>{" "}
+                  recomienda, para pujas basadas en valor, un objetivo de
+                  conversión con al menos 15 conversiones en los últimos 30
+                  días. Con menos señal que eso, el
                   algoritmo está en fase de aprendizaje permanente y los
                   resultados son inestables. En muchos mercados LATAM de nicho,
                   esto descalifica a PMax directamente.
@@ -400,7 +406,7 @@ export default function PostPerformanceMax() {
             {[
               {
                 label: "Datos de conversión de calidad",
-                desc: "PMax necesita señales de conversión precisas. Si el tracking por defecto pierde el 25–40% de las conversiones reales (por ad blockers o restricciones de Safari), el algoritmo trabaja con información incompleta. El tracking server-side es prácticamente obligatorio para sacar el máximo rendimiento a PMax.",
+                desc: "PMax necesita señales de conversión precisas. Si el tracking por defecto pierde parte de las conversiones reales (por ad blockers o restricciones de Safari), el algoritmo trabaja con información incompleta. El tracking server-side es prácticamente obligatorio para sacar el máximo rendimiento a PMax.",
               },
               {
                 label: "Listas de audiencia bien construidas",
@@ -453,7 +459,7 @@ export default function PostPerformanceMax() {
               <tbody className="divide-y divide-[#f6f3f2]">
                 {[
                   { scenario: "E-commerce con catálogo + datos de conversión sólidos", rec: "PMax puede ser la campaña principal" },
-                  { scenario: "B2B lead gen, ciclos largos, menos de 50 conv/mes", rec: "Search primero. PMax solo si escala" },
+                  { scenario: "B2B lead gen, ciclos largos, pocas conversiones al mes", rec: "Search primero. PMax solo si escala" },
                   { scenario: "Cuenta nueva sin historial de conversión", rec: "Search para construir señales, luego evaluar PMax" },
                   { scenario: "Retargeting con audiencias grandes (+1,000 usuarios)", rec: "PMax puede complementar Search" },
                   { scenario: "Qualificación compleja de leads, nicho B2B", rec: "Search con match types controlados" },

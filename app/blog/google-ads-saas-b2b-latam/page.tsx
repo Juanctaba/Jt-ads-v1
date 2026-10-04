@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Google Ads para software B2B y SaaS en LATAM: guía 2026",
     description:
-      "Estructura de campañas, tracking con CRM, benchmarks de CPL y errores frecuentes en cuentas de SaaS B2B en LATAM.",
+      "Estructura de campañas, tracking con CRM, CPL por etapa del funnel y errores frecuentes en cuentas de SaaS B2B en LATAM.",
     images: ["/opengraph-image"],
     url: "https://jtads.com/blog/google-ads-saas-b2b-latam",
   },
@@ -32,7 +32,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Google Ads para software B2B y SaaS en LATAM: guía completa 2026",
   description:
-    "Cómo estructurar Google Ads para SaaS B2B en LATAM: keywords por intención, tracking conectado al CRM, benchmarks de CPL y errores frecuentes.",
+    "Cómo estructurar Google Ads para SaaS B2B en LATAM: keywords por intención, tracking conectado al CRM, CPL por etapa y errores frecuentes.",
   author: {
     "@type": "Person",
     name: "Juan Tabares",
@@ -96,7 +96,7 @@ const faqSchema = {
       name: "¿Cuánto cuesta un lead de Google Ads para SaaS B2B en LATAM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende del país, del ticket y de la etapa del funnel. Como referencia, en cuentas activas de LATAM un lead de formulario suele costar menos de $100 USD, una demo calificada hasta unos $250 USD y una oportunidad en CRM (SQL) hasta unos $600 USD. Si el lead supera los $150 USD o la oportunidad los $900 USD, es señal de problemas estructurales en la cuenta.",
+        text: "Depende del país, del ticket y de la etapa del funnel. No hay una cifra universal: el lead de formulario siempre cuesta menos que la demo calificada, y la demo menos que la oportunidad en CRM (SQL). Lo que importa es medir las tres etapas con tu propio CRM. Si el costo por lead sube mientras las demos y las oportunidades no crecen, es señal de problemas estructurales en la cuenta.",
       },
     },
     {
@@ -112,7 +112,7 @@ const faqSchema = {
       name: "¿Debo usar Performance Max para mi SaaS B2B?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En la mayoría de los casos de SaaS B2B en LATAM en 2026, Performance Max no es la primera opción. Requiere mínimo 30–50 conversiones de calidad por mes para salir de la fase de aprendizaje, y la mayoría de los SaaS B2B en LATAM no alcanzan ese volumen en demos calificadas. Se recomienda empezar con campañas de Search segmentadas y activar PMax solo cuando existan datos de conversión robustos.",
+        text: "En la mayoría de los casos de SaaS B2B en LATAM en 2026, Performance Max no es la primera opción. Necesita un volumen constante de conversiones de calidad para salir de la fase de aprendizaje, y la mayoría de los SaaS B2B en LATAM no alcanzan ese volumen en demos calificadas. Se recomienda empezar con campañas de Search segmentadas y activar PMax solo cuando existan datos de conversión robustos.",
       },
     },
     {
@@ -151,9 +151,9 @@ const faqSchema = {
 };
 
 const benchmarks = [
-  { etapa: "Lead (formulario completado)", rango: "Menos de $100 USD", alerta: "Más de $150 USD" },
-  { etapa: "Demo calificada", rango: "Hasta ~$250 USD", alerta: "Más de $400 USD" },
-  { etapa: "SQL (oportunidad en CRM)", rango: "Hasta ~$600 USD", alerta: "Más de $900 USD" },
+  { etapa: "Lead (formulario completado)", rango: "El costo más bajo del funnel", alerta: "Sube y las demos no crecen" },
+  { etapa: "Demo calificada", rango: "Mayor que el costo por lead", alerta: "Muchas demos no califican" },
+  { etapa: "SQL (oportunidad en CRM)", rango: "El costo más alto, el que manda", alerta: "No se mide en el CRM" },
 ];
 
 export default function PostSaaSB2B() {
@@ -196,7 +196,7 @@ export default function PostSaaSB2B() {
             className="text-[#a8aab8] text-base leading-relaxed mb-6 max-w-2xl"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Estructura de campañas, tracking conectado al CRM, benchmarks de CPL por etapa del funnel y los tres errores que destruyen el rendimiento en cuentas activas.
+            Estructura de campañas, tracking conectado al CRM, cómo leer el CPL por etapa del funnel y los tres errores que destruyen el rendimiento en cuentas activas.
           </p>
           <p
             className="text-[#727687] text-sm"
@@ -252,7 +252,7 @@ export default function PostSaaSB2B() {
 
           <div className="bg-[#f6f3f2] rounded-xl p-6 mb-8 border-l-4 border-[#0066ff]">
             <p className="text-[#1c1b1b] text-sm leading-relaxed font-medium" style={{ fontFamily: "Inter, sans-serif" }}>
-              <strong>El problema clave:</strong> Google Ads solo ve el paso 2. Si entrenas el algoritmo con "solicitud de demo", estás optimizando para el tope del funnel, no para el cierre. El CPL de plataforma puede ser excelente ($40–$80 USD por demo) mientras el costo por cliente adquirido resulta 5x mayor. La única forma de conectar estos dos números es con tracking server-side integrado al CRM.
+              <strong>El problema clave:</strong> Google Ads solo ve el paso 2. Si entrenas el algoritmo con "solicitud de demo", estás optimizando para el tope del funnel, no para el cierre. El CPL de plataforma puede verse excelente mientras el costo por cliente adquirido resulta mucho mayor. La única forma de conectar estos dos números es con tracking server-side integrado al CRM.
             </p>
           </div>
 
@@ -384,7 +384,7 @@ export default function PostSaaSB2B() {
               },
               {
                 titulo: "Implementar tracking server-side",
-                detalle: "El píxel del navegador pierde entre el 20% y el 40% de conversiones por bloqueadores de anuncios, iOS 17+ y restricciones de cookies. El servidor no tiene ese problema. En SaaS con ciclos largos, cada conversión perdida distorsiona la optimización del algoritmo.",
+                detalle: "El píxel del navegador pierde parte de las conversiones por bloqueadores de anuncios, iOS 17+ y restricciones de cookies. El servidor no tiene ese problema. En SaaS con ciclos largos, cada conversión perdida distorsiona la optimización del algoritmo.",
               },
             ].map((step, i) => (
               <li key={i} className="flex gap-4">
@@ -414,7 +414,7 @@ export default function PostSaaSB2B() {
               </p>
               <ul className="space-y-2" style={{ fontFamily: "Inter, sans-serif" }}>
                 {[
-                  "Menos de 30–50 conversiones de calidad por mes",
+                  "Pocas conversiones de calidad por mes",
                   "Sin listas de audiencia de CRM robustas",
                   "Sin activos de video de calidad",
                   "Cuando necesitas control granular de keywords",
@@ -450,10 +450,10 @@ export default function PostSaaSB2B() {
 
           {/* Section 6 — Benchmarks */}
           <h2 className="font-black text-2xl text-[#1c1b1b] mt-12 mb-4" style={{ fontFamily: "Manrope, sans-serif" }}>
-            Benchmarks de CPL para SaaS B2B en LATAM (2026)
+            CPL por etapa del funnel para SaaS B2B en LATAM (2026)
           </h2>
           <p className="text-[#424656] leading-relaxed mb-6 text-base" style={{ fontFamily: "Inter, sans-serif" }}>
-            Estos rangos son una referencia de cuentas activas de SaaS B2B en México, Colombia, Chile y Argentina:
+            No hay una cifra que sirva para todos los SaaS de México, Colombia, Chile y Argentina. Lo útil es comparar las etapas entre sí y su tendencia en tu propia cuenta:
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-[#c2c6d8]/20 mb-6">
@@ -461,7 +461,7 @@ export default function PostSaaSB2B() {
               <thead>
                 <tr className="bg-[#f6f3f2] text-left">
                   <th className="px-6 py-4 font-bold text-[#1c1b1b]">Etapa del funnel</th>
-                  <th className="px-6 py-4 font-bold text-[#1c1b1b]">Benchmark LATAM</th>
+                  <th className="px-6 py-4 font-bold text-[#1c1b1b]">Qué esperar</th>
                   <th className="px-6 py-4 font-bold text-[#1c1b1b]">Señal de alerta</th>
                 </tr>
               </thead>
@@ -479,7 +479,7 @@ export default function PostSaaSB2B() {
 
           <div className="bg-[#f6f3f2] rounded-xl p-5 mb-10">
             <p className="text-sm text-[#424656] leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
-              <strong className="text-[#1c1b1b]">Cómo leer estos números:</strong> el CPL de plataforma siempre será menor que el costo por demo calificada, que a su vez será menor que el costo por SQL. Si solo mides el primer número, tomas decisiones de presupuesto basadas en datos que no representan tu negocio real. Los tres deben medirse en paralelo.
+              <strong className="text-[#1c1b1b]">Cómo leer estas etapas:</strong> el CPL de plataforma siempre será menor que el costo por demo calificada, que a su vez será menor que el costo por SQL. Si solo mides el primer número, tomas decisiones de presupuesto basadas en datos que no representan tu negocio real. Los tres deben medirse en paralelo.
             </p>
           </div>
 

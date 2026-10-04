@@ -275,8 +275,8 @@ export default function AgenciaGoogleAdsPage() {
                             Costo por Lead (CPL)
                           </p>
                           <p className="text-3xl font-bold text-slate-900">
-                            $18.40{" "}
-                            <span className="text-green-500 text-sm font-medium">↓ 34%</span>
+                            <span className="line-through">Inflada</span>{" "}
+                            <span className="text-green-500 text-sm font-medium">→ Real</span>
                           </p>
                         </div>
                         {/* Sparkline — descending (CPL bajando) */}
@@ -290,22 +290,22 @@ export default function AgenciaGoogleAdsPage() {
                       <div className="mb-5">
                         <div className="flex justify-between text-xs text-slate-400 mb-1">
                           <span>Calidad de Leads</span>
-                          <span className="text-green-500 font-semibold">↑ +2.4</span>
+                          <span className="text-green-500 font-semibold">↑ Medida en CRM</span>
                         </div>
-                        <p className="text-xl font-bold text-slate-900 mb-2">8.7 / 10</p>
+                        <p className="text-xl font-bold text-slate-900 mb-2">Calificados</p>
                         <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
                           <div className="h-2 bg-[#0061FF] rounded-full" style={{ width: "87%" }} />
                         </div>
                         <div className="flex justify-between text-xs text-slate-400 mt-1">
-                          <span>Antes: 6.3</span><span>Ahora: 8.7</span>
+                          <span>Antes: formulario</span><span>Ahora: venta</span>
                         </div>
                       </div>
                       {/* Stats row */}
                       <div className="grid grid-cols-3 gap-3 pt-3 border-t border-slate-100">
                         {[
-                          { label: "ROAS", value: "4.8x" },
-                          { label: "Conv. Rate", value: "12.3%" },
-                          { label: "Ad Spend", value: "$22k" },
+                          { label: "Tracking", value: "Server-side" },
+                          { label: "CRM", value: "Conectado" },
+                          { label: "ROAS", value: "Real" },
                         ].map((s) => (
                           <div key={s.label} className="text-center">
                             <p className="text-xs text-slate-400">{s.label}</p>

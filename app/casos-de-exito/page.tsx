@@ -354,8 +354,8 @@ export default function CasosDeExitoPage() {
                   <span className="text-xs uppercase font-bold tracking-wider text-[#424656]">Así suele venir la atribución de plataforma</span>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-sm mt-8">
-                  <span className="text-4xl font-bold block mb-2" style={{ color: "#0066ff" }}>2.4x</span>
-                  <span className="text-xs uppercase font-bold tracking-wider text-[#424656]">Mejora en Eficiencia Media</span>
+                  <span className="text-4xl font-bold block mb-2" style={{ color: "#0066ff" }}>Real</span>
+                  <span className="text-xs uppercase font-bold tracking-wider text-[#424656]">Eficiencia medida contra ventas del CRM</span>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-sm">
                   <span className="text-4xl font-bold block mb-2" style={{ color: "#0066ff" }}>7</span>

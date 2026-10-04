@@ -118,7 +118,7 @@ const faqItems: FaqItem[] = [
   },
   {
     q: "¿Cómo manejan el impacto de iOS 14 en el tracking?",
-    a: "Implementamos Meta Conversions API (CAPI) desde el servidor para recuperar entre el 20% y el 40% de eventos perdidos por restricciones de cookies y trackers de dispositivo. Eso significa que el algoritmo toma decisiones con datos más completos y el CPL real es más bajo de lo que reporta el píxel solo.",
+    a: "Implementamos Meta Conversions API (CAPI) desde el servidor para recuperar parte de los eventos que se pierden por restricciones de cookies y trackers de dispositivo. Eso significa que el algoritmo toma decisiones con datos más completos y el CPL real es más bajo de lo que reporta el píxel solo.",
   },
   {
     q: "¿Gestionan Instagram Ads por separado o junto con Facebook Ads?",
@@ -240,8 +240,8 @@ export default function AgenciaMetaAdsPage() {
                             Costo por Lead (CPL)
                           </p>
                           <p className="text-3xl font-bold text-slate-900">
-                            $12.80{" "}
-                            <span className="text-green-500 text-sm font-medium">↓ 41%</span>
+                            <span className="line-through">Inflada</span>{" "}
+                            <span className="text-green-500 text-sm font-medium">→ Real</span>
                           </p>
                         </div>
                         <div className="w-24 h-12 bg-blue-50 rounded flex items-center justify-center">
@@ -254,22 +254,22 @@ export default function AgenciaMetaAdsPage() {
                       <div className="mb-5">
                         <div className="flex justify-between text-xs text-slate-400 mb-1">
                           <span>ROAS</span>
-                          <span className="text-green-500 font-semibold">↑ +1.9x</span>
+                          <span className="text-green-500 font-semibold">↑ Conectado a ventas</span>
                         </div>
-                        <p className="text-xl font-bold text-slate-900 mb-2">5.4x</p>
+                        <p className="text-xl font-bold text-slate-900 mb-2">Trazable</p>
                         <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
                           <div className="h-2 bg-[#1877F2] rounded-full" style={{ width: "82%" }} />
                         </div>
                         <div className="flex justify-between text-xs text-slate-400 mt-1">
-                          <span>Antes: 2.1x</span><span>Ahora: 5.4x</span>
+                          <span>Antes: píxel solo</span><span>Ahora: CRM</span>
                         </div>
                       </div>
                       {/* Stats row */}
                       <div className="grid grid-cols-3 gap-3 pt-3 border-t border-slate-100">
                         {[
-                          { label: "Reach", value: "124k" },
-                          { label: "CTR", value: "3.8%" },
-                          { label: "Ad Spend", value: "$18k" },
+                          { label: "Píxel", value: "Activo" },
+                          { label: "CAPI", value: "Server-side" },
+                          { label: "CRM", value: "Conectado" },
                         ].map((s) => (
                           <div key={s.label} className="text-center">
                             <p className="text-xs text-slate-400">{s.label}</p>
@@ -322,8 +322,8 @@ export default function AgenciaMetaAdsPage() {
             </h2>
             <div className="space-y-6 text-lg text-slate-300">
               <p>
-                Meta Ads funciona bien cuando tiene datos de calidad: el Píxel solo captura entre
-                el 60% y el 80% de los eventos reales debido a bloqueadores, iOS 14+ y restricciones
+                Meta Ads funciona bien cuando tiene datos de calidad: el Píxel solo no captura
+                todos los eventos reales debido a bloqueadores, iOS 14+ y restricciones
                 de cookies. Eso significa que el algoritmo está optimizando con información incompleta.
               </p>
               <p>
@@ -337,7 +337,7 @@ export default function AgenciaMetaAdsPage() {
             </div>
             <div className="mt-10 grid sm:grid-cols-3 gap-6">
               {[
-                { stat: "20–40%", label: "de eventos recuperados con CAPI server-side" },
+                { stat: "CAPI", label: "eventos recuperados server-side que el píxel solo pierde" },
                 { stat: "Partner", label: "JT Ads es Meta Partner y Google Partner" },
                 { stat: "<4h", label: "tiempo de respuesta para agendar tu diagnóstico" },
               ].map((item) => (

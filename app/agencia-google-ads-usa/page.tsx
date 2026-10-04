@@ -337,7 +337,7 @@ export default function AgenciaGoogleAdsUSAPage() {
                             className="text-2xl font-black line-through"
                             style={{ fontFamily: "Manrope, sans-serif", color: "#a33200" }}
                           >
-                            $185 USD
+                            Inflada
                           </p>
                         </div>
                         <div
@@ -351,7 +351,7 @@ export default function AgenciaGoogleAdsUSAPage() {
                             className="text-2xl font-black"
                             style={{ fontFamily: "Manrope, sans-serif", color: "#0066ff" }}
                           >
-                            $94 USD
+                            Real
                           </p>
                         </div>
                       </div>
@@ -373,10 +373,10 @@ export default function AgenciaGoogleAdsUSAPage() {
                       <div>
                         <div className="flex justify-between mb-1">
                           <span className="text-xs font-medium" style={{ color: "#424656" }}>
-                            Reducción de CPL calificado
+                            Leads de Google con su venta en el CRM
                           </span>
                           <span className="text-xs font-bold" style={{ color: "#0066ff" }}>
-                            +49%
+                            Trazable
                           </span>
                         </div>
                         <div
@@ -428,7 +428,7 @@ export default function AgenciaGoogleAdsUSAPage() {
                     </svg>
                   ),
                   title: "Nivel de tracking enterprise",
-                  body: "Server-side tagging, CAPI y conversiones offline para cuentas de alto volumen donde el CPL de plataforma puede estar hasta un 60% inflado respecto al CPL real.",
+                  body: "Server-side tagging, CAPI y conversiones offline para cuentas de alto volumen donde el CPL de plataforma suele verse inflado respecto al CPL real.",
                 },
               ].map((item) => (
                 <div

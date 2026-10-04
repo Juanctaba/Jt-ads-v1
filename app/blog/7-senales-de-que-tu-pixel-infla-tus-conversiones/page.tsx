@@ -324,8 +324,8 @@ export default function PostPixelInflaConversiones() {
                 Tracking Técnico
               </p>
               <p className="text-sm font-semibold text-[#1c1b1b]">
-                Por qué el CPL de tu plataforma te está mintiendo (y cómo
-                solucionarlo)
+                CPL de plataforma vs CPL real: por qué Meta y Google no cuadran
+                con tu CRM
               </p>
             </a>
             <a

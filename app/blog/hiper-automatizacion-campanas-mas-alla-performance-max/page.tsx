@@ -552,7 +552,7 @@ export default function PostHiperAutomatizacion() {
               >
                 <span className="text-[#0066ff] text-lg leading-none">→</span>
                 <span className="text-sm font-semibold text-[#1c1b1b] group-hover:text-[#0066ff] transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                  Por qué el CPL de tu plataforma te está mintiendo (y cómo solucionarlo)
+                  CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM
                 </span>
               </Link>
               <Link

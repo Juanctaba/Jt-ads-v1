@@ -128,6 +128,7 @@ const faqItems: FaqItem[] = [
   {
     q: "¿Qué formato rinde mejor en Instagram: Reels, Stories o Feed?",
     a: "Depende del objetivo y se decide con datos, no por moda. Reels sirve para llegar a gente nueva con video corto; Stories, para acciones inmediatas y retargeting; Feed y carrusel, para explicar la oferta. Montamos cada formato en su propia campaña o conjunto para leer su CPL real por separado.",
+    links: [{ text: "CPL real", href: "/blog/tracking-server-side-cpl-plataforma" }],
   },
   {
     q: "¿Necesito una landing page para anunciar en Instagram?",

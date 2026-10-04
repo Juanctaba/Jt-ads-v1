@@ -145,6 +145,7 @@ const faqAll: FaqItem[] = [
   {
     q: "¿Cómo sé que están gestionando bien mi cuenta si no tengo acceso técnico?",
     a: "Desde el primer mes tienes acceso directo a la cuenta — ves todo lo que vemos nosotros. Los reportes mensuales incluyen el CPL real conectado con tu CRM, no el CPL de plataforma. Sin intermediarios.",
+    links: [{ text: "el CPL real conectado con tu CRM", href: "/blog/tracking-server-side-cpl-plataforma" }],
   },
   {
     q: "¿Trabajan con cuentas que ya tienen historial o solo cuentas nuevas?",

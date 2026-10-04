@@ -122,12 +122,12 @@ const posts = [
   {
     slug: "tracking-server-side-cpl-plataforma",
     title:
-      "Por qué el CPL de tu plataforma te está mintiendo (y cómo solucionarlo)",
+      "CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM",
     excerpt:
-      "El dashboard de Google Ads muestra $45. Tu equipo de ventas dice que los leads no convierten. La diferencia no es un error — es cómo funciona el tracking por defecto.",
+      "El CPL de la plataforma divide el gasto entre lo que Meta o Google se atribuyen; el real, entre los leads válidos de tu CRM. Seis razones por las que no cuadran y cómo calcularlo cada semana.",
     category: "Tracking Técnico",
-    date: "Abril 2026",
-    readTime: "10 min",
+    date: "Octubre 2026",
+    readTime: "11 min",
   },
   {
     slug: "como-reducir-cpl-google-ads-latam",

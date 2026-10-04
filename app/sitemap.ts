@@ -26,6 +26,8 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/envio-directo-whatsapp-direct-send", "2026-09-29", 0.7],
   ["/blog/que-es-meta-business-agent", "2026-09-29", 0.7],
   ["/agencia-meta-ads-latam", "2026-10-04", 0.8],
+  ["/agencia-meta-ads-mexico", "2026-10-04", 0.8],
+  ["/agencia-meta-ads-argentina", "2026-10-04", 0.8],
   ["/agencia-linkedin-ads-latam", "2026-09-14", 0.8],
   ["/agencia-google-ads-mexico", "2026-09-14", 0.8],
   ["/agencia-google-ads-colombia", "2026-09-14", 0.8],

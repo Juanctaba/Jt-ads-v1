@@ -340,6 +340,10 @@ export default function PostCuantoCobraMeta() {
             </a>
             ). Zona horaria: Ciudad de México está en UTC-6 todo el año.
           </p>
+          <p className={P_}>
+            Si tu empresa está en México, lo que cambia al trabajar Meta Ads allá está en nuestra página de{" "}
+            <Link href="/agencia-meta-ads-mexico" className={A}>agencia de Meta Ads en México</Link>.
+          </p>
 
           <h3 className={H3}>Colombia</h3>
           <p className={P_}>
@@ -382,6 +386,11 @@ export default function PostCuantoCobraMeta() {
               Meta Business Help: IVA en Argentina
             </a>
             ). Zona horaria: Buenos Aires, UTC-3.
+          </p>
+          <p className={P_}>
+            Si tu empresa está en Argentina, la moneda de la cuenta (USD o ARS) y el resto del contexto local están en
+            nuestra página de{" "}
+            <Link href="/agencia-meta-ads-argentina" className={A}>agencia de Meta Ads en Argentina</Link>.
           </p>
 
           <h3 className={H3}>Estados Unidos (mercado hispano)</h3>

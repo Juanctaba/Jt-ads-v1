@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://jtads.com/agencia-meta-ads-latam",
     languages: {
+      "es-MX": "https://jtads.com/agencia-meta-ads-mexico",
+      "es-AR": "https://jtads.com/agencia-meta-ads-argentina",
       "es": "https://jtads.com/agencia-meta-ads-latam",
       "x-default": "https://jtads.com/agencia-meta-ads-latam",
     },
@@ -139,6 +141,14 @@ const faqItems: FaqItem[] = [
   {
     q: "¿Cómo es el proceso para empezar?",
     a: "Completas un formulario breve y te contactamos en menos de 4 horas hábiles. Revisamos tu cuenta de Meta en vivo, en una sesión de 60 minutos: tracking, estructura, audiencias y creativos. Las conclusiones son tuyas. Si quieres que implementemos, conversamos; si prefieres hacerlo internamente, también sirve.",
+  },
+  {
+    q: "¿Tienen páginas de Meta Ads para México y Argentina?",
+    a: "Sí. Lo que cambia en cada mercado (moneda, impuestos que agrega Meta y zona horaria) está en nuestras páginas de agencia de Meta Ads en México y agencia de Meta Ads en Argentina.",
+    links: [
+      { text: "agencia de Meta Ads en México", href: "/agencia-meta-ads-mexico" },
+      { text: "agencia de Meta Ads en Argentina", href: "/agencia-meta-ads-argentina" },
+    ],
   },
   {
     q: "¿En qué moneda y zona horaria conviene crear la cuenta publicitaria de Meta en cada país?",
@@ -284,16 +294,22 @@ export default function AgenciaMetaAdsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 lg:gap-12 items-center opacity-70">
               {[
-                { flag: "🇲🇽", label: "México" },
+                { flag: "🇲🇽", label: "México", href: "/agencia-meta-ads-mexico" },
                 { flag: "🇨🇴", label: "Colombia" },
                 { flag: "🇨🇱", label: "Chile" },
-                { flag: "🇦🇷", label: "Argentina" },
+                { flag: "🇦🇷", label: "Argentina", href: "/agencia-meta-ads-argentina" },
                 { flag: "🇺🇸", label: "USA" },
-              ].map((m) => (
-                <div key={m.label} className="flex items-center gap-2 font-semibold text-slate-600">
-                  <span>{m.flag}</span> {m.label}
-                </div>
-              ))}
+              ].map((m: { flag: string; label: string; href?: string }) =>
+                m.href ? (
+                  <a key={m.label} href={m.href} className="flex items-center gap-2 font-semibold text-slate-600">
+                    <span>{m.flag}</span> {m.label}
+                  </a>
+                ) : (
+                  <div key={m.label} className="flex items-center gap-2 font-semibold text-slate-600">
+                    <span>{m.flag}</span> {m.label}
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </section>

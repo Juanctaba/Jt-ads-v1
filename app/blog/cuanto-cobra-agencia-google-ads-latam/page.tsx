@@ -6,16 +6,16 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "¿Cuánto cobra una agencia de Google Ads en LATAM? 2026",
   description:
-    "Modelos de precios de agencias de Google Ads en México, Colombia y Chile: qué incluye cada uno, cuál te conviene y qué señales de alerta debes evitar.",
+    "Lo que cobra una agencia de Google Ads depende de la complejidad de tu cuenta, no de una tabla por país. Modelos de cobro, qué mueve el fee y señales de alerta.",
   alternates: {
     canonical: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
     languages: { "es": "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam" },
   },
   openGraph: {
     title:
-      "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales 2026",
+      "¿Cuánto cobra una agencia de Google Ads en LATAM? De qué depende en 2026",
     description:
-      "Guía de precios reales de agencias de Google Ads en México, Colombia y Chile. Modelos de cobro, qué incluir y señales de alerta.",
+      "Qué mueve el fee de una agencia de Google Ads en LATAM: complejidad de la cuenta, plataformas, creativos, CRM y tracking. Modelos de cobro y señales de alerta.",
     images: ["/opengraph-image"],
     url: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales en 2026",
+  headline: "¿Cuánto cobra una agencia de Google Ads en LATAM? De qué depende en 2026",
   author: {
     "@type": "Person",
     name: "Juan Tabares",
@@ -36,7 +36,7 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: "https://jtads.com/logo-blue.png" },
   },
   datePublished: "2026-04-01",
-  dateModified: "2026-04-09",
+  dateModified: "2026-10-04",
   image: "https://jtads.com/opengraph-image",
   url: "https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam",
 };
@@ -81,14 +81,14 @@ export default function PostPreciosAgencia() {
             className="font-black text-white text-3xl md:text-4xl leading-tight mb-6"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
-            ¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales en
+            ¿Cuánto cobra una agencia de Google Ads en LATAM? De qué depende en
             2026
           </h1>
           <p
             className="text-[#727687] text-sm"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Abril 2026 · 8 min de lectura
+            Actualizado en octubre 2026 · 8 min de lectura
           </p>
         </div>
       </section>
@@ -102,20 +102,23 @@ export default function PostPreciosAgencia() {
             className="text-[#424656] leading-relaxed mb-6 text-base"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Si alguna vez intentaste comparar precios de agencias de Google Ads
-            en LATAM, probablemente te encontraste con el mismo problema: nadie
-            publica sus tarifas reales. El sitio web dice "planes personalizados
-            según tus objetivos", la llamada de ventas termina con "te enviamos
-            una propuesta" y la propuesta llega con números que no puedes
-            contrastar con nada.
+            Lo que cobra una agencia de Google Ads en LATAM depende de los
+            requerimientos y la complejidad de tu cuenta: cuántas plataformas se
+            manejan, cuánto volumen creativo hace falta y si hay que conectar el
+            CRM y el tracking. No depende del país en el que estés, y la pauta es
+            aparte: la pagas tú directo a Google, con la cuenta a tu nombre. Por
+            eso aquí no vas a encontrar una tabla de precios por país, sino lo que
+            necesitas para entender y comparar una cotización.
           </p>
           <p
             className="text-[#424656] leading-relaxed mb-6 text-base"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Esa opacidad no es accidental. Es una estrategia. Sin precios de
-            referencia, es difícil saber si estás pagando bien, mal o
-            directamente mal. Esta guía existe para cambiar eso.
+            Las tablas de precios que circulan mezclan agencias, freelancers,
+            alcances y monedas en un solo rango, casi nunca dicen de dónde salen y
+            terminan funcionando como un piso o un techo que no le sirve a nadie.
+            Lo útil es saber qué estás comprando: cómo cobra la agencia, qué mueve
+            el fee y qué debería incluir.
           </p>
 
           {/* Section 1 */}
@@ -129,8 +132,7 @@ export default function PostPreciosAgencia() {
             className="text-[#424656] leading-relaxed mb-6 text-base"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Antes de hablar de números, hay que entender cómo cobran las
-            agencias. El modelo de cobro afecta directamente sus incentivos — y
+            Primero hay que entender cómo cobran las agencias. El modelo de cobro afecta directamente sus incentivos — y
             sus incentivos afectan cómo gestionan tu cuenta.
           </p>
 
@@ -138,23 +140,22 @@ export default function PostPreciosAgencia() {
             className="font-bold text-lg text-[#1c1b1b] mt-8 mb-3"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
-            1. Porcentaje del ad spend (10% – 20%)
+            1. Porcentaje del ad spend
           </h3>
           <p
             className="text-[#424656] leading-relaxed mb-4 text-base"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Es el modelo más extendido en el mercado. La agencia cobra un
-            porcentaje mensual sobre el presupuesto que gastas en pauta — por
-            lo general entre el 10% y el 20%. Si inviertes $10,000 USD en
-            Google Ads, pagas entre $1,000 y $2,000 adicionales en honorarios.
+            La agencia cobra un porcentaje mensual sobre el presupuesto que
+            gastas en pauta. Cuanto más inviertes en Google Ads, más pagas de
+            honorarios, aunque el trabajo de gestionar la cuenta no haya
+            cambiado.
           </p>
           <p
             className="text-[#424656] leading-relaxed mb-6 text-base"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Conviene cuando tienes presupuestos altos y necesitas gestión
-            activa. El problema estructural: a la agencia le conviene que
+            Es fácil de entender y escala solo. El problema estructural: a la agencia le conviene que
             gastes más, no necesariamente que gastes mejor. Es un incentivo
             implícito a subir el presupuesto antes de optimizar la estructura.
           </p>
@@ -171,10 +172,9 @@ export default function PostPreciosAgencia() {
           >
             Un monto fijo independiente de cuánto inviertes en pauta. Suele
             incluir gestión de campañas, optimización semanal, reportes
-            mensuales y soporte. Es el modelo más predecible para el cliente y
-            el más común en agencias que trabajan con presupuestos medianos
-            ($2,000 – $15,000 USD/mes en pauta). La clave está en qué incluye
-            exactamente ese fee — y qué queda fuera.
+            mensuales y soporte. Es el modelo más predecible para el cliente,
+            siempre que el monto refleje la complejidad real de la cuenta. La
+            clave está en qué incluye exactamente ese fee — y qué queda fuera.
           </p>
 
           <h3
@@ -188,59 +188,65 @@ export default function PostPreciosAgencia() {
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             La agencia cobra un porcentaje sobre los leads generados o las
-            ventas atribuidas. Suena atractivo, pero es raro en LATAM y tiene
-            un riesgo importante: si no hay un sistema de tracking robusto e
+            ventas atribuidas. Suena atractivo, pero tiene un riesgo importante: si no hay un sistema de tracking robusto e
             independiente, la agencia termina midiendo sus propios resultados.
             Sin auditoría externa, el modelo puede dar lugar a inflación de
             métricas.
           </p>
 
-          {/* Section 2 — Pricing table */}
+          {/* Section 2 — Qué mueve el fee */}
           <h2
             className="font-black text-2xl text-[#1c1b1b] mt-12 mb-4"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
-            Rango de precios reales en LATAM (2026)
+            Qué mueve el fee de una agencia de Google Ads
           </h2>
           <p
             className="text-[#424656] leading-relaxed mb-8 text-base"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Los siguientes rangos reflejan honorarios de gestión, no incluyen
-            el presupuesto de pauta. Los precios están en USD y corresponden a
-            agencias con al menos un equipo senior dedicado — no a freelancers
-            ni a cuentas gestionadas por practicantes.
+            El fee de gestión depende de los requerimientos y la complejidad de
+            cada cuenta. Dos empresas del mismo tamaño, en la misma ciudad,
+            pueden necesitar trabajos muy distintos. Estos son los factores que
+            hacen la diferencia:
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-[#c2c6d8]/20 mb-10">
             <table className="w-full bg-white text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
               <thead>
                 <tr className="bg-[#f6f3f2] text-left">
-                  <th className="px-6 py-4 font-bold text-[#1c1b1b]">País</th>
+                  <th className="px-6 py-4 font-bold text-[#1c1b1b]">Factor</th>
                   <th className="px-6 py-4 font-bold text-[#1c1b1b]">
-                    Honorarios / mes
+                    Qué cambia en el trabajo
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f6f3f2]">
-                <tr>
-                  <td className="px-6 py-4 text-[#1c1b1b] font-medium">
-                    México
-                  </td>
-                  <td className="px-6 py-4 text-[#424656]">$800 – $3,500 USD</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-[#1c1b1b] font-medium">
-                    Colombia
-                  </td>
-                  <td className="px-6 py-4 text-[#424656]">$600 – $2,500 USD</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-[#1c1b1b] font-medium">
-                    Chile
-                  </td>
-                  <td className="px-6 py-4 text-[#424656]">$900 – $3,500 USD</td>
-                </tr>
+                {[
+                  {
+                    factor: "Requerimientos y complejidad de la cuenta",
+                    detalle: "Cuántas campañas, productos, países y monedas; si la cuenta es nueva o hay que reconstruir una con historial.",
+                  },
+                  {
+                    factor: "Número de plataformas",
+                    detalle: "Solo Google, o Google junto con Meta y LinkedIn, con presupuesto y medición coordinados.",
+                  },
+                  {
+                    factor: "Volumen creativo",
+                    detalle: "Anuncios de búsqueda, recursos para Performance Max, video para YouTube: cuánto material nuevo hace falta al mes.",
+                  },
+                  {
+                    factor: "CRM y tracking",
+                    detalle: "Si las conversiones ya se miden bien y llegan al CRM, o si hay que corregir el tracking y conectar el CRM.",
+                  },
+                ].map((row) => (
+                  <tr key={row.factor}>
+                    <td className="px-6 py-4 text-[#1c1b1b] font-medium">
+                      {row.factor}
+                    </td>
+                    <td className="px-6 py-4 text-[#424656]">{row.detalle}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -250,12 +256,13 @@ export default function PostPreciosAgencia() {
               className="text-[#424656] text-sm leading-relaxed"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              <strong className="text-[#1c1b1b]">Nota importante:</strong> los
-              rangos bajos ($600–$800 USD/mes) suelen corresponder a servicios
-              más básicos — reportes estándar, optimizaciones mínimas, sin
-              configuración de tracking avanzado. Los rangos altos (+$2,500
-              USD/mes) incluyen gestión estratégica, tracking server-side,
-              integración con CRM y soporte prioritario.
+              <strong className="text-[#1c1b1b]">Nota importante:</strong> un fee
+              bajo suele significar un servicio más básico — reportes estándar,
+              optimizaciones puntuales, sin revisar el tracking. Cuando la
+              propuesta incluye gestión estratégica, tracking server-side e
+              integración con CRM, el trabajo es otro y el fee también. Lo que
+              no cambia con el fee: la pauta la pagas tú directo a Google y la
+              cuenta queda a tu nombre.
             </p>
           </div>
 
@@ -270,8 +277,8 @@ export default function PostPreciosAgencia() {
             className="text-[#424656] leading-relaxed mb-6 text-base"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            No importa el modelo de cobro: hay un estándar mínimo que cualquier
-            agencia seria debería cumplir. Si alguno de estos puntos no está
+            No importa el modelo de cobro: hay una base que cualquier agencia
+            seria debería cumplir. Si alguno de estos puntos no está
             incluido, es una señal de alerta.
           </p>
 
@@ -363,8 +370,9 @@ export default function PostPreciosAgencia() {
                 <p className="text-[#424656] text-sm leading-relaxed">
                   Una agencia que entrega resultados no necesita amarrarte por
                   un año. Los contratos largos sin salida son una señal de que
-                  confían más en el contrato que en su trabajo. Lo estándar
-                  es 3 meses de compromisos mínimos con renovación mensual.
+                  confían más en el contrato que en su trabajo. Antes de
+                  firmar, pregunta cómo se sale: con cuánto aviso y qué te
+                  llevas.
                 </p>
               </div>
             </li>
@@ -415,9 +423,10 @@ export default function PostPreciosAgencia() {
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Contratar una agencia de Google Ads en LATAM no debería ser un acto
-            de fe. Los rangos de precios existen, los modelos de cobro tienen
-            implicaciones claras y hay señales objetivas que te permiten evaluar
-            si lo que te ofrecen es proporcional a lo que pagas.
+            de fe. El precio depende de la complejidad de tu cuenta, los modelos
+            de cobro tienen implicaciones claras y hay señales objetivas que te
+            permiten evaluar si lo que te ofrecen es proporcional a lo que
+            pagas.
           </p>
           <p
             className="text-[#424656] leading-relaxed mb-10 text-base"

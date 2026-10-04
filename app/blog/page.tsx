@@ -103,9 +103,9 @@ const posts = [
   {
     slug: "cuanto-cobra-agencia-google-ads-latam",
     title:
-      "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales en 2026",
+      "¿Cuánto cobra una agencia de Google Ads en LATAM? De qué depende en 2026",
     excerpt:
-      "Los modelos de precios varían más de lo que crees. Te explicamos qué cobran las agencias en México, Colombia y Chile, qué incluye cada modelo y cómo evitar pagar de más.",
+      "El fee depende de la complejidad de tu cuenta, no de una tabla por país. Modelos de cobro, qué mueve el precio, qué debe incluir el servicio y cómo evitar pagar de más.",
     category: "Precios & Contratación",
     date: "Abril 2026",
     readTime: "8 min",

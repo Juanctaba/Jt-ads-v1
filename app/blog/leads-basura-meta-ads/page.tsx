@@ -305,7 +305,7 @@ export default function PostLeadsBasuraMeta() {
               "Generas al menos 200 leads al mes.",
               "Envías los datos al menos una vez al día.",
               "La etapa por la que quieres optimizar ocurre dentro de los 28 días posteriores al lead.",
-              "Esa etapa tiene una tasa de conversión de entre 1% y 40% sobre los leads.",
+              "Esa etapa tiene una tasa de conversión sobre los leads dentro del rango que indica Meta: ni casi todos los leads llegan, ni casi ninguno.",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-[#424656] text-sm leading-relaxed">
                 <span className="text-[#727687] mt-0.5">–</span>

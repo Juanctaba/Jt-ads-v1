@@ -63,7 +63,7 @@ const comparisonRows = [
   {
     criterio: "Experiencia en ad spend",
     tradicional: "Sin dato publicado",
-    jtads: "+$500k/mes gestionados",
+    jtads: "+$5M USD en inversión auditada",
     differentiate: true,
   },
   {
@@ -268,8 +268,8 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                 {/* Stats row */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "+$800k USD", label: "invertidos en pauta" },
-                    { value: "+25", label: "empresas argentinas" },
+                    { value: "+$5M USD", label: "en inversión auditada" },
+                    { value: "Partner", label: "Meta y Google" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (
                     <div key={stat.label}>

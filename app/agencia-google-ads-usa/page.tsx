@@ -152,7 +152,7 @@ const useCases = [
     ),
   },
   {
-    title: "Scale-ups con más de $50k/mes",
+    title: "Scale-ups con inversión relevante",
     description:
       "Cuentas que ya invierten fuerte pero sospechan que el tracking subreporta conversiones reales. El CPL de plataforma no coincide con los cierres en el CRM. Implementamos server-side tagging, CAPI y conversiones offline para recuperar la señal real.",
     icon: (
@@ -251,14 +251,14 @@ export default function AgenciaGoogleAdsUSAPage() {
                 <p className="text-lg leading-relaxed mb-8" style={{ color: "#424656" }}>
                   Somos una{" "}
                   <a href="/agencia-google-ads-latam" className="text-[#0066ff] font-semibold hover:underline">agencia de Google Ads</a>{" "}
-                  para LATAM y el mercado hispano de USA. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM. +$500k/mes gestionados.
+                  para LATAM y el mercado hispano de USA. Gestionamos campañas con tracking correcto, estructura alineada al funnel y reportes conectados a tu CRM.
                 </p>
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 mb-10">
                   {[
-                    { value: "+$3M USD", label: "invertidos en pauta" },
-                    { value: "+50", label: "cuentas en USA y LATAM" },
+                    { value: "+$5M USD", label: "en inversión auditada" },
+                    { value: "Partner", label: "Meta y Google" },
                     { value: "< 4h", label: "Respuesta" },
                   ].map((stat) => (
                     <div key={stat.label} className="flex flex-col">

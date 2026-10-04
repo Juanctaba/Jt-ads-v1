@@ -398,10 +398,10 @@ export default function AgenciaGoogleAdsPage() {
               </h2>
               <div className="space-y-6 text-lg text-slate-300">
                 <p>
-                  Hemos auditado cuentas donde el CPL reportado en Google Ads era $80. Al revisar el
+                  Hemos auditado cuentas donde el CPL reportado en Google Ads se veía sano. Al revisar el
                   tracking, el evento de "conversión" estaba disparando en la vista de la página de
                   agradecimiento — no en el submit real del formulario. Eso incluía rebotes, bots y
-                  visitas directas a la URL. El CPL real, midiendo solo submits verificados, era $310.
+                  visitas directas a la URL. El CPL real, midiendo solo submits verificados, era varias veces mayor.
                 </p>
                 <p>
                   Eso no es un error de las campañas. Es un error de medición que lleva meses

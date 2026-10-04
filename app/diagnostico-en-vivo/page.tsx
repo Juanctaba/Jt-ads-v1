@@ -86,7 +86,7 @@ const faqItems = [
 function DiagnosticoIllustration() {
   const auditItems = [
     { label: "Pixel & CAPI Setup", status: "ok", detail: "Verificado" },
-    { label: "Event Matching Rate", status: "warn", detail: "67% — bajo umbral" },
+    { label: "Event Matching Rate", status: "warn", detail: "Bajo umbral" },
     { label: "UTM Consistency", status: "ok", detail: "Verificado" },
     { label: "Budget Allocation", status: "scanning", detail: "Analizando…" },
     { label: "ROAS vs MER", status: "scanning", detail: "Analizando…" },
@@ -186,10 +186,10 @@ function DiagnosticoIllustration() {
             </div>
             <div className="text-right">
               <p className="text-[9px] font-bold uppercase tracking-[0.1em] text-[#727687] mb-0.5">
-                Ahorro potencial
+                CPL plataforma
               </p>
-              <p className="text-xl font-black text-[#1c1b1b]" style={{ fontFamily: "Manrope, sans-serif" }}>
-                ~34%
+              <p className="text-xl font-black text-[#1c1b1b] line-through" style={{ fontFamily: "Manrope, sans-serif" }}>
+                Inflada
               </p>
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function DiagnosticoPage() {
                 <div className="flex flex-wrap gap-8 opacity-80 mb-10">
                   {[
                     { value: "+$5M USD", label: "en inversión auditada" },
-                    { value: "200+", label: "Marcas Optimizadas" },
+                    { value: "Partner", label: "Meta y Google" },
                     { value: "<4h", label: "Tiempo de Respuesta" },
                   ].map((stat, i) => (
                     <div key={stat.label} className="flex items-center gap-6">

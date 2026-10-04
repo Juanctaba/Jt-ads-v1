@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "Ya tenemos un CRM implementado. ¿Sirve trabajar con ustedes?",
-    a: "Sí, y suele ser el mejor escenario. La mayoría de empresas usan menos del 30% de la capacidad de su CRM. Auditamos tu implementación actual, identificamos qué está mal configurado o subutilizado, y construimos los flujos y agentes encima de lo que ya tienes. No hay que migrar ni empezar de cero.",
+    a: "Sí, y suele ser el mejor escenario. La mayoría de empresas usan solo una parte pequeña de la capacidad de su CRM. Auditamos tu implementación actual, identificamos qué está mal configurado o subutilizado, y construimos los flujos y agentes encima de lo que ya tienes. No hay que migrar ni empezar de cero.",
   },
   {
     q: "¿Qué son exactamente los agentes conversacionales con IA?",
@@ -355,7 +355,7 @@ export default function SolucionesPage() {
                   Ya tienes stack implementado
                 </h3>
                 <p className="text-sm leading-relaxed text-[var(--text-secondary)] mb-5">
-                  La mayoría de empresas usan menos del 30% de lo que pagaron. Auditamos tu
+                  La mayoría de empresas usan solo una parte pequeña de lo que pagaron. Auditamos tu
                   configuración actual, corregimos lo que está mal armado y construimos los flujos
                   y agentes encima. Sin migración, sin empezar de cero.
                 </p>

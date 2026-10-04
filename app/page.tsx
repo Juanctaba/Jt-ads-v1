@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "JT Ads | Agencia Google Ads Performance para LATAM + USA",
-    description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, +$500k/mes gestionados.",
+    description: "Diagnóstico en vivo de tu cuenta de ads. Equipo senior, tracking server-side y CPL real.",
     images: ["/opengraph-image"],
     url: "https://jtads.com",
   },
@@ -42,7 +42,7 @@ const problems = [
 const valueProp = [
   {
     title: "Equipo senior desde el día 1",
-    body: "Account manager senior dedicado desde el inicio. Nuestro equipo ha gestionado más de $500,000 USD/mes en Google Ads, Meta y LinkedIn — no aprendemos con tu cuenta.",
+    body: "Account manager senior dedicado desde el inicio. Nuestro equipo gestiona cuentas de Google Ads, Meta y LinkedIn todos los días — no aprendemos con tu cuenta.",
   },
   {
     title: "Tracking honesto desde cero",
@@ -257,10 +257,10 @@ export default function HomePage() {
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-xs text-gray-400 mb-1">Costo por Lead (CPL)</p>
-                      <p className="text-2xl font-bold text-gray-900">$18.40</p>
+                      <p className="text-2xl font-bold text-gray-900 line-through">Inflada</p>
                     </div>
                     <span className="inline-flex items-center gap-1 text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full">
-                      ↓ 34%
+                      → Real
                     </span>
                   </div>
                   {/* Mini sparkline (SVG) */}
@@ -290,10 +290,10 @@ export default function HomePage() {
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-xs text-gray-400 mb-1">Calidad de Leads</p>
-                      <p className="text-2xl font-bold text-gray-900">8.7 / 10</p>
+                      <p className="text-2xl font-bold text-gray-900">Calificados</p>
                     </div>
                     <span className="inline-flex items-center gap-1 text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full">
-                      ↑ +2.4
+                      ↑ Medida en CRM
                     </span>
                   </div>
                   {/* Progress bar */}
@@ -301,17 +301,17 @@ export default function HomePage() {
                     <div className="bg-[var(--accent)] h-2 rounded-full" style={{ width: "87%" }} />
                   </div>
                   <div className="flex justify-between text-xs text-gray-400 mt-1">
-                    <span>Antes: 6.3</span>
-                    <span>Ahora: 8.7</span>
+                    <span>Antes: formulario</span>
+                    <span>Ahora: venta</span>
                   </div>
                 </div>
 
                 {/* Stat row */}
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { label: "ROAS", value: "4.8×" },
-                    { label: "Conv. Rate", value: "12.3%" },
-                    { label: "Ad Spend", value: "$22k" },
+                    { label: "Tracking", value: "Server-side" },
+                    { label: "CRM", value: "Conectado" },
+                    { label: "ROAS", value: "Real" },
                   ].map((stat) => (
                     <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-3 text-center">
                       <p className="text-xs text-gray-400 mb-1">{stat.label}</p>
@@ -341,7 +341,7 @@ export default function HomePage() {
               </span>
             ))}
             <span className="hidden md:inline-block h-4 w-px bg-gray-200" />
-            <span className="font-semibold text-[var(--text-secondary)]">+$500k/mes gestionados</span>
+            <span className="font-semibold text-[var(--text-secondary)]">+$5M USD en inversión auditada</span>
           </div>
         </section>
 

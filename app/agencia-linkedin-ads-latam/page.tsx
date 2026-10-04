@@ -196,8 +196,8 @@ export default function AgenciaLinkedInAdsPage() {
                             Costo por Lead (CPL)
                           </p>
                           <p className="text-3xl font-bold text-slate-900">
-                            $68.50{" "}
-                            <span className="text-green-500 text-sm font-medium">↓ 38%</span>
+                            <span className="line-through">Inflada</span>{" "}
+                            <span className="text-green-500 text-sm font-medium">→ Real</span>
                           </p>
                         </div>
                         <div className="w-24 h-12 bg-blue-50 rounded flex items-center justify-center">
@@ -210,22 +210,22 @@ export default function AgenciaLinkedInAdsPage() {
                       <div className="mb-5">
                         <div className="flex justify-between text-xs text-slate-400 mb-1">
                           <span>Tasa MQL → SQL</span>
-                          <span className="text-green-500 font-semibold">↑ +18pp</span>
+                          <span className="text-green-500 font-semibold">↑ Medida en CRM</span>
                         </div>
-                        <p className="text-xl font-bold text-slate-900 mb-2">62%</p>
+                        <p className="text-xl font-bold text-slate-900 mb-2">Trazable</p>
                         <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
                           <div className="h-2 bg-[#0A66C2] rounded-full" style={{ width: "62%" }} />
                         </div>
                         <div className="flex justify-between text-xs text-slate-400 mt-1">
-                          <span>Antes: 44%</span><span>Ahora: 62%</span>
+                          <span>Antes: formulario</span><span>Ahora: SQL</span>
                         </div>
                       </div>
                       {/* Stats row */}
                       <div className="grid grid-cols-3 gap-3 pt-3 border-t border-slate-100">
                         {[
                           { label: "Seniority", value: "C-Level" },
-                          { label: "Conv. Rate", value: "8.4%" },
-                          { label: "Ad Spend", value: "$12k" },
+                          { label: "CRM", value: "Conectado" },
+                          { label: "Leads", value: "Calificados" },
                         ].map((s) => (
                           <div key={s.label} className="text-center">
                             <p className="text-xs text-slate-400">{s.label}</p>
@@ -289,8 +289,8 @@ export default function AgenciaLinkedInAdsPage() {
             </div>
             <div className="mt-10 grid sm:grid-cols-3 gap-6">
               {[
-                { stat: "4–6x", label: "más caro que Meta Ads — pero el lead califica mejor" },
-                { stat: "62%+", label: "tasa MQL→SQL cuando la segmentación es correcta" },
+                { stat: "CPL alto", label: "más caro que Meta Ads — pero el lead califica mejor" },
+                { stat: "+$5M USD", label: "en inversión auditada" },
                 { stat: "<4h", label: "tiempo de respuesta para agendar tu diagnóstico" },
               ].map((item) => (
                 <div key={item.stat} className="bg-white/5 rounded-xl p-6 border border-white/10">

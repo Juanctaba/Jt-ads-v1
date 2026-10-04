@@ -266,6 +266,21 @@ export default function PostPreciosAgencia() {
             </p>
           </div>
 
+          <p
+            className="text-[#424656] leading-relaxed mb-6 text-base"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            Si también pautas en Facebook e Instagram, el criterio es el mismo:
+            lo explicamos en{" "}
+            <Link
+              href="/blog/cuanto-cobra-agencia-meta-ads-latam"
+              className="text-[#0066ff] font-semibold hover:underline"
+            >
+              cuánto cobra una agencia de Meta Ads en LATAM
+            </Link>
+            , con lo que cambia por país en moneda e impuestos.
+          </p>
+
           {/* Section 3 */}
           <h2
             className="font-black text-2xl text-[#1c1b1b] mt-12 mb-4"
@@ -490,6 +505,10 @@ export default function PostPreciosAgencia() {
             <a href="/blog/tracking-server-side-cpl-plataforma" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
               <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Tracking</p>
               <p className="text-sm font-semibold text-[#1c1b1b]">CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM</p>
+            </a>
+            <a href="/blog/cuanto-cobra-agencia-meta-ads-latam" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
+              <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Precios</p>
+              <p className="text-sm font-semibold text-[#1c1b1b]">¿Cuánto cobra una agencia de Meta Ads en LATAM? De qué depende el precio, país por país</p>
             </a>
             <a href="/agencia-google-ads-latam" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
               <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Servicios</p>

@@ -22,6 +22,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "cuanto-cobra-agencia-meta-ads-latam",
+    title: "¿Cuánto cobra una agencia de Meta Ads en LATAM? De qué depende el precio, país por país",
+    excerpt:
+      "El fee depende de la complejidad de tu cuenta, no de una tabla. Fee, pauta y creativos por separado, modelos de cobro, qué cambia por país en moneda e impuestos y 7 preguntas para comparar cotizaciones.",
+    category: "Precios & Contratación",
+    date: "Octubre 2026",
+    readTime: "10 min",
+  },
+  {
     slug: "leads-basura-meta-ads",
     title: "Leads basura en Meta Ads: cómo filtrarlos antes, durante y después del formulario",
     excerpt:

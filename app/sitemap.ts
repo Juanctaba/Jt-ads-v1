@@ -40,6 +40,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/7-senales-de-que-tu-pixel-infla-tus-conversiones", "2026-08-27", 0.7],
   ["/blog/hiper-automatizacion-campanas-mas-alla-performance-max", "2026-09-14", 0.7],
   ["/blog/cuanto-cobra-agencia-google-ads-latam", "2026-10-04", 0.7],
+  ["/blog/cuanto-cobra-agencia-meta-ads-latam", "2026-10-04", 0.7],
   ["/blog/tracking-server-side-cpl-plataforma", "2026-10-04", 0.7],
   ["/blog/como-reducir-cpl-google-ads-latam", "2026-09-14", 0.7],
   ["/blog/performance-max-como-funciona-latam", "2026-09-14", 0.7],

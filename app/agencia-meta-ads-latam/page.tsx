@@ -95,7 +95,8 @@ const services = [
 const faqItems: FaqItem[] = [
   {
     q: "¿Cuánto cuesta la gestión de Meta Ads con JT Ads?",
-    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Meta.",
+    a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Meta. Explicamos qué mueve el precio en cuánto cobra una agencia de Meta Ads en LATAM.",
+    links: [{ text: "cuánto cobra una agencia de Meta Ads en LATAM", href: "/blog/cuanto-cobra-agencia-meta-ads-latam" }],
   },
   {
     q: "¿Son Meta Partner?",

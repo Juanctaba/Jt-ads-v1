@@ -603,7 +603,7 @@ export default function PostSaaSB2B() {
             >
               <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>Tracking</p>
               <p className="text-sm font-semibold text-[#1c1b1b]" style={{ fontFamily: "Inter, sans-serif" }}>
-                Por qué el CPL de tu plataforma miente y cómo solucionarlo
+                CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM
               </p>
             </a>
             <a

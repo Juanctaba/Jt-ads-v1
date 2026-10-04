@@ -22,6 +22,24 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "cuanto-cobra-agencia-meta-ads-latam",
+    title: "¿Cuánto cobra una agencia de Meta Ads en LATAM? De qué depende el precio, país por país",
+    excerpt:
+      "El fee depende de la complejidad de tu cuenta, no de una tabla. Fee, pauta y creativos por separado, modelos de cobro, qué cambia por país en moneda e impuestos y 7 preguntas para comparar cotizaciones.",
+    category: "Precios & Contratación",
+    date: "Octubre 2026",
+    readTime: "10 min",
+  },
+  {
+    slug: "leads-basura-meta-ads",
+    title: "Leads basura en Meta Ads: cómo filtrarlos antes, durante y después del formulario",
+    excerpt:
+      "Por qué Meta te manda leads que no contestan ni califican, y las tres capas para filtrarlos: el anuncio, el formulario instantáneo y el CRM que le devuelve a Meta qué lead sí sirvió.",
+    category: "Meta Ads",
+    date: "Octubre 2026",
+    readTime: "10 min",
+  },
+  {
     slug: "envio-directo-whatsapp-direct-send",
     title: "Envío directo en WhatsApp: mensajes de utilidad sin crear plantillas",
     excerpt:
@@ -103,9 +121,9 @@ const posts = [
   {
     slug: "cuanto-cobra-agencia-google-ads-latam",
     title:
-      "¿Cuánto cobra una agencia de Google Ads en LATAM? Precios reales en 2026",
+      "¿Cuánto cobra una agencia de Google Ads en LATAM? De qué depende en 2026",
     excerpt:
-      "Los modelos de precios varían más de lo que crees. Te explicamos qué cobran las agencias en México, Colombia y Chile, qué incluye cada modelo y cómo evitar pagar de más.",
+      "El fee depende de la complejidad de tu cuenta, no de una tabla por país. Modelos de cobro, qué mueve el precio, qué debe incluir el servicio y cómo evitar pagar de más.",
     category: "Precios & Contratación",
     date: "Abril 2026",
     readTime: "8 min",
@@ -113,12 +131,12 @@ const posts = [
   {
     slug: "tracking-server-side-cpl-plataforma",
     title:
-      "Por qué el CPL de tu plataforma te está mintiendo (y cómo solucionarlo)",
+      "CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM",
     excerpt:
-      "El dashboard de Google Ads muestra $45. Tu equipo de ventas dice que los leads no convierten. La diferencia no es un error — es cómo funciona el tracking por defecto.",
+      "El CPL de la plataforma divide el gasto entre lo que Meta o Google se atribuyen; el real, entre los leads válidos de tu CRM. Seis razones por las que no cuadran y cómo calcularlo cada semana.",
     category: "Tracking Técnico",
-    date: "Abril 2026",
-    readTime: "10 min",
+    date: "Octubre 2026",
+    readTime: "11 min",
   },
   {
     slug: "como-reducir-cpl-google-ads-latam",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { faqPage, toJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Hiper-automatización en campañas: más allá de PMax",
@@ -75,44 +76,27 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Qué es AI Max for Search en Google Ads?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "AI Max for Search es la evolución del broad match inteligente en Google Ads. Combina expansión de consultas impulsada por IA con targeting de URL final dinámica y personalización de copy en tiempo real. En la práctica, el algoritmo decide no solo a qué búsquedas responder, sino también qué URL mostrar y qué parte del anuncio adaptar según el contexto del usuario. Está disponible de manera progresiva desde principios de 2026 y representa el nivel más alto de automatización dentro de campañas de Search.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Performance Max y Advantage+ son lo mismo?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No, aunque tienen filosofías similares. Performance Max (Google) unifica todos los inventarios de Google — Search, Display, YouTube, Discover, Maps, Gmail — en una sola campaña gestionada por IA. Advantage+ (Meta) hace lo equivalente en el ecosistema de Facebook e Instagram, automatizando targeting, placements y creativos. Ambas ceden control al algoritmo a cambio de optimización cross-canal. La diferencia clave está en el tipo de señales disponibles: Google trabaja con intención de búsqueda; Meta trabaja con comportamiento social y patrones de consumo.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuándo NO conviene usar Performance Max o Advantage+?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Performance Max no es recomendable cuando: el volumen de conversiones mensuales es menor a 30–50 (el algoritmo no aprende correctamente), cuando hay restricciones de brand estrictas que el algoritmo puede ignorar, o cuando el negocio opera en nichos muy específicos donde la expansión de audiencia automática genera tráfico irrelevante. Advantage+ tiene las mismas limitaciones para B2B y productos con ICP muy definido. En ambos casos, la falta de transparencia sobre dónde se invierte el presupuesto es un riesgo real cuando los objetivos de negocio son granulares.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿La automatización total en campañas reduce el CPL?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Depende. En cuentas con alto volumen de conversiones y señales de datos de calidad, la automatización total puede bajar el CPL al encontrar patrones que el humano no detectaría. En cuentas con poco historial, conversiones escasas o tracking deficiente, la automatización total amplifica los errores: el algoritmo optimiza agresivamente hacia la señal incorrecta. El resultado es un CPL aparentemente bajo en plataforma y leads de baja calidad en el CRM. La automatización no sustituye un tracking correcto — lo presupone.",
-      },
-    },
-  ],
-};
+// FAQ visible y FAQPage JSON-LD salen del mismo array (antes divergían).
+const faqs = [
+  {
+    q: "¿Qué es AI Max for Search en Google Ads?",
+    a: "AI Max for Search es la evolución del broad match inteligente en Google Ads. Combina expansión de consultas por IA, targeting de URL final dinámica y personalización de copy en tiempo real. El algoritmo decide no solo a qué búsquedas responder, sino también qué URL mostrar y cómo adaptar el mensaje. Representa el nivel más alto de automatización dentro de campañas de Search.",
+  },
+  {
+    q: "¿Performance Max y Advantage+ son lo mismo?",
+    a: "No, aunque comparten filosofía. Performance Max (Google) unifica todos los inventarios de Google en una sola campaña. Advantage+ (Meta) hace lo equivalente en Facebook e Instagram. La diferencia clave: Google trabaja con intención de búsqueda; Meta trabaja con comportamiento social.",
+  },
+  {
+    q: "¿Cuándo NO conviene usar Performance Max o Advantage+?",
+    a: "Cuando el volumen de conversiones mensuales es menor a 30–50, cuando hay restricciones de brand estrictas, cuando el ICP es muy específico por cargo o industria, o cuando el tracking no está conectado a revenue real. En esos casos, la automatización amplifica errores en lugar de corregirlos.",
+  },
+  {
+    q: "¿La automatización total en campañas reduce el CPL?",
+    a: "En cuentas con alto volumen y datos de calidad, sí puede bajar el CPL al encontrar patrones que el humano no detecta. En cuentas con poco historial o tracking deficiente, la automatización total optimiza hacia la señal incorrecta. El resultado es un CPL bajo en plataforma y leads de mala calidad en el CRM.",
+  },
+];
+
+const faqSchema = faqPage(faqs);
 
 const comparisonRows = [
   {
@@ -166,7 +150,7 @@ export default function PostHiperAutomatizacion() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchema) }}
       />
       <Navbar />
 
@@ -504,24 +488,7 @@ export default function PostHiperAutomatizacion() {
             Preguntas frecuentes
           </h2>
           <div className="space-y-6 mb-14">
-            {[
-              {
-                q: "¿Qué es AI Max for Search en Google Ads?",
-                a: "AI Max for Search es la evolución del broad match inteligente en Google Ads. Combina expansión de consultas por IA, targeting de URL final dinámica y personalización de copy en tiempo real. El algoritmo decide no solo a qué búsquedas responder, sino también qué URL mostrar y cómo adaptar el mensaje. Representa el nivel más alto de automatización dentro de campañas de Search.",
-              },
-              {
-                q: "¿Performance Max y Advantage+ son lo mismo?",
-                a: "No, aunque comparten filosofía. Performance Max (Google) unifica todos los inventarios de Google en una sola campaña. Advantage+ (Meta) hace lo equivalente en Facebook e Instagram. La diferencia clave: Google trabaja con intención de búsqueda; Meta trabaja con comportamiento social.",
-              },
-              {
-                q: "¿Cuándo NO conviene usar Performance Max o Advantage+?",
-                a: "Cuando el volumen de conversiones mensuales es menor a 30–50, cuando hay restricciones de brand estrictas, cuando el ICP es muy específico por cargo o industria, o cuando el tracking no está conectado a revenue real. En esos casos, la automatización amplifica errores en lugar de corregirlos.",
-              },
-              {
-                q: "¿La automatización total en campañas reduce el CPL?",
-                a: "En cuentas con alto volumen y datos de calidad, sí puede bajar el CPL al encontrar patrones que el humano no detecta. En cuentas con poco historial o tracking deficiente, la automatización total optimiza hacia la señal incorrecta. El resultado es un CPL bajo en plataforma y leads de mala calidad en el CRM.",
-              },
-            ].map((item) => (
+            {faqs.map((item) => (
               <div key={item.q} className="border-b border-[#f6f3f2] pb-6">
                 <h3 className="text-base font-bold text-[#1c1b1b] mb-3" style={{ fontFamily: "Manrope, sans-serif" }}>
                   {item.q}
@@ -552,7 +519,7 @@ export default function PostHiperAutomatizacion() {
               >
                 <span className="text-[#0066ff] text-lg leading-none">→</span>
                 <span className="text-sm font-semibold text-[#1c1b1b] group-hover:text-[#0066ff] transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                  Por qué el CPL de tu plataforma te está mintiendo (y cómo solucionarlo)
+                  CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM
                 </span>
               </Link>
               <Link

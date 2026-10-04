@@ -59,7 +59,7 @@ const implementamos = [
   {
     title: "Sincronización CRM ↔ ads",
     body: "Las conversiones offline vuelven a Google y Meta para que las plataformas optimicen hacia ventas y no hacia formularios. Es la mitad del problema que describimos en nuestra guía sobre el CPL de plataforma.",
-    link: { href: "/blog/tracking-server-side-cpl-plataforma", label: "Por qué el CPL de tu plataforma miente" },
+    link: { href: "/blog/tracking-server-side-cpl-plataforma", label: "CPL de plataforma vs CPL real" },
   },
   {
     title: "Automatización de tareas operativas",

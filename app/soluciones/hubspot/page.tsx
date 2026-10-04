@@ -63,7 +63,7 @@ const implementamos = [
   {
     title: "Integración con ads",
     body: "Conexión con Google Ads y Meta para que las etapas del pipeline vuelvan a las plataformas como conversiones offline y las campañas optimicen hacia ventas.",
-    link: { href: "/blog/tracking-server-side-cpl-plataforma", label: "Por qué el CPL de tu plataforma miente" },
+    link: { href: "/blog/tracking-server-side-cpl-plataforma", label: "CPL de plataforma vs CPL real" },
   },
   {
     title: "WhatsApp y canales",

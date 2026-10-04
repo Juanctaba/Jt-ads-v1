@@ -332,7 +332,7 @@ export default function PostTrackingServerSideGuia() {
             </a>
             <a href="/blog/tracking-server-side-cpl-plataforma" className="flex-1 bg-white rounded-xl p-5 border border-[#c2c6d8]/15 hover:shadow-sm transition-shadow">
               <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Tracking Técnico</p>
-              <p className="text-sm font-semibold text-[#1c1b1b]">Por qué el CPL de tu plataforma te está mintiendo</p>
+              <p className="text-sm font-semibold text-[#1c1b1b]">CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM</p>
             </a>
           </div>
         </div>

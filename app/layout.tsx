@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jtads.com"),
   title: "JT Ads — Paid Media para Empresas en LATAM",
   description:
-    "Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior, tracking server-side y CPL real. Sin contratos largos.",
+    "Diagnóstico en vivo de tu cuenta de Google Ads, Meta y LinkedIn. Equipo senior, +$500k/mes gestionados. Sin contratos largos.",
   openGraph: {
     images: ["/opengraph-image"],
   },

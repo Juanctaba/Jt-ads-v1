@@ -290,7 +290,7 @@ export default function AgenciaLinkedInAdsPage() {
             <div className="mt-10 grid sm:grid-cols-3 gap-6">
               {[
                 { stat: "CPL alto", label: "más caro que Meta Ads — pero el lead califica mejor" },
-                { stat: "+$5M USD", label: "en inversión auditada" },
+                { stat: "$500k+", label: "USD/mes gestionados en ads" },
                 { stat: "<4h", label: "tiempo de respuesta para agendar tu diagnóstico" },
               ].map((item) => (
                 <div key={item.stat} className="bg-white/5 rounded-xl p-6 border border-white/10">

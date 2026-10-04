@@ -185,7 +185,7 @@ const faqItems = [
   },
   {
     q: "¿Qué diferencia a JT Ads de las agencias locales en Argentina?",
-    a: "La diferencia principal es el nivel de tracking. La mayoría de agencias locales reporta el CPL de plataforma. Nosotros conectamos las conversiones directamente con tu CRM para reportar el CPL real de ventas. Esa diferencia puede representar entre el 30% y el 60% de discrepancia en los números.",
+    a: "La diferencia principal es el nivel de tracking. La mayoría de agencias locales reporta el CPL de plataforma. Nosotros conectamos las conversiones directamente con tu CRM para reportar el CPL real de ventas. Esa diferencia suele cambiar por completo la lectura de los números.",
   },
   {
     q: "¿Qué impuestos suma Google Ads en Argentina?",
@@ -348,10 +348,10 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                             className="text-2xl font-extrabold line-through"
                             style={{ fontFamily: "Manrope, sans-serif", color: "#a33200" }}
                           >
-                            $12.400 ARS
+                            Inflada
                           </p>
                           <p className="text-xs mt-1" style={{ color: "#424656" }}>
-                            Reportado en plataforma
+                            Así suele venir la atribución de plataforma
                           </p>
                         </div>
                         <div
@@ -365,7 +365,7 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                             className="text-2xl font-extrabold"
                             style={{ fontFamily: "Manrope, sans-serif", color: "#0066ff" }}
                           >
-                            $6.800 ARS
+                            Real
                           </p>
                           <p className="text-xs mt-1" style={{ color: "#424656" }}>
                             Conectado a ventas
@@ -390,10 +390,10 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                       <div>
                         <div className="flex justify-between items-center mb-2">
                           <p className="text-xs font-medium" style={{ color: "#424656" }}>
-                            Reducción de costo por lead calificado
+                            Leads de Google con su venta en el CRM
                           </p>
                           <span className="text-xs font-bold" style={{ color: "#0066ff" }}>
-                            +44%
+                            Trazable
                           </span>
                         </div>
                         <div

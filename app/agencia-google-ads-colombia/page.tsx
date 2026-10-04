@@ -437,7 +437,7 @@ export default function AgenciaGoogleAdsColombiaPage() {
                             className="text-xl font-bold line-through"
                             style={{ color: "#a33200" }}
                           >
-                            $180.000 COP
+                            Inflada
                           </p>
                         </div>
                         <div
@@ -451,7 +451,7 @@ export default function AgenciaGoogleAdsColombiaPage() {
                             className="text-xl font-bold"
                             style={{ color: "#0066ff" }}
                           >
-                            $94.000 COP
+                            Real
                           </p>
                         </div>
                       </div>
@@ -473,9 +473,9 @@ export default function AgenciaGoogleAdsColombiaPage() {
                       <div>
                         <div className="flex justify-between items-center mb-1.5">
                           <p className="text-xs font-semibold" style={{ color: "#424656" }}>
-                            Reducción de costo por lead calificado
+                            Leads de Google con su venta en el CRM
                           </p>
-                          <p className="text-xs font-bold" style={{ color: "#0066ff" }}>+38%</p>
+                          <p className="text-xs font-bold" style={{ color: "#0066ff" }}>Trazable</p>
                         </div>
                         <div className="w-full h-2 rounded-full" style={{ backgroundColor: "#e5e2e1" }}>
                           <div
@@ -808,7 +808,7 @@ export default function AgenciaGoogleAdsColombiaPage() {
               ¿Cuánto estás perdiendo en campañas mal optimizadas?
             </h2>
             <p className="text-lg mb-10" style={{ color: "rgba(255,255,255,0.85)" }}>
-              Una sola sesión de diagnóstico puede identificar entre el 20% y el 40% de presupuesto malgastado. Empieza sin costo.
+              Una sola sesión de diagnóstico puede identificar dónde se está malgastando tu presupuesto. Empieza sin costo.
             </p>
             <a
               href="/diagnostico-en-vivo"

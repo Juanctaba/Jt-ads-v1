@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "¿Cuándo NO conviene usar Performance Max o Advantage+?",
-    a: "Cuando el volumen de conversiones mensuales es menor a 30–50, cuando hay restricciones de brand estrictas, cuando el ICP es muy específico por cargo o industria, o cuando el tracking no está conectado a revenue real. En esos casos, la automatización amplifica errores en lugar de corregirlos.",
+    a: "Cuando el volumen de conversiones mensuales es bajo y el algoritmo no tiene señal suficiente, cuando hay restricciones de brand estrictas, cuando el ICP es muy específico por cargo o industria, o cuando el tracking no está conectado a revenue real. En esos casos, la automatización amplifica errores en lugar de corregirlos.",
   },
   {
     q: "¿La automatización total en campañas reduce el CPL?",
@@ -108,7 +108,7 @@ const comparisonRows = [
   {
     dimension: "Requisito de conversiones",
     manual: "Funciona con bajo volumen",
-    pmax: "Mínimo 30–50 conv/mes para aprender",
+    pmax: "Necesita volumen de conversiones constante para aprender",
     hiperAuto: "Volumen alto crítico; sin él, el algoritmo se equivoca más",
   },
   {
@@ -360,7 +360,7 @@ export default function PostHiperAutomatizacion() {
             </p>
             <div className="space-y-4">
               {[
-                "Performance Max genera volumen, pero en cuentas B2B con ICP específico, entre el 40% y el 60% del gasto va a Search genérico y Display donde la audiencia no es el decisor.",
+                "Performance Max genera volumen, pero en cuentas B2B con ICP específico, una parte relevante del gasto puede irse a Search genérico y Display donde la audiencia no es el decisor.",
                 "Advantage+ Shopping funciona bien para e-commerce de ticket bajo con catálogo amplio. Para ticket alto o marcas con posicionamiento premium, la expansión de audiencia automática lleva tráfico de precio, no de valor.",
                 "LinkedIn Accelerate produce campañas que se ven razonables en el panel pero con targeting tan amplio que diluye el costo por clic de LinkedIn sin la calidad de lead que justifica ese costo.",
                 "En los tres casos, el problema no es la automatización en sí — es que el sistema optimiza sobre la señal que tiene, y si esa señal no es revenue real, optimizará hacia algo diferente de lo que necesitas.",
@@ -388,7 +388,7 @@ export default function PostHiperAutomatizacion() {
               </h3>
               <ul className="space-y-2">
                 {[
-                  "Tienes 50+ conversiones verificadas al mes (no proxy — conversiones reales de negocio)",
+                  "Tienes un volumen constante de conversiones verificadas cada mes (no proxy — conversiones reales de negocio)",
                   "Tu ICP es amplio o el producto tiene demanda masiva",
                   "El tracking está conectado al CRM y la señal de conversión es revenue, no solo leads",
                   "Tu equipo puede interpretar los reportes agregados y detectar anomalías",
@@ -407,7 +407,7 @@ export default function PostHiperAutomatizacion() {
               </h3>
               <ul className="space-y-2">
                 {[
-                  "Las conversiones mensuales son menores a 30 (el algoritmo no tiene señal suficiente)",
+                  "Las conversiones mensuales son pocas (el algoritmo no tiene señal suficiente)",
                   "Tu ICP tiene parámetros muy específicos: cargo, industria, tamaño de empresa o geografía",
                   "El tracking es browser-side solamente y el pixel pierde eventos por iOS o blockers",
                   "El ticket es alto y un lead mal calificado tiene un costo de oportunidad real en ventas",
@@ -446,7 +446,7 @@ export default function PostHiperAutomatizacion() {
               {
                 n: "02",
                 title: "Segundo, volumen antes que automatización",
-                body: "Si las conversiones mensuales son menores a 30, empezar con campañas de Search segmentadas. La automatización avanzada necesita datos para aprender. Sin datos, aprende cosas equivocadas.",
+                body: "Si las conversiones mensuales son pocas, empezar con campañas de Search segmentadas. La automatización avanzada necesita datos para aprender. Sin datos, aprende cosas equivocadas.",
               },
               {
                 n: "03",

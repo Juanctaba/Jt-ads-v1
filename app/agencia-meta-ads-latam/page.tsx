@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AuditoriaForm from "@/app/diagnostico-en-vivo/AuditoriaForm";
+import { withLinks, type FaqItem } from "@/lib/faqLinks";
 
 export const metadata: Metadata = {
   title: "Agencia de Instagram Ads y Facebook Ads en LATAM | JT Ads",
@@ -91,7 +92,7 @@ const services = [
   },
 ];
 
-const faqItems = [
+const faqItems: FaqItem[] = [
   {
     q: "¿Cuánto cuesta la gestión de Meta Ads con JT Ads?",
     a: "El fee de gestión depende de los requerimientos y la complejidad de cada cuenta. La inversión en medios no pasa por nosotros: la pagas directamente a Meta.",
@@ -130,7 +131,8 @@ const faqItems = [
   },
   {
     q: "¿Necesito una landing page para anunciar en Instagram?",
-    a: "No siempre. Los Lead Ads (formularios nativos de Meta) capturan el lead sin salir de Instagram y se conectan directo a tu CRM o webhook. Para ofertas complejas o de ticket alto, una landing coherente con el anuncio suele filtrar mejor. Lo definimos en el diagnóstico según tu ciclo de venta.",
+    a: "No siempre. Los Lead Ads (formularios nativos de Meta) capturan el lead sin salir de Instagram y se conectan directo a tu CRM o webhook. Para ofertas complejas o de ticket alto, una landing coherente con el anuncio suele filtrar mejor. Lo definimos en el diagnóstico según tu ciclo de venta. Si los formularios llegan pero no sirven, aquí explicamos cómo filtrar los leads basura en Meta Ads.",
+    links: [{ text: "cómo filtrar los leads basura en Meta Ads", href: "/blog/leads-basura-meta-ads" }],
   },
   {
     q: "¿Cómo es el proceso para empezar?",
@@ -393,7 +395,7 @@ export default function AgenciaMetaAdsPage() {
               {faqItems.map((item) => (
                 <div key={item.q} className="border-b border-slate-100 pb-6">
                   <h3 className="text-lg font-bold text-slate-900 mb-3">{item.q}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.a}</p>
+                  <p className="text-slate-600 leading-relaxed">{withLinks(item.a, item.links)}</p>
                 </div>
               ))}
             </div>

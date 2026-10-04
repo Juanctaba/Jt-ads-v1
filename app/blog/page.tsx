@@ -22,6 +22,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "leads-basura-meta-ads",
+    title: "Leads basura en Meta Ads: cómo filtrarlos antes, durante y después del formulario",
+    excerpt:
+      "Por qué Meta te manda leads que no contestan ni califican, y las tres capas para filtrarlos: el anuncio, el formulario instantáneo y el CRM que le devuelve a Meta qué lead sí sirvió.",
+    category: "Meta Ads",
+    date: "Octubre 2026",
+    readTime: "10 min",
+  },
+  {
     slug: "envio-directo-whatsapp-direct-send",
     title: "Envío directo en WhatsApp: mensajes de utilidad sin crear plantillas",
     excerpt:

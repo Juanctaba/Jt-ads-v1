@@ -25,7 +25,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/limites-mensajes-whatsapp-business", "2026-09-29", 0.7],
   ["/blog/envio-directo-whatsapp-direct-send", "2026-09-29", 0.7],
   ["/blog/que-es-meta-business-agent", "2026-09-29", 0.7],
-  ["/agencia-meta-ads-latam", "2026-09-14", 0.8],
+  ["/agencia-meta-ads-latam", "2026-10-04", 0.8],
   ["/agencia-linkedin-ads-latam", "2026-09-14", 0.8],
   ["/agencia-google-ads-mexico", "2026-09-14", 0.8],
   ["/agencia-google-ads-colombia", "2026-09-14", 0.8],
@@ -33,7 +33,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/agencia-google-ads-argentina", "2026-09-14", 0.8],
   ["/agencia-google-ads-usa", "2026-09-14", 0.8],
   ["/casos-de-exito", "2026-04-20", 0.7],
-  ["/blog", "2026-09-29", 0.7],
+  ["/blog", "2026-10-04", 0.7],
   ["/blog/recursos", "2026-05-18", 0.6],
   ["/contacto", "2026-04-20", 0.6],
   ["/blog/tracking-server-side-que-es-por-que-pixel-miente", "2026-09-14", 0.7],
@@ -44,7 +44,8 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/como-reducir-cpl-google-ads-latam", "2026-09-14", 0.7],
   ["/blog/performance-max-como-funciona-latam", "2026-09-14", 0.7],
   ["/blog/google-ads-saas-b2b-latam", "2026-09-14", 0.7],
-  ["/sistema", "2026-09-13", 0.8],
+  ["/blog/leads-basura-meta-ads", "2026-10-04", 0.7],
+  ["/sistema", "2026-10-04", 0.8],
   ["/crm-agencia-ads", "2026-09-13", 0.8],
 ];
 

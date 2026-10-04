@@ -152,7 +152,7 @@ const useCases = [
     ),
   },
   {
-    title: "Scale-up con $50k+/mes en Google Ads",
+    title: "Scale-ups con más de $50k/mes",
     description:
       "Cuentas que ya invierten fuerte pero sospechan que el tracking subreporta conversiones reales. El CPL de plataforma no coincide con los cierres en el CRM. Implementamos server-side tagging, CAPI y conversiones offline para recuperar la señal real.",
     icon: (

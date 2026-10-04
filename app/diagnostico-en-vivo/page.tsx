@@ -273,7 +273,7 @@ export default function DiagnosticoPage() {
                 {/* Stats */}
                 <div className="flex flex-wrap gap-8 opacity-80 mb-10">
                   {[
-                    { value: "$5M+", label: "Inversión Auditada" },
+                    { value: "+$5M USD", label: "en inversión auditada" },
                     { value: "200+", label: "Marcas Optimizadas" },
                     { value: "<4h", label: "Tiempo de Respuesta" },
                   ].map((stat, i) => (

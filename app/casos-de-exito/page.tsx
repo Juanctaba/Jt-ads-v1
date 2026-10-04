@@ -18,13 +18,13 @@ const cases = [
     platform: "Google Ads · Search",
     tag: "Tracking",
     challenge:
-      "La cuenta generaba 90+ leads/mes pero menos del 10% llegaba a una demo calificada. El equipo de ventas reportaba leads de mala calidad; la agencia anterior reportaba un CPL de $45.",
+      "La cuenta generaba muchos leads, pero muy pocos llegaban a una demo calificada. El equipo de ventas reportaba leads de mala calidad; la agencia anterior reportaba un CPL que se veía barato.",
     action:
       "Auditamos las conversiones y encontramos que se contaban rellenos de formularios de landing pages de contenido (blog) como conversiones de ventas. Reconfiguramos el tracking para contar solo solicitudes de demo del sitio principal. Reestructuramos las campañas por intención e implementamos exclusiones de keywords informacionales.",
     results: [
-      { metric: "CPL real (demo calificada)", before: "$380", after: "$94", tag: "−75%" },
-      { metric: "Tasa demo → propuesta", before: "11%", after: "38%", tag: "+245%" },
-      { metric: "Ad spend mensual", before: "$8,000", after: "$8,000", tag: "Sin cambio" },
+      { metric: "CPL real (demo calificada)", before: "Inflado", after: "Real", tag: "Medido en CRM" },
+      { metric: "Tasa demo → propuesta", before: "Baja", after: "Mayor", tag: "Leads con intención" },
+      { metric: "Ad spend mensual", before: "Igual", after: "Igual", tag: "Sin cambio" },
     ],
   },
   {
@@ -34,13 +34,13 @@ const cases = [
     platform: "Google Ads · Search + Performance Max",
     tag: "Calidad de Leads",
     challenge:
-      "8 meses con Performance Max como campaña principal. Volumen alto pero tasa de cierre menor al 3%. Sin exclusiones de audiencia, el targeting incluía tráfico fuera del perfil comprador.",
+      "Varios meses con Performance Max como campaña principal. Volumen alto pero tasa de cierre muy baja. Sin exclusiones de audiencia, el targeting incluía tráfico fuera del perfil comprador.",
     action:
-      "Desactivamos PMax temporalmente y auditamos los segmentos reales de compradores de los últimos 12 meses. Reconstruimos Search con match types restrictivos y relanzamos PMax con señales de audiencia basadas en clientes reales y Enhanced Conversions conectado al CRM.",
+      "Desactivamos PMax temporalmente y auditamos los segmentos reales de compradores del último año. Reconstruimos Search con match types restrictivos y relanzamos PMax con señales de audiencia basadas en clientes reales y Enhanced Conversions conectado al CRM.",
     results: [
-      { metric: "Leads/mes", before: "210", after: "87", tag: "−59%" },
-      { metric: "Tasa lead → cliente", before: "2.8%", after: "11.4%", tag: "+307%" },
-      { metric: "Costo por cliente adquirido", before: "$1,240", after: "$490", tag: "−60%" },
+      { metric: "Leads/mes", before: "Volumen alto", after: "Menos, mejores", tag: "Menos ruido" },
+      { metric: "Tasa lead → cliente", before: "Baja", after: "Mayor", tag: "Perfil comprador" },
+      { metric: "Costo por cliente adquirido", before: "Alto", after: "Menor", tag: "Medido en CRM" },
     ],
   },
   {
@@ -50,13 +50,13 @@ const cases = [
     platform: "Google Ads · Shopping + Search",
     tag: "ROAS Real",
     challenge:
-      "ROAS reportado: 4.2x. ROAS real (excluyendo devoluciones y pedidos cancelados): 1.8x. El feed no tenía segmentación por margen y las campañas pujaban igual por todos los SKUs.",
+      "El ROAS reportado se veía sano, pero el ROAS real (excluyendo devoluciones y pedidos cancelados) era mucho menor. El feed no tenía segmentación por margen y las campañas pujaban igual por todos los SKUs.",
     action:
       "Segmentamos el feed por margen alto, medio y bajo. Asignamos targets de ROAS diferenciados por categoría. Implementamos reglas de exclusión para SKUs sin stock. Conectamos datos de devoluciones con el feed de conversiones.",
     results: [
-      { metric: "ROAS real (post-devoluciones)", before: "1.8x", after: "3.4x", tag: "+89%" },
-      { metric: "Productos rentables (% del spend)", before: "41%", after: "78%", tag: "+90%" },
-      { metric: "Margen bruto por pedido", before: "$18", after: "$31", tag: "+72%" },
+      { metric: "ROAS real (post-devoluciones)", before: "Inflado", after: "Real", tag: "Sin devoluciones" },
+      { metric: "Productos rentables (% del spend)", before: "Minoría", after: "Prioridad", tag: "Puja por margen" },
+      { metric: "Margen bruto por pedido", before: "Bajo", after: "Mayor", tag: "Feed por margen" },
     ],
   },
   {
@@ -66,13 +66,13 @@ const cases = [
     platform: "Meta Ads",
     tag: "Pixel / CAPI",
     challenge:
-      "Campañas con muchos leads a bajo costo pero tasa de inscripción inferior al 2%. El pixel disparaba el evento 'Lead' en la vista de la landing, no en el submit real del formulario.",
+      "Campañas con muchos leads a bajo costo pero muy pocas inscripciones. El pixel disparaba el evento 'Lead' en la vista de la landing, no en el submit real del formulario.",
     action:
       "Corregimos el pixel para disparar solo en confirmación real. Implementamos Conversions API server-side para recuperar eventos perdidos por bloqueadores. Creamos lookalikes basados en compradores reales y segmentamos creativos por etapa del funnel.",
     results: [
-      { metric: "Costo por lead real (submit)", before: "$3.20", after: "$11.40", tag: "Número honesto" },
-      { metric: "Tasa lead → inscripción", before: "1.9%", after: "8.7%", tag: "+358%" },
-      { metric: "Costo por inscripción", before: "$168", after: "$131", tag: "−22%" },
+      { metric: "Costo por lead real (submit)", before: "Inflado", after: "Real", tag: "Número honesto" },
+      { metric: "Tasa lead → inscripción", before: "Baja", after: "Mayor", tag: "Lookalikes reales" },
+      { metric: "Costo por inscripción", before: "Alto", after: "Menor", tag: "CAPI server-side" },
     ],
   },
   {
@@ -82,13 +82,13 @@ const cases = [
     platform: "LinkedIn Ads + Google Ads",
     tag: "ABM",
     challenge:
-      "$18,000/mes distribuidos entre LinkedIn y Google sin criterio claro. LinkedIn generaba pocas conversiones; Google generaba volumen pero con perfil de empresa equivocado.",
+      "Presupuesto repartido entre LinkedIn y Google sin criterio claro. LinkedIn generaba pocas conversiones; Google generaba volumen pero con perfil de empresa equivocado.",
     action:
       "Mapeamos el funnel real: LinkedIn para ABM (awareness en cuentas target por industria y tamaño), Google Search para captura de demanda activa ya educada. Alineamos audiencias con el ICP real del equipo de ventas.",
     results: [
-      { metric: "Oportunidades calificadas/mes", before: "4", after: "11", tag: "+175%" },
-      { metric: "Ciclo de ventas promedio", before: "94 días", after: "61 días", tag: "−35%" },
-      { metric: "Pipeline generado (90 días)", before: "$210k", after: "$580k", tag: "+176%" },
+      { metric: "Oportunidades calificadas/mes", before: "Pocas", after: "Más", tag: "ICP alineado" },
+      { metric: "Ciclo de ventas promedio", before: "Largo", after: "Más corto", tag: "Demanda educada" },
+      { metric: "Pipeline generado", before: "Bajo", after: "Mayor", tag: "Medido en CRM" },
     ],
   },
   {
@@ -98,13 +98,13 @@ const cases = [
     platform: "Meta Ads + Google Ads",
     tag: "Tracking End-to-End",
     challenge:
-      "14 meses activos con tres agencias distintas. La conversión medida era 'click en WhatsApp' — sin tracking del ciclo completo: contacto real, visita, oferta.",
+      "Más de un año activos con varias agencias distintas. La conversión medida era 'click en WhatsApp' — sin tracking del ciclo completo: contacto real, visita, oferta.",
     action:
       "Implementamos tracking end-to-end: click → WhatsApp → contacto real (CRM) → visita → oferta. Redefinimos la conversión principal como 'visita a proyecto agendada'. Eliminamos campañas que generaban clicks sin visitas documentadas.",
     results: [
-      { metric: "Costo por visita agendada", before: "Sin dato", after: "$74", tag: "Medible por primera vez" },
-      { metric: "Visitas/mes a proyectos", before: "~12 estimadas", after: "31 documentadas", tag: "+158%" },
-      { metric: "Budget desperdiciado (est.)", before: "60% del spend", after: "< 20%", tag: "−67%" },
+      { metric: "Costo por visita agendada", before: "Sin dato", after: "Medible", tag: "Medible por primera vez" },
+      { metric: "Visitas/mes a proyectos", before: "Estimadas", after: "Documentadas", tag: "Trazables en CRM" },
+      { metric: "Budget desperdiciado (est.)", before: "Alto", after: "Bajo", tag: "Campañas depuradas" },
     ],
   },
   {
@@ -118,28 +118,28 @@ const cases = [
     action:
       "Construimos la cuenta desde cero con Enhanced Conversions desde el día 1. Definimos el perfil de búsqueda exacto junto al equipo de ventas. Comenzamos con presupuesto conservador, match types restrictivos y criterios de expansión atados a calidad de lead real.",
     results: [
-      { metric: "CPL primer mes", before: "—", after: "$68", tag: "Línea base sana" },
-      { metric: "Tasa lead → reunión calificada", before: "—", after: "34%", tag: "Desde el inicio" },
-      { metric: "Budget quemado sin resultados", before: "Habitual en mes 1", after: "$0", tag: "Estructura desde día 1" },
+      { metric: "CPL primer mes", before: "—", after: "Sano", tag: "Línea base sana" },
+      { metric: "Tasa lead → reunión calificada", before: "—", after: "Medida", tag: "Desde el inicio" },
+      { metric: "Budget quemado sin resultados", before: "Habitual en mes 1", after: "Evitado", tag: "Estructura desde día 1" },
     ],
   },
 ];
 
 const benchmarks = [
   {
-    stat: "60%",
+    stat: "Doble",
     color: "#0066ff",
     title: "Error de Configuración",
-    desc: "De las cuentas analizadas tienen duplicidad de eventos en el Píxel o API de Conversiones.",
+    desc: "Es frecuente encontrar eventos duplicados en el Píxel o en la API de Conversiones.",
   },
   {
-    stat: "42%",
+    stat: "Fuga",
     color: "#a33200",
     title: "Fuga de Atribución",
     desc: "Ventas que ocurren en el CRM pero no se reportan en Google/Meta por falta de tracking server-side.",
   },
   {
-    stat: "15%",
+    stat: "Ruido",
     color: "#9bb4fe",
     title: "Inversión Perdida",
     desc: "Presupuesto asignado a términos irrelevantes o audiencias de baja calidad técnica.",
@@ -185,12 +185,12 @@ function HeroIllustration() {
           <div className="grid grid-cols-2 gap-0 divide-x divide-[#f0edec]">
             <div className="p-5">
               <p className="text-[10px] font-bold uppercase tracking-wider text-[#727687] mb-1">CPL Plataforma</p>
-              <p className="text-3xl font-black text-[#1c1b1b] line-through opacity-40">$45</p>
+              <p className="text-3xl font-black text-[#1c1b1b] line-through opacity-40">Inflada</p>
               <p className="text-[10px] text-[#a33200] font-bold mt-1">⚠ Evento incorrecto</p>
             </div>
             <div className="p-5 bg-[#0066ff]/5">
               <p className="text-[10px] font-bold uppercase tracking-wider text-[#0050cb] mb-1">CPL Real</p>
-              <p className="text-3xl font-black text-[#0066ff]">$94</p>
+              <p className="text-3xl font-black text-[#0066ff]">Real</p>
               <p className="text-[10px] text-green-600 font-bold mt-1">✓ Demo calificada</p>
             </div>
           </div>
@@ -220,13 +220,13 @@ function HeroIllustration() {
           <div className="px-5 py-4">
             <div className="flex justify-between items-center mb-1.5">
               <p className="text-[10px] font-bold uppercase tracking-wider text-[#727687]">Tasa demo → propuesta</p>
-              <p className="text-xs font-black text-green-600">+245%</p>
+              <p className="text-xs font-black text-green-600">Trazable</p>
             </div>
             <div className="h-1.5 bg-[#e5e2e1] rounded-full overflow-hidden">
               <div className="h-full bg-[#0066ff] rounded-full" style={{ width: "78%" }} />
             </div>
             <div className="flex justify-between text-[10px] text-[#727687] mt-1">
-              <span>Antes: 11%</span><span>Ahora: 38%</span>
+              <span>Antes: formulario</span><span>Ahora: demo</span>
             </div>
           </div>
         </div>
@@ -318,7 +318,7 @@ export default function CasosDeExitoPage() {
                   {[
                     {
                       title: "Server-Side Tracking",
-                      desc: "Eliminamos la dependencia de cookies de terceros para una precisión del 100%.",
+                      desc: "Eliminamos la dependencia de cookies de terceros para una medición más precisa.",
                       icon: (
                         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
@@ -379,7 +379,7 @@ export default function CasosDeExitoPage() {
                 className="text-3xl font-bold mb-2 text-[#1c1b1b]"
                 style={{ fontFamily: "Manrope, sans-serif" }}
               >
-                7 casos documentados con números reales.
+                7 casos documentados, conectados al CRM.
               </h2>
               <p className="text-[#424656]">
                 Todos conectados al CRM. Ninguno mide solo clics o impresiones.
@@ -477,7 +477,7 @@ export default function CasosDeExitoPage() {
                 El estado actual del Performance Marketing
               </h2>
               <p className="text-[#dcd9d9] max-w-2xl mx-auto">
-                Datos de más de 100 auditorías técnicas realizadas en el último año.
+                Lo que más encontramos en las auditorías técnicas de cuentas.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

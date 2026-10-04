@@ -295,7 +295,7 @@ export default function PostReducirCPL() {
                   oferta poco clara o un formulario con demasiados campos puede
                   reducir la tasa de conversión a la mitad. En cuentas donde
                   hemos mejorado la landing sin tocar el presupuesto, el CPL
-                  bajó entre un 25% y un 45% en 30 días.
+                  bajó de forma clara en pocas semanas.
                 </p>
               </div>
             </li>
@@ -357,7 +357,7 @@ export default function PostReducirCPL() {
                   reales, no de clics
                 </p>
                 <p className="text-[#424656] text-sm leading-relaxed">
-                  El tracking por defecto pierde entre el 25% y el 40% de las
+                  El tracking por defecto pierde parte de las
                   conversiones reales por bloqueo de ad blockers, restricciones
                   de Safari/iOS y configuraciones de privacidad. Eso significa
                   que el algoritmo optimiza con datos incompletos. Implementar
@@ -383,24 +383,24 @@ export default function PostReducirCPL() {
           >
             La reducción de CPL no es un número universal — depende del estado
             inicial de la cuenta, el sector y cuántas de las 7 palancas tienen
-            margen de mejora. Dicho eso, hay rangos razonables que observamos
-            de forma consistente:
+            margen de mejora. Dicho eso, el patrón que observamos es
+            consistente: cuantas más palancas trabajas, mayor es la mejora.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             {[
               {
-                stat: "20–35%",
+                stat: "Mejora",
                 label: "Solo con estructura + negativos",
                 desc: "Sin tocar el presupuesto ni la landing. Solo reorganizando la arquitectura de campañas y limpiando búsquedas irrelevantes.",
               },
               {
-                stat: "30–50%",
+                stat: "Mayor",
                 label: "Estructura + landing optimizada",
                 desc: "Cuando se trabajan en paralelo la estructura de campañas y la tasa de conversión de la página de destino.",
               },
               {
-                stat: "40–60%",
+                stat: "Máxima",
                 label: "Stack completo con tracking real",
                 desc: "Cuando se implementan las 7 palancas, incluyendo tracking server-side y señales de CRM al algoritmo.",
               },

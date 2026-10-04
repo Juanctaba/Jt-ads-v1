@@ -67,7 +67,7 @@ const comparison = [
   },
   {
     feature: "Experiencia en ad spend",
-    jt: "✅ +$500k/mes gestionados",
+    jt: "✅ +$5M USD en inversión auditada",
     jtPositive: true,
     traditional: "⚠️ Variable — no verificable",
     tradPositive: null,
@@ -352,8 +352,8 @@ export default function AgenciaGoogleAdsChilePage() {
             {/* Stats */}
             <div className="flex flex-wrap gap-6 mb-8">
               {[
-                { label: "+$1.2M USD invertidos en pauta" },
-                { label: "+30 empresas chilenas" },
+                { label: "+$5M USD en inversión auditada" },
+                { label: "Meta Partner y Google Partner" },
                 { label: "< 4h Respuesta" },
               ].map((s) => (
                 <div key={s.label} className="flex items-center gap-2">

@@ -342,7 +342,7 @@ export default function AgenciaGoogleAdsArgentinaPage() {
                           style={{ backgroundColor: "#f6f3f2" }}
                         >
                           <p className="text-xs font-medium mb-1" style={{ color: "#424656" }}>
-                            CPL Plataforma
+                            CPL plataforma
                           </p>
                           <p
                             className="text-2xl font-extrabold line-through"

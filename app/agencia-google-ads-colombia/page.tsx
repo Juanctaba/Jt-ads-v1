@@ -431,7 +431,7 @@ export default function AgenciaGoogleAdsColombiaPage() {
                           style={{ backgroundColor: "#f6f3f2" }}
                         >
                           <p className="text-xs font-semibold mb-1" style={{ color: "#424656" }}>
-                            CPL Meta Platform
+                            CPL plataforma
                           </p>
                           <p
                             className="text-xl font-bold line-through"

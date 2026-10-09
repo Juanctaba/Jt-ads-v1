@@ -10,20 +10,24 @@ import { breadcrumb, faqPage, service, toJsonLd, type Crumb } from "@/lib/schema
 
 // Landing en español neutro (tú, USD), sin país objetivo. Rompe el patrón de
 // las otras hijas a propósito: guía primero, oferta después. El enlace de
-// afiliado nunca va en el hero (patrón de "thin affiliate" que Google penaliza).
+// afiliado va una sola vez en el hero, como botón con divulgación visible
+// (rel="sponsored nofollow" vía AffiliateLink). El resto de la página sigue
+// siendo guía; no convertir el hero en una página de afiliado delgada.
 
 const PATH = "/soluciones/gohighlevel";
 const URL = `https://jtads.com${PATH}`;
 
+const SEO_TITLE = "GoHighLevel en español: qué es, precios y 30 días gratis";
+// El precio sale de GHL_PRICING (fuente oficial, con fecha de revisión).
+const SEO_DESC = `Qué es GoHighLevel, cuánto cuesta (desde ${"$"}${GHL_PRICING.planes[0].mensual} USD al mes) y cómo activar la prueba gratis de 30 días con bootcamp en español. Guía práctica para Latinoamérica.`;
+
 export const metadata: Metadata = {
-  title: "GoHighLevel en Español: Qué Es, Precios y Cómo Usarlo",
-  description:
-    "Qué es GoHighLevel, cuánto cuesta y cómo se implementa en Latinoamérica. Guía en español de la plataforma y la alternativa white-label que operamos: Omnix.",
+  title: SEO_TITLE,
+  description: SEO_DESC,
   alternates: { canonical: URL, languages: { es: URL, "x-default": URL } },
   openGraph: {
-    title: "GoHighLevel en Español: Qué Es, Precios y Cómo Usarlo",
-    description:
-      "Guía en español de GoHighLevel: qué incluye, cuánto cuesta en USD, cómo se compara con HubSpot y Kommo, y cuándo no conviene usarlo.",
+    title: SEO_TITLE,
+    description: SEO_DESC,
     images: ["/opengraph-image"],
     url: URL,
   },
@@ -128,7 +132,7 @@ export default function GoHighLevelPage() {
       <Navbar />
       <main className="flex-1">
 
-        {/* ── 1. Hero informativo ── sin enlace de afiliado */}
+        {/* ── 1. Hero informativo ── un solo enlace de afiliado (prueba de 30 días) con divulgación */}
         <section className="bg-[#0a0a0a] pt-28 pb-20 px-6">
           <div className="max-w-4xl mx-auto">
             <Breadcrumbs items={crumbs} tone="dark" />
@@ -145,6 +149,9 @@ export default function GoHighLevelPage() {
                 en una sola cuenta. Nació para agencias, pero cada vez más empresas la usan como su sistema comercial.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <AffiliateLink slug="gohighlevel" dataCta="ghl-afiliado-hero" className={ctaPrimary}>
+                  Prueba gratis 30 días en español ↗
+                </AffiliateLink>
                 <a href="#precios" className={ctaSecondaryDark}>
                   Ver precios ↓
                 </a>
@@ -152,6 +159,10 @@ export default function GoHighLevelPage() {
                   Cuándo no conviene ↓
                 </a>
               </div>
+              <p className="text-gray-500 text-xs mt-4">
+                Prueba de 30 días con el bootcamp de implementación de HighLevel en español. Enlace de afiliado: JT Ads
+                recibe una comisión sin costo adicional para ti.
+              </p>
             </div>
           </div>
         </section>

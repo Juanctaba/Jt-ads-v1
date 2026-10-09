@@ -8,9 +8,9 @@ import { breadcrumb, faqPage, toJsonLd, absoluteUrl, type Crumb } from "@/lib/sc
 const PATH = "/blog/que-es-meta-business-agent";
 const URL = absoluteUrl(PATH);
 const TITLE = "Qué es Meta Business Agent y cómo te lo cobran por tokens";
-const SEO_TITLE = "Qué es Meta Business Agent y cuánto cuesta por mensaje";
+const SEO_TITLE = "Meta Business Agent: qué es, cuánto cuesta y si es gratis";
 const DESC =
-  "La categoría de mensaje que Meta cobra por tokens desde agosto de 2026: qué es, cuánto cuesta cada respuesta y cuándo te conviene frente a tu propia IA.";
+  "Meta Business Agent cobra por tokens: $2 USD por millón, unos 4 a 5 centavos por respuesta. Qué es, si es gratis y cuándo conviene frente a tu propia IA.";
 
 export const metadata: Metadata = {
   title: SEO_TITLE,
@@ -18,8 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: URL, languages: { es: URL } },
   openGraph: {
     title: SEO_TITLE,
-    description:
-      "$2 USD por millón de tokens, entre 4 y 5 centavos por respuesta. Cómo se compara con usar tu propia IA sobre la API de WhatsApp.",
+    description: DESC,
     images: ["/opengraph-image"],
     url: URL,
   },

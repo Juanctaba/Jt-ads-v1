@@ -1,0 +1,57 @@
+# JT Ads
+
+> JT Ads (JT Ads Performance LLC) es una agencia de pauta digital y performance marketing, y de automatización con IA, para empresas en LATAM y el mercado hispano de USA. Gestiona Google Ads, Meta Ads (Facebook e Instagram) y LinkedIn Ads, y mide los resultados con el CPL real en el CRM del cliente, no con el que reporta la plataforma. JT Ads es Google Partner y Meta Partner.
+
+Datos clave:
+
+- Base: Medellín, Colombia. Trabajo remoto con empresas de México, Colombia, Chile, Argentina, Perú y el mercado hispano de USA.
+- Volumen gestionado: más de $500k USD al mes en ads.
+- Fee de gestión: depende de los requerimientos y la complejidad de cada cuenta. No se publican tarifas.
+- La inversión en medios la paga el cliente directamente a cada plataforma (Google, Meta o LinkedIn); no pasa por JT Ads.
+- Las cuentas publicitarias quedan a nombre del cliente.
+- Medición: tracking server-side y CPL real conectado al CRM.
+- Primer paso: diagnóstico gratuito de la cuenta.
+
+## Servicios
+
+- [Agencia de Google Ads en LATAM](https://jtads.com/agencia-google-ads-latam): Search, Performance Max, Display, YouTube y Demand Gen, con tracking server-side.
+- [Agencia de Meta Ads en LATAM](https://jtads.com/agencia-meta-ads-latam): Facebook e Instagram Ads, Lead Ads y API de Conversiones.
+- [Agencia de LinkedIn Ads en LATAM](https://jtads.com/agencia-linkedin-ads-latam): Lead Gen Forms y ABM para SaaS B2B y enterprise, con tracking conectado al CRM.
+- [Automatización e IA para empresas](https://jtads.com/soluciones): automatización de marketing, agentes de IA y CRM.
+- [Agentes de IA para WhatsApp y voz](https://jtads.com/soluciones/agentes-de-ia): agentes que atienden, califican y agendan, conectados al CRM.
+- [Implementación de HubSpot CRM](https://jtads.com/soluciones/hubspot): implementación y configuración en español para LATAM.
+- [Speed-to-lead después del formulario de ads](https://jtads.com/sistema): del formulario de Meta o Google a oportunidad con responsable asignado.
+
+## Páginas por país
+
+- [Google Ads en México](https://jtads.com/agencia-google-ads-mexico)
+- [Google Ads en Colombia](https://jtads.com/agencia-google-ads-colombia)
+- [Google Ads en Chile](https://jtads.com/agencia-google-ads-chile)
+- [Google Ads en Argentina](https://jtads.com/agencia-google-ads-argentina)
+- [Google Ads en USA (mercado hispano)](https://jtads.com/agencia-google-ads-usa)
+- [Meta Ads en México](https://jtads.com/agencia-meta-ads-mexico)
+- [Meta Ads en Argentina](https://jtads.com/agencia-meta-ads-argentina)
+
+## Guías
+
+- [¿Cuánto cobra una agencia de Google Ads en LATAM?](https://jtads.com/blog/cuanto-cobra-agencia-google-ads-latam): qué mueve el fee y señales de alerta.
+- [¿Cuánto cobra una agencia de Meta Ads en LATAM?](https://jtads.com/blog/cuanto-cobra-agencia-meta-ads-latam): qué mueve el fee y qué se le paga a Meta.
+- [CPL de plataforma vs CPL real](https://jtads.com/blog/tracking-server-side-cpl-plataforma): por qué no cuadran con el CRM y cómo calcularlo.
+- [Qué es el tracking server-side](https://jtads.com/blog/tracking-server-side-que-es-por-que-pixel-miente): por qué el píxel infla conversiones.
+- [Leads basura en Meta Ads](https://jtads.com/blog/leads-basura-meta-ads): por qué llegan y cómo filtrarlos.
+- [Performance Max en LATAM](https://jtads.com/blog/performance-max-como-funciona-latam): cómo funciona y cuándo usarlo.
+- [Google Ads para SaaS B2B en LATAM](https://jtads.com/blog/google-ads-saas-b2b-latam): keywords por intención y conversiones offline desde el CRM.
+- [Límites de mensajes en WhatsApp Business](https://jtads.com/blog/limites-mensajes-whatsapp-business): cómo suben los límites del portafolio.
+- [Calculadora de costos de WhatsApp Business API](https://jtads.com/calculadora-costos-whatsapp-business-api): tarifas oficiales de Meta por país.
+
+## Contacto
+
+- [Diagnóstico gratuito de Google Ads, Meta y LinkedIn](https://jtads.com/diagnostico-en-vivo)
+- [Diagnóstico gratuito de automatización y CRM](https://jtads.com/diagnostico-operacion)
+- [Contacto](https://jtads.com/contacto)
+
+## Opcional
+
+- [Casos de éxito](https://jtads.com/casos-de-exito)
+- [GoHighLevel en español](https://jtads.com/soluciones/gohighlevel): qué es y cómo activar la prueba con bootcamp en español.
+- [Blog](https://jtads.com/blog)

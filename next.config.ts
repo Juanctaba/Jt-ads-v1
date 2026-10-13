@@ -35,6 +35,9 @@ const nextConfig: NextConfig = {
       { source: "/sistema/", destination: "/sistema.html" },
       { source: "/crm-agencia-ads", destination: "/crm-agencia-ads.html" },
       { source: "/crm-agencia-ads/", destination: "/crm-agencia-ads.html" },
+      // IndexNow: /<key>.txt lo sirve app/indexnow-key/[key]/route.ts con la key de
+      // INDEXNOW_KEY. Los .txt reales (robots, llms) tienen prioridad: van antes que los rewrites.
+      { source: "/:key([a-zA-Z0-9-]{8,128})\\.txt", destination: "/indexnow-key/:key" },
     ];
   },
 };

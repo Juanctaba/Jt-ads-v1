@@ -10,7 +10,7 @@ const URL = absoluteUrl(PATH);
 const TITLE = "Límites de mensajes en WhatsApp Business: cómo funcionan y cómo suben";
 const SEO_TITLE = "Límite de mensajes en WhatsApp Business: de 250 a ilimitado";
 const DESC =
-  "¿WhatsApp Business tiene límite de mensajes? Sí, y es del portafolio, no del número. Cuántos destinatarios puedes contactar al día y cómo pasar de 250 a ilimitado.";
+  "WhatsApp Business sí tiene límite de mensajes y es del portafolio, no del número. Cuántos contactos al día y cómo pasar de 250 a ilimitado.";
 
 export const metadata: Metadata = {
   title: SEO_TITLE,

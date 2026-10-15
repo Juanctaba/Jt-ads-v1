@@ -803,95 +803,22 @@
     }
 
     /* ════════════════════════════════════════════════════
-       SLIDE 12 — ICP
+       SLIDE 12 — CTA FINAL
     ════════════════════════════════════════════════════ */
-    #s12 { background: var(--warm-2); }
-
-    #s12 h2 {
-      font-size: var(--t-h2);
-      color: var(--text-1);
-      margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
-    }
-
-    .icp-body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(1.5rem, 3vw, 3rem);
-      align-items: start;
-    }
-
-    .check-list { display: flex; flex-direction: column; gap: 0.85rem; }
-
-    .check-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .check-icon {
-      width: 22px; height: 22px; flex-shrink: 0;
-      border-radius: 50%;
-      background: #f0fdf4;
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 1px;
-    }
-
-    .check-icon svg { width: 11px; height: 11px; stroke: var(--green); stroke-width: 2.5; }
-
-    .check-item span {
-      font-size: var(--t-body);
-      color: var(--text-2);
-      line-height: 1.5;
-    }
-
-    .icp-card {
-      background: var(--dark-2);
-      border-radius: var(--r);
-      padding: clamp(1.25rem, 2vw, 2rem);
-    }
-
-    .icp-card .tag {
-      font-size: var(--t-eyebrow);
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--blue-badge);
-      margin-bottom: 0.75rem;
-    }
-
-    .icp-card p {
-      font-size: var(--t-small);
-      color: rgba(255,255,255,0.5);
-      line-height: 1.7;
-      margin-bottom: 0.85rem;
-    }
-
-    .icp-card blockquote {
-      font-size: var(--t-small);
-      color: rgba(255,255,255,0.3);
-      font-style: italic;
-      border-left: 2px solid rgba(0,102,255,0.4);
-      padding-left: 0.85rem;
-      line-height: 1.6;
-    }
-
-    /* ════════════════════════════════════════════════════
-       SLIDE 13 — CTA FINAL
-    ════════════════════════════════════════════════════ */
-    #s13 {
+    #s12 {
       background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
     }
 
-    #s13 .inner { text-align: center; max-width: 720px; }
+    #s12 .inner { text-align: center; max-width: 720px; }
 
-    #s13 h2 {
+    #s12 h2 {
       font-size: clamp(1.75rem, 4vw, 3.75rem);
       font-weight: 900;
       color: #fff;
       margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
     }
 
-    #s13 p {
+    #s12 p {
       font-size: clamp(0.9rem, 1.5vw, 1.1rem);
       color: rgba(255,255,255,0.7);
       line-height: 1.65;
@@ -899,7 +826,7 @@
       margin: 0 auto clamp(1.5rem, 3vh, 2.5rem);
     }
 
-    #s13 .cta-btn {
+    #s12 .cta-btn {
       display: inline-block;
       background: #fff;
       color: var(--blue);
@@ -912,20 +839,20 @@
       transition: opacity 0.2s;
       letter-spacing: 0.01em;
     }
-    #s13 .cta-btn:hover { opacity: 0.88; }
+    #s12 .cta-btn:hover { opacity: 0.88; }
 
-    #s13 .contact {
+    #s12 .contact {
       margin-top: clamp(1rem, 2vh, 1.5rem);
       font-size: var(--t-small);
       color: rgba(255,255,255,0.45);
     }
 
-    #s13 .contact a {
+    #s12 .contact a {
       color: rgba(255,255,255,0.65);
       text-decoration: none;
     }
 
-    #s13 .disclaimer {
+    #s12 .disclaimer {
       margin-top: clamp(0.5rem, 1vh, 0.75rem);
       font-size: calc(var(--t-eyebrow) * 0.95);
       color: rgba(255,255,255,0.3);
@@ -956,7 +883,7 @@
     @media (max-width: 768px) {
       .prob-grid, .service-cols, .diff-grid,
       .phase-grid, .bench-grid { grid-template-columns: 1fr; }
-      .caso-body, .icp-body { grid-template-columns: 1fr; }
+      .caso-body { grid-template-columns: 1fr; }
       .logo-grid { grid-template-columns: repeat(4, 1fr); }
       #dots { display: none; }
     }
@@ -1506,65 +1433,9 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
-     SLIDE 12 — PERFIL DE CLIENTE IDEAL
+     SLIDE 12 — CTA FINAL
 ═══════════════════════════════════════════════════════ -->
-<section class="slide" id="s12" data-theme="light">
-  <div class="slide-inner">
-
-    <p class="eyebrow r">¿Es este tu perfil?</p>
-
-    <h2 class="r">Trabajamos con un perfil específico.</h2>
-
-    <div class="icp-body r">
-
-      <div class="check-list">
-        <div class="check-item">
-          <div class="check-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <span>Empresas con equipo de marketing interno</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <span>Ad spend mensual de $5,000 USD en adelante</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <span>Director de Marketing, CMO o VP de Growth</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <span>Mercados LATAM Tier 1 (México, Colombia, Chile, Argentina) + USA</span>
-        </div>
-      </div>
-
-      <div class="icp-card">
-        <p class="tag">¿Por qué este filtro?</p>
-        <p>
-          Trabajamos con empresas donde el ad spend es suficientemente significativo para que un cambio
-          estratégico tenga impacto real y medible en el negocio — no en presupuestos donde el margen
-          no justifica un equipo senior dedicado.
-        </p>
-        <blockquote>
-          "Si no cumples exactamente este perfil, cuéntanos igual. Si podemos ayudarte, lo hacemos.
-          Si no, te orientamos sin costo."
-        </blockquote>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 13 — CTA FINAL
-═══════════════════════════════════════════════════════ -->
-<section class="slide" id="s13" data-theme="dark">
+<section class="slide" id="s12" data-theme="dark">
   <div class="slide-inner" style="align-items:center;">
     <div class="inner">
 

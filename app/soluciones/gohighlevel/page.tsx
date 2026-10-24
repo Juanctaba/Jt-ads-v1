@@ -15,9 +15,10 @@ import { breadcrumb, faqPage, service, toJsonLd, type Crumb } from "@/lib/schema
 const PATH = "/soluciones/gohighlevel";
 const URL = `https://jtads.com${PATH}`;
 
-const SEO_TITLE = "GoHighLevel en español: qué es, precios y 30 días gratis";
-// El precio sale de GHL_PRICING (fuente oficial, con fecha de revisión).
-const SEO_DESC = `Qué es GoHighLevel, cuánto cuesta (desde ${"$"}${GHL_PRICING.planes[0].mensual} USD al mes) y cómo activar la prueba gratis de 30 días con nuestro enlace y bootcamp en español. Guía para LATAM.`;
+const SEO_TITLE = "GoHighLevel en español: qué es, precios y cuándo usarlo";
+// Intención informativa: sin oferta ni afiliado en title/meta (ver diagnóstico del 23 oct 2026).
+const SEO_DESC =
+  "Qué es GoHighLevel (HighLevel), cuánto cuesta en USD, qué incluye y cuándo no conviene. Guía en español para agencias y empresas de Latinoamérica.";
 
 export const metadata: Metadata = {
   title: SEO_TITLE,
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
     url: URL,
   },
+  twitter: { card: "summary_large_image", title: SEO_TITLE, description: SEO_DESC },
 };
 
 const crumbs: Crumb[] = [
@@ -169,11 +171,7 @@ export default function GoHighLevelPage() {
               <strong>GoHighLevel (también llamado HighLevel) es un software que combina CRM, automatización de
               marketing, embudos de venta, calendarios y una bandeja de mensajería unificada en una sola plataforma.</strong>{" "}
               Su propuesta es reemplazar cinco o seis herramientas sueltas por una cuenta con tarifa mensual plana y
-              usuarios ilimitados. Puedes probarla gratis 30 días, con el bootcamp de implementación en español,{" "}
-              <AffiliateLink slug="gohighlevel" dataCta="ghl-afiliado-intro" className="text-[var(--accent)] font-semibold hover:underline">
-                con nuestro enlace
-              </AffiliateLink>{" "}
-              (enlace de afiliado: JT Ads recibe una comisión sin costo extra para ti).
+              usuarios ilimitados.
             </p>
             <p className="text-[var(--text-secondary)] text-lg leading-relaxed mb-6">
               Se diseñó para agencias que gestionan varios clientes, por eso organiza todo en sub-cuentas: cada negocio
@@ -284,13 +282,13 @@ export default function GoHighLevelPage() {
                 locales a servicios digitales que apliquen en tu país.
               </p>
               <p>
-                <strong className="text-[var(--text-primary)]">Prueba gratuita.</strong> HighLevel ofrece una prueba
-                estándar de {GHL_PRICING.pruebaEstandarDias} días. Con nuestro enlace de afiliado la prueba es de{" "}
-                {ghl.oferta.toLowerCase()}{" "}
-                (<AffiliateLink slug="gohighlevel" dataCta="ghl-afiliado-precios" className="text-[var(--accent)] font-semibold hover:underline">
-                  ver la oferta
-                </AffiliateLink>
-                ; JT Ads recibe una comisión sin costo adicional para ti).
+                <strong className="text-[var(--text-primary)]">Prueba gratuita.</strong> Prueba oficial de{" "}
+                {GHL_PRICING.pruebaEstandarDias} días; con nuestro enlace, 30 días. El enlace lleva además al bootcamp de
+                implementación en español, un programa aparte de HighLevel que no forma parte del plan:{" "}
+                <AffiliateLink slug="gohighlevel" dataCta="ghl-afiliado-precios" className="text-[var(--accent)] font-semibold hover:underline">
+                  probar GoHighLevel 30 días con nuestro enlace
+                </AffiliateLink>{" "}
+                (enlace de afiliado: JT Ads recibe una comisión sin costo adicional para ti).
               </p>
             </div>
           </div>
@@ -377,8 +375,8 @@ export default function GoHighLevelPage() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#727687] mb-3">Por tu cuenta</p>
                 <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Probar GoHighLevel directo</h3>
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
-                  Si tienes tiempo y ganas de aprender la plataforma, empieza con la prueba gratuita y el bootcamp de
-                  implementación de HighLevel. Con nuestro enlace tienes {ghl.oferta.toLowerCase()}, en lugar de la prueba
+                  Si tienes tiempo y ganas de aprender la plataforma, empieza con la prueba gratuita y, si quieres, el
+                  bootcamp de implementación de HighLevel, que es un programa aparte. Con nuestro enlace tienes {ghl.oferta.toLowerCase()}, en lugar de la prueba
                   estándar de {GHL_PRICING.pruebaEstandarDias} días.
                 </p>
                 <p className="text-xs text-[#727687] leading-relaxed mb-6 bg-[#f6f3f2] rounded-lg p-4">

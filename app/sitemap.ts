@@ -12,7 +12,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/soluciones", "2026-09-14", 0.9],
   ["/soluciones/automatizacion-de-procesos", "2026-09-14", 0.8],
   ["/soluciones/agentes-de-ia", "2026-09-29", 0.8],
-  ["/soluciones/gohighlevel", "2026-09-14", 0.8],
+  ["/soluciones/gohighlevel", "2026-10-24", 0.8],
   ["/soluciones/hubspot", "2026-09-14", 0.8],
   ["/soluciones/stack", "2026-09-14", 0.6],
   ["/agencia-google-ads-latam", "2026-10-04", 0.9],
@@ -49,7 +49,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/google-ads-saas-b2b-latam", "2026-09-14", 0.7],
   ["/blog/leads-basura-meta-ads", "2026-10-04", 0.7],
   ["/sistema", "2026-10-04", 0.8],
-  ["/crm-agencia-ads", "2026-09-13", 0.8],
+  ["/crm-agencia-ads", "2026-10-24", 0.8],
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

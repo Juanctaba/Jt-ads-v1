@@ -108,9 +108,17 @@ export default function PostLimites() {
         <div className="max-w-3xl mx-auto">
 
           <p className={P_}>
-            Hay dos conversaciones distintas sobre límites en WhatsApp y se mezclan todo el tiempo. Una es la de la
-            aplicación de WhatsApp Business, la que se instala en un teléfono. La otra es la de la API, que tiene
-            límites documentados, escalones definidos y una forma concreta de subirlos.
+            El límite de mensajes de WhatsApp Business API es el número máximo de usuarios únicos a los que tu
+            empresa puede escribir fuera de la ventana de atención al cliente en 24 horas móviles. Según la{" "}
+            <a
+              href="https://developers.facebook.com/docs/whatsapp/messaging-limits"
+              target="_blank" rel="noopener noreferrer"
+              className="text-[#0066ff] font-semibold hover:underline"
+            >
+              documentación oficial de Meta
+            </a>
+            , un portafolio comercial nuevo empieza en 250 y puede subir a 2.000, 10.000, 100.000 o ilimitado. No hay
+            que confundirlo con la aplicación de WhatsApp Business, la que se instala en un teléfono.
           </p>
           <p className={P_}>
             Este artículo es sobre la segunda, porque es la que está publicada y la que puedes planificar.

@@ -1,0 +1,527 @@
+{
+ "exportFormatVersion": 2,
+ "exportTime": "2026-10-28 08:00:00",
+ "containerVersion": {
+  "path": "accounts/0/containers/0/versions/0",
+  "accountId": "0",
+  "containerId": "0",
+  "containerVersionId": "0",
+  "name": "v17 select_cta + generate_lead por envio de formulario (SIN PUBLICAR)",
+  "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16. Paso manual obligatorio: pausar la etiqueta GA4 existente con evento generate_lead por clic (tag_id 18, activador CE generate_lead).",
+  "container": {
+   "path": "accounts/0/containers/0",
+   "accountId": "0",
+   "containerId": "0",
+   "name": "jtads.com (GTM-W3MS2WPT)",
+   "publicId": "GTM-W3MS2WPT",
+   "usageContext": [
+    "WEB"
+   ]
+  },
+  "builtInVariable": [
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "type": "PAGE_PATH",
+    "name": "Page Path"
+   }
+  ],
+  "variable": [
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "variableId": "101",
+    "name": "DLV v17 - cta_id",
+    "type": "v",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "template",
+      "key": "name",
+      "value": "cta_id"
+     },
+     {
+      "type": "integer",
+      "key": "dataLayerVersion",
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "variableId": "102",
+    "name": "DLV v17 - cta_destino",
+    "type": "v",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "template",
+      "key": "name",
+      "value": "cta_destino"
+     },
+     {
+      "type": "integer",
+      "key": "dataLayerVersion",
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "variableId": "103",
+    "name": "DLV v17 - link_url",
+    "type": "v",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "template",
+      "key": "name",
+      "value": "link_url"
+     },
+     {
+      "type": "integer",
+      "key": "dataLayerVersion",
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "variableId": "104",
+    "name": "DLV v17 - page_path",
+    "type": "v",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "template",
+      "key": "name",
+      "value": "page_path"
+     },
+     {
+      "type": "integer",
+      "key": "dataLayerVersion",
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "variableId": "105",
+    "name": "DLV v17 - form_id",
+    "type": "v",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "template",
+      "key": "name",
+      "value": "form_id"
+     },
+     {
+      "type": "integer",
+      "key": "dataLayerVersion",
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "variableId": "106",
+    "name": "DLV v17 - event_id",
+    "type": "v",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "setDefaultValue",
+      "value": "false"
+     },
+     {
+      "type": "template",
+      "key": "name",
+      "value": "event_id"
+     },
+     {
+      "type": "integer",
+      "key": "dataLayerVersion",
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "variableId": "107",
+    "name": "LUT v17 - form por form_id",
+    "type": "smm",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "parameter": [
+     {
+      "type": "template",
+      "key": "input",
+      "value": "{{DLV v17 - form_id}}"
+     },
+     {
+      "type": "boolean",
+      "key": "setDefaultValue",
+      "value": "true"
+     },
+     {
+      "type": "template",
+      "key": "defaultValue",
+      "value": "otro"
+     },
+     {
+      "type": "list",
+      "key": "map",
+      "list": [
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "key",
+          "value": "ExDq9WBVQ74hXB8YBmkH"
+         },
+         {
+          "type": "template",
+          "key": "value",
+          "value": "diagnostico-en-vivo"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "key",
+          "value": "azNkDnlHWDexRIOMjNnr"
+         },
+         {
+          "type": "template",
+          "key": "value",
+          "value": "diagnostico-operacion"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "key",
+          "value": "D4pmggg9CUScHXgsEcpg"
+         },
+         {
+          "type": "template",
+          "key": "value",
+          "value": "contacto"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "trigger": [
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "triggerId": "201",
+    "name": "CE v17 - select_cta",
+    "type": "CUSTOM_EVENT",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "customEventFilter": [
+     {
+      "type": "EQUALS",
+      "parameter": [
+       {
+        "type": "template",
+        "key": "arg0",
+        "value": "{{_event}}"
+       },
+       {
+        "type": "template",
+        "key": "arg1",
+        "value": "select_cta"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "triggerId": "202",
+    "name": "CE v17 - jtads_form_success",
+    "type": "CUSTOM_EVENT",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "customEventFilter": [
+     {
+      "type": "EQUALS",
+      "parameter": [
+       {
+        "type": "template",
+        "key": "arg0",
+        "value": "{{_event}}"
+       },
+       {
+        "type": "template",
+        "key": "arg1",
+        "value": "jtads_form_success"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "tag": [
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "tagId": "301",
+    "name": "GA4 - Evento - select_cta (v17)",
+    "type": "gaawe",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "firingTriggerId": [
+     "201"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "sendEcommerceData",
+      "value": "false"
+     },
+     {
+      "type": "boolean",
+      "key": "enhancedUserId",
+      "value": "false"
+     },
+     {
+      "type": "list",
+      "key": "eventSettingsTable",
+      "list": [
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "cta_id"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{DLV v17 - cta_id}}"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "cta_destino"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{DLV v17 - cta_destino}}"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "link_url"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{DLV v17 - link_url}}"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "page_path"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{DLV v17 - page_path}}"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "template",
+      "key": "eventName",
+      "value": "select_cta"
+     },
+     {
+      "type": "template",
+      "key": "measurementIdOverride",
+      "value": "G-CCJX8R2MC9"
+     }
+    ]
+   },
+   {
+    "accountId": "0",
+    "containerId": "0",
+    "tagId": "302",
+    "name": "GA4 - Evento - generate_lead (envío de formulario, v17)",
+    "type": "gaawe",
+    "notes": "Medición (Ada), 28-oct-2026. PR select_cta / generate_lead por envío de formulario. NO PUBLICAR sin OK de Juan. Rollback: volver a la versión 16.",
+    "firingTriggerId": [
+     "202"
+    ],
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "parameter": [
+     {
+      "type": "boolean",
+      "key": "sendEcommerceData",
+      "value": "false"
+     },
+     {
+      "type": "boolean",
+      "key": "enhancedUserId",
+      "value": "false"
+     },
+     {
+      "type": "list",
+      "key": "eventSettingsTable",
+      "list": [
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "form_id"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{DLV v17 - form_id}}"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "form"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{LUT v17 - form por form_id}}"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "page_path"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{Page Path}}"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "lead_source"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "form_submit"
+         }
+        ]
+       },
+       {
+        "type": "map",
+        "map": [
+         {
+          "type": "template",
+          "key": "parameter",
+          "value": "event_id"
+         },
+         {
+          "type": "template",
+          "key": "parameterValue",
+          "value": "{{DLV v17 - event_id}}"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "template",
+      "key": "eventName",
+      "value": "generate_lead"
+     },
+     {
+      "type": "template",
+      "key": "measurementIdOverride",
+      "value": "G-CCJX8R2MC9"
+     }
+    ]
+   }
+  ]
+ }
+}

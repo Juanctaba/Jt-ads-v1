@@ -414,7 +414,7 @@ export default function PostPmaxVsAdvantage() {
           </div>
 
           <p className="text-sm text-[#727687] leading-relaxed">
-            {/* PENDIENTE JUAN: confirmar «$500k+ USD/mes gestionados en ads» y «Meta Partner» antes de publicar. */}
+            {/* PENDIENTE JUAN: confirmar «$500k+ USD/mes gestionados en ads» antes de publicar; si no lo confirma, se quita del texto. */}
             Soy Juan Tabares. JT Ads es Google Partner y Meta Partner, con $500k+ USD/mes gestionados en ads.
           </p>
         </div>

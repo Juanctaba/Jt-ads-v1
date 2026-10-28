@@ -48,6 +48,8 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/performance-max-como-funciona-latam", "2026-09-14", 0.7],
   ["/blog/google-ads-saas-b2b-latam", "2026-09-14", 0.7],
   ["/blog/leads-basura-meta-ads", "2026-10-04", 0.7],
+  // TODO(merge): lastmod = día real del merge a producción.
+  ["/blog/performance-max-vs-advantage-plus", "2026-10-28", 0.7],
   ["/sistema", "2026-10-04", 0.8],
   ["/crm-agencia-ads", "2026-10-24", 0.8],
 ];

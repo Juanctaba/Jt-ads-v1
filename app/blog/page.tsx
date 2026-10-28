@@ -22,6 +22,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "performance-max-vs-advantage-plus",
+    title: "Performance Max vs Advantage+: en qué se diferencian y cuál te conviene",
+    excerpt:
+      "Performance Max y Advantage+ comparten una idea y casi nada más. Qué es cada una, qué controlas y cuál te conviene según tu negocio.",
+    category: "Performance Max",
+    date: "Octubre 2026",
+    readTime: "8 min",
+  },
+  {
     slug: "cuanto-cobra-agencia-meta-ads-latam",
     title: "¿Cuánto cobra una agencia de Meta Ads en LATAM? De qué depende el precio, país por país",
     excerpt:

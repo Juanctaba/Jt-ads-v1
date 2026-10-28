@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "¿Puedo usar Performance Max y Advantage+ al mismo tiempo?",
-    a: "Sí, son plataformas distintas y no se pisan entre sí. El riesgo es otro: si activas las dos a la vez en una cuenta nueva, no sabrás cuál generó el resultado. Empieza por una, mide contra tu CRM y suma la segunda cuando la primera esté estable.",
+    a: "Sí, son plataformas distintas. Cada una reporta sus propias conversiones, así que lo útil es comparar los resultados de las dos contra tu CRM.",
   },
   {
     q: "¿Qué puedo controlar si uso automatización?",
@@ -108,6 +108,15 @@ const comparison: { dim: string; pmax: string; adv: string }[] = [
   },
 ];
 
+const SOURCES: { href: string; label: string }[] = [
+  { href: "https://support.google.com/google-ads/answer/10724817?hl=es", label: "Google Ads Help: Acerca de las campañas Máximo rendimiento" },
+  { href: "https://blog.google/products/ads-commerce/channel-performance-reporting-coming-to-performance-max/", label: "Google Ads & Commerce Blog: Channel performance reporting coming to Performance Max" },
+  { href: "https://www.facebook.com/business/help/2486309305148646", label: "Meta Business Help Center: Meta Advantage+ features" },
+  { href: "https://www.facebook.com/business/help/1362234537597370", label: "Meta Business Help Center: About Advantage+ sales campaigns" },
+  { href: "https://www.facebook.com/business/help/1438478636941047", label: "Meta Business Help Center: Set audience and placement controls for your ad account" },
+  { href: "https://www.facebook.com/business/ads/meta-advantage/advantage-plus-shopping-ads", label: "Meta for Business: Advantage+ shopping campaigns (aviso de renombre a Advantage+ sales campaigns)" },
+];
+
 const P_ = "text-[#424656] leading-relaxed mb-6 text-base";
 const H2 = "font-bold text-2xl text-[#1c1b1b] mt-12 mb-4";
 const H3 = "font-bold text-lg text-[#1c1b1b] mt-8 mb-3";
@@ -150,7 +159,7 @@ export default function PostPmaxVsAdvantage() {
             ← Volver al blog
           </Link>
           <span className="inline-block mb-5 px-3 py-1 rounded-full bg-[#9bb4fe]/20 text-[#9bb4fe] text-xs font-semibold uppercase tracking-wide">
-            Comparativas
+            Performance Max
           </span>
           <h1 className="font-bold text-white text-3xl md:text-4xl leading-tight mb-6">{H1}</h1>
           <p className="text-[#727687] text-sm">Octubre 2026 · 8 min de lectura</p>
@@ -170,11 +179,11 @@ export default function PostPmaxVsAdvantage() {
             <Link href="/blog/performance-max-como-funciona-latam" className={A}>
               Performance Max en LATAM: cómo funciona y cuándo realmente conviene usarlo
             </Link>
-            . Si te interesa qué viene después de ambas, lee{" "}
+            . Si te interesa{" "}
             <Link href="/blog/hiper-automatizacion-campanas-mas-alla-performance-max" className={A}>
-              Más allá de Performance Max y Advantage+
+              qué viene después: AI Max, Advantage+ Audience y niveles de automatización
             </Link>
-            . Aquí vamos a lo práctico: qué es cada una, cuál encaja con tu negocio y cómo saber si está funcionando.
+            , tienes ese análisis aparte. Aquí vamos a lo práctico: qué es cada una, cuál encaja con tu negocio y cómo saber si está funcionando.
           </p>
 
           <div className="bg-[#f6f3f2] rounded-xl p-6 my-8">
@@ -296,24 +305,28 @@ export default function PostPmaxVsAdvantage() {
             aclara que ese puntaje no refleja tu rendimiento real ni futuro.
           </p>
           <p className={P_}>
-            <strong className="text-[#1c1b1b]">Sobre el 9%.</strong> Meta publica que los anunciantes que usaron
-            Advantage+ sales campaigns vieron, en promedio, una mejora de 9% en el costo por conversión. Es un promedio
-            de Meta sobre sus propios anunciantes. No es una promesa para tu cuenta, y la tuya puede quedar por encima o
-            por debajo.
-          </p>
-          <p className={P_}>
             <strong className="text-[#1c1b1b]">Mi regla:</strong> la plataforma te dice qué pasó dentro de la
             plataforma. Tu CRM te dice si eso fue dinero. Si optimizas al costo por lead y nunca bajas a «lead
             calificado» o «venta», el algoritmo aprende a conseguir formularios, no clientes. Eso pasa en las dos. Si
             quieres ver por qué el CPL de plataforma suele mentir, lee{" "}
             <Link href="/blog/tracking-server-side-cpl-plataforma" className={A}>
-              por qué el CPL de tu plataforma miente y cómo solucionarlo
+              CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM
             </Link>
             .
           </p>
 
           <h2 className={H2}>Cuál elegir según tu caso</h2>
-          <p className={P_}>Esta es mi posición, sin humo:</p>
+          <p className={P_}>
+            Esta es mi posición, sin humo. Si prefieres que lo veamos en tu cuenta, así trabajamos{" "}
+            <Link href="/agencia-google-ads-latam" className={A}>
+              Google Ads
+            </Link>{" "}
+            y{" "}
+            <Link href="/agencia-meta-ads-latam" className={A}>
+              Meta Ads
+            </Link>
+            :
+          </p>
           <ol className="space-y-3 mb-6 pl-5 list-decimal">
             <li className={LI}>
               <strong className="text-[#1c1b1b]">E-commerce con catálogo.</strong> Prueba las dos. Performance Max
@@ -327,8 +340,8 @@ export default function PostPmaxVsAdvantage() {
               antes de escalar.
             </li>
             <li className={LI}>
-              <strong className="text-[#1c1b1b]">Cuenta nueva o sin historial.</strong> No actives las dos a la vez. Si
-              lo haces, no sabrás cuál funcionó. Empieza por una, mide contra tu CRM y suma la otra después.
+              <strong className="text-[#1c1b1b]">Cuenta nueva o sin historial.</strong> Define desde el inicio qué
+              conversión vas a medir en tu CRM, porque cada plataforma reporta las suyas.
             </li>
             <li className={LI}>
               <strong className="text-[#1c1b1b]">Necesitas control fino de palabras clave.</strong> Mantén Búsqueda por
@@ -374,6 +387,17 @@ export default function PostPmaxVsAdvantage() {
             ))}
           </div>
 
+          <h2 className={H2}>Fuentes</h2>
+          <ul className="space-y-2 mb-10 pl-5 list-disc">
+            {SOURCES.map((x) => (
+              <li key={x.href} className="text-sm leading-relaxed text-[#424656]">
+                <a href={x.href} target="_blank" rel="noopener noreferrer" className={A}>
+                  {x.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
           <div className="bg-[#f6f3f2] rounded-xl p-8 my-8 text-center">
             <p className="text-[#1c1b1b] font-bold text-lg mb-3">¿Tu cuenta debería usar Performance Max o Advantage+?</p>
             <p className="text-[#424656] text-sm mb-6 max-w-md mx-auto leading-relaxed">
@@ -390,7 +414,8 @@ export default function PostPmaxVsAdvantage() {
           </div>
 
           <p className="text-sm text-[#727687] leading-relaxed">
-            Soy Juan Tabares. JT Ads es Google Partner y Meta Partner, y gestionamos $500k+ USD/mes en ads.
+            {/* PENDIENTE JUAN: confirmar «$500k+ USD/mes gestionados en ads» y «Meta Partner» antes de publicar. */}
+            Soy Juan Tabares. JT Ads es Google Partner y Meta Partner, con $500k+ USD/mes gestionados en ads.
           </p>
         </div>
       </article>
@@ -433,7 +458,7 @@ export default function PostPmaxVsAdvantage() {
             >
               <p className="text-xs text-[#727687] mb-1 uppercase tracking-wide font-semibold">Automatización</p>
               <p className="text-sm font-semibold text-[#1c1b1b]">
-                Más allá de Performance Max y Advantage+: la próxima frontera de la autonomía en campañas
+                Qué viene después: AI Max, Advantage+ Audience y niveles de automatización
               </p>
             </Link>
           </div>

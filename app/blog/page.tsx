@@ -26,7 +26,7 @@ const posts = [
     title: "Performance Max vs Advantage+: en qué se diferencian y cuál te conviene",
     excerpt:
       "Performance Max y Advantage+ comparten una idea y casi nada más. Qué es cada una, qué controlas y cuál te conviene según tu negocio.",
-    category: "Comparativas",
+    category: "Performance Max",
     date: "Octubre 2026",
     readTime: "8 min",
   },

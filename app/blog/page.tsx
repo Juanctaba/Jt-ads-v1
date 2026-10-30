@@ -22,6 +22,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "chatgpt-ads",
+    title: "ChatGPT Ads: qué es, cuánto cuesta y si da leads (lo probé en 3 países)",
+    excerpt:
+      "Qué es ChatGPT Ads, cómo funciona y cuánto cuesta. Qué pasó con los leads en una semana de prueba real y cómo medirlos hasta el CRM.",
+    category: "Automatización",
+    date: "Octubre 2026",
+    readTime: "18 min",
+  },
+  {
     slug: "cuanto-cobra-agencia-meta-ads-latam",
     title: "¿Cuánto cobra una agencia de Meta Ads en LATAM? De qué depende el precio, país por país",
     excerpt:

@@ -17,7 +17,10 @@ const DATE_MODIFIED = "2026-10-30T00:00:00-05:00";
 const DATE_VISIBLE = "30 de octubre de 2026";
 const SOURCES_CONSULTED = "29 de octubre de 2026";
 const BIO_URL = "https://www.linkedin.com/in/juan-tabares-b1272b58/";
-const IMAGE_URL = "https://jtads.com/opengraph-image";
+// Imagen OG propia del post (public/chatgpt-ads-og-1200x630.png, 1200x630).
+// URL absoluta a jtads.com solo para este post; no depende de metadataBase.
+const IMAGE_URL = "https://jtads.com/chatgpt-ads-og-1200x630.png";
+const IMAGE_ALT = "ChatGPT Ads: qué es, cuánto cuesta y si da leads. Lo probé en 3 países. JT Ads";
 
 export const metadata: Metadata = {
   title: SEO_TITLE,
@@ -26,8 +29,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: SEO_TITLE,
     description: DESC,
-    images: ["/opengraph-image"],
+    images: [{ url: IMAGE_URL, width: 1200, height: 630, alt: IMAGE_ALT }],
     url: URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: DESC,
+    images: [{ url: IMAGE_URL, width: 1200, height: 630, alt: IMAGE_ALT }],
   },
 };
 

@@ -98,7 +98,7 @@ export default function OGImage() {
             fontWeight: 600,
           }}
         >
-          ads.juantabares.co
+          jtads.com
         </div>
       </div>
     ),

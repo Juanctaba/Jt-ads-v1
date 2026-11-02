@@ -19,7 +19,7 @@ const DATE_PUBLISHED = "2026-11-05T00:00:00-05:00"; // TODO(merge)
 const DATE_MODIFIED = "2026-11-05T00:00:00-05:00"; // TODO(merge)
 const DATE_ISO = "2026-11-05"; // TODO(merge)
 const DATE_VISIBLE = "5 de noviembre de 2026"; // TODO(merge)
-const SOURCES_CONSULTED = "1 de noviembre de 2026";
+const SOURCES_CONSULTED = "2 de noviembre de 2026";
 const BIO_URL = "https://www.linkedin.com/in/juan-tabares-b1272b58/";
 // Imagen OG: la de marca (app/opengraph-image.tsx), URL absoluta a jtads.com.
 const IMAGE_URL = "https://jtads.com/opengraph-image";
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "¿Qué es una buena tasa de conversión de leads?",
-    a: "No existe un número bueno para todos: depende del negocio, del canal y de cómo definas «lead». Sin datos propios medidos en el CRM, cualquier porcentaje que veas en internet es una suposición. Mide tu tasa entre etapas durante varias semanas, por campaña, y compárate contigo mismo, no contra un promedio ajeno.",
+    a: "No existe un número bueno para todos: depende del negocio, del canal y de cómo definas «lead». Sin datos propios medidos en el CRM, un porcentaje que veas en internet puede no aplicar a tu caso. Mide tu tasa entre etapas durante varias semanas, por campaña, y compárate contigo mismo, no contra un promedio ajeno.",
   },
   {
     q: "¿Cómo se calcula la tasa de conversión de leads a ventas?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: "¿Qué etapa del embudo conviene arreglar primero?",
-    a: "Arregla primero la etapa que más leads pierde y que depende de ti. Si nadie mide cuánto tardan en contactar al lead, empieza por «contactado»: suele ser la fuga más barata de corregir. Cambia una sola cosa a la vez y compárala por cohorte, para saber si el cambio funcionó o fue casualidad.",
+    a: "Arregla primero la etapa que más leads pierde y que depende de ti. Si nadie mide cuánto tardan en contactar al lead, empieza por «contactado»: suele ser un buen punto de partida. Cambia una sola cosa a la vez y compárala por cohorte, para saber si el cambio funcionó o fue casualidad.",
   },
   {
     q: "¿Esto sirve si no uso Meta Ads?",
@@ -173,7 +173,7 @@ export default function PostTasaConversionLeads() {
       <article className="bg-white py-16 px-6">
         <div className="max-w-3xl mx-auto">
           <p className={P_}>
-            Recibes leads y las ventas no suben. La reacción de siempre es tocar el anuncio, la landing o el color del botón. Casi nunca es ahí.
+            Recibes leads y las ventas no suben. La reacción de siempre es tocar el anuncio, la landing o el color del botón. Muchas veces no es ahí.
           </p>
           <p className={P_}>«Tasa de conversión de leads» son dos números distintos, y se confunden:</p>
           <ol className={OL}>
@@ -185,7 +185,7 @@ export default function PostTasaConversionLeads() {
             </li>
           </ol>
           <p className={P_}>
-            La plataforma de anuncios solo ve el primero. El segundo vive en tu CRM. Este post es sobre cómo leer ese segundo número, etapa por etapa, para saber qué arreglar.
+            Por defecto, la plataforma de anuncios solo ve el primero. El segundo vive en tu CRM. Este post es sobre cómo leer ese segundo número, etapa por etapa, para saber qué arreglar.
           </p>
           <p className={P_}>
             Aquí no hablo de formularios ni de cómo filtrar leads antes de que entren. Eso está en{" "}
@@ -218,7 +218,7 @@ export default function PostTasaConversionLeads() {
 
           <h2 className={H2}>Las 4 etapas que hay que medir en el CRM</h2>
           <p className={P_}>
-            Todo CRM, el que uses (HubSpot, otro), puede tener estas cuatro etapas. Si tu pipeline tiene más, agrúpalas en estas.
+            Cualquier CRM, sea HubSpot u otro, puede tener estas cuatro etapas. Si tu pipeline tiene más, agrúpalas en estas.
           </p>
           <div className={TABLE_WRAP}>
             <table className="w-full min-w-[560px] text-left border-collapse">
@@ -277,7 +277,7 @@ export default function PostTasaConversionLeads() {
 
           <h3 className={H3}>La fórmula por etapa</h3>
           <p className={P_}>
-            Tasa de una etapa = leads que pasaron a la siguiente ÷ leads que entraron a esa etapa × 100. Sácala por cohorte: los leads que entraron en la misma semana, seguidos hasta que cierran o se descartan. Mezclar cohortes distintas es la forma más común de leer mal el embudo.
+            Tasa de una etapa = leads que pasaron a la siguiente ÷ leads que entraron a esa etapa × 100. Sácala por cohorte: los leads que entraron en la misma semana, seguidos hasta que cierran o se descartan. Mezclar cohortes distintas es una forma común de leer mal el embudo.
           </p>
           <div className="bg-[#f6f3f2] rounded-xl p-6 my-8">
             <p className="text-[#424656] text-sm leading-relaxed mb-2">
@@ -390,7 +390,7 @@ export default function PostTasaConversionLeads() {
           </p>
           <ul className={UL}>
             <li>
-              <strong className={STRONG}>Meta</strong> documenta una integración para optimizar por una etapa de tu CRM, con requisitos propios. Está en la{" "}
+              <strong className={STRONG}>Meta</strong> documenta una integración para optimizar por una etapa de tu CRM, por ahora solo para anuncios de formulario instantáneo de Facebook e Instagram y con requisitos propios, como al menos 200 leads al mes. Está en la{" "}
               <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/conversion-leads-integration" target="_blank" rel="noopener noreferrer" className={A}>documentación oficial de Meta</a> y la resumo en{" "}
               <Link href="/blog/leads-basura-meta-ads" className={A}>devolverle a Meta las etapas del CRM</Link>.
             </li>
@@ -402,10 +402,10 @@ export default function PostTasaConversionLeads() {
           <p className={P_}>Los pasos técnicos van en otra guía. La documentación de Google cambió en 2026, así que no los copio aquí.</p>
 
           <h2 className={H2}>Cómo lo trabaja JT Ads</h2>
-          <p className={P_}>JT Ads es Partner de Google y Meta. Resultado que sí puedo decir: $500k+ USD/mes gestionados en ads.</p>
+          <p className={P_}>JT Ads es Partner de Google y Meta, con $500k+ USD/mes gestionados en ads.</p>
           <p className={P_}>
             Lo que hacemos con tu embudo: conectamos el anuncio con el CRM para que cada lead llegue con su fuente y campaña, y medimos la velocidad de contacto y el paso de lead a oportunidad. Lo ves en{" "}
-            <Link href="/sistema" className={A}>/sistema</Link> y en{" "}
+            <Link href="/sistema" className={A}>cómo funciona el sistema de JT Ads</Link> y en{" "}
             <Link href="/crm-agencia-ads" className={A}>el CRM para la operación de ads</Link>. Trabajamos{" "}
             <Link href="/agencia-google-ads-latam" className={A}>Google Ads</Link> y{" "}
             <Link href="/agencia-meta-ads-latam" className={A}>Meta Ads</Link> para LATAM.

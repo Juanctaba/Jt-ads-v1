@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     q: "¿Por qué mi plataforma de anuncios muestra muchas conversiones y casi no hay ventas?",
-    a: "Porque la plataforma cuenta el formulario enviado, no la venta. Esa conversión ocurre antes de que alguien contacte, califique o cierre al lead, y esas etapas solo las ve tu CRM. Un costo por conversión bajo puede convivir con cero ventas. Por eso conviene leer el embudo en el CRM, por campaña, hasta la venta.",
+    a: "Porque la plataforma cuenta el formulario enviado, no la venta. Esa conversión ocurre antes de que alguien contacte, califique o cierre al lead, y, por defecto, esas etapas solo las ve tu CRM. Un costo por conversión bajo puede convivir con cero ventas. Por eso conviene leer el embudo en el CRM, por campaña, hasta la venta.",
   },
   {
     q: "¿Qué etapa del embudo conviene arreglar primero?",
@@ -194,7 +194,7 @@ export default function PostTasaConversionLeads() {
 
           <h2 className={H2}>¿Qué es la tasa de conversión de leads?</h2>
           <p className={P_}>
-            En JT Ads medimos la tasa de conversión de leads en el CRM, no en la plataforma de anuncios: es el porcentaje de leads que pasa de una etapa a la siguiente (contactado, calificado, venta). La plataforma solo ve el formulario enviado; la venta ocurre después y solo el CRM la ve.
+            En JT Ads medimos la tasa de conversión de leads en el CRM, no en la plataforma de anuncios: es el porcentaje de leads que pasa de una etapa a la siguiente (contactado, calificado, venta). Por defecto, la plataforma solo ve el formulario enviado; la venta ocurre después y, sin integración, solo el CRM la ve.
           </p>
           <p className={P_}>
             Por eso una sola tasa global engaña. Una tasa baja de lead a venta no te dice si el lead nunca fue contactado, si fue contactado y no era para ti, o si era para ti y nadie le dio seguimiento. Son tres problemas con tres arreglos distintos.
@@ -203,9 +203,9 @@ export default function PostTasaConversionLeads() {
           <h2 className={H2}>Dos «tasas de conversión» que se confunden</h2>
           <h3 className={H3}>Qué ve la plataforma y qué no</h3>
           <p className={P_}>
-            Google Ads y Meta registran una conversión cuando alguien envía el formulario o hace la acción que configuraste. Ahí termina su visibilidad. No saben si el lead contestó el teléfono, si era el decisor, ni si compró.
+            Google Ads y Meta registran una conversión cuando alguien envía el formulario o hace la acción que configuraste. Por defecto, ahí termina su visibilidad: no saben si el lead contestó el teléfono, si era el decisor, ni si compró, a menos que tú les devuelvas esas etapas desde el CRM.
           </p>
-          <p className={P_}>Eso no es un defecto. Es el límite de lo que miden. El error es leerlo como si fuera venta.</p>
+          <p className={P_}>Eso no es un defecto. Es el límite de lo que miden sin esa integración. El error es leerlo como si fuera venta.</p>
           <h3 className={H3}>Por qué un CPL bajo puede convivir con cero ventas</h3>
           <p className={P_}>
             Un costo por lead bajo dice que el anuncio consiguió formularios baratos. No dice nada de lo que pasó con ellos. Si el lead se muere en la etapa de contacto, el CPL sigue viéndose bien y la venta no llega. La diferencia entre el CPL del panel y el costo real por lead que avanza la expliqué en{" "}
@@ -284,7 +284,7 @@ export default function PostTasaConversionLeads() {
               <strong className={STRONG}>Ejemplo con variables (sin números).</strong> A leads entran → B son contactados → C son calificados → D terminan en venta.
             </p>
             <p className="text-[#424656] text-sm leading-relaxed">
-              Lead → contactado: B ÷ A. Contactado → calificado: C ÷ B. Calificado → venta: D ÷ C. Global: D ÷ A. Multiplica cada cociente por 100 y lo ves en %. La etapa con el cociente más bajo es donde se te cae el lead, y la comparas contra tu propio histórico, no contra un rango de afuera. El panel de anuncios solo ve A.
+              Lead → contactado: B ÷ A. Contactado → calificado: C ÷ B. Calificado → venta: D ÷ C. Global: D ÷ A. Multiplica cada cociente por 100 y lo ves en %. La etapa con el cociente más bajo es donde se te cae el lead, y la comparas contra tu propio histórico, no contra un rango de afuera. Sin integración, el panel de anuncios solo ve A.
             </p>
           </div>
           <p className={P_}>

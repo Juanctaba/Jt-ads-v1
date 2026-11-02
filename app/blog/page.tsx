@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "como-mejorar-tasa-de-conversion-de-leads",
+    title: "Cómo mejorar la tasa de conversión de leads: mídela hasta la venta, no hasta el formulario",
+    excerpt:
+      "Tasa de conversión de leads medida en el CRM: lead, contactado, calificado y venta. Cómo ver en qué etapa se cae y qué arreglar primero.",
+    category: "Optimización",
+    // TODO(merge): fecha y orden definitivos al publicar (placeholder: nov 2026)
+    date: "Noviembre 2026",
+    readTime: "10 min",
+  },
+  {
     slug: "chatgpt-ads",
     title: "ChatGPT Ads: qué es, cuánto cuesta y si da leads (lo probé en 3 países)",
     excerpt:

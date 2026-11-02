@@ -27,8 +27,17 @@ const posts = [
     excerpt:
       "Performance Max y Advantage+ comparten una idea y casi nada más. Qué es cada una, qué controlas y cuál te conviene según tu negocio.",
     category: "Performance Max",
-    date: "Octubre 2026",
+    date: "Noviembre 2026",
     readTime: "8 min",
+  },
+  {
+    slug: "chatgpt-ads",
+    title: "ChatGPT Ads: qué es, cuánto cuesta y si da leads (lo probé en 3 países)",
+    excerpt:
+      "Qué es ChatGPT Ads, cómo funciona y cuánto cuesta. Qué pasó con los leads en una semana de prueba real y cómo medirlos hasta el CRM.",
+    category: "Automatización",
+    date: "Octubre 2026",
+    readTime: "18 min",
   },
   {
     slug: "cuanto-cobra-agencia-meta-ads-latam",

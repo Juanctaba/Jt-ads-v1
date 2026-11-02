@@ -11,12 +11,11 @@ const SEO_TITLE = "Performance Max vs Advantage+: cuál conviene a tu negocio";
 const DESC =
   "Performance Max (Google) y Advantage+ (Meta) no son lo mismo. Compara objetivos, controles y reportes, y decide dónde poner tu próximo dólar.";
 
-// TODO(merge): datePublished/dateModified se fijan el día del merge a producción.
-// Hoy llevan la fecha en que se abrió el PR (2026-10-28) como valor provisional;
-// Atlas/Dev Web los actualizan al día real del merge, igual que la fecha visible
-// ("Octubre 2026") y el lastmod de app/sitemap.ts.
-const DATE_PUBLISHED = "2026-10-28";
-const DATE_MODIFIED = "2026-10-28";
+// Fechas del día del merge a producción (2026-11-02). Si se cambian aquí, cambiar también
+// la fecha visible, el lastmod de app/sitemap.ts y la fecha de la entrada en /blog.
+const DATE_PUBLISHED = "2026-11-02T00:00:00-05:00";
+const DATE_MODIFIED = "2026-11-02T00:00:00-05:00";
+const DATE_VISIBLE = "2 de noviembre de 2026";
 
 export const metadata: Metadata = {
   title: SEO_TITLE,
@@ -162,7 +161,9 @@ export default function PostPmaxVsAdvantage() {
             Performance Max
           </span>
           <h1 className="font-bold text-white text-3xl md:text-4xl leading-tight mb-6">{H1}</h1>
-          <p className="text-[#727687] text-sm">Octubre 2026 · 8 min de lectura</p>
+          <p className="text-[#727687] text-sm">
+            <time dateTime="2026-11-02">{DATE_VISIBLE}</time> · 8 min de lectura
+          </p>
         </div>
       </section>
 

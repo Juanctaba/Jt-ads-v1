@@ -29,7 +29,7 @@ const posts = [
     category: "Optimización",
     // TODO(merge): fecha y orden definitivos al publicar (placeholder: nov 2026)
     date: "Noviembre 2026",
-    readTime: "11 min",
+    readTime: "10 min",
   },
   {
     slug: "chatgpt-ads",

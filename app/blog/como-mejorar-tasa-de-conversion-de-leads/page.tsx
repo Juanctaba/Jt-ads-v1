@@ -165,7 +165,7 @@ export default function PostTasaConversionLeads() {
             <a href={BIO_URL} target="_blank" rel="noopener noreferrer" className="text-[#9bb4fe] hover:underline">
               Juan Tabares
             </a>
-            , fundador de JT Ads · <time dateTime={DATE_ISO}>{DATE_VISIBLE}</time> · 11 min de lectura
+            , fundador de JT Ads · <time dateTime={DATE_ISO}>{DATE_VISIBLE}</time> · 10 min de lectura
           </p>
         </div>
       </section>

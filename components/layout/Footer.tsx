@@ -28,6 +28,8 @@ export default function Footer() {
               src="/google-partner-badge.svg"
               alt="Google Partner"
               style={{ height: "60px", width: "auto" }}
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

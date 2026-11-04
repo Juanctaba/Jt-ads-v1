@@ -505,7 +505,7 @@ export default function PostSegmentacionIdioma() {
 
           <h2 className={H2}>Cómo lo trabaja JT Ads</h2>
           <p className={P_}>
-            JT Ads es Google Partner. Resultado que sí puedo decir: $500k+ USD/mes gestionados en ads. No hay inversión
+            JT Ads es Google Partner y Meta Partner. Resultado que sí puedo decir: $500k+ USD/mes gestionados en ads. No hay inversión
             mínima.
           </p>
           <p className={P_}>
@@ -526,7 +526,7 @@ export default function PostSegmentacionIdioma() {
 
           <h2 className={H2}>Fuentes</h2>
           <p className="text-sm leading-relaxed text-[#424656] mb-4">
-            Consultadas el 4 de noviembre de 2026 (todas abiertas con WebFetch).
+            Consultadas el 4 de noviembre de 2026.
           </p>
           <p className="text-sm font-bold text-[#1c1b1b] mb-2">Oficiales de Google</p>
           <ul className="space-y-2 mb-6 pl-5 list-disc">

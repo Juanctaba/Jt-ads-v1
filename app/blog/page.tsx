@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "segmentacion-idioma-google-ads-cambios",
+    title: "Google Ads elimina la segmentación por idioma: qué hacer en campañas de español, portugués e inglés",
+    excerpt:
+      "Google Ads elimina la segmentación por idioma en Búsqueda desde finales de septiembre de 2026. Checklist para campañas en español, portugués e inglés.",
+    category: "Google Ads",
+    // TODO(merge): fecha provisional (4 nov 2026); poner el mes del merge si cambia.
+    date: "Noviembre 2026",
+    readTime: "9 min",
+  },
+  {
     slug: "performance-max-vs-advantage-plus",
     title: "Performance Max vs Advantage+: en qué se diferencian y cuál te conviene",
     excerpt:

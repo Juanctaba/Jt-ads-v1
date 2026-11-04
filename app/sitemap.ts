@@ -50,6 +50,8 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/google-ads-saas-b2b-latam", "2026-09-14", 0.7],
   ["/blog/leads-basura-meta-ads", "2026-10-04", 0.7],
   ["/blog/performance-max-vs-advantage-plus", "2026-11-02", 0.7],
+  // TODO(merge): lastmod provisional; poner la fecha real del merge (misma que DATE_* del post).
+  ["/blog/segmentacion-idioma-google-ads-cambios", "2026-11-04", 0.7],
   ["/sistema", "2026-10-04", 0.8],
   ["/crm-agencia-ads", "2026-10-24", 0.8],
 ];

@@ -22,6 +22,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "tiempo-de-respuesta-leads",
+    title: "El lead que no respondes en 5 minutos ya es de tu competencia",
+    excerpt:
+      "Qué dicen los estudios sobre el tiempo de respuesta a leads, por qué tu equipo no alcanza a contestar en 5 minutos y qué automatizar primero para lograrlo.",
+    category: "Automatización",
+    date: "Noviembre 2026",
+    readTime: "6 min",
+  },
+  {
     slug: "performance-max-vs-advantage-plus",
     title: "Performance Max vs Advantage+: en qué se diferencian y cuál te conviene",
     excerpt:

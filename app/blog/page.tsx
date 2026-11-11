@@ -22,6 +22,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "businesses-in-chatgpt",
+    title: "Businesses in ChatGPT: cómo reclamar tu negocio y qué te muestra Business Hub",
+    excerpt: "OpenAI ya deja reclamar un negocio elegible en ChatGPT (beta). Cómo verificarlo paso a paso, qué mide Business Hub y qué hacer si aún no puedes.",
+    category: "Automatización",
+    date: "Noviembre 2026",
+    readTime: "7 min",
+  },
+  {
     slug: "tiempo-de-respuesta-leads",
     title: "El lead que no respondes en 5 minutos ya es de tu competencia",
     excerpt:

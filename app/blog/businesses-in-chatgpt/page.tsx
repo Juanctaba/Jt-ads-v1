@@ -8,11 +8,9 @@ const URL = "https://jtads.com/blog/businesses-in-chatgpt";
 const SEO_TITLE = "Businesses in ChatGPT: cómo reclamar tu negocio";
 const H1_TEXT = "Businesses in ChatGPT: cómo reclamar tu negocio y qué te muestra Business Hub";
 const DESC =
-  "OpenAI ya deja reclamar tu negocio en ChatGPT (beta). Cómo verificarlo paso a paso, qué mide Business Hub y qué hacer si aún no puedes.";
+  "OpenAI ya deja reclamar un negocio elegible en ChatGPT (beta). Cómo verificarlo paso a paso, qué mide Business Hub y qué hacer si aún no puedes.";
 
-// Fecha de publicación: una sola constante para lo visible, el JSON-LD y el
-// lastmod de app/sitemap.ts (2026-11-11). Si el merge cae otro día, cambiar
-// aquí y también allí (hora Bogotá).
+// PENDIENTE: actualizar fechas (byline, JSON-LD, sitemap lastmod) el día del merge
 const DATE_PUBLISHED = "2026-11-11T00:00:00-05:00";
 const DATE_MODIFIED = "2026-11-11T00:00:00-05:00";
 const DATE_VISIBLE = "11 de noviembre de 2026";
@@ -44,11 +42,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "¿Qué es Businesses in ChatGPT?",
-    a: "Es la beta que OpenAI lanzó el 10 de noviembre de 2026 para que los negocios reclamen su ficha en ChatGPT desde Business Hub, actualicen sus datos y vean menciones, clics a su web y temas de descubrimiento. Los Business Agents hoy son solo para e-commerce y servicios en línea elegibles de EE. UU.",
+    a: "Es la beta que OpenAI lanzó el 10 de noviembre de 2026 para que los negocios elegibles reclamen su ficha en ChatGPT desde Business Hub, actualicen sus datos y vean menciones, clics a su web y temas de descubrimiento. Los Business Agents hoy son solo para e-commerce y servicios en línea elegibles de EE. UU.",
   },
   {
     q: "¿Cómo reclamo mi negocio en ChatGPT?",
-    a: "Abre Business Hub en la barra lateral de ChatGPT, busca tu negocio, elige la ficha y verifícala por teléfono, correo del negocio, registro TXT en tu dominio o Shopify. Cuando OpenAI aprueba el reclamo, verificas tu identidad con Persona para publicar cambios y ver métricas.",
+    a: "Abre Business Hub en la barra lateral de ChatGPT, busca tu negocio, elige la ficha y verifícala por teléfono, correo del negocio, registro TXT en tu dominio o Shopify. Cuando OpenAI aprueba el reclamo, verificas tu identidad con Persona para publicar cambios, ver métricas o crear un agente si tu negocio es elegible.",
   },
   {
     q: "¿Qué métricas muestra Business Hub?",
@@ -56,11 +54,11 @@ const faqs = [
   },
   {
     q: "¿Reclamar mi negocio hace que ChatGPT me recomiende más?",
-    a: "No. Según OpenAI, reclamarlo te deja gestionar tu información, pero no garantiza más visibilidad ni da control sobre las recomendaciones independientes de ChatGPT. La publicidad tampoco influye en esas respuestas.",
+    a: "No. Según OpenAI, reclamarlo te deja gestionar la información que das, pero no garantiza más visibilidad ni da control sobre las recomendaciones independientes de ChatGPT. La publicidad tampoco influye en esas respuestas. Reclamar, publicar un agente y anunciarse son pasos separados.",
   },
   {
     q: "¿Una agencia puede gestionar la ficha de mi negocio en ChatGPT?",
-    a: "Sí. El admin que reclamó el negocio puede dar acceso a una agencia desde Business Hub para gestionar el negocio o su agente. Cada persona entra con su propia cuenta de ChatGPT.",
+    a: "Sí. El admin que reclamó el negocio puede agregar compañeros y dar acceso a una agencia desde Business Hub para gestionar el negocio o su agente. Cada persona entra con su propia cuenta de ChatGPT. Si el negocio se reclamó en un espacio de trabajo, los invitados pueden necesitar ser miembros de ese espacio.",
   },
 ];
 
@@ -72,18 +70,29 @@ const schemaGraph = {
       "@id": "https://jtads.com/#organization",
       name: "JT Ads",
       url: "https://jtads.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://jtads.com/logo-blue.png",
+      },
     },
     {
       "@type": "WebPage",
       "@id": `${URL}#webpage`,
       url: URL,
-      name: SEO_TITLE,
+      name: H1_TEXT,
+      description: DESC,
       inLanguage: "es",
       breadcrumb: { "@id": `${URL}#breadcrumb` },
+      datePublished: DATE_PUBLISHED,
+      dateModified: DATE_MODIFIED,
     },
     {
       "@type": "BlogPosting",
-      headline: SEO_TITLE,
+      "@id": `${URL}#article`,
+      headline: H1_TEXT,
+      description: DESC,
+      inLanguage: "es",
+      mainEntityOfPage: { "@id": `${URL}#webpage` },
       author: {
         "@type": "Person",
         "@id": "https://jtads.com/#juan-tabares",
@@ -92,36 +101,33 @@ const schemaGraph = {
         url: BIO_URL,
         worksFor: { "@id": "https://jtads.com/#organization" },
       },
+      publisher: { "@id": "https://jtads.com/#organization" },
       datePublished: DATE_PUBLISHED,
       dateModified: DATE_MODIFIED,
-      mainEntityOfPage: { "@id": `${URL}#webpage` },
-      "@id": `${URL}#article`,
-      url: URL,
-      inLanguage: "es",
-      description: DESC,
       image: IMAGE_URL,
-      publisher: { "@id": "https://jtads.com/#organization" },
-      about: { "@type": "Thing", name: "Businesses in ChatGPT" },
+      citation: [
+        "https://openai.com/index/introducing-businesses-chatgpt/",
+        "https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt",
+        "https://www.reuters.com/5f374b32b07b/technology/openai-lets-businesses-claim-chatgpt-profiles-adds-ai-agents-us-e-commerce-firms-2026-11-10/",
+      ],
     },
     {
       "@type": "FAQPage",
+      "@id": `${URL}#faq`,
       mainEntity: faqs.map((f) => ({
         "@type": "Question",
         name: f.q,
         acceptedAnswer: { "@type": "Answer", text: f.a },
       })),
-      "@id": `${URL}#faq`,
-      inLanguage: "es",
-      isPartOf: { "@id": `${URL}#webpage` },
     },
     {
       "@type": "BreadcrumbList",
+      "@id": `${URL}#breadcrumb`,
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Inicio", item: "https://jtads.com" },
         { "@type": "ListItem", position: 2, name: "Blog", item: "https://jtads.com/blog" },
         { "@type": "ListItem", position: 3, name: "Businesses in ChatGPT", item: URL },
       ],
-      "@id": `${URL}#breadcrumb`,
     },
   ],
 };
@@ -163,9 +169,9 @@ export default function PostBusinessesInChatGPT() {
 
 <div className="bg-[#f6f3f2] rounded-xl p-6 my-8">
 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#727687] mb-3">Respuesta corta</p>
-<p className="text-[#424656] text-sm leading-relaxed">Businesses in ChatGPT es la beta que OpenAI lanzó el 10 de noviembre de 2026 para que un negocio reclame su ficha en ChatGPT desde Business Hub, la verifique y, tras validar su identidad con Persona, edite sus datos y vea menciones, clics a su web y temas de descubrimiento de los últimos 28 días. <sup className="text-xs"><a href="#fuente-1" className="text-[#0066ff] hover:underline" aria-label="Fuente 1">[1]</a></sup><sup className="text-xs"><a href="#fuente-2" className="text-[#0066ff] hover:underline" aria-label="Fuente 2">[2]</a></sup></p>
+<p className="text-[#424656] text-sm leading-relaxed">Businesses in ChatGPT es la beta que OpenAI lanzó el 10 de noviembre de 2026 para que un negocio elegible reclame su ficha en ChatGPT desde Business Hub, la verifique y, tras validar su identidad con Persona, edite sus datos y vea menciones, clics a su web y temas de descubrimiento de los últimos 28 días. <sup className="text-xs"><a href="#fuente-1" className="text-[#0066ff] hover:underline" aria-label="Fuente 1">[1]</a></sup><sup className="text-xs"><a href="#fuente-2" className="text-[#0066ff] hover:underline" aria-label="Fuente 2">[2]</a></sup></p>
 </div>
-<p className={P_}>Hasta el 10 de noviembre de 2026, saber si ChatGPT te recomendaba era pura estimación. Con Businesses in ChatGPT, OpenAI abre una vía oficial para gestionar tu ficha y ver datos agregados de cómo te encuentran. <sup className="text-xs"><a href="#fuente-1" className="text-[#0066ff] hover:underline" aria-label="Fuente 1">[1]</a></sup> En JT Ads estamos reclamando la ficha de jtads.com y la de Omnix. Te cuento cómo se hace y qué haría yo con eso.</p>
+<p className={P_}><strong className="text-[#1c1b1b]">Mi lectura, marcada como opinión:</strong> hasta el 10 de noviembre de 2026, saber si ChatGPT te recomendaba era pura estimación. Con Businesses in ChatGPT, OpenAI abre una vía oficial para gestionar tu ficha y ver datos agregados de cómo te encuentran. <sup className="text-xs"><a href="#fuente-1" className="text-[#0066ff] hover:underline" aria-label="Fuente 1">[1]</a></sup> Te cuento cómo se hace y qué haría yo con eso.</p>
 <h2 className={H2}>Qué es Businesses in ChatGPT (y qué no es)</h2>
 <p className={P_}>Es un conjunto de herramientas en beta para negocios dentro de ChatGPT, que según OpenAI usan 1.200 millones de personas cada semana. <sup className="text-xs"><a href="#fuente-1" className="text-[#0066ff] hover:underline" aria-label="Fuente 1">[1]</a></sup> Tiene dos piezas:</p>
 <ul className="list-disc pl-6 mb-6 space-y-2 text-[#424656] leading-relaxed text-base">
@@ -194,7 +200,7 @@ export default function PostBusinessesInChatGPT() {
 <tr className="border-t border-[#c2c6d8]/15">
 <th scope="row" className="p-4 text-sm font-medium text-[#1c1b1b] align-top">Tiendas y restaurantes locales</th>
 <td className="p-4 text-sm text-[#424656] align-top">Por ahora solo pueden reclamar una ficha existente de EE. UU. <sup className="text-xs"><a href="#fuente-2" className="text-[#0066ff] hover:underline" aria-label="Fuente 2">[2]</a></sup></td>
-<td className="p-4 text-sm text-[#424656] align-top">No</td>
+<td className="p-4 text-sm text-[#424656] align-top">No (hoy solo e-commerce y servicios en línea elegibles de EE. UU.)</td>
 </tr>
 <tr className="border-t border-[#c2c6d8]/15">
 <th scope="row" className="p-4 text-sm font-medium text-[#1c1b1b] align-top">Clientes Enterprise y anunciantes de OpenAI</th>

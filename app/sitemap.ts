@@ -51,6 +51,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/leads-basura-meta-ads", "2026-10-04", 0.7],
   ["/blog/performance-max-vs-advantage-plus", "2026-11-02", 0.7],
   ["/blog/tiempo-de-respuesta-leads", "2026-11-10", 0.7],
+  ["/blog/businesses-in-chatgpt", "2026-11-11", 0.7],
   ["/sistema", "2026-10-04", 0.8],
   ["/crm-agencia-ads", "2026-10-24", 0.8],
 ];

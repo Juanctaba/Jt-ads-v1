@@ -22,6 +22,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "ga4-no-coincide-meta-ads",
+    title: "GA4 no coincide con Meta Ads: por qué ocurre (y qué mirar antes de pelearte con el píxel)",
+    excerpt: "GA4 no coincide con Meta Ads porque miden distinto: atribución, view-through, ventanas, UTMs y consentimiento. Qué comparar antes de tocar el píxel.",
+    category: "Tracking Técnico",
+    date: "Noviembre 2026",
+    readTime: "10 min",
+  },
+  {
     slug: "businesses-in-chatgpt",
     title: "Businesses in ChatGPT: cómo reclamar tu negocio y qué te muestra Business Hub",
     excerpt: "OpenAI ya deja reclamar un negocio elegible en ChatGPT (beta). Cómo verificarlo paso a paso, qué mide Business Hub y qué hacer si aún no puedes.",

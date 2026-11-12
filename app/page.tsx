@@ -434,20 +434,20 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 items-center">
               {[
-                { name: "Sodexo",           file: "sodexo_logo.png" },
-                { name: "Pluxee",           file: "logo-pluxee.png" },
-                { name: "Localiza",         file: "localiza_logo_2022.png" },
-                { name: "Renting Colombia", file: "logo-renting.png" },
-                { name: "Hilton",           file: "hilton-logo.png" },
-                { name: "Atmopel",          file: "logo-atmopel.png" },
-                { name: "Betterfly",        file: "logo-betterfly.png" },
-                { name: "Kamina",           file: "logo-kamina.png" },
-                { name: "Ransomware Help",  file: "ransom-logo.png" },
-                { name: "Puntos Colombia",  file: "logo-puntos.png" },
-                { name: "GLT Logistics",    file: "logo_glt.png" },
-                { name: "ISC Connection",   file: "logo-iscconnection-group.png" },
-                { name: "Oro Express",      file: "cropped-logo-oroexpress-3.png" },
-                { name: "OPPO Mobile",      file: "oppo_logo_2019.png" },
+                { name: "Sodexo",           file: "sodexo_logo.png", w: 246 },
+                { name: "Pluxee",           file: "logo-pluxee.png", w: 163 },
+                { name: "Localiza",         file: "localiza_logo_2022.png", w: 400 },
+                { name: "Renting Colombia", file: "logo-renting.png", w: 270 },
+                { name: "Hilton",           file: "hilton-logo.png", w: 103 },
+                { name: "Atmopel",          file: "logo-atmopel.png", w: 453 },
+                { name: "Betterfly",        file: "logo-betterfly.png", w: 420 },
+                { name: "Kamina",           file: "logo-kamina.png", w: 279 },
+                { name: "Ransomware Help",  file: "ransom-logo.png", w: 190 },
+                { name: "Puntos Colombia",  file: "logo-puntos.png", w: 221 },
+                { name: "GLT Logistics",    file: "logo_glt.png", w: 141 },
+                { name: "ISC Connection",   file: "logo-iscconnection-group.png", w: 231 },
+                { name: "Oro Express",      file: "cropped-logo-oroexpress-3.png", w: 456 },
+                { name: "OPPO Mobile",      file: "oppo_logo_2019.png", w: 335 },
               ].map((brand) => (
                 <div key={brand.name} className="flex items-center justify-center p-3">
                   <img
@@ -455,6 +455,10 @@ export default function HomePage() {
                     alt={brand.name}
                     className="max-h-8 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-200 grayscale"
                     title={brand.name}
+                    width={brand.w}
+                    height={80}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}

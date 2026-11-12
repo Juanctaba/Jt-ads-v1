@@ -124,7 +124,12 @@ export default function PostPixelInflaConversiones() {
             Y en la gran mayoría de los casos no es tu agencia en sentido
             malintencionado: es el píxel. Un píxel roto, mal configurado o mal
             deduplicado infla cifras que después mantienen a un equipo
-            confundido, con leads que nunca llegan a venta.
+            confundido, con leads que nunca llegan a venta. Ojo: si lo que ves
+            es que{" "}
+            <Link href="/blog/ga4-no-coincide-meta-ads" className="text-[#0066ff] font-semibold hover:underline">
+              Meta y tu analítica no cuadran
+            </Link>
+            , no siempre es el píxel: a veces solo miden distinto.
           </p>
           <p className={P} style={INTER}>
             Acá van las siete señales más claras de que tu píxel te está

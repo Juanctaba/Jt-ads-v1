@@ -12,12 +12,10 @@ const H1_TEXT = "GA4 no coincide con Meta Ads: por qué ocurre (y qué mirar ant
 const DESC =
   "GA4 no coincide con Meta Ads porque miden distinto: atribución, view-through, ventanas, UTMs y consentimiento. Qué comparar antes de tocar el píxel.";
 
-// Fechas provisionales: 16 nov 2026 (Bogotá), pedidas por Rankin.
-// PENDIENTE: actualizar fechas (byline, JSON-LD, sitemap lastmod) el día del merge
-const DATE_PUBLISHED = "2026-11-16T00:00:00-05:00";
-const DATE_MODIFIED = "2026-11-16T00:00:00-05:00";
-const DATE_ISO = "2026-11-16";
-const DATE_VISIBLE = "16 de noviembre de 2026";
+const DATE_PUBLISHED = "2026-11-12T00:00:00-05:00";
+const DATE_MODIFIED = "2026-11-12T00:00:00-05:00";
+const DATE_ISO = "2026-11-12";
+const DATE_VISIBLE = "12 de noviembre de 2026";
 const SOURCES_CONSULTED = "9 de noviembre de 2026";
 const BIO_URL = "https://www.linkedin.com/in/juan-tabares-b1272b58/";
 // OG global del sitio (app/opengraph-image.tsx). No se crea una imagen propia.

@@ -53,8 +53,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/blog/tiempo-de-respuesta-leads", "2026-11-10", 0.7],
   // PENDIENTE: actualizar fechas (byline, JSON-LD, sitemap lastmod) el día del merge
   ["/blog/businesses-in-chatgpt", "2026-11-11", 0.7],
-  // PENDIENTE: actualizar fechas (byline, JSON-LD, sitemap lastmod) el día del merge
-  ["/blog/ga4-no-coincide-meta-ads", "2026-11-16", 0.7],
+  ["/blog/ga4-no-coincide-meta-ads", "2026-11-12", 0.7],
   ["/sistema", "2026-10-04", 0.8],
   ["/crm-agencia-ads", "2026-10-24", 0.8],
 ];

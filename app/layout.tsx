@@ -39,13 +39,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* Medicion: un solo listener delegado (guardado con una bandera global
             para no duplicarse) que empuja affiliate_click en enlaces de afiliado
-            de HighLevel (fp_ref) y generate_lead en CTAs al diagnostico. Las
-            etiquetas que escuchan estos eventos viven en GTM. */}
+            de HighLevel (fp_ref) y select_cta (clic en CTAs al diagnostico; NO es
+            un lead). generate_lead ya no sale de aqui: GTM lo emite al recibir
+            jtads_form_success (envio del formulario de HighLevel). Las etiquetas
+            que escuchan estos eventos viven en GTM. */}
         <Script
           id="jtads-click-tracking"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(){if(window.__jtadsClickTracking)return;window.__jtadsClickTracking=true;window.dataLayer=window.dataLayer||[];document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var u;try{u=new URL(a.getAttribute('href'),location.href)}catch(x){return}var pp=location.pathname;if(/(^|\\.)gohighlevel\\.com$|(^|\\.)highlevel\\.com$/i.test(u.hostname)&&u.searchParams.has('fp_ref')){window.dataLayer.push({event:'affiliate_click',link_url:u.href,page_path:pp});return}if((u.hostname===location.hostname||/(^|\\.)jtads\\.com$/i.test(u.hostname))&&/^\\/(diagnostico-en-vivo|diagnostico-operacion)\\/?$/.test(u.pathname)){window.dataLayer.push({event:'generate_lead',form:'diagnostico',page_path:pp})}},true)})();`,
+            __html: `(function(){if(window.__jtadsClickTracking)return;window.__jtadsClickTracking=true;window.dataLayer=window.dataLayer||[];document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var u;try{u=new URL(a.getAttribute('href'),location.href)}catch(x){return}var pp=location.pathname;if(/(^|\\.)gohighlevel\\.com$|(^|\\.)highlevel\\.com$/i.test(u.hostname)&&u.searchParams.has('fp_ref')){window.dataLayer.push({event:'affiliate_click',link_url:u.href,page_path:pp});return}if((u.hostname===location.hostname||/(^|\\.)jtads\\.com$/i.test(u.hostname))&&/^\\/(diagnostico-en-vivo|diagnostico-operacion)\\/?$/.test(u.pathname)){window.dataLayer.push({event:'select_cta',cta_id:a.getAttribute('data-cta')||'sin-data-cta',cta_destino:/operacion/.test(u.pathname)?'diagnostico-operacion':'diagnostico-en-vivo',link_url:u.origin+u.pathname,page_path:pp})}},true)})();`,
           }}
         />
         {/* External tracking. Se sirve desde el layout y no desde GTM a

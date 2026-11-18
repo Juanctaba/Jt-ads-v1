@@ -306,7 +306,8 @@ export default function PostHiperAutomatizacion() {
           </div>
 
           <p className="text-[#424656] leading-relaxed mb-6 text-base" style={{ fontFamily: "Inter, sans-serif" }}>
-            La desconexión entre lo que optimiza el algoritmo y lo que necesita el negocio no es un bug — es una consecuencia estructural de cómo funcionan estos sistemas. El algoritmo maximiza la métrica que le diste. Si esa métrica no está perfectamente alineada con revenue real, el sistema va a optimizar en la dirección equivocada de forma cada vez más eficiente.
+            La desconexión entre lo que optimiza el algoritmo y lo que necesita el negocio no es un bug — es una consecuencia estructural de cómo funcionan estos sistemas. El algoritmo maximiza la métrica que le diste. Si esa métrica no está perfectamente alineada con revenue real, el sistema va a optimizar en la dirección equivocada de forma cada vez más eficiente. Esa diferencia entre lo que reporta el panel y lo que gana el negocio es la de{" "}
+            <Link href="/blog/poas-vs-roas" className="text-[#0066ff] font-semibold hover:underline">ROAS vs POAS</Link>.
           </p>
           <p className="text-[#424656] leading-relaxed mb-10 text-base" style={{ fontFamily: "Inter, sans-serif" }}>
             Y con hiper-automatización, ese problema se amplifica porque tampoco puedes auditar fácilmente dónde se está yendo el presupuesto ni qué búsquedas o audiencias están produciendo las conversiones que el sistema reporta.

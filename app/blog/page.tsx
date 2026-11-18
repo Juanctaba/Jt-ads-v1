@@ -22,6 +22,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "poas-vs-roas",
+    title: "POAS vs ROAS: cuándo medir la utilidad y no solo la venta",
+    excerpt: "POAS vs ROAS: qué mide cada uno, cuándo mirar la utilidad y no solo la venta, y por qué un buen ROAS no garantiza ganancia.",
+    category: "Tracking Técnico",
+    // TODO(merge): fecha y orden definitivos al publicar (placeholder: nov 2026)
+    date: "Noviembre 2026",
+    readTime: "12 min",
+  },
+  {
     slug: "ga4-no-coincide-meta-ads",
     title: "GA4 no coincide con Meta Ads: por qué ocurre (y qué mirar antes de pelearte con el píxel)",
     excerpt: "GA4 no coincide con Meta Ads porque miden distinto: atribución, view-through, ventanas, UTMs y consentimiento. Qué comparar antes de tocar el píxel.",

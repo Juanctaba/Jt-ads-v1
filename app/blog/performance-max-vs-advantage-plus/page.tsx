@@ -313,6 +313,10 @@ export default function PostPmaxVsAdvantage() {
             <Link href="/blog/tracking-server-side-cpl-plataforma" className={A}>
               CPL de plataforma vs CPL real: por qué Meta y Google no cuadran con tu CRM
             </Link>
+            . Si lo que necesitas es decidir presupuesto por utilidad y no solo por la venta que reporta la plataforma, está en{" "}
+            <Link href="/blog/poas-vs-roas" className={A}>
+              POAS vs ROAS
+            </Link>
             .
           </p>
 

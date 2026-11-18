@@ -54,6 +54,13 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   // PENDIENTE: actualizar fechas (byline, JSON-LD, sitemap lastmod) el día del merge
   ["/blog/businesses-in-chatgpt", "2026-11-11", 0.7],
   ["/blog/ga4-no-coincide-meta-ads", "2026-11-12", 0.7],
+  // TODO(merge): lastmod = fecha real de publicación (un solo día, el mismo
+  // que DATE_* del artículo y el índice). El 2026-11-19 es placeholder del
+  // calendario; el R20 no fija fecha. NO mergear con esta fecha.
+  // Si este PR entra con los enlaces entrantes, actualizar también el lastmod
+  // de hiper-automatizacion, ga4-no-coincide-meta-ads y
+  // performance-max-vs-advantage-plus a ese mismo día.
+  ["/blog/poas-vs-roas", "2026-11-19", 0.7],
   ["/sistema", "2026-10-04", 0.8],
   ["/crm-agencia-ads", "2026-10-24", 0.8],
 ];

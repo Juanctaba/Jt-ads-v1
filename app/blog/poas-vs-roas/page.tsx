@@ -131,9 +131,11 @@ const schemaGraph = {
       image: IMAGE_URL,
       citation: [
         "https://support.google.com/google-ads/answer/6268637?hl=es",
-        "https://support.google.com/google-ads/answer/3419241?hl=es",
-        "https://support.google.com/google-ads/answer/16564103?hl=es",
+        "https://support.google.com/google-ads/answer/13064207?hl=es",
+        "https://support.google.com/google-ads/answer/7684216?hl=es",
+        "https://support.google.com/google-ads/answer/2998031?hl=es",
         "https://support.google.com/google-ads/answer/9028254?hl=es-419",
+        "https://support.google.com/google-ads/answer/16564103?hl=es",
         "https://support.google.com/merchants/answer/9017895?hl=es-419",
         "https://support.google.com/google-ads/answer/1722066?hl=es",
         "https://support.google.com/google-ads/answer/6268632?hl=es",
@@ -180,6 +182,31 @@ const sources: { label: string; href: string }[] = [
     label:
       "Ayuda de Google Ads, «Acerca de las importaciones de conversiones offline» (GCLID + conversión offline, p. ej. firma de contrato; recomendación de Conversiones mejoradas de clientes potenciales)",
     href: "https://support.google.com/google-ads/answer/2998031?hl=es",
+  },
+  {
+    label:
+      "Ayuda de Google Ads, «Acerca de las conversiones con datos del carrito» (con el CBV del feed de Merchant Center, genera métricas de ganancias brutas)",
+    href: "https://support.google.com/google-ads/answer/9028254?hl=es-419",
+  },
+  {
+    label:
+      "Ayuda de Google Ads, «Métricas disponibles en Conversiones con datos del carrito» (métrica «Beneficio bruto» con datos del carrito y el coste de los bienes vendidos del feed)",
+    href: "https://support.google.com/google-ads/answer/16564103?hl=es",
+  },
+  {
+    label:
+      "Ayuda de Google Merchant Center, «Costo de bienes vendidos (CBV) [cost_of_goods_sold]» (para informes adicionales sobre las ganancias brutas)",
+    href: "https://support.google.com/merchants/answer/9017895?hl=es-419",
+  },
+  {
+    label:
+      "Ayuda de Google Ads, «Información sobre el retorno de la inversión (ROI)» (el ROI es la relación entre el beneficio neto y los costes)",
+    href: "https://support.google.com/google-ads/answer/1722066?hl=es",
+  },
+  {
+    label:
+      "Ayuda de Google Ads, «Acerca de la estrategia de puja CPA objetivo» (con CPA objetivo defines el coste por conversión medio que quieres)",
+    href: "https://support.google.com/google-ads/answer/6268632?hl=es",
   },
 ];
 
@@ -369,7 +396,7 @@ export default function PostPoasVsRoas() {
 
           <h2 className={H2}>Cómo lo mira JT Ads</h2>
           {/* Partner: wording del sitio («Meta Partner y Google Partner»). Cifra propia: solo $500k+. Cero inversión mínima. */}
-          <p className={P_}>En JT Ads gestionamos $500k+ USD/mes en ads para empresas de LATAM. JT Ads es Meta Partner y Google Partner. La pauta la pagas directo a la plataforma y la cuenta publicitaria queda a tu nombre.</p>
+          <p className={P_}>JT Ads es Meta Partner y Google Partner, con $500k+ USD/mes gestionados en ads para empresas de LATAM.</p>
           <p className={P_}>
             Lo primero que revisamos en una cuenta no es el ROAS, sino qué valor le estás mandando a la plataforma y si ese valor se parece a lo que gana tu negocio. Si mide facturación y tú decides con eso, estás optimizando venta. Cómo conectamos la medición con el CRM está en{" "}
             <Link href="/sistema" className={A}>el sistema</Link>.

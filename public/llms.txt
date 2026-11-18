@@ -39,6 +39,7 @@ Datos clave:
 - [CPL de plataforma vs CPL real](https://jtads.com/blog/tracking-server-side-cpl-plataforma): por qué no cuadran con el CRM y cómo calcularlo.
 - [Qué es el tracking server-side](https://jtads.com/blog/tracking-server-side-que-es-por-que-pixel-miente): por qué el píxel infla conversiones.
 - [Leads basura en Meta Ads](https://jtads.com/blog/leads-basura-meta-ads): por qué llegan y cómo filtrarlos.
+- [Tiempo de respuesta a leads](https://jtads.com/blog/tiempo-de-respuesta-leads): por qué responder en menos de 5 minutos y qué automatizar.
 - [Performance Max en LATAM](https://jtads.com/blog/performance-max-como-funciona-latam): cómo funciona y cuándo usarlo.
 - [Google Ads para SaaS B2B en LATAM](https://jtads.com/blog/google-ads-saas-b2b-latam): keywords por intención y conversiones offline desde el CRM.
 - [Límites de mensajes en WhatsApp Business](https://jtads.com/blog/limites-mensajes-whatsapp-business): cómo suben los límites del portafolio.

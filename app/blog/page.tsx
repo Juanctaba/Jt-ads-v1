@@ -32,6 +32,40 @@ const posts = [
     readTime: "10 min",
   },
   {
+    slug: "ga4-no-coincide-meta-ads",
+    title: "GA4 no coincide con Meta Ads: por qué ocurre (y qué mirar antes de pelearte con el píxel)",
+    excerpt: "GA4 no coincide con Meta Ads porque miden distinto: atribución, view-through, ventanas, UTMs y consentimiento. Qué comparar antes de tocar el píxel.",
+    category: "Tracking Técnico",
+    date: "Noviembre 2026",
+    readTime: "10 min",
+  },
+  {
+    slug: "businesses-in-chatgpt",
+    title: "Businesses in ChatGPT: cómo reclamar tu negocio y qué te muestra Business Hub",
+    excerpt: "OpenAI ya deja reclamar un negocio elegible en ChatGPT (beta). Cómo verificarlo paso a paso, qué mide Business Hub y qué hacer si aún no puedes.",
+    category: "Automatización",
+    date: "Noviembre 2026",
+    readTime: "7 min",
+  },
+  {
+    slug: "tiempo-de-respuesta-leads",
+    title: "El lead que no respondes en 5 minutos ya es de tu competencia",
+    excerpt:
+      "Qué dicen los estudios sobre el tiempo de respuesta a leads, por qué tu equipo no alcanza a contestar en 5 minutos y qué automatizar primero para lograrlo.",
+    category: "Automatización",
+    date: "Noviembre 2026",
+    readTime: "6 min",
+  },
+  {
+    slug: "performance-max-vs-advantage-plus",
+    title: "Performance Max vs Advantage+: en qué se diferencian y cuál te conviene",
+    excerpt:
+      "Performance Max y Advantage+ comparten una idea y casi nada más. Qué es cada una, qué controlas y cuál te conviene según tu negocio.",
+    category: "Performance Max",
+    date: "Noviembre 2026",
+    readTime: "8 min",
+  },
+  {
     slug: "chatgpt-ads",
     title: "ChatGPT Ads: qué es, cuánto cuesta y si da leads (lo probé en 3 países)",
     excerpt:

@@ -448,6 +448,7 @@ export default function PostChatGPTAds() {
 <li><strong className="text-[#1c1b1b]">No bloquear a OAI-SearchBot</strong> en robots.txt: OpenAI lo usa para mostrar sitios en la búsqueda de ChatGPT y recomienda permitirlo. <sup className="text-xs"><a href="#fuente-16" className="text-[#0066ff] hover:underline" aria-label="Fuente 16">[16]</a></sup> (jtads.com ya lo permite.)</li>
 <li>Presencia en directorios y fuentes que ya se citan en tu sector.</li>
 </ul>
+<p className={P_}>Desde el 10 de noviembre de 2026 también puedes reclamar la ficha de tu negocio en ChatGPT: lo explico en <Link href="/blog/businesses-in-chatgpt" className={A}>Businesses in ChatGPT</Link>.</p>
 <h2 className={H2}>Qué haría yo con el presupuesto</h2>
 <ol className="list-decimal pl-6 mb-6 space-y-2 text-[#424656] leading-relaxed text-base">
 <li><strong className="text-[#1c1b1b]">Google Ads para captar a quien ya te busca.</strong> Si tu cliente ya te busca, Google. Si necesitas crear la demanda, Meta. Si buscas equipo, mira nuestra <Link href="/agencia-google-ads-colombia" className={A}>agencia de Google Ads en Colombia</Link>.</li>

@@ -243,7 +243,12 @@ export default function PostCplPlataformaVsReal() {
           <p className={P} style={INTER}>
             Y si además miras GA4, tienes una tercera fuente que tampoco va a coincidir con ninguna de las dos
             plataformas ni con el CRM, porque usa sus propias reglas. No es un error de nadie: son tres sistemas
-            midiendo cosas distintas. El CRM es el único que sabe si el lead existía y si compró.
+            midiendo cosas distintas. El CRM es el único que sabe si el lead existía y si compró. Te
+            explico{" "}
+            <Link href="/blog/ga4-no-coincide-meta-ads" className={A}>
+              por qué GA4 no coincide con Meta Ads
+            </Link>{" "}
+            en un artículo aparte.
           </p>
           <p className={P} style={INTER}>
             Si sospechas que el problema es sobre todo de medición (eventos que se disparan dos veces, páginas

@@ -19,7 +19,7 @@ const routes: Array<[path: string, lastModified: string, priority: number]> = [
   ["/diagnostico-en-vivo", "2026-10-04", 0.9],
   ["/diagnostico-operacion", "2026-09-14", 0.9],
   ["/calculadora-costos-whatsapp-business-api", "2026-09-29", 0.9],
-  // TODO(merge): lastmod = fecha real de publicación (placeholder 2026-11-05)
+  // TODO(merge): lastmod = fecha real de publicación (no usar 2026-11-05; esa fecha objetivo ya pasó)
   ["/blog/como-mejorar-tasa-de-conversion-de-leads", "2026-11-05", 0.7],
   ["/blog/chatgpt-ads", "2026-10-30", 0.7],
   ["/blog/whatsapp-business-bloqueado-que-hacer", "2026-09-29", 0.7],

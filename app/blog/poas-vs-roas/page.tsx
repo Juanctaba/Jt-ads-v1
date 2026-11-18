@@ -396,7 +396,7 @@ export default function PostPoasVsRoas() {
 
           <h2 className={H2}>Cómo lo mira JT Ads</h2>
           {/* Partner: wording del sitio («Meta Partner y Google Partner»). Cifra propia: solo $500k+. Cero inversión mínima. */}
-          <p className={P_}>JT Ads es Meta Partner y Google Partner, con $500k+ USD/mes gestionados en ads para empresas de LATAM.</p>
+          <p className={P_}>JT Ads es Meta Partner y Google Partner, con $500k+ USD/mes gestionados en ads para empresas de LATAM. La pauta la pagas directo a la plataforma y la cuenta publicitaria queda a tu nombre.</p>
           <p className={P_}>
             Lo primero que revisamos en una cuenta no es el ROAS, sino qué valor le estás mandando a la plataforma y si ese valor se parece a lo que gana tu negocio. Si mide facturación y tú decides con eso, estás optimizando venta. Cómo conectamos la medición con el CRM está en{" "}
             <Link href="/sistema" className={A}>el sistema</Link>.

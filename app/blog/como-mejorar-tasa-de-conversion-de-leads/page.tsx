@@ -404,7 +404,7 @@ export default function PostTasaConversionLeads() {
           <p className={P_}>Los pasos técnicos van en otra guía. La documentación de Google cambió en 2026, así que no los copio aquí.</p>
 
           <h2 className={H2}>Cómo lo trabaja JT Ads</h2>
-          <p className={P_}>JT Ads es Partner de Google y Meta, con $500k+ USD/mes gestionados en ads.</p>
+          <p className={P_}>JT Ads es Meta Partner y Google Partner, con $500k+ USD/mes gestionados en ads.</p>
           <p className={P_}>
             Lo que hacemos con tu embudo: conectamos el anuncio con el CRM para que cada lead llegue con su fuente y campaña, y medimos la velocidad de contacto y el paso de lead a oportunidad. Lo ves en{" "}
             <Link href="/sistema" className={A}>cómo funciona el sistema de JT Ads</Link> y en{" "}

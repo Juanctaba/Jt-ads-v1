@@ -11,16 +11,10 @@ const H1_TEXT =
 const DESC =
   "Tasa de conversión de leads medida en el CRM: lead, contactado, calificado y venta. Cómo ver en qué etapa se cae y qué arreglar primero.";
 
-// TODO(merge): fecha de publicación. Una sola constante para lo visible, el
-// JSON-LD y el lastmod de app/sitemap.ts. Los valores de abajo son un
-// PLACEHOLDER CADUCADO: el 5 nov 2026 ya no es la fecha objetivo y NO se
-// mergea con esa fecha. Al merge, con el OK de Juan, fijar un solo día real en
-// DATE_PUBLISHED, DATE_MODIFIED, DATE_ISO, DATE_VISIBLE, el índice
-// (app/blog/page.tsx) y el lastmod de app/sitemap.ts.
-const DATE_PUBLISHED = "2026-11-05T00:00:00-05:00"; // TODO(merge)
-const DATE_MODIFIED = "2026-11-05T00:00:00-05:00"; // TODO(merge)
-const DATE_ISO = "2026-11-05"; // TODO(merge)
-const DATE_VISIBLE = "5 de noviembre de 2026"; // TODO(merge)
+const DATE_PUBLISHED = "2026-11-19T00:00:00-05:00";
+const DATE_MODIFIED = "2026-11-19T00:00:00-05:00";
+const DATE_ISO = "2026-11-19";
+const DATE_VISIBLE = "19 de noviembre de 2026";
 const SOURCES_CONSULTED = "18 de noviembre de 2026";
 const BIO_URL = "https://www.linkedin.com/in/juan-tabares-b1272b58/";
 // Imagen OG: la de marca (app/opengraph-image.tsx), URL absoluta a jtads.com.

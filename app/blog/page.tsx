@@ -27,7 +27,6 @@ const posts = [
     excerpt:
       "Tasa de conversión de leads medida en el CRM: lead, contactado, calificado y venta. Cómo ver en qué etapa se cae y qué arreglar primero.",
     category: "Optimización",
-    // TODO(merge): fecha y orden definitivos al publicar (placeholder: nov 2026)
     date: "Noviembre 2026",
     readTime: "10 min",
   },
